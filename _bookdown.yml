@@ -1,8 +1,15 @@
-book_filename: "bookdownproj"
+book_filename: "SCMA104bookdownproj"
 output_dir: docs
 delete_merged_file: true
-edit: https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/main/%s
-view: https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/main/%s
+edit: https://github.com/pairote-sat/SCMA104/edit/main/%s
+view: https://github.com/pairote-sat/SCMA104/blob/main/%s
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: "บทที่ "
+  label:  
+    exm: "ตัวอย่าง "
+    
+output:
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    

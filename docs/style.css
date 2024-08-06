@@ -12,3 +12,52 @@ pre {
 pre code {
   white-space: inherit;
 }
+
+
+
+.hello {
+  border: 1px solid #d9534f; /* Adjusted border color */
+  padding: 15px; /* Increased padding */
+  color: #d9534f; /* Adjusted text color */
+  background-color: #f2dede; /* Adjusted background color */
+  border-left: 5px solid #d9534f; /* Added left border for emphasis */
+  border-radius: 4px; /* Rounded corners */
+  font-family: 'Arial', sans-serif; /* Optional: Change font */
+  margin: 10px 0; /* Add margin for spacing */
+}
+
+.hello::before {
+  content: "⚠️"; /* Optional: Add an icon */
+  font-size: 20px; /* Adjust icon size */
+  margin-right: 10px; /* Space between icon and text */
+  vertical-align: middle; /* Align icon with text */
+}
+
+.admonition {
+  padding: 15px;
+  background-color: #ffffff; /* White background for body */
+  border-left: 5px solid #007bff; /* Light blue left border */
+  border-radius: 4px;
+  font-family: 'Arial', sans-serif;
+  margin: 10px 0;
+  position: relative;
+  color: #000000; /* Black text for body */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.admonition-title {
+  font-weight: bold;
+  color: #000000; /* Black text for title */
+  background-color: #cfe2ff; /* Light blue background for title */
+  padding: 10px;
+  border-radius: 4px 4px 0 0; /* Rounded corners for top only */
+  margin: -15px -15px 10px -15px; /* Adjust margins to align with padding */
+  display: flex;
+  align-items: center;
+}
+
+.admonition-title::before {
+  content: "ℹ️"; /* Optional: Add an icon */
+  font-size: 20px;
+  margin-right: 10px;
+}

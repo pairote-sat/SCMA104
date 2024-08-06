@@ -1,0 +1,34 @@
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\XeTeXlinebreaklocale "th_TH"
+\XeTeXlinebreakskip = 0pt plus 1pt  
+\usepackage{fonts-tlwg}
+
+\setmainfont[Script=Thai,%
+    Scale=MatchLowercase,%
+    WordSpace=1.25,%
+    Mapping=tex-text,]{TH Sarabun New}
+
+%% ---- Load line spacing package ---- %%
+\usepackage{setspace}
+
+% Introducing hair space 
+\newrobustcmd{\hrsp}{\ifmmode\mskip1mu\else\kern0.0625em\fi}
+
+
+
+
+
+\usepackage{tcolorbox}
+
+% Define a new tcolorbox environment
+\newtcolorbox{hello}{
+  colframe=red, % border color
+  colback=red!10, % background color
+  coltext=red, % text color
+  boxrule=0.5mm, % border thickness
+  left=1mm, % left margin
+  right=1mm, % right margin
+  top=1mm, % top margin
+  bottom=1mm % bottom margin
+}

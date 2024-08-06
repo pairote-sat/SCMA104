@@ -1,0 +1,3 @@
+\contentsline {chapter}{หลักการและความสำคัญของแคลคูลัสและระบบสมการเชิงอนุพันธ์สามัญ}{1}{chapter*.2}%
+\contentsline {chapter}{The pool of tears}{9}{chapter*.7}%
+\contentsline {chapter}{A caucus-race and a long tale}{11}{chapter*.8}%

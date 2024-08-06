@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>YOUR TITLE HERE</title>
-  <meta name="description" content="YOUR TITLE HERE" />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <title>SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</title>
+  <meta name="description" content="SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="YOUR TITLE HERE" />
+  <meta property="og:title" content="SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
   <meta property="og:type" content="book" />
   
   
-  
-  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="YOUR TITLE HERE" />
+  <meta name="twitter:title" content="SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
   
   
   
 
-<meta name="author" content="YOUR NAME HERE" />
+<meta name="author" content="Pairote Satiracoo" />
 
 
-<meta name="date" content="2020-08-10" />
+<meta name="date" content="2024-08-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,8 @@
   
 
 <link rel="next" href="the-pool-of-tears.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,9 +49,16 @@
 
 
 
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -66,14 +73,15 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">SHORT TITLE HERE</a></li>
+<li><a href="./">SCMA104</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Down the rabbit-hole</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> หลักการและความสำคัญของแคลคูลัสและระบบสมการเชิงอนุพันธ์สามัญ</a></li>
 <li class="chapter" data-level="2" data-path="the-pool-of-tears.html"><a href="the-pool-of-tears.html"><i class="fa fa-check"></i><b>2</b> The pool of tears</a></li>
 <li class="chapter" data-level="3" data-path="a-caucus-race-and-a-long-tale.html"><a href="a-caucus-race-and-a-long-tale.html"><i class="fa fa-check"></i><b>3</b> A caucus-race and a long tale</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -83,7 +91,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">YOUR TITLE HERE</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</a>
           </h1>
         </div>
 
@@ -92,12 +100,170 @@
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">YOUR TITLE HERE</h1>
-<p class="author"><em>YOUR NAME HERE</em></p>
-<p class="date"><em>2020-08-10</em></p>
+<h1 class="title">SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</h1>
+<p class="author"><em>Pairote Satiracoo</em></p>
+<p class="date"><em>2024-08-07</em></p>
 </div>
-<div id="down-the-rabbit-hole" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Down the rabbit-hole</h1>
+<div id="หลกการและความสำคญของแคลคลสและระบบสมการเชงอนพนธสามญ" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">บทที่ 1</span> หลักการและความสำคัญของแคลคูลัสและระบบสมการเชิงอนุพันธ์สามัญ<a href="index.html#หลกการและความสำคญของแคลคลสและระบบสมการเชงอนพนธสามญ" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>แคลคูลัสมีส่วนประกอบหลักที่สำคัญอยู่ 2 องค์ประกอบ คือ</p>
+<ol style="list-style-type: decimal">
+<li><p>การหาอนุพันธ์ (differentiation) และ</p></li>
+<li><p>การหาปริพันธ์ (Integration)</p></li>
+</ol>
+<p>การประยุกต์เรื่องการหาอนุพันธ์ในการแก้ปัญหาเบื้องต้นที่สำคัญในทางชีววิทยา หรือทางการแพทย์ ประกอบด้วย การหาอัตราการเปลี่ยนแปลงของปริมาณของตัวแปรที่เราสนใจ และการใช้แคลคูลัสในการแก้ปัญหาการหาค่าสูงสุดและค่าต่ำสุดของปัญหาหรือฟังก์ชันที่แสดงความสัมพันธ์ของตัวแปรที่เราสนใจ</p>
+<p>ตัวอย่างการเปลี่ยนแปลงของปริมาณที่สนใจ เช่น ขนาดของประชากร จำนวนของผู้ติดเชื้อจากโรคทางเดินหายใจ ระดับนำ้ตาลในกระแสเลือด ปริมาณของยาที่มีอยู่ในกระแสเลือกหรือส่วนหนึ่งของร่างกาย โดยที่การเปลี่ยนแปลงดังกล่าวสามารถเปรียบเทียบได้กับเวลา ดังต่อไปนี้</p>
+<ul>
+<li><p>ประชากรในประเทศไทยปี พ.ศ. 2566 มีจำนวน 66.05 ล้านคน (ข้อมูลอ้างอิงจาก <a href="https://www.boi.go.th/index.php?page=demographic" class="uri">สำนักงานคณะกรรมการส่งเสริมการลงทุน</a>)</p></li>
+<li><p>ข้อมูลจำนวนผู้รักษาตัวในโรงพยาบาลจากศูนย์ข้อมูล COVID-19 ระหว่างวันที่ 28 กรกฎาคม ถึงวันที่ 3 สิงหาคม พ.ศ. 2567 (ข้อมูลอ้างอิงจาก <a href="https://www.facebook.com/informationcovid19?locale=th_TH" class="uri">ศูนย์ข้อมูล Covid-19</a>)</p></li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:fig-covid-19"></span>
+<img src="images/fig-covid-19.jpeg" alt="ข้อมูลจำนวนผู้รักษาตัวในโรงพยาบาลจากศูนย์ข้อมูล COVID-19" width="100%" />
+<p class="caption">
+Figure 1.1: ข้อมูลจำนวนผู้รักษาตัวในโรงพยาบาลจากศูนย์ข้อมูล COVID-19
+</p>
+</div>
+<ul>
+<li>การเปลี่ยนแปลงของระดับนำ้ตาลในเลือดระหว่างมืออาหารสามมือในหนึ่งวัน (รูปภาพอ้างอิงจาก <a href="https://en.wikipedia.org/wiki/Blood_sugar_level" class="uri">Wikipedia: Blood Sugar Level</a>)</li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:fig-blood-glucose"></span>
+<img src="images/Fig-blood-glucose.png" alt="ความผันผวนของระดับน้ำตาลในเลือด (สีแดง) และฮอร์โมนอินซูลิน (สีน้ำเงิน) ในมนุษย์ระหว่างมื้ออาหารสามมื้อ" width="100%" />
+<p class="caption">
+Figure 1.2: ความผันผวนของระดับน้ำตาลในเลือด (สีแดง) และฮอร์โมนอินซูลิน (สีน้ำเงิน) ในมนุษย์ระหว่างมื้ออาหารสามมื้อ
+</p>
+</div>
+<ul>
+<li>การเปลี่ยนแปลงของปริมาณยาในกระแสเลือดที่เวลาต่างๆ สำหรับการให้ยาโดยวิธีต่างๆ (รูปภาพอ้างอิงจาก <a href="https://www.mdpi.com/1420-3049/28/24/8038" class="uri">บทความทางวิชาการในฐานข้อมูล MDPI</a>)</li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:fig-drug-absorption"></span>
+<img src="images/fig-drug-absorption.jpeg" alt="ความเข็มข้นของยาในกระแสเลือดที่เวลาต่างๆ " width="100%" />
+<p class="caption">
+Figure 1.3: ความเข็มข้นของยาในกระแสเลือดที่เวลาต่างๆ
+</p>
+</div>
+<p>ในการทำความเข้าใจการเปลี่ยนแปลงของปริมาณข้างต้นเทียบกับเวลา เราสามารถประยุกต์ใช้การสร้างแบบจำลองทางคณิตศาสตร์เพื่อมาใช้อธิบายการเปลี่ยนแปลงของปริมาณต่างๆ ที่เกี่ยวข้อง</p>
+<blockquote>
+<p><strong>การสร้างแบบจำลองทางคณิตศาสตร์</strong> เป็นกระบวนการอธิบายปัญหาหรือ ปรากฎการต่างๆ ที่เกิดขึ้นในธรรมชาติ โดยปกติแล้วจะอยู่ในรูปของสมการทางคณิตศาสตร์ ซึ่งแบบจำลองทางคณิตศาสตร์นี้จะช่วยให้อธิบายสิ่งต่างๆ ที่เกิดขึ้นในปัญหาหรือปรากฏที่สนใจ</p>
+</blockquote>
+<p>ตัวอย่างต่อไปนี้จะแสดงถึงแนวคิดในการประยุกต์ของแคลคูลัสที่เกี่ยวข้องกับอัตราการเปลี่ยนแปลงของ</p>
+<div class="example">
+<p><span id="exm:exm1" class="example"><strong>ตัวอย่าง 1.1  </strong></span>ในการทดลองหนึ่ง นักวิจัยต้องการศึกษาการขยายพันธ์ของแบคทีเรียที่มีการการแบ่งตัวที่เรียกว่า binary fission (การแบ่งตัวแบบทวิภาค) ซึ่งแบคทีเรียจะมีการแบ่งจากหนึ่งเป็นสองเซลเท่าๆ กัน และได้ผลการทำลองดังต่อไปนี้</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig-binary-fission"></span>
+<img src="images/fig-binary-fission.png" alt="กระบวนการแบ่งตัวแบบทวิภาคของแบคทีเรีย" width="100%" />
+<p class="caption">
+Figure 1.4: กระบวนการแบ่งตัวแบบทวิภาคของแบคทีเรีย
+</p>
+</div>
+<p>(รูปอ้างอิงจาก <a href="https://byjus.com/biology/binary-fission/">BYJU’s Learning Website</a> )</p>
+<table>
+<caption><span id="tab:bacteria-table">Table 1.1: </span>จำนวนของแบคทีเรียที่เวลา t ใดๆ</caption>
+<tbody>
+<tr class="odd">
+<td align="left">เวลา (10 นาที)</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="right">6</td>
+</tr>
+<tr class="even">
+<td align="left">จำนวนแบคทีเรีย</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">4</td>
+<td align="right">8</td>
+<td align="right">16</td>
+<td align="right">32</td>
+<td align="right">64</td>
+</tr>
+</tbody>
+</table>
+<p>ตาราง <a href="index.html#tab:bacteria-table">1.1</a> และรูปที่ <a href="index.html#fig:population-plot">1.5</a> แสดงการเปลี่ยนแปลงของจำนวนแบคทีเรียที่เวลาใดๆ ในตัวอย่างนี้การเปลี่ยนแปลงของจำนวนของแบคทีเรียที่เวลา <span class="math inline">\(t\)</span> สามารถเขียนในรูปฟังก์ชัน <span class="math inline">\(N(t)\)</span> ถ้าให้ <span class="math inline">\(N_0\)</span> แทนจำนวนของแบคทีเรียตอนเริ่มการทดลอง แล้วแบบจำลองทางคณิตศาสตร์สำหรับการเพิ่มของจำนวนแบคทีเรียจะสามารถเขียนในรูปของสมการ</p>
+<span class="math display" id="eq:population-growth">\[\begin{equation}
+N(t) = N_0 \cdot 2 ^t, \quad t = 0,1,2, \ldots
+\tag{1.1}
+\end{equation}\]</span>
+<p>ในแบบจำลองทางคณิตศาสตร์นี้การเปลี่ยนแปลงของจำนวนแบคทีเรียที่เวลา <span class="math inline">\(t\)</span> ใดๆ เพิ่มขึ้นในลักษณะที่เรียกว่า เอกซ์โพเนนเชียล (Exponential Population Growth)</p>
+<div class="figure"><span style="display:block;" id="fig:population-plot"></span>
+<img src="SCMA104bookdownproj_files/figure-html/population-plot-1.png" alt="Population Size Over Time" width="672" />
+<p class="caption">
+Figure 1.5: Population Size Over Time
+</p>
+</div>
+<div class="example">
+<p><span id="exm:exm2" class="example"><strong>ตัวอย่าง 1.2  </strong></span>ในการสร้างแบบจำลองทางคณิตศาสตร์ ในตัวอย่างของการขยายพันธ์แบคทีเรีย หรือในปัญหาอื่นๆ แทนที่เราจะพยายามหาความสัมพันธ์ หรือฟังก์ชัน <span class="math inline">\(N(t)\)</span> ในรูปของเวลา <span class="math inline">\(t\)</span> โดยตรง ถ้าเราทราบกระบวนการที่เกี่ยวข้องกับการอัตราการเปลี่ยนแปลงของตัวแปร <span class="math inline">\(N(t)\)</span> นั้น เราสามารถนำมาใช้ในการสร้างแบบจำลองทางคณิตศาสตร์ ได้ดังต่อนี้ กระบวนการที่เกี่ยวข้องกับการเปลี่ยนแปลงของจำนวนแบคทีเรีย (การเพิ่มหรือลดลงของแบคทีเรีย) ที่เกิดขึ้นในระหว่างเวลา <span class="math inline">\(t\)</span> และเวลา <span class="math inline">\(t + h\)</span> เกิดจากจำนวนแบคทีเรียที่เพิ่มขึ้น (เกิดขึ้นมาใหม่) ในช่วงเวลาดังกล่าว และลดลงจากจำนวนแบคทีเรียที่ลดลง (ตายไป) ในช่วงเวลาดังกล่าวเช่นกัน ซึ่งเราสามารถเขียนในรูปของสมการได้ดังต่อไปนี้</p>
+</div>
+<span class="math display" id="eq:population-growth-2">\[\begin{align}
+N(t + h) &amp;= N(t) \\
+&amp;\quad + \text{จำนวนแบคทีเรียที่เกิดขึ้นใหม่ระหว่าง } t \text{ และ } t+h \\
+&amp;\quad - \text{จำนวนแบคทีเรียที่ตายไประหว่าง } t \text{ และ } t+h
+\tag{1.2}
+\end{align}\]</span>
+<p>ในที่นี้ “<strong>การเกิด</strong>” เราหมายถึงการเพิ่มจำนวนของแบคทีเรียจากหนึ่งเป็นสอง และเราจะกำหนดให้ <span class="math inline">\(h\)</span> เป็นช่วงเวลาสั้นๆ (ซึ่งเราสามารถใช้ความรู้แคลคูลัสในการสร้างแบบจำลองทางคณิตศาสตร์ในรูปของสมการเชิงอนุพันธ์ (differential equation)) ในสมการ <a href="index.html#eq:population-growth-2">(1.2)</a> ถ้าเราสมมติว่า การเพิ่มของแบคทีเรียเป็นสัดส่วนกับจำนวนแบคทีเรียที่มีอยู่ในขณะนั้น หรือเขียนในรูปของสมการได้ดังนี้</p>
+<p><span class="math display">\[
+\text{จำนวนแบคทีเรียที่เกิดใหม่ระหว่าง } t \text{ และ } t + h \approx b \cdot N \cdot h
+\]</span></p>
+<p><span class="math display">\[
+\text{จำนวนแบคทีเรียที่ตายไประหว่าง } t \text{ และ } t + h \approx m \cdot N \cdot h
+\]</span></p>
+<p>โดยที่ค่าคงตัว <span class="math inline">\(b\)</span> และ <span class="math inline">\(m\)</span> ในสมการข้างต้น คือ อัตราการเกิด (birth rate) และอัตราการตาย (mortality rate)</p>
+<p>เมื่อแทนจำนวนแบคทีเรียที่เกิดใหม่ และตายไประหว่างช่วงเวลาที่กำหนดลงในสมการ <a href="index.html#eq:population-growth-2">(1.2)</a> จะได้สมการ</p>
+<span class="math display" id="eq:population-growth-3">\[\begin{equation}
+N(t + h) - N(t) = b\cdot N(t) \cdot h - m\cdot N(t) \cdot h
+\tag{1.3}
+\end{equation}\]</span>
+<p>เราสามารถจัดรูปสมการ <a href="index.html#eq:population-growth-3">(1.3)</a> ได้ไหมในรูปของ<strong>อัตราการเปลี่ยนแปลงเฉลี่ย</strong>ของจำนวนแบคทีเรียในช่วงเวลาดังกล่าว ดังนี้</p>
+<span class="math display" id="eq:population-growth-4">\[\begin{align}
+\frac{N(t + h) - N(t)}{h} &amp;= b\cdot N(t)  - m\cdot N(t)\\
+\tag{1.4}
+\end{align}\]</span>
+<p>ดังนั้น ถ้าเราให้ <span class="math inline">\(h\)</span> เข้าใกล้ 0 ผ่านการหาค่าลิมิต เราจะได้อัตราการเปลี่ยนแปลงขณะหนึ่ง (instantaneous rate of change) และเขียนได้ในรูปของสมการเชิงอนุพันธ์ ดังนี้</p>
+<span class="math display" id="eq:population-growth-5">\[\begin{align}
+\frac{dN}{dt} = \lim_{h \rightarrow 0}\frac{N(t + h) - N(t)}{h} &amp;= b\cdot N(t)  - m\cdot N(t)\\
+\tag{1.5}
+\end{align}\]</span>
+<p>ทั้งนี้ในการแก้สมการเชิงอนุพันธ์ <a href="index.html#eq:population-growth-5">(1.5)</a> เพื่อให้ได้คำตอบที่แสดงจำนวนแบคทีเรีย <span class="math inline">\(N(t)\)</span> ในรูปของฟังก์ชันของ <span class="math inline">\(t\)</span> เราจะต้องกำหนดเงื่อนไขเพิ่มเติมที่เกี่ยวข้องกับจำนวนแบคทีเรีย <span class="math inline">\(N(t)\)</span> ที่เวลา <span class="math inline">\(t\)</span> หนึ่ง โดยทั่วไปเราจะกำหนดค่าเริ่มต้นของจำนวนแบคทีเรียที่ <span class="math inline">\(t = 0\)</span> ดังนั้น ถ้าเรากำหนดเงื่อนไขเริ่มต้น (initial condition)</p>
+<span class="math display" id="eq:population-growth-6">\[\begin{equation}
+N(0) = N_0
+\tag{1.6}
+\end{equation}\]</span>
+<p>เราสามารถหาคำตอบของสมการเชิงอนุพันธ์ที่มีเงื่อนไขเริ่มต้นโดยวิธีการหาปริพันธ์ (Integration) ได้คำตอบของสมการดังนี้</p>
+<span class="math display" id="eq:population-growth-7">\[\begin{equation}
+N(t) = N_0 e^{(b-m)t}
+\tag{1.7}
+\end{equation}\]</span>
+<div class="example">
+<p><span id="exm:exm3" class="example"><strong>ตัวอย่าง 1.3  </strong></span>ในการทดลองเลี้ยงยีสต์ในขวดทดลองที่มีอาหารเลี้ยงยีสต์ในปริมาณที่เหมาะสม ผู้ทำการทดลองสนใจที่จะประมาณค่าของยีสต์โดยอาศัยแบบจำลองการเปลี่ยนแปลงของประชากรที่อธิบายด้วยสมการ <a href="index.html#eq:population-growth-7">(1.7)</a> กำหนดให้</p>
+<ul>
+<li><p>ภายใต้สภาวะของการทดลองที่เหมาะสม ยีสต์จะแบ่งตัวทุกๆ 90 นาที</p></li>
+<li><p>ยีสต์มีครึ่งชีวิตเท่ากับ 1 สัปดาห์</p></li>
+</ul>
+<p>จากข้อมูลดังกล่าว จงแสดงวิธีทำเพื่อหาคำตอบจากคำถามต่อไปนี้</p>
+<ol style="list-style-type: decimal">
+<li><p>จงประมาณค่าของอัตราการเกิด <span class="math inline">\(b\)</span> (1/ชั่วโมง) และอัตราการตาย <span class="math inline">\(m\)</span> (1/ชั่วโมง)</p></li>
+<li><p>เขียนแบบจำลองทางคณิตศาสตร์โดยใช้ค่า <span class="math inline">\(b\)</span> และ <span class="math inline">\(m\)</span> ที่ประมาณค่าได้ (สมการ <a href="index.html#eq:population-growth-7">(1.7)</a>)</p></li>
+<li><p>ใช้เครื่องมือที่นักศึกษามีอยู่ในการวาดกราฟแสดงความสัมพันธ์ของจำนวนยีสต์ที่เวลาต่างๆ</p></li>
+<li><p>เปรียบเทียบผลลัพธ์ที่ได้กับรูปภาพแสดงการเปลี่ยนแปลงของยีสต์จากการทดลองในห้องปฏิการ ตามรูปที่ <a href="index.html#fig:fig-yeast-cells">1.6</a> (รูปภาพอ้างอิงจาก <a href="https://homework.study.com/explanation/a-graph-of-a-population-of-yeast-cells-in-a-new-laboratory-culture-as-a-function-of-time-is-shown-a-describe-how-the-rate-of-population-increase-varies-b-when-is-this-rate-highest-c-on-what-intervals-is-the-population-function-concave-upward-or-d.html" class="uri">https://homework.study.com/</a>)</p></li>
+</ol>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig-yeast-cells"></span>
+<img src="images/fig-yeast-cells.png" alt="กราฟการเจริญเติบโตของเซลล์ยีสต์" width="50%" />
+<p class="caption">
+Figure 1.6: กราฟการเจริญเติบโตของเซลล์ยีสต์
+</p>
+</div>
+<div class="example">
+<p><span id="exm:exm4" class="example"><strong>ตัวอย่าง 1.4  </strong></span>จงใช้อินเทอร์เน็ตเพื่อค้นหาตัวอย่างแบบจำลองทางคณิตศาสตร์ที่อธิบายโดยสมการเชิงอนุพันธ์หรือระบบสมการเชิงอนุพันธ์ ข้อมูลที่ต้องการประกอบด้วย</p>
+<ol style="list-style-type: decimal">
+<li><p>ค้นหาหน้าเว็บที่ให้ข้อมูลเกี่ยวกับแบบจำลองทางคณิตศาสตร์ในปัญหาที่นักศึกษาสนใจ</p></li>
+<li><p>จดบันทึก URL ของหน้าเว็บ</p></li>
+<li><p>เขียนสรุปสั้นๆ ว่าโมเดลนี้ใช้เพื่ออะไร</p></li>
+</ol>
+</div>
+<p>โดยสรุป แคลคูลัสและสมการเชิงอนุพันธ์เป็นเครื่องมือสำคัญในการทำความเข้าใจว่าสิ่งต่างๆ เปลี่ยนแปลงไปอย่างไรและ แคลคูลัสช่วยให้เราวิเคราะห์อัตราการเปลี่ยนแปลงและพื้นที่ใต้เส้นโค้ง ในขณะที่สมการเชิงอนุพันธ์ช่วยให้เราสร้างแบบจำลองระบบที่ซับซ้อนในสาขาต่างๆ เช่น ฟิสิกส์ วิศวกรรม เศรษฐศาสตร์ และชีววิทยา แนวคิดทางคณิตศาสตร์เหล่านี้มีความสำคัญต่อการแก้ปัญหาในโลกแห่งความเป็นจริง เมื่อโลกของเราก้าวหน้ามากขึ้น ความสำคัญของแคลคูลัสและสมการเชิงอนุพันธ์ก็จะเพิ่มขึ้นอย่างต่อเนื่อง ซึ่งสนับสนุนความก้าวหน้าทางวิทยาศาสตร์และเทคโนโลยี</p>
 
 </div>
             </section>
@@ -110,7 +276,6 @@
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -129,6 +294,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -137,7 +303,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/master/index.Rmd",
+"link": "https://github.com/pairote-sat/SCMA104/edit/main/index.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -145,10 +311,14 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/master/index.Rmd",
+"link": "https://github.com/pairote-sat/SCMA104/blob/main/index.Rmd",
 "text": null
 },
-"download": null,
+"download": ["SCMA104bookdownproj.pdf", "SCMA104bookdownproj.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -156,6 +326,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
