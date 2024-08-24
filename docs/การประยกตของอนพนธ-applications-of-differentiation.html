@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>บทที่ 4 การประยุกต์ของอนุพันธ์ (Applications of Differentiation) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</title>
+  <meta name="description" content="บทที่ 4 การประยุกต์ของอนุพันธ์ (Applications of Differentiation) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="บทที่ 4 การประยุกต์ของอนุพันธ์ (Applications of Differentiation) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="บทที่ 4 การประยุกต์ของอนุพันธ์ (Applications of Differentiation) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  
+  
+  
+
+<meta name="author" content="Pairote Satiracoo" />
+
+
+<meta name="date" content="2024-08-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="อนพนธ-derivatives.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SCMA104</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> หลักการและความสำคัญของแคลคูลัสและระบบสมการเชิงอนุพันธ์สามัญ</a></li>
+<li class="chapter" data-level="2" data-path="ลมต-limits.html"><a href="ลมต-limits.html"><i class="fa fa-check"></i><b>2</b> ลิมิต (Limits)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ลมต-limits.html"><a href="ลมต-limits.html#ความตอเนอง-continuity"><i class="fa fa-check"></i><b>2.1</b> ความต่อเนื่อง (Continuity)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html"><i class="fa fa-check"></i><b>3</b> อนุพันธ์ (Derivatives)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธ-derivatives-1"><i class="fa fa-check"></i><b>3.1</b> อนุพันธ์ (Derivatives)</a></li>
+<li class="chapter" data-level="3.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#การคำนวณหาอนพนธ"><i class="fa fa-check"></i><b>3.2</b> การคำนวณหาอนุพันธ์</a></li>
+<li class="chapter" data-level="3.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#สตรสำหรบหาอนพนธ"><i class="fa fa-check"></i><b>3.3</b> สูตรสำหรับหาอนุพันธ์</a></li>
+<li class="chapter" data-level="3.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธอนดบสง-high-order-derivatives"><i class="fa fa-check"></i><b>3.4</b> อนุพันธ์อันดับสูง (High Order Derivatives)</a></li>
+<li class="chapter" data-level="3.5" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#การตความอนพนธ-interpretation-of-derivatives"><i class="fa fa-check"></i><b>3.5</b> การตีความอนุพันธ์ (Interpretation of Derivatives)</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงความชน-derivatives-as-slopes"><i class="fa fa-check"></i><b>3.5.1</b> อนุพันธ์ในเชิงความชัน (Derivatives as Slopes)</a></li>
+<li class="chapter" data-level="3.5.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงอตราเรว-derivatives-as-speeds"><i class="fa fa-check"></i><b>3.5.2</b> อนุพันธ์ในเชิงอัตราเร็ว (Derivatives as Speeds)</a></li>
+<li class="chapter" data-level="3.5.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงอตราการเปลยนแปลง-derivatives-as-rates-of-change"><i class="fa fa-check"></i><b>3.5.3</b> อนุพันธ์ในเชิงอัตราการเปลี่ยนแปลง (Derivatives as Rates of Change)</a></li>
+<li class="chapter" data-level="3.5.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-exercises"><i class="fa fa-check"></i><b>3.5.4</b> แบบฝึกหัด (Exercises)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#กฎลกโซ-the-chain-rule"><i class="fa fa-check"></i><b>3.6</b> กฎลูกโซ่ (The Chain Rule)</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด"><i class="fa fa-check"></i><b>3.6.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนอนเวอรส-derivatives-of-inverse-functions"><i class="fa fa-check"></i><b>3.7</b> อนุพันธ์ของฟังก์ชันอินเวอร์ส (Derivatives of Inverse Functions)</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-1"><i class="fa fa-check"></i><b>3.7.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#differentials-implicit-differentiation-and-related-rates"><i class="fa fa-check"></i><b>3.8</b> Differentials, Implicit Differentiation and Related Rates</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#differentials"><i class="fa fa-check"></i><b>3.8.1</b> Differentials</a></li>
+<li class="chapter" data-level="3.8.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#implicit-differentiation"><i class="fa fa-check"></i><b>3.8.2</b> Implicit Differentiation</a></li>
+<li class="chapter" data-level="3.8.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#related-rates"><i class="fa fa-check"></i><b>3.8.3</b> Related Rates</a></li>
+<li class="chapter" data-level="3.8.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-2"><i class="fa fa-check"></i><b>3.8.4</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนตรโกณมตและอนเวอรสของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9</b> อนุพันธ์ของฟังก์ชันตรีโกณมิติและอินเวอร์สของฟังก์ชันตรีโกณมิติ</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9.1</b> อนุพันธ์ของฟังก์ชันตรีโกณมิติ</a></li>
+<li class="chapter" data-level="3.9.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนอนเวอรสของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9.2</b> อนุพันธ์ของฟังก์ชันอินเวอร์สของฟังก์ชันตรีโกณมิติ</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html"><i class="fa fa-check"></i><b>4</b> การประยุกต์ของอนุพันธ์ (Applications of Differentiation)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#applications-of-derivatives-related-to-students-discipline"><i class="fa fa-check"></i><b>4.1</b> Applications of derivatives related to students discipline</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-3"><i class="fa fa-check"></i><b>4.1.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#sec-sketch"><i class="fa fa-check"></i><b>4.2</b> Sketching the graph of a function from the derivative</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-4"><i class="fa fa-check"></i><b>4.2.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การประยกตของ-monotonicity-และ-concavity"><i class="fa fa-check"></i><b>4.3</b> การประยุกต์ของ Monotonicity และ Concavity</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-5"><i class="fa fa-check"></i><b>4.3.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาคาเหมาะทสด-optimization"><i class="fa fa-check"></i><b>4.4</b> การหาค่าเหมาะที่สุด (Optimization)</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-6"><i class="fa fa-check"></i><b>4.4.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="การประยกตของอนพนธ-applications-of-differentiation" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">บทที่ 4</span> การประยุกต์ของอนุพันธ์ (Applications of Differentiation)<a href="การประยกตของอนพนธ-applications-of-differentiation.html#การประยกตของอนพนธ-applications-of-differentiation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="applications-of-derivatives-related-to-students-discipline" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Applications of derivatives related to students discipline<a href="การประยกตของอนพนธ-applications-of-differentiation.html#applications-of-derivatives-related-to-students-discipline" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>จากบทเรียนก่อนหน้านี้ เราทราบว่าถ้าตัวแปร <span class="math inline">\(y\)</span> สามารถเขียนอธิบายได้ด้วยฟังก์ชันๆ หนึ่ง
+ที่ขึ้นกับตัวแปร <span class="math inline">\(x\)</span> นั่นคือ <span class="math inline">\(f(x)\)</span> เราจะสามารถวาดกราฟของ <span class="math inline">\(y\)</span> หรือฟังก์ชัน <span class="math inline">\(f(x)\)</span> ได้
+และถ้าเราทราบว่า จุด <span class="math inline">\(P(x_0,y_0)\)</span> และจุด <span class="math inline">\(Q(x_1,y_1)\)</span> ต่างอยู่บนกราฟของ <span class="math inline">\(y\)</span>
+แสดงว่า <span class="math inline">\(y_0=f(x_0)\)</span> และ <span class="math inline">\(y_1=f(x_1)\)</span> นั่นเอง ความชันของเส้นตรงที่ลากผ่านจุด <span class="math inline">\(P\)</span>
+และจุด <span class="math inline">\(Q\)</span> มักใช้ <span class="math inline">\(m\)</span> เป็นสัญลักษณ์ มีสูตรการหาดังนี้
+<span class="math display">\[m=\frac{\triangle y}{\triangle x}=\frac{y_1-y_0}{ x_1-x_0}=\frac{f(x_1)-f(x_0)}{ x_1-x_0}=\frac{y_0-y_1}{ x_0-x_1}\]</span>
+ความชันของเส้นตรงที่กล่าวมาแล้วนี้ มีชื่อเรียกอีกชื่อหนึ่งว่า อัตราการเปลี่ยนแปลงเฉลี่ยของ
+<span class="math inline">\(f(x)\)</span> ตั้งแต่ <span class="math inline">\(x=x_0\)</span> จนถึง <span class="math inline">\(x=x_1\)</span> และ
+<span class="math display">\[\lim_{x_1 \rightarrow x_0} \frac{f(x_1)-f(x_0)}{ x_1-x_0} =f&#39;(x_0)\]</span>
+คืออัตราการเปลี่ยนแปลงของ <span class="math inline">\(f(x)\)</span> ณ <span class="math inline">\(x=x_0\)</span> หรือการหาอนุพันธ์ของฟังก์ชัน <span class="math inline">\(f(x)\)</span>
+เทียบกับตัวแปร <span class="math inline">\(x\)</span> เมื่อ <span class="math inline">\(x\)</span> มีค่าเท่ากับ <span class="math inline">\(x_0\)</span> นั่นเอง</p>
+<p>หลักการหาอนุพันธ์สามารถนำไปประยุกต์ใช้ได้ในหลากหลายสาขาวิชาชีพ ไม่ว่าจะเป็นธุรกิจ
+เศรษฐศาสตร์ วิศวกรรมศาสตร์ ฟิสิกส์ เคมี หรือแม้กระทั่งชีววิทยา สำหรับบทนี้
+ผู้เขียนจะขอกล่าวถึง การนำแนวคิดทางคณิตศาสตร์นี้ไปประยุกต์ใช้กับปัญหาทางวิทยาศาสตร์ชีวภาพ
+เพื่อให้สอดคล้องกับความสนใจของผู้เรียน</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-50" class="example"><strong>ตัวอย่าง 4.1  </strong></span>AIDS ย่อมาจาก acquired immunodeficiency syndrome
+เป็นโรคติดต่อทางเพศสัมพันธ์และการให้เลือด ซึ่งพบการแพร่ระบาดมาตั้งแต่ปี พ.ศ. 2523
+โดยผู้ป่วยที่เป็นโรค AIDS จะพบเชื้อไวรัส HIV ใน antibodies ซึ่งไวรัส HIV
+นี้มีระยะฟักตัวตั้งแต่ไม่กี่เดือน จนกระทั่งนานนับปี นักวิจัยคนหนึ่งนำเชื้อไวรัส HIV
+มาเพาะเลี้ยงในจานเพาะเชื้อ พบว่า ขนาดของประชากรไวรัส ณ เวลา <span class="math inline">\(t\)</span> , <span class="math inline">\(N(t)\)</span>
+สอดคล้องกับสมการ <span class="math inline">\(N(t)=1000+20t+t^2\)</span> อยากทราบว่าไวรัสชุดนี้มีอัตราการเปลี่ยนแปลง ณ
+<span class="math inline">\(t\)</span> ใดๆ เป็นอย่างไร</p>
+</div>
+<p>กำหนดให้ <span class="math inline">\(t\)</span> แทน เวลา <span class="math inline">\(N(t)\)</span> แทน ขนาดของประชากรไวรัส ณ เวลา <span class="math inline">\(t\)</span>
+จากการทดลองพบว่า ขนาดของประชากรไวรัส ณ เวลา <span class="math inline">\(t\)</span> ใดๆ สอดคล้องกับสมการ
+<span class="math display">\[N(t)=1000+20t+t^2\]</span> ดังนั้น อัตราการเปลี่ยนแปลงของขนาดของประชากรไวรัส ณ เวลา
+<span class="math inline">\(t\)</span> ใดๆ คือ <span class="math display">\[\frac{dN}{dt}=20+2t\]</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-51" class="example"><strong>ตัวอย่าง 4.2  </strong></span>จากการสำรวจพบว่า จำนวนผู้ป่วยด้วยโรค AIDS, <span class="math inline">\(P(t)\)</span> มีความสัมพันธ์กับสมการ
+<span class="math display">\[P(t)=100t^2-2t^3\]</span> เมื่อ <span class="math inline">\(t\)</span> เป็นเวลาที่ผ่านไปนับจากวันนี้ มีหน่วยเป็นวัน
+อยากทราบว่าเมื่อ 20 วันผ่านไป จะมีผู้ป่วยด้วยโรคนี้กี่คน
+และมีอัตราการเพิ่มจำนวนผู้ป่วยเป็นเท่าไหร่</p>
+</div>
+<p>กำหนดให้ <span class="math inline">\(t\)</span> แทน เวลา มีหน่วยเป็นวัน <span class="math inline">\(P(t)\)</span> แทน จำนวนผู้ป่วยด้วยโรค AIDS
+มีหน่วยเป็นคน จากการสำรวจพบว่า <span class="math display">\[P(t)=100t^2-2t^3\]</span> เมื่อ 20 วันผ่านไป แสดงว่า
+<span class="math inline">\(t=20\)</span> จะได้ว่า <span class="math inline">\(P(20)=100(20)^2-2(20)^3=24,000\)</span> ดังนั้น เมื่อ 20 วันผ่านไป
+จะมีผู้ป่วยโรค AIDS 24,000 คน อัตราการเพิ่มจำนวนผู้ป่วยโรค AIDS ณ เวลา <span class="math inline">\(t\)</span> ใดๆ
+หาได้ดังนี้ <span class="math display">\[\frac{dP}{dt}=200t-6t^2\]</span> ดังนั้น เมื่อ 20 วันผ่านไป
+อัตราการเพิ่มจำนวนผู้ป่วยจะมีค่าเท่ากับ <span class="math inline">\(200(20)-6(20)^2\)</span> หรือ <span class="math inline">\(1,600\)</span> คนต่อวัน</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-52" class="example"><strong>ตัวอย่าง 4.3  </strong></span>จากการศึกษาทางสิ่งแวดล้อมระบุว่า <span class="math inline">\(Q(t)\)</span> ระดับ carbon monoxide (CO) เฉลี่ยในอากาศ
+(หน่วยเป็น ppm) จะมีค่าเป็นเท่าไร <span class="math display">\[Q(t)=0.05t^2+0.1t+3.4\]</span> เมื่อ <span class="math inline">\(t\)</span>
+เป็นเวลาที่นับจากนี้เป็นต้นไป มีหน่วยเป็นปี อยากทราบว่า ระดับ CO
+เฉลี่ยในอากาศจะเปลี่ยนแปลงไปอย่างไร ในอีก 2 ปี ข้างหน้า</p>
+</div>
+<p>กำหนดให้ <span class="math inline">\(t\)</span> เป็นเวลาที่นับจากวันนี้ มีหน่วยเป็นปี <span class="math inline">\(Q(t)\)</span> เป็นระดับ CO
+เฉลี่ยในอากาศมีหน่วยเป็น ppm จากการศึกษาทางสิ่งแวดล้อมระบุว่า
+<span class="math display">\[Q(t)=0.05t^2+0.1t+3.4\]</span> อัตราการเปลี่ยนแปลงระดับ CO เฉลี่ยในอากาศ ณ <span class="math inline">\(t\)</span> ใดๆ
+คือ <span class="math display">\[\frac{dQ}{dt}=0.1t+0.1\]</span> ในอีก 2 ปีข้างหน้า <span class="math inline">\(t=2\)</span>
+<span class="math display">\[\frac{dQ}{dt}=0.1(2)+0.1=0.3&gt;0\]</span> ระดับ CO เฉลี่ยในอากาศจะเพิ่มขึ้น (เพราะ
+<span class="math inline">\(\displaystyle\frac{dQ}{dt}&gt;0\)</span>) ด้วยอัตราเร็ว 0.3 ppm ต่อปี</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-53" class="example"><strong>ตัวอย่าง 4.4  </strong></span>Poiseuille’s law กล่าวว่า ความเร็วของเลือด (หน่วย คือ เซนติเมตรต่อวินาที)
+ที่อยู่ห่างจากจุดกึ่งกลางของหลอดเลือด <span class="math inline">\(r\)</span> เซนติเมตร มีสูตรดังนี้ <span class="math inline">\(S(r)=C(R^2-r^2)\)</span> เมื่อ
+<span class="math inline">\(C\)</span> เป็นค่าบวกใดๆ และ <span class="math inline">\(R\)</span> เป็นรัศมีของหลอดเลือด อยากทราบว่า
+ความเร็วของเลือดจะเปลี่ยนแปลงเป็นอย่างไร
+เมื่อเลือดอยู่บริเวณกึ่งกลางระหว่างจุดกึ่งกลางและผนังของหลอดเลือด</p>
+</div>
+<figure>
+</figure>
+<p>กำหนดให้ <span class="math inline">\(r\)</span> เป็นระยะห่างจากจุดกึ่งกลางของหลอดเลือด (หน่วยเป็นเซนติเมตร) <span class="math inline">\(S(r)\)</span>
+เป็นความเร็วของเลือด ณ <span class="math inline">\(r\)</span> ใดๆ (หน่วยเป็นเซนติเมตรต่อวินาที) จาก Poiseuille’s law
+<span class="math display">\[S(r)=C(R^2-r^2)\]</span> อัตราการเปลี่ยนแปลงความเร็วของเลือด ณ <span class="math inline">\(r\)</span> ใดๆ คือ
+<span class="math display">\[\frac{dS}{dr}=-2Cr\]</span>
+เลือดที่อยู่บริเวณกึ่งกลางระหว่างจุดกึ่งกลางและผนังของหลอดเลือดหมายถึง <span class="math inline">\(r=\frac{R}{2}\)</span>
+ดังนั้น
+<span class="math display">\[\frac{ds}{dr}\bigg{|}_{r=R/2} =  - CR &lt; 0 \text{ เพราะว่า } C&gt;0, R&gt;0\]</span>
+แสดงว่าความเร็วของเลือดจะลดลง (เพราะ <span class="math inline">\(\displaystyle\frac{dS}{dr}&lt;0\)</span>)
+ด้วยอัตรา <span class="math inline">\(CR\)</span> (cm/s)/cm</p>
+<div id="แบบฝกหด-3" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> แบบฝึกหัด<a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>ผลการทดลองแสดงให้เห็นว่า ความเข้มข้นของปริมาณ adrenaline ที่ฉีดเข้าไปในร่างกาย,
+<span class="math inline">\(x\)</span>, มีความสัมพันธ์กับการตอบสนองของกล้ามเนื้อ, <span class="math inline">\(y\)</span>, ด้วยสมการ
+<span class="math inline">\(y=\frac{x}{a+bx}\)</span> เมื่อ <span class="math inline">\(a\)</span> และ <span class="math inline">\(b\)</span> เป็นค่าคงตัว
+จงหาอัตราการเปลี่ยนแปลงการตอบสนองของกล้ามเนื้อ เมื่อเทียบกับความเข้มข้นของปริมาณ
+adrenaline ที่ฉีดเข้าไปในร่างกาย</p></li>
+<li><p>กำหนดให้ <span class="math inline">\(\displaystyle P(t)=\frac{1000t}{t+10}\)</span>
+แสดงถึงขนาดของประชากรแบคทีเรีย เมื่อ <span class="math inline">\(t\)</span> เป็นเวลา
+จงหาอัตราการเจริญเติบโตของประชากร</p></li>
+<li><p>Schuty - Borisoff laws กล่าวถึง ปริมาณ substrate, <span class="math inline">\(y\)</span>,
+ที่ถูกเปลี่ยนรูปด้วยเอนไซม์ ในรูปของฟังก์ชันที่ขึ้นกับเวลา <span class="math inline">\(t\)</span> ดังนี้ <span class="math display">\[y=k\sqrt{cat}\]</span>
+เมื่อ <span class="math inline">\(k\)</span>, <span class="math inline">\(a\)</span>, <span class="math inline">\(c\)</span> เป็นค่าคงตัว จงหาอัตราการเปลี่ยนแปลงปริมาณ substrate
+ที่ถูกเปลี่ยนรูปด้วยเอนไซม์ ณ เวลา <span class="math inline">\(t\)</span> ใดๆ</p></li>
+</ol>
+</div>
+</div>
+<div id="sec-sketch" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Sketching the graph of a function from the derivative<a href="การประยกตของอนพนธ-applications-of-differentiation.html#sec-sketch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>ในหัวข้อนี้เราใช้ประโยชน์จากเรื่อง derivative ในการวาดกราฟของฟังก์ชัน
+เมื่อนึกถึงกราฟของฟังก์ชัน เราสนใจลักษณะที่สำคัญ เช่นช่วงใดที่กราฟเพิ่ม ช่วงใดที่กราฟลด
+ค่าสูงสุดและค่าต่ำสุดของกราฟอยู่ที่ใด กราฟมีลักษณะคว่ำในช่วงใด หรือมีลักษณะหงายในช่วงใด
+เป็นต้น</p>
+<p>แนวคิดแรกคือเรื่องของการเพิ่มและลดของฟังก์ชัน เรามารู้จักนิยามก่อน</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-54" class="definition"><strong>นิยาม 4.1  </strong></span>ให้ <span class="math inline">\(f\)</span> เป็นฟังก์ชันนิยามบนช่วง <span class="math inline">\(I\)</span> ให้ <span class="math inline">\(x_1\)</span> และ <span class="math inline">\(x_2\)</span> เป็น สมาชิกในช่วง <span class="math inline">\(I\)</span></p>
+<ul>
+<li><p><span class="math inline">\(f\)</span> เป็นฟังก์ชันเพิ่มบนช่วง <span class="math inline">\(I\)</span> ก็ต่อเมื่อ ถ้า <span class="math inline">\(x_1 &lt; x_2\)</span> แล้ว <span class="math inline">\(f(x_1) &lt; f(x_2)\)</span></p></li>
+<li><p><span class="math inline">\(f\)</span> เป็นฟังก์ชันลดบนช่วง <span class="math inline">\(I\)</span> ก็ต่อเมื่อ ถ้า <span class="math inline">\(x_1 &lt; x_2\)</span> แล้ว <span class="math inline">\(f(x_1) &gt; f(x_2)\)</span></p></li>
+<li><p><span class="math inline">\(f\)</span> เป็นฟังก์ชันคงตัวบนช่วง <span class="math inline">\(I\)</span> ก็ต่อเมื่อ สำหรับค่า <span class="math inline">\(x_1\)</span> และ <span class="math inline">\(x_2\)</span> ใด ๆ แล้ว
+<span class="math inline">\(f(x_1) = f(x_2)\)</span></p></li>
+</ul>
+</div>
+<p>ประโยชน์ของ derivative ที่ใช้ในการตรวจสอบการเพิ่มและลดของฟังก์ชัน มาจาก ทฤษฏีบท :</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-55" class="theorem"><strong>ทฤษฎี 4.1  </strong></span>ให้ <span class="math inline">\(f\)</span> เป็นฟังก์ชันต่อเนื่องบนช่วงปิด <span class="math inline">\([a,b]\)</span> และหา derivative ได้ บนช่วงเปิด
+<span class="math inline">\((a,b)\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p>ถ้า <span class="math inline">\(f&#39;(x) &gt; 0\)</span> สำหรับทุก ๆ <span class="math inline">\(x \in (a,b)\)</span> แล้ว <span class="math inline">\(f\)</span> เป็น ฟังก์ชันเพิ่มบนช่วง
+<span class="math inline">\([a,b]\)</span></p></li>
+<li><p>ถ้า <span class="math inline">\(f&#39;(x) &lt; 0\)</span> สำหรับทุก ๆ <span class="math inline">\(x \in (a,b)\)</span> แล้ว <span class="math inline">\(f\)</span> เป็น ฟังก์ชันลดบนช่วง
+<span class="math inline">\([a,b]\)</span></p></li>
+<li><p>ถ้า <span class="math inline">\(f&#39;(x) = 0\)</span> สำหรับทุก ๆ <span class="math inline">\(x \in (a,b)\)</span> แล้ว <span class="math inline">\(f\)</span> เป็น ฟังก์ชันคงตัวบนช่วง
+<span class="math inline">\([a,b]\)</span></p></li>
+</ol>
+</div>
+<p>ทฤษฏีบทนี้สามารถขยายผลจากช่วง <span class="math inline">\([a,b]\)</span> ไปได้ถึงช่วงในรูป <span class="math inline">\([a,\infty)\)</span>,
+<span class="math inline">\((-\infty,b]\)</span> และ <span class="math inline">\((-\infty,\infty)\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-56" class="example"><strong>ตัวอย่าง 4.5  </strong></span>พิจารณาฟังก์ชัน <span class="math display">\[f(x) = x^2-3x+2\]</span> เราหา derivative ของฟังก์ชัน ได้ว่า
+<span class="math inline">\(f&#39;(x) = 2x-3\)</span> ซึ่งบอกเราว่า <span class="math display">\[\begin{equation}   \begin{aligned}
+    f&#39;(x) &amp;&lt; 0 \text{ สำหรับ $x &lt; 3/2$} \\
+    f&#39;(x) &amp;&gt; 0 \text{ สำหรับ $x &gt; 3/2$}
+  \end{aligned} \end{equation}\]</span> เนื่องจาก <span class="math inline">\(f\)</span> เป็นฟังก์ชันต่อเนื่องที่ <span class="math inline">\(x=3/2\)</span> เราจึงบอกได้ว่า
+<span class="math display">\[\begin{equation}   \begin{aligned}
+    \text{ $f$ เป็นฟังก์ชันลดบนช่วง $(-\infty,3/2]$} \\
+    \text{ $f$ เป็นฟังก์ชันเพิ่มบนช่วง $[3/2,\infty)$}
+  \end{aligned} \end{equation}\]</span></p>
+</div>
+<p>แนวคิดต่อไป เป็นเรื่องของลักษณะหงายหรือคว่ำของกราฟของฟังก์ชัน
+ถ้ากราฟของฟังก์ชันมีลักษณะหงาย เราเรียกว่าฟังก์ชัน concave up
+ในขณะที่ถ้ากราฟของฟังก์ชันมีลักษณะคว่ำ เราเรียกว่า ฟังก์ชัน concave down นิยามที่ชัดเจนของ
+concavity ของฟังก์ชันเป็นดังนี้</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-57" class="definition"><strong>นิยาม 4.2  </strong></span>ให้ <span class="math inline">\(f\)</span> เป็นฟังก์ชันซึ่งหา derivative ได้บนช่วงเปิด <span class="math inline">\(I\)</span></p>
+<ul>
+<li><p><span class="math inline">\(f\)</span> concave up บนช่วง <span class="math inline">\(I\)</span> ถ้า <span class="math inline">\(f&#39;\)</span> เป็นฟังก์ชันเพิ่มบนช่วง <span class="math inline">\(I\)</span></p></li>
+<li><p><span class="math inline">\(f\)</span> concave down บนช่วง <span class="math inline">\(I\)</span> ถ้า <span class="math inline">\(f&#39;\)</span> เป็นฟังก์ชันลดบนช่วง <span class="math inline">\(I\)</span></p></li>
+</ul>
+</div>
+<p>ลักษณะ concavity ของฟังก์ชัน สามารถตรวจสอบโดยใช้ derivative ดังนี้</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-58" class="theorem"><strong>ทฤษฎี 4.2  </strong></span>ให้ <span class="math inline">\(f\)</span> เป็นฟังก์ชันซึ่งหา derivative อันดับสองได้บนช่วง <span class="math inline">\(I\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p>ถ้า <span class="math inline">\(f&#39;&#39;(x) &gt; 0\)</span> บนช่วง <span class="math inline">\(I\)</span> แล้ว <span class="math inline">\(f\)</span> concave up บนช่วง <span class="math inline">\(I\)</span></p></li>
+<li><p>ถ้า <span class="math inline">\(f&#39;&#39;(x) &lt; 0\)</span> บนช่วง <span class="math inline">\(I\)</span> แล้ว <span class="math inline">\(f\)</span> concave down บนช่วง <span class="math inline">\(I\)</span></p></li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-59" class="example"><strong>ตัวอย่าง 4.6  </strong></span>พิจารณาฟังก์ชัน <span class="math inline">\(f(x) = x^2-3x+2\)</span> ถ้าเราคำนวณ derivative อับดับสอง <span class="math inline">\(f&#39;&#39;(x) = 2\)</span>
+ซึ่งจากทฤษฏีบท เราบอกได้ว่า <span class="math inline">\(f\)</span> concave up บนช่วง <span class="math inline">\((-\infty,\infty)\)</span></p>
+</div>
+<p>การเปลี่ยนทิศทางของ concavity ของฟังก์ชัน ก็เป็นอีกที่หนึ่งของกราฟของ ฟังก์ชัน
+ซึ่งมีลักษณะเด่น ที่จุดนี้กราฟอาจมีการเปลี่ยนจากลักษณะหงาย เป็นคว่ำ
+หรือจากลักษณะคว่ำเป็นหงาย</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-60" class="definition"><strong>นิยาม 4.3  </strong></span>ถ้า <span class="math inline">\(f\)</span> เป็นฟังก์ชันต่อเนื่องบนช่วงเปิด <span class="math inline">\(I\)</span> ซึ่งมี <span class="math inline">\(x_0\)</span> เป็น สมาชิก และ <span class="math inline">\(f\)</span>
+เปลี่ยนทิศทางของ concavity ที่จุดนี้ แล้วเรากล่าว ว่า <span class="math inline">\(f\)</span> มี inflection point ที่
+<span class="math inline">\(x_0\)</span> และเราเรียก <span class="math inline">\((x_0,f(x_0))\)</span> ว่า inflection point ของ <span class="math inline">\(f\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-61" class="example"><strong>ตัวอย่าง 4.7  </strong></span>ฟังก์ชัน <span class="math inline">\(f(x) = x^3\)</span> มี <span class="math display">\[f&#39;(x) = 3x^2, \quad f&#39;&#39;(x) = 6x\]</span> สังเกตว่า</p>
+<ul>
+<li><p>เมื่อ <span class="math inline">\(x&lt;0\)</span>, <span class="math inline">\(f&#39;&#39;(x) &lt; 0\)</span></p></li>
+<li><p>เมื่อ <span class="math inline">\(x&gt;0\)</span>, <span class="math inline">\(f&#39;&#39;(x) &gt;0\)</span></p></li>
+</ul>
+<p>ดังนั้น ที่จุด <span class="math inline">\(x=0\)</span>, <span class="math inline">\(f\)</span> มีการเปลี่ยนทิศทางของ concavity จาก concave down เมื่อ
+<span class="math inline">\(x&lt;0\)</span> เป็น concave up เมื่อ <span class="math inline">\(x&gt;0\)</span> เพราะฉะนั้น inflection point จึงเป็น <span class="math inline">\((0,0)\)</span>
+สังเกตอีก ว่า <span class="math inline">\(f\)</span> เป็นฟังก์ชันเพิ่มตลอดช่วง <span class="math inline">\((-\infty,\infty)\)</span></p>
+</div>
+<p>ค่าสูงสุดและต่ำสุดในย่านหนึ่ง ๆ ของกราฟก็เป็นอีกลักษณะเด่น ที่เราสามารถ ตรวจสอบได้โดยใช้
+derivative ของฟังก์ชัน</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-62" class="definition"><strong>นิยาม 4.4  </strong></span></p>
+<ol style="list-style-type: decimal">
+<li><p>ฟังก์ชัน <span class="math inline">\(f\)</span> มี relative maximum ที่ <span class="math inline">\(x_0\)</span> ถ้ามีช่วงเปิดที่มี <span class="math inline">\(x_0\)</span> เป็นสมาชิก และ
+<span class="math inline">\(f(x_0) \ge f(x)\)</span> สำหรับทุก ๆ <span class="math inline">\(x\)</span> ที่เป็น สมาชิกในช่วงเปิดดังกล่าว</p></li>
+<li><p>ฟังก์ชัน <span class="math inline">\(f\)</span> มี relative minimum ที่ <span class="math inline">\(x_0\)</span> ถ้ามีช่วงเปิดที่มี <span class="math inline">\(x_0\)</span> เป็นสมาชิก และ
+<span class="math inline">\(f(x_0) \le f(x)\)</span> สำหรับทุก ๆ <span class="math inline">\(x\)</span> ที่เป็น สมาชิกในช่วงเปิดดังกล่าว</p></li>
+<li><p>ถ้า <span class="math inline">\(f\)</span> มี relative maximum หรือ relative minimum ที่ <span class="math inline">\(x_0\)</span> แล้ว เรากล่าวว่า
+<span class="math inline">\(f\)</span> มี relative extremum ที่ <span class="math inline">\(x_0\)</span></p></li>
+</ol>
+</div>
+<p>ฟังก์ชันหนึ่ง ๆ อาจมี relative maximum, relative minimum หลายที่ อาจมีที่เดียว
+หรืออาจไม่มีเลยก็ได้ ดังตัวอย่างต่อไปนี้</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-63" class="example"><strong>ตัวอย่าง 4.8  </strong></span></p>
+<ol style="list-style-type: decimal">
+<li><p>ฟังก์ชัน <span class="math inline">\(f(x) = (x-1)^2\)</span> มี relative minimum ที่ <span class="math inline">\(x=1\)</span> แต่ไม่มี relative
+maximum</p></li>
+<li><p>ฟังก์ชัน <span class="math inline">\(f(x) = x^3\)</span> ไม่มี relative extremum</p></li>
+<li><p>ฟังก์ชัน <span class="math inline">\(f(x) = \frac{1}{3}x^3 - \frac{1}{2}x^2\)</span> มี relative maximum ที่
+<span class="math inline">\(x=0\)</span> และมี relative minimum ที่ <span class="math inline">\(x=1\)</span></p></li>
+<li><p>ฟังก์ชัน <span class="math inline">\(f(x) = \sin x\)</span> มี relative maxima ที่ <span class="math inline">\(\pi/2 + 2n\pi\)</span> และมี
+relative minima ที่ <span class="math inline">\(3\pi/2 + 2n\pi\)</span> สำหรับทุก ๆ จำนวนเต็ม <span class="math inline">\(n\)</span> ใด ๆ</p></li>
+</ol>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-64" class="theorem"><strong>ทฤษฎี 4.3  </strong></span>ถ้า <span class="math inline">\(f\)</span> มี relative extremum ที่จุด <span class="math inline">\(x_0\)</span> แล้ว <span class="math inline">\(f&#39;(x_0) = 0\)</span> หรือ <span class="math inline">\(f\)</span> หา
+derivative ไม่ได้ที่ <span class="math inline">\(x_0\)</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-65" class="definition"><strong>นิยาม 4.5  </strong></span>เราเรียก <span class="math inline">\(x_0\)</span> ว่า critical point ของฟังก์ชัน <span class="math inline">\(f\)</span> ถ้า <span class="math inline">\(f&#39;(x_0) = 0\)</span> หรือ <span class="math inline">\(f\)</span> หา
+derivative ไม่ได้ที่ <span class="math inline">\(x_0\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-66" class="example"><strong>ตัวอย่าง 4.9  </strong></span>ฟังก์ชัน <span class="math inline">\(f(x) = |x^2-x|\)</span> มี critical point ที่จุด <span class="math inline">\(x=0,1\)</span> และฟังก์ชัน <span class="math inline">\(g(x) =
+x^2-x\)</span> ก็มี critical point ที่จุด <span class="math inline">\(x=0,1\)</span> เช่นกัน สังเกตว่า ฟังก์ชัน <span class="math inline">\(f\)</span> หา
+derivative ไม่ได้ที่จุด <span class="math inline">\(x=0,1\)</span> ในขณะที่ฟังก์ชัน <span class="math inline">\(g\)</span> หา derivative ได้ ที่จุดดังกล่าว</p>
+</div>
+<p>การตรวจสอบหา relative extremum โดยใช้ derivative เราใช้ทฤษฏีบทต่อไปนี้</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-67" class="theorem"><strong>ทฤษฎี 4.4  </strong></span>ให้ <span class="math inline">\(f\)</span> เป็นฟังก์ชันต่อเนื่องที่ critical point <span class="math inline">\(x_0\)</span> และถ้า ค่าของ <span class="math inline">\(f&#39;\)</span>
+เปลี่ยนเครื่องหมายที่ <span class="math inline">\(x_0\)</span> แล้ว <span class="math inline">\(f\)</span> มี relative minimum หรือ relative maximum ที่
+<span class="math inline">\(x_0\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p>ถ้า <span class="math inline">\(f&#39;\)</span> มีค่าเป็นลบสำหรับค่าทางซ้ายของ <span class="math inline">\(x_0\)</span> และมีค่า เป็นบวกสำหรับค่าทางขวาของ
+<span class="math inline">\(x_0\)</span> แล้ว <span class="math inline">\(f\)</span> มี relative minimum ที่ <span class="math inline">\(x_0\)</span></p></li>
+<li><p>ถ้า <span class="math inline">\(f&#39;\)</span> มีค่าเป็นบวกสำหรับค่าทางซ้ายของ <span class="math inline">\(x_0\)</span> และมีค่า เป็นลบสำหรับค่าทางขวาของ
+<span class="math inline">\(x_0\)</span> แล้ว <span class="math inline">\(f\)</span> มี relative maximum ที่ <span class="math inline">\(x_0\)</span></p></li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-68" class="example"><strong>ตัวอย่าง 4.10  </strong></span>พิจารณาฟังก์ชัน <span class="math inline">\(f(x) = |x^2-x|\)</span> จงหาค่า <span class="math inline">\(x\)</span> ที่ทำให้ <span class="math inline">\(f\)</span> มี relative extrema</p>
+</div>
+<p><strong>วิธีทำ</strong> เรารู้ว่า <span class="math inline">\(x=0,1\)</span> เป็น critical point เขียนฟังก์ชัน <span class="math inline">\(f\)</span> ใหม่ว่า
+<span class="math display">\[f(x) = |x||x-1| = \begin{cases}
+    x(x-1) &amp; \text{ $x \le 0$}  \\
+    -x(x-1) &amp; \text{ $0&lt; x \le 1$} \\
+    x(x-1) &amp; \text{ $x &gt; 1$}
+    \end{cases}\]</span> นั่นคือ <span class="math display">\[f&#39;(x) = \begin{cases}
+    2x-1 &amp; \text{ $x &lt; 0$} \\
+    -2x+1 &amp; \text{ $0 &lt; x &lt; 1$} \\
+    2x-1 &amp; \text{ $x&gt; 1$}
+    \end{cases}\]</span> ดังนั้นที่จุด <span class="math inline">\(x\)</span> ใกล้ ๆ <span class="math inline">\(0\)</span> และ <span class="math inline">\(x&lt;0\)</span> เราพบว่า <span class="math inline">\(f&#39;(x) &lt; 0\)</span>
+ในขณะที่ที่จุด <span class="math inline">\(x\)</span> ใกล้ ๆ <span class="math inline">\(0\)</span> และ <span class="math inline">\(x&gt;0\)</span> เราพบว่า <span class="math inline">\(f&#39;(x) &gt; 0\)</span> เราจึงสรูปว่า <span class="math inline">\(f\)</span> มี
+relative minimum ที่ <span class="math inline">\(0\)</span> ในทำนองเดียวกัน ที่จุด <span class="math inline">\(x\)</span> ใกล้ ๆ <span class="math inline">\(1\)</span> และ <span class="math inline">\(x&lt;1\)</span> เราพบว่า
+<span class="math inline">\(f&#39;(x) &lt; 0\)</span> ในขณะที่ที่จุด <span class="math inline">\(x\)</span> ใกล้ ๆ <span class="math inline">\(1\)</span> และ <span class="math inline">\(x&gt;1\)</span> เราพบว่า <span class="math inline">\(f&#39;(x) &gt; 0\)</span>
+เราจึงสรูปได้เช่นกันว่า <span class="math inline">\(f\)</span> มี relative minimum ที่ <span class="math inline">\(1\)</span></p>
+<p>เมื่อเราพิจารณาฟังก์ชัน แล้วต้องการวาดกราฟของฟังก์ชัน เราคงจำได้ว่า มีข้อมูล
+บางประการที่เราสามารถตรวจสอบได้ก่อน เช่น <span class="math inline">\(x\)</span>-intercepts <span class="math inline">\(y\)</span>-intercepts ลักษณะ
+ของกราฟเมื่อ <span class="math inline">\(x\)</span> เข้าใกล้ค่าอนันต์ เป็นต้น ตัวอย่างต่อไปนี้ เราจะใช้ความรู้เหล่านี้
+ประกอบกับเรื่องของ derivative ในการวาดกราฟของฟังก์ชัน</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-69" class="example"><strong>ตัวอย่าง 4.11  </strong></span>จงวาดกราฟของฟังก์ชัน <span class="math display">\[y = f(x) =  x^3-3x+2\]</span></p>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<ul>
+<li><p><span class="math inline">\(x\)</span>-intercepts: ให้ <span class="math inline">\(y=0\)</span> ได้ว่า <span class="math display">\[\begin{equation}   \begin{aligned}
+    x^3-3x+2 &amp;= 0 \\
+    (x+2)(x^2-2x+1) &amp;= 0 \\
+    (x+2)(x-1)^2 &amp;= 0
+  \end{aligned} \end{equation}\]</span> ดังนั้น <span class="math inline">\(x=-2, 1\)</span></p></li>
+<li><p><span class="math inline">\(y\)</span>-intercepts: ให้ <span class="math inline">\(x=0\)</span> ได้ว่า <span class="math inline">\(y=2\)</span></p></li>
+<li><p>ลักษณะกราฟเมื่อ <span class="math inline">\(x \to \infty\)</span> และ <span class="math inline">\(x \to -\infty\)</span>: สังเกตว่า
+<span class="math display">\[\begin{equation}   \begin{aligned}
+    \lim_{x\to \infty} (x^3-2x+2) = \infty \\
+    \lim_{x\to -\infty} (x^3-2x+2) = -\infty
+  \end{aligned} \end{equation}\]</span></p></li>
+<li><p>ช่วงการเพิ่มและการลดของฟังก์ชัน เราหา derivative ของ <span class="math inline">\(f\)</span> ได้ว่า
+<span class="math display">\[\frac{dy}{dx} = 3x^2-3 = 3(x-1)(x+1)\]</span> ดังนั้น <span class="math inline">\(f\)</span> จึงเป็นฟังก์ชันเพิ่มเมื่อ
+<span class="math inline">\(x &lt; -1\)</span> เป็นฟังก์ชันลดเมื่อ <span class="math inline">\(-1 &lt; x &lt; 1\)</span> และ เป็นฟังก์ชันเพิ่มอีกครั้งเมื่อ <span class="math inline">\(x&gt;1\)</span></p></li>
+<li><p>ช่วงการ concave up และ concave down ของฟังก์ชัน <span class="math inline">\(f\)</span> เราหา derivative
+อันดับ สองของฟังก์ชัน <span class="math inline">\(f\)</span> ได้ว่า <span class="math display">\[\frac{d^2y}{dx^2} = 6x\]</span> ดังนั้น <span class="math inline">\(f\)</span> จึง
+concave up เมื่อ <span class="math inline">\(x&gt;0\)</span> และ concave down เมื่อ <span class="math inline">\(x&lt;0\)</span> ฟังก์ชัน <span class="math inline">\(f\)</span> มี
+inflection point ที่ <span class="math inline">\(0\)</span></p></li>
+</ul>
+<p>จากข้อมูลทั้งหมด เราเขียนกราฟคร่าว ๆ
+ดังรูปที่ <a href="การประยกตของอนพนธ-applications-of-differentiation.html#Fig:graph1" reference-type="eqref" reference="Fig:graph1"><span class="math display">\[Fig:graph1\]</span></a></p>
+<figure id="Fig:graph1">
+<figcaption>
+กราฟของฟังก์ชัน <span class="math inline"><em>f</em>(<em>x</em>) = <em>x</em><sup>3</sup> − 3<em>x</em> + 2</span>
+</figcaption>
+</figure>
+<div class="example">
+<p><span id="exm:unlabeled-div-70" class="example"><strong>ตัวอย่าง 4.12  </strong></span>ถ้า <span class="math inline">\(f\)</span> เป็นฟังก์ชัน และเรามีข้อมูลที่เกี่ยวกับ <span class="math inline">\(f&#39;\)</span> ดังนี้</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(f&#39;(x) &gt; 0\)</span> และ <span class="math inline">\(f&#39;\)</span> เป็นฟังก์ชันเพิ่มในช่วง <span class="math inline">\((-\infty, -1)\)</span></p></li>
+<li><p><span class="math inline">\(f&#39;(x) &gt; 0\)</span> และ <span class="math inline">\(f&#39;\)</span> เป็นฟังก์ชันลดในช่วง <span class="math inline">\((-1,1)\)</span></p></li>
+<li><p><span class="math inline">\(f&#39;(1) = 0\)</span></p></li>
+<li><p><span class="math inline">\(f&#39;(x) &lt; 0\)</span> และ <span class="math inline">\(f&#39;\)</span> เป็นฟังก์ชันลดในช่วง <span class="math inline">\((1,\infty)\)</span></p></li>
+</ol>
+<p>จงวาดกราฟที่เป็นไปได้ของฟังก์ชัน <span class="math inline">\(f\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> จากข้อมูลที่ได้มา เราสรูปว่า</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(f\)</span> เป็นฟังก์ชันเพิ่ม และ concave up ในช่วง <span class="math inline">\((-\infty,-1)\)</span></p></li>
+<li><p><span class="math inline">\(f\)</span> เป็นฟังก์ชันเพิ่ม และ concave down ในช่วง <span class="math inline">\((-1,1)\)</span></p></li>
+<li><p><span class="math inline">\(f\)</span> มี relative maximum ที่ <span class="math inline">\(x=1\)</span></p></li>
+<li><p><span class="math inline">\(f\)</span> เป็นฟังก์ชันลด และ concave down ในช่วง <span class="math inline">\((1,\infty)\)</span></p></li>
+</ol>
+<p>ตัวอย่างกราฟของฟังก์ชัน <span class="math inline">\(f\)</span>
+เช่นรูป <a href="การประยกตของอนพนธ-applications-of-differentiation.html#Fig:graph2" reference-type="eqref" reference="Fig:graph2"><span class="math display">\[Fig:graph2\]</span></a></p>
+<figure id="Fig:graph2">
+<figcaption>
+กราฟของฟังก์ชัน <span class="math inline"><em>f</em></span>
+จากข้อมูลที่กำหนด
+</figcaption>
+</figure>
+<div class="example">
+<p><span id="exm:unlabeled-div-71" class="example"><strong>ตัวอย่าง 4.13  </strong></span>พิจารณาฟังก์ชัน <span class="math display">\[f(x) = \frac{x}{x^2+1}\]</span></p>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<ul>
+<li><p><span class="math inline">\(x\)</span>-intercepts: ให้ <span class="math inline">\(y=0\)</span> ได้ว่า <span class="math display">\[\begin{equation}   \begin{aligned}
+    \frac{x}{x^2+1} &amp;= 0 \\
+    x &amp;= 0
+  \end{aligned} \end{equation}\]</span></p></li>
+<li><p><span class="math inline">\(y\)</span>-intercepts: ให้ <span class="math inline">\(x=0\)</span> ได้ว่า <span class="math inline">\(y=0\)</span></p></li>
+<li><p>ลักษณะกราฟเมื่อ <span class="math inline">\(x \to \infty\)</span> และ <span class="math inline">\(x \to -\infty\)</span>: สังเกตว่า
+<span class="math display">\[\begin{equation}   \begin{aligned}
+    \lim_{x\to \infty} \frac{x}{x^2+1} = 0 \\
+    \lim_{x\to -\infty} \frac{x}{x^2+1} = 0
+  \end{aligned} \end{equation}\]</span></p></li>
+<li><p>ช่วงการเพิ่มและการลดของฟังก์ชัน เราหา derivative ของ <span class="math inline">\(f\)</span> ได้ว่า
+<span class="math display">\[\frac{dy}{dx} = \frac{1-x^2}{(x^2+1)^2}  =\frac{(1-x)(1+x)}{(x^2+1)^2}\]</span>
+ดังนั้น <span class="math inline">\(f\)</span> จึงเป็นฟังก์ชันลดเมื่อ <span class="math inline">\(x &lt; -1\)</span> เป็นฟังก์ชันเพิ่มเมื่อ <span class="math inline">\(-1 &lt; x &lt; 1\)</span> และ
+เป็นฟังก์ชันลดอีกครั้งเมื่อ <span class="math inline">\(x&gt;1\)</span></p></li>
+<li><p>ช่วงการ concave up และ concave down ของฟังก์ชัน <span class="math inline">\(f\)</span> เราหา derivative
+อันดับ สองของฟังก์ชัน <span class="math inline">\(f\)</span> ได้ว่า
+<span class="math display">\[\frac{d^2y}{dx^2} = \frac{2x^3-6x}{(x^2+1)^3} = \frac{2x(x-\sqrt{3})(x+\sqrt{3})}{(x^2+1)^3}\]</span>
+ดังนั้น <span class="math inline">\(f\)</span> จึง concave up เมื่อ <span class="math inline">\(x&gt;\sqrt{3}\)</span> หรือเมื่อ <span class="math inline">\(-\sqrt{3}&lt;x&lt;0\)</span>
+ในขณะที่ <span class="math inline">\(f\)</span> concave down เมื่อ <span class="math inline">\(x&lt;-\sqrt{3}\)</span> หรือเมื่อ <span class="math inline">\(0&lt;x&lt;\sqrt{3}\)</span>
+ฟังก์ชัน <span class="math inline">\(f\)</span> มี inflection point ที่ <span class="math inline">\(0,\pm\sqrt{3}\)</span></p></li>
+</ul>
+<p>จากข้อมูลทั้งหมด เราเขียนกราฟคร่าว ๆ
+ดังรูป <a href="การประยกตของอนพนธ-applications-of-differentiation.html#Fig:graph3" reference-type="eqref" reference="Fig:graph3"><span class="math display">\[Fig:graph3\]</span></a></p>
+<figure id="Fig:graph3">
+<figcaption>
+กราฟของฟังก์ชัน <span class="math inline"><span class="math inline">\(f(x) =
+\frac{x}{x^2+1}\)</span></span>
+</figcaption>
+</figure>
+<div class="example">
+<p><span id="exm:unlabeled-div-72" class="example"><strong>ตัวอย่าง 4.14  </strong></span>พิจารณาฟังก์ชัน <span class="math display">\[f(x) = \ln(x^3+1)\]</span> นิยามบนช่วง <span class="math inline">\((-1,\infty)\)</span>
+จงวาดกราฟของฟังก์ชันนี้</p>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<ul>
+<li><p><span class="math inline">\(x\)</span>-intercepts: ให้ <span class="math inline">\(y=0\)</span> พบว่า <span class="math inline">\(x=0\)</span></p></li>
+<li><p><span class="math inline">\(y\)</span>-intercepts: ให้ <span class="math inline">\(x=0\)</span> พบว่า <span class="math inline">\(y=0\)</span></p></li>
+<li><p>ลักษณะกราฟเมื่อ <span class="math inline">\(x \to \infty\)</span>:
+<span class="math display">\[\lim_{x\to\infty} \ln(x^3+1) = \infty\]</span></p></li>
+<li><p>ลักษณะกราฟเมื่อ <span class="math inline">\(x\to (-1)^+\)</span>:
+<span class="math display">\[\lim_{x\to (-1)^+} \ln(x^3+1) = -\infty\]</span></p></li>
+<li><p>ช่วงการเพิ่มและการลดของฟังก์ชัน เราหา derivative ของ <span class="math inline">\(f\)</span> ได้ว่า
+<span class="math display">\[f&#39;(x) = \frac{3x^2}{x^3+1} &gt; 0\]</span> สำหรับ <span class="math inline">\(x&gt;-1\)</span> ดังนั้น <span class="math inline">\(f\)</span>
+เป็นฟังก์ชันเพิ่มตลอดโดเมน</p></li>
+<li><p>ช่วงการ concave up และ concave down ของฟังก์ชัน <span class="math inline">\(f\)</span> เราหา derivative
+อันดับ สองของฟังก์ชัน <span class="math inline">\(f\)</span> ได้ว่า
+<span class="math display">\[f&#39;&#39;(x) = \frac{-3x^4+6x}{(x^3+1)^2} = \frac{-3x(x-\sqrt[3]{2})(x^2+\sqrt[3]{2}x+\sqrt[3]{4})}{(x^3+1)^2}\]</span>
+ดังนั้น <span class="math inline">\(f\)</span> จึง concave up เมื่อ <span class="math inline">\(0&lt;x&lt;\sqrt[3]{2}\)</span> และ <span class="math inline">\(f\)</span> concave down
+เมื่อ <span class="math inline">\(x&lt;0\)</span> หรือเมื่อ <span class="math inline">\(x&gt;\sqrt[3]{2}\)</span> ฟังก์ชัน <span class="math inline">\(f\)</span> มี inflection point ที่
+<span class="math inline">\(0,\sqrt[3]{2}\)</span> ค่าของ <span class="math inline">\(\sqrt[3]{2} \approx 1.26\)</span></p></li>
+</ul>
+<p>จากข้อมูลทั้งหมด เราเขียนกราฟคร่าว ๆ
+ดังรูป <a href="การประยกตของอนพนธ-applications-of-differentiation.html#Fig:graph4" reference-type="eqref" reference="Fig:graph4"><span class="math display">\[Fig:graph4\]</span></a></p>
+<figure id="Fig:graph4">
+<figcaption>
+กราฟของฟังก์ชัน <span class="math inline"><em>f</em>(<em>x</em>) = ln (<em>x</em><sup>3</sup>+1)</span>
+บนช่วง <span class="math inline">(−1,∞)</span>
+</figcaption>
+</figure>
+<div class="example">
+<p><span id="exm:unlabeled-div-73" class="example"><strong>ตัวอย่าง 4.15  </strong></span>พิจารณาฟังก์ชัน <span class="math inline">\(f\)</span> ซึ่งนิยามบนช่วง <span class="math inline">\((-3,3)\)</span> และหา derivative อันดับสองได้ ฟังก์ชัน<br />
+<span class="math inline">\(f\)</span> มีกราฟดังรูป <a href="การประยกตของอนพนธ-applications-of-differentiation.html#Fig:graph5" reference-type="eqref" reference="Fig:graph5"><span class="math display">\[Fig:graph5\]</span></a></p>
+<figure id="Fig:graph5">
+<figcaption>
+กราฟของฟังก์ชัน <span class="math inline"><em>f</em></span>
+บนช่วง <span class="math inline">(−3,3)</span>
+</figcaption>
+</figure>
+<p>ที่จุดใดที่ฟังก์ชัน <span class="math inline">\(f&#39;\)</span> เปลี่ยนเครื่องหมาย และที่จุดใด <span class="math inline">\(f&#39;\)</span> มี relative extrema</p>
+</div>
+<p><strong>วิธีทำ</strong> จากรูป ที่จุดซึ่ง <span class="math inline">\(f&#39;\)</span> เปลี่ยนเครื่องหมายคือจุด <span class="math inline">\(x\)</span> ที่ <span class="math inline">\(f&#39;(x) = 0\)</span> ซึ่ง คือ
+<span class="math inline">\(a, c, e\)</span> และ <span class="math inline">\(j\)</span> ในขณะที่จุดซึ่ง <span class="math inline">\(f&#39;\)</span> มี relative extrema เป็นจุดซึ่ง <span class="math inline">\(f&#39;&#39;\)</span>
+เปลี่ยนเครื่องหมาย ในที่นี้คือจุดซึ่ง <span class="math inline">\(f\)</span> มี inflection point ซึ่งก็คือ <span class="math inline">\(b, d, i\)</span> และ <span class="math inline">\(k\)</span></p>
+<div id="แบบฝกหด-4" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> แบบฝึกหัด<a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>พิจารณาฟังก์ชันต่อไปนี้</p>
+<div class="multicols">
+<p>2</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\displaystyle f(x) = x^2-3x+2\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle f(x) = \frac{x^2}{x^2+1}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle f(x) = x^{4/3} - x^{1/3}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle f(x) = \ln(1+x^2)\)</span></p></li>
+</ol>
+</div>
+<p>ในแต่ละฟังก์ชัน จงหา</p>
+<div class="multicols">
+<p>2</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(x\)</span>-intercepts และ <span class="math inline">\(y\)</span>-intercepts</p></li>
+<li><p>ช่วงเปิดซึ่ง <span class="math inline">\(f\)</span> เป็นฟังก์ชันเพิ่ม</p></li>
+<li><p>ช่วงเปิดซึ่ง <span class="math inline">\(f\)</span> เป็นฟังก์ชันลด</p></li>
+<li><p>ช่วงเปิดซึ่ง <span class="math inline">\(f\)</span> เป็นฟังก์ชัน concave up</p></li>
+<li><p>ช่วงเปิดซึ่ง <span class="math inline">\(f\)</span> เป็นฟังก์ชัน concave down</p></li>
+<li><p>ค่า <span class="math inline">\(x\)</span> ที่ทำให้ <span class="math inline">\(f\)</span> มี inflection point</p></li>
+</ol>
+</div></li>
+<li><p>จงหา relative extrema ของฟังก์ชันต่อไปนี้</p>
+<div class="multicols">
+<p>2</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\displaystyle f(x) = x^3+5x-2\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle f(x) = x(x-2)^2\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle f(x) = \frac{x}{x-1}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle f(x) = |x^2-1|\)</span></p></li>
+</ol>
+</div></li>
+<li><p>จงสเก็ตกราฟของฟังก์ชัน</p>
+<div class="multicols">
+<p>2</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(f(x) = x^3-3x+3\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = -(x+1)x^2(x-1)\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = e^{1/x}\)</span></p></li>
+</ol>
+</div></li>
+<li><p>จงวาดกราฟของฟังก์ชัน <span class="math inline">\(y=f(x)\)</span> และ <span class="math inline">\(a&lt;b&lt;c\)</span> จากข้อมูลต่อไปนี้</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(f&#39;(a) = f&#39;(b) = 0\)</span></p></li>
+<li><p><span class="math display">\[\begin{equation}   \begin{aligned}
+    f&#39;(x)  \begin{cases}
+    &gt; 0 &amp;\text{สำหรับ $x&lt;a$} \\
+    &gt; 0 &amp;\text{สำหรับ $a&lt;x&lt;c$} \\
+    &lt; 0 &amp;\text{สำหรับ $x&gt;c$}
+    \end{cases}
+  \end{aligned} \end{equation}\]</span></p></li>
+<li><p><span class="math inline">\(f&#39;&#39;(a) = f&quot;&#39;(b) = 0\)</span></p></li>
+<li><p><span class="math display">\[\begin{equation}   \begin{aligned}
+    f&#39;&#39;(x) \begin{cases}
+    &lt; 0 &amp;\text{สำหรับ $x&lt;a$} \\
+    &gt; 0 &amp;\text{สำหรับ $a&lt;x&lt;b$} \\
+    &lt; 0 &amp;\text{สำหรับ $x&gt;b$}
+    \end{cases}
+  \end{aligned} \end{equation}\]</span></p></li>
+</ol></li>
+<li><p>กำหนดให้ฟังก์ชัน <span class="math inline">\(f&#39;\)</span>
+เป็นดังรูป <a href="การประยกตของอนพนธ-applications-of-differentiation.html#Fig:graph6" reference-type="eqref" reference="Fig:graph6"><span class="math display">\[Fig:graph6\]</span></a></p>
+<figure id="Fig:graph6">
+<figcaption>
+<p>กราฟของฟังก์ชัน <span class="math inline"><em>f</em>′</span></p>
+</figcaption>
+</figure>
+<p>จงตอบคำถามต่อไปนี้</p>
+<ol style="list-style-type: decimal">
+<li><p>ช่วงใดที่ <span class="math inline">\(f\)</span> เป็นฟังก์ชันเพิ่ม</p></li>
+<li><p>ฟังก์ชัน <span class="math inline">\(f\)</span> มี relative maximum ที่ใด</p></li>
+<li><p>ช่วงใดที่ <span class="math inline">\(f\)</span> concave up</p></li>
+<li><p>ฟังก์ชัน <span class="math inline">\(f\)</span> มี inflection point ที่ใด</p></li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="การประยกตของ-monotonicity-และ-concavity" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> การประยุกต์ของ Monotonicity และ Concavity<a href="การประยกตของอนพนธ-applications-of-differentiation.html#การประยกตของ-monotonicity-และ-concavity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>จากที่ได้ศึกษามาแล้ว ถ้า <span class="math inline">\(f\)</span> เป็นฟังก์ชันนิยามบนช่วงเปิด <span class="math inline">\((a,b)\)</span> และ <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>
+เป็นจุดที่อยู่ภายในช่วงดังกล่าว แล้ว</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(f\)</span> เป็นฟังก์ชันเพิ่ม ถ้า <span class="math inline">\(f(x_1)&lt;f(x_2)\)</span> เมื่อ <span class="math inline">\(x_1&lt;x_2\)</span> หรือ <span class="math inline">\(f&#39;(x)&gt;0\)</span>
+สำหรับทุกค่า <span class="math inline">\(x\)</span> ที่อยู่ในช่วง <span class="math inline">\((a,b)\)</span></p></li>
+<li><p><span class="math inline">\(f\)</span> เป็นฟังก์ชันลด ถ้า <span class="math inline">\(f(x_2)&lt;f(x_1)\)</span> เมื่อ <span class="math inline">\(x_1&lt;x_2\)</span> หรือ <span class="math inline">\(f&#39;(x)&lt;0\)</span>
+สำหรับทุกค่า <span class="math inline">\(x\)</span> ที่อยู่ในช่วง <span class="math inline">\((a,b)\)</span> นอกจากนี้แล้ว</p></li>
+<li><p><span class="math inline">\(f\)</span> มีลักษณะแบบ concave up ในช่วง <span class="math inline">\((c,d)\)</span> ถ้า <span class="math inline">\(f&#39;\)</span>
+เป็นฟังก์ชันเพิ่มในช่วงดังกล่าว หรือ <span class="math inline">\(f&#39;&#39;(x)&gt;0\)</span> สำหรับทุกค่า <span class="math inline">\(x\)</span> ที่อยู่ในช่วง <span class="math inline">\((c,d)\)</span></p></li>
+<li><p><span class="math inline">\(f\)</span> มีลักษณะแบบ concave down ในช่วง <span class="math inline">\((c,d)\)</span> ถ้า <span class="math inline">\(f&#39;\)</span>
+เป็นฟังก์ชันลดในช่วงดังกล่าว หรือ <span class="math inline">\(f&#39;&#39;(x)&lt;0\)</span> สำหรับทุกค่า <span class="math inline">\(x\)</span> ที่อยู่ในช่วง <span class="math inline">\((c,d)\)</span></p></li>
+</ol>
+<p>ซึ่งสามารถนำมาประยุกต์ใช้กับปัญหาทางวิทยาศาสตร์ชีวภาพ ดังตัวอย่างต่อไปนี้</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-74" class="example"><strong>ตัวอย่าง 4.16  </strong></span>อัตราการเจริญเติบโตของพืชขึ้นอยู่กับธาตุอาหารที่ได้รับซึ่ง Monod ได้อธิบายไว้ดังสมการ
+<span class="math display">\[f(R)=\frac{aR}{K+R}, \quad R \ge 0\]</span> โดยที่ <span class="math inline">\(f(R)\)</span> เป็นอัตราการเจริญเติบโต,
+<span class="math inline">\(R\)</span> เป็นระดับธาตุอาหาร, <span class="math inline">\(a\)</span> และ <span class="math inline">\(K\)</span> เป็นค่าบวกใดๆ ขึ้นอยู่กับชนิดของพืช
+อยากทราบว่าอัตราการเจริญเติบโตของพืชจะเพิ่มขึ้น หรือลดลงเมื่อไหร่</p>
+</div>
+<p>กำหนดให้ <span class="math inline">\(R\)</span> เป็นระดับธาตุอาหาร <span class="math inline">\(f(R)\)</span> เป็นอัตราการเจริญเติบโต เนื่องจาก
+<span class="math display">\[f(R)=\frac{aR}{K+R},  \quad      R \ge 0\]</span> จะได้
+<span class="math display">\[f&#39;(R)=\frac{aK}{(K+R)^2}&gt;0\]</span> เพราะ <span class="math inline">\(a&gt;0\)</span>, <span class="math inline">\(K&gt;0\)</span> ดังนั้น
+อัตราการเจริญเติบโตของพืชจะเพิ่มขึ้นและจะไม่มีวันลดลง</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-75" class="example"><strong>ตัวอย่าง 4.17  </strong></span>จากตัวอย่างที่แล้ว เราทราบว่า อัตราการเจริญเติบโตของพืชเป็นฟังก์ชันเพิ่ม
+อยากทราบว่าอัตราการเพิ่มของอัตราการเจริญเติบโตของพืชจะเป็นอย่างไร</p>
+</div>
+<p>เนื่องจาก <span class="math inline">\(\displaystyle f(R)=\frac{aR}{K+R}, \quad R \ge 0\)</span> จะได้
+<span class="math inline">\(\displaystyle f&#39;(R)=\frac{aK}{(K+R)^2}&gt;0\)</span> นั่นคือ
+อัตราการเจริญเติบโตของพืชเป็นฟังก์ชันเพิ่ม
+โจทย์อยากทราบว่าอัตราการเจริญเติบโตของพืชที่เพิ่มขึ้นนี้จะเพิ่มขึ้นด้วยอัตราเท่าไร
+นั่นคือการหาอนุพันธ์ของ <span class="math inline">\(f&#39;(R)\)</span> จะได้
+<span class="math inline">\(\displaystyle f&#39;&#39;(R)=\frac{-2aK}{(K+R)^3}&lt;0\)</span>
+หมายความว่าอัตราการเจริญเติบโตของพืชนั้นเพิ่มขึ้น แต่อัตราการเพิ่มขึ้นนั้นจะลดลง ดังรูป
+<a href="การประยกตของอนพนธ-applications-of-differentiation.html#fig-monod" reference-type="ref" reference="fig-monod">2.7</a></p>
+<figure id="fig-monod">
+<figcaption>
+กราฟของฟังก์ชัน <span class="math inline"><span class="math inline">\(f(R)=\frac{aR}{K+R}\)</span></span>
+</figcaption>
+</figure>
+<div class="example">
+<p><span id="exm:unlabeled-div-76" class="example"><strong>ตัวอย่าง 4.18  </strong></span>อัตราการเจริญเติบโตของประชากรสามารถอธิบายได้ด้วยสมการ logistic
+<span class="math display">\[f(N)=rN(1- \frac{N}{K})\]</span> เมื่อ <span class="math inline">\(N\)</span> เป็นจำนวนประชากร, <span class="math inline">\(r\)</span> และ <span class="math inline">\(K\)</span>
+เป็นค่าบวก อยากทราบว่าอัตราการเจริญเติบโตของประชากรจะเพิ่มขึ้น หรือลดลงอย่างไร</p>
+</div>
+<p>โจทย์ต้องการทราบว่า <span class="math inline">\(f(N)\)</span> จะเพิ่มขึ้นหรือลดลงอย่างไร นั่นคือ <span class="math inline">\(f&#39;(N)&gt;0\)</span> หรือ
+<span class="math inline">\(f&#39;(N)&lt;0\)</span> เมื่อ <span class="math inline">\(N\)</span> อยู่ในช่วงใด เนื่องจากอนุพันธ์ใช้ศึกษาการเปลี่ยนแปลงแบบค่อยเป็นค่อยไป
+ดังนั้น <span class="math inline">\(f&#39;(N)\)</span> จะเปลี่ยนจากค่าลบเป็นค่าบวก ย่อมต้องผ่านค่าศูนย์ก่อน การหาค่า <span class="math inline">\(N^*\)</span>
+ที่ทำให้ <span class="math inline">\(f(N^*)=0\)</span> ย่อมเป็นหนทางหนึ่งที่สามารถใช้พิจารณาช่วงที่ทำให้ <span class="math inline">\(f&#39;(N)&gt;0\)</span> และ
+<span class="math inline">\(f&#39;(N)&lt;0\)</span> ได้ จาก <span class="math inline">\(\displaystyle f(N)=rN(1- \frac{N}{K})\)</span> จะได้
+<span class="math display">\[f&#39;(N)=r- \frac{2rN}{K}\]</span> ซึ่ง <span class="math inline">\(f&#39;(N)=0\)</span> เมื่อ <span class="math inline">\(N = \frac{K}{2}\)</span></p>
+<p>ถ้า <span class="math inline">\(\displaystyle N&gt; \frac{K}{2}\)</span> <span class="math inline">\(f&#39;(N)&lt;0\)</span> และถ้า
+<span class="math inline">\(\displaystyle N&lt; \frac{K}{2}\)</span> <span class="math inline">\(f&#39;(N)&gt;0\)</span> ดังนั้น
+อัตราการเจริญเติบโตของประชากรจะเพิ่มขึ้น เมื่อ <span class="math inline">\(\displaystyle N&lt; \frac{K}{2}\)</span>
+และจะลดลง เมื่อ <span class="math inline">\(\displaystyle N&gt; \frac{K}{2}\)</span> แสดงว่าประชากรยิ่งหนาแน่น
+อัตราการเพิ่มของประชากรก็จะยิ่งลดลง</p>
+<div id="แบบฝกหด-5" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> แบบฝึกหัด<a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>จากตัวอย่างที่ 9 จงวาดกราฟของ <span class="math inline">\(f(N)\)</span> และระบุช่วงที่ทำให้ <span class="math inline">\(f\)</span> มีลักษณะแบบ
+concave up และแบบ concave down</p></li>
+<li><p>ค่า <span class="math inline">\(pH\)</span> ของสารละลายสัมพันธ์กับความเข้มข้นของไฮโดรเจนอิออน, <span class="math inline">\(H^+\)</span>, ดังนี้
+<span class="math display">\[pH=-log(H^+)\]</span> จงพิจารณาว่าค่า <span class="math inline">\(pH\)</span> ของสารละลายจะเพิ่มขึ้นหรือลดลงอย่างไร</p></li>
+</ol>
+</div>
+</div>
+<div id="การหาคาเหมาะทสด-optimization" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> การหาค่าเหมาะที่สุด (Optimization)<a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาคาเหมาะทสด-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>การหาค่าเหมาะที่สุด คือปัญหาที่ต้องการทราบค่าสูงสุด (absolute maximum) และค่าต่ำสุด
+(absolute minimum) ดังตัวอย่างต่อไปนี้</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-77" class="example"><strong>ตัวอย่าง 4.19  </strong></span>ผลผลิตของพืชผักสัมพันธ์กับปริมาณไนโตรเจนดังสมการ
+<span class="math inline">\(\displaystyle Y(N)= \frac{N}{1+N^2}\)</span> เมื่อ <span class="math inline">\(Y(N)\)</span> เป็นผลผลิตของพืชผัก และ <span class="math inline">\(N\)</span>
+เป็นปริมาณไนโตรเจน <span class="math inline">\((N \ge 0)\)</span> จงหาปริมาณไนโตรเจนที่ทำให้ได้ผลผลิตของพืชผักมากที่สุด</p>
+</div>
+<p>กำหนดให้ <span class="math inline">\(N\)</span> เป็นปริมาณไนโตรเจน <span class="math inline">\(Y(N)\)</span> เป็นผลผลิตของพืชผัก จากความสัมพันธ์
+<span class="math display">\[Y(N)= \frac{N}{1+N^2}\]</span> หาอนุพันธ์ทั้ง 2 ข้างของสมการ
+<span class="math display">\[Y&#39;(N)= \frac{(1+N^2)-N(2N)}{(1+N^2)^2}= \frac{1-N^2}{(1+N^2)^2}\]</span>
+กำหนดให้ <span class="math inline">\(Y&#39;(N)=0\)</span> เพื่อหา relative extrema <span class="math inline">\(Y&#39;(N)=0\)</span> เมื่อ <span class="math inline">\(1-N^2=0\)</span> ดังนั้น
+<span class="math inline">\(N= \pm 1\)</span></p>
+<p>เราจะพิจารณา <span class="math inline">\(N\)</span> ในช่วง <span class="math inline">\(N \ge 0\)</span> ดังนั้น <span class="math inline">\(N=-1\)</span> จึงอยู่นอกโดเมน
+จุดที่สนใจจึงเหลือเพียง <span class="math inline">\(N=1\)</span> โดยพิจารณาเครื่องหมายของ <span class="math inline">\(Y&#39;(N)\)</span> เราจะได้ว่า
+<span class="math display">\[Y&#39;(N) &gt; 0 \text{ เมื่อ }  -1&lt; N &lt;1  \quad  Y&#39;(N) &lt; 0 \text{ เมื่อ } N &gt; 1\]</span>
+เนื่องจาก <span class="math inline">\(Y(N)\)</span> เปลี่ยนจากฟังก์ชันเพิ่ม เป็นฟังก์ชันลด ที่ <span class="math inline">\(N=1\)</span> ดังนั้น ที่ <span class="math inline">\(N=1\)</span>
+เกิดจากจุดสูงสุดสัมพัทธ์ (relative maximum) โดย <span class="math inline">\(Y(1)= \frac{1}{2}\)</span></p>
+<p>เนื่องจากเราสนใจ absolute maximum จึงต้องตรวจสอบจุดปลายของโดเมน (<span class="math inline">\(N \ge 0\)</span>
+หรือ <span class="math inline">\(N \in [0,\infty)\)</span>) นั่นคือ <span class="math inline">\(N=0\)</span> และ <span class="math inline">\(N \rightarrow \infty\)</span> ด้วย ว่าทำให้
+<span class="math inline">\(Y\)</span> มีค่ามากกว่า <span class="math inline">\(Y(1)= \frac{1}{2}\)</span> หรือไม่
+<span class="math display">\[Y(0)=0,   \quad  \lim_{N \rightarrow \infty} Y(N) =\lim_{N \rightarrow \infty} \frac{N}{1+N^2} = 0\]</span>
+ดังนั้นที่ <span class="math inline">\(N=1\)</span> จะเกิดจุดสูงสุดสัมบูรณ์ (absolute maximum)
+ซึ่งเป็นปริมาณไนโตรเจนที่ทำให้พืชผักมีผลผลิตมากที่สุด คือ <span class="math inline">\(Y(1)= \frac{1}{2}\)</span> (ดูกราฟ
+<a href="#fig-nitrogen" reference-type="ref" reference="fig-nitrogen">2.8</a>)</p>
+<!-- ![กราฟของฟังก์ชัน $Y(N) = \frac{N}{1 + N^2}$](nitrogen.eps){#fig-nitrogen -->
+<!-- width="60mm"} -->
+<div class="example">
+<p><span id="exm:unlabeled-div-78" class="example"><strong>ตัวอย่าง 4.20  </strong></span>เรือบรรทุกน้ำมันของบริษัทแห่งหนึ่งอับปางลงบริเวณอ่าวไทย ทำให้น้ำมันไหลรั่วซึมลงสู่ทะเล
+กระทบต่อระดับออกซิเจนที่ละลายอยู่ในน้ำ และสิ่งมีชีวิตที่อาศัยอยู่ในบริเวณดังกล่าว
+สมมติว่าระดับออกซิเจนที่ละลายอยู่ในน้ำ หลังเหตุการณ์เรือล่ม มีการเปลี่ยนแปลงดังสมการ
+<span class="math display">\[P(t)=500[1- \frac{4}{t+4} + \frac{16}{(t+4)^2}]\]</span> เมื่อ <span class="math inline">\(P(t)\)</span>
+เป็นระดับออกซิเจนที่ละลายอยู่ในน้ำ หลังเหตุการณ์เรือล่มผ่านพ้นไป <span class="math inline">\(t\)</span> เดือน
+อยากทราบว่าเมื่อไหร่ออกซิเจนที่ละลายอยู่ในน้ำบริเวณดังกล่าวจะอยู่ในระดับที่ต่ำที่สุด</p>
+</div>
+<p>กำหนดให้ <span class="math inline">\(t\)</span> เป็นเวลาหลังเหตุการณ์เรือล่ม <span class="math inline">\(P(t)\)</span> เป็นระดับออกซิเจนที่ละลายอยู่ในน้ำ
+บริเวณที่เกิดเหตุ</p>
+<p>จาก <span class="math inline">\(P(t)=500[1- \frac{4}{t+4} + \frac{16}{(t+4)^2}]\)</span> หาอนุพันธ์ทั้ง 2
+ข้างของสมการ <span class="math display">\[\begin{equation}   \begin{aligned}
+    P&#39;(t) &amp;= \frac{2000}{(t+4)^2} - \frac{16000}{(t+4)^3} \\
+          &amp;=\frac{2000(t+4)-16000}{(t+4)^3} \\
+          &amp;=\frac{2000t-8000}{(t+4)^3}
+  \end{aligned} \end{equation}\]</span></p>
+<p>กำหนดให้ <span class="math inline">\(\displaystyle P&#39;(t)= \frac{2000t-8000}{(t+4)^3}=0\)</span> จะได้ <span class="math inline">\(t=4\)</span>
+เครื่องหมายของ <span class="math inline">\(P&#39;(t) &gt; 0\)</span> เมื่อ <span class="math inline">\(t &gt; 4\)</span> และ <span class="math inline">\(P&#39;(t) ฒ 0\)</span> เมื่อ <span class="math inline">\(t &lt; 4\)</span> ดังนั้น
+<span class="math inline">\(P(t)\)</span> เปลี่ยนจากฟังก์ชันลดเป็นฟังก์ชันเพิ่มที่ <span class="math inline">\(t=4\)</span> ดังนั้น ที่ <span class="math inline">\(t=4\)</span> เกิดจุดต่ำสุดสัมพัทธ์
+(relative minimum) โดย <span class="math inline">\(P(4)=375\)</span></p>
+<p>เนื่องจากเราสนใจ absolute minimum จึงต้องตรวจสอบค่า <span class="math inline">\(P(t)\)</span> ที่จุดปลายของโดเมน
+<span class="math inline">\(t\)</span> ด้วย นั่นคือ <span class="math inline">\(t = 0\)</span> และ <span class="math inline">\(t \rightarrow \infty\)</span> <span class="math inline">\(P(0)=500\)</span> และ
+<span class="math inline">\(\lim_{t \rightarrow \infty} P(t) = 500\)</span> ดังนั้น ที่ <span class="math inline">\(t=4\)</span> เกิดจุดต่ำสุดสัมบูรณ์
+(absolute minimum) ระดับออกซิเจนที่ละลายอยู่ในน้ำ บริเวณดังกล่าวต่ำสุด
+หลังเหตุการณ์เรืออับปางผ่านพ้นไป 4 เดือน</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-79" class="example"><strong>ตัวอย่าง 4.21  </strong></span>นักชีววิทยาต้องการออกแบบพื้นที่ทดลองให้เป็นรูปสี่เหลี่ยมมุมฉาก เขามีรั้วยาว 1600 ฟุต
+เขาจะใช้รั้วนี้อย่างไร จึงจะทำให้ได้พื้นที่ทดลองที่กว้างใหญ่ที่สุด</p>
+</div>
+<p>กำหนดให้</p>
+<p><span class="math inline">\(x\)</span> เป็นความกว้างของพื้นที่ทดลอง<br />
+<span class="math inline">\(y\)</span> เป็นความยาวของพื้นที่ทดลอง<br />
+<span class="math inline">\(A\)</span> เป็นพื้นที่ของพื้นที่ทดลอง<br />
+<span class="math inline">\(P\)</span> เป็นความยาวรอบรูปของพื้นที่ทดลอง</p>
+<p>เนื่องจาก <span class="math inline">\(A=xy\)</span> และ <span class="math inline">\(P=2x+2y\)</span> จากโจทย์ <span class="math inline">\(P=2x+2y=1600\)</span> ดังนั้น <span class="math inline">\(x+y=800\)</span> หรือ
+<span class="math inline">\(y=800-x\)</span> แทน <span class="math inline">\(y\)</span> ลงใน <span class="math inline">\(A=xy\)</span> จะได้ <span class="math display">\[\begin{equation}   \begin{aligned}
+    A(x)  &amp;=x(800-x), \quad  0 \le x \le 800 \\
+            &amp;=800x-x^2
+  \end{aligned} \end{equation}\]</span> โจทย์ต้องการหาพื้นที่กว้างใหญ่ที่สุด เราจึงต้องหาอนุพันธ์ทั้ง 2 ข้าง
+<span class="math display">\[A&#39;(x)=800-2x\]</span> กำหนดให้ <span class="math inline">\(A&#39;(x)=800-2x=0\)</span> จะได้ <span class="math inline">\(x=400\)</span> และ <span class="math inline">\(A(400)=1600\)</span>
+ตามลำดับ ทดสอบโดยใช้อนุพันธ์อันดับสอง <span class="math inline">\(A&#39;&#39;(x)=-2&lt;0\)</span> พบว่า <span class="math inline">\(x=400\)</span>
+ทำให้เกิดจุดสูงสุดสัมบูรณ์ เพราะ <span class="math inline">\(A(x)\)</span> มีลักษณะแบบ concave down
+ดังนั้นนักชีววิทยาควรกั้นรั้วเป็นรูปสี่เหลี่ยมจัตุรัสกว้าง 400 ฟุต จึงจะได้พื้นที่ทดลองที่กว้างใหญ่ที่สุด</p>
+<ol style="list-style-type: decimal">
+<li><p>วาดภาพและกำหนดตัวแปรต่างๆ เช่น <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> เป็นต้น</p></li>
+<li><p>หาสูตรหรือสมการของปริมาณที่ต้องการหาค่าสูงสุดหรือค่าต่ำสุด</p></li>
+<li><p>ใช้เงื่อนไขที่โจทย์ระบุให้ในการตัดทอนตัวแปร เพื่อทำให้สมการในขั้นตอนที่ 2
+อยู่ในรูปฟังก์ชันที่ขึ้นอยู่กับตัวแปรเพียงตัวเดียว</p></li>
+<li><p>หาช่วงที่เป็นไปได้ของตัวแปร โดยให้สอดคล้องกับความหมายของโจทย์</p></li>
+<li><p>ใช้เทคนิคการหาค่าสูงสุด/ต่ำสุดสัมพัทธ์ ไม่ว่าจะเป็นทดสอบด้วยอนุพันธ์อันดับหนึ่ง
+หรือทดสอบด้วยอนุพันธ์อันดับสอง</p></li>
+<li><p>ตรวจสอบจุดปลายของโดเมนของตัวแปร เพื่อยืนยันการเกิดค่าสูงสุด/ต่ำสุดสัมบูรณ์</p></li>
+</ol>
+<div id="แบบฝกหด-6" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> แบบฝึกหัด<a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>อัตราการเปลี่ยนแปลงของการสังเคราะห์แสงขึ้นกับความเข้มของแสง <span class="math inline">\(x\)</span>,
+ซึ่งสอดคล้องกับสมการ <span class="math inline">\(R(x)=270x-90x^2\)</span> จงหาความเข้มของแสง
+ที่ทำให้อัตราการเปลี่ยนแปลงของการสังเคราะห์แสงมากที่สุด</p></li>
+<li><p>การตอบสนองต่อยาชนิดหนึ่งขึ้นกับปริมาณของยา, <span class="math inline">\(x\)</span>, ดังสมการ <span class="math inline">\(S=1000x-x^2\)</span>
+จงหาปริมาณยาที่ทำให้มีการตอบสนองต่อยาชนิดนี้มากที่สุด</p></li>
+<li><p>นักวิจัยพบว่าขณะไอ ปริมาณอากาศที่ไหลผ่านทางหลอดลมสัมพันธ์กับสมการ <span class="math inline">\(F=SA\)</span> เมื่อ <span class="math inline">\(S\)</span>
+คือความเร็วของอากาศ และ <span class="math inline">\(A\)</span> คือพื้นที่ตัดขวางของหลอดลม ดังรูป
+<a href="การประยกตของอนพนธ-applications-of-differentiation.html#fig-artery" reference-type="ref" reference="fig-artery">2.9</a>
+ถ้าความเร็วของอากาศมีสูตรเป็น <span class="math inline">\(S=c-r\)</span> โดย <span class="math inline">\(r\)</span> คือรัศมีของหลอดลมขณะไอ และ <span class="math inline">\(c\)</span>
+คือรัศมีของหลอดลมในสภาวะปกติ จงหารัศมีที่ทำให้ปริมาณอากาศที่ไหลผ่านหลอดลมมีมากที่สุด
+ขณะที่ไอ</p></li>
+<li><p>เภสัชกรต้องการสร้างกล่องไร้ฝาอย่างง่ายเพื่อขนย้ายยา เขามีกระดาษแข็งกว้าง 16 นิ้ว
+ยาว 30 นิ้ว เขาตั้งใจจะตัดมุมของกระดาษแข็งทั้ง 4 ออก ตามรูป
+<a href="การประยกตของอนพนธ-applications-of-differentiation.html#fig-box-area" reference-type="ref" reference="fig-box-area">2.10</a>
+แล้วทำการพับตามรอยปะและเชื่อมรอยต่อด้วยเทปกาว จงหาความยาว <span class="math inline">\(x\)</span> ที่ตัดตามมุม
+เพื่อให้ได้กล่องที่มีปริมาตรมากที่สุด</p></li>
+<li><p>คราวนี้นักชีววิทยาคนเดิม ต้องการพื้นที่ทดลองแบบสี่เหลี่ยมมุมฉากขนาด 320 ตารางเมตร
+ด้านที่ขนานกันคู่หนึ่งใช้รั้วราคา 100 บาทต่อเมตร ส่วนด้านคู่ที่เหลือใช้รั้วราคา 200
+บาทต่อเมตร จงหาความกว้างและความยาวของพื้นที่ทดลองแห่งนี้ เมื่อใช้งบประมาณน้อยที่สุด</p></li>
+</ol>
+<figure id="fig-artery">
+<figcaption>
+การไหลเวียนของอากาศในหลอดลม
+</figcaption>
+</figure>
+<figure id="fig-box-area">
+<figcaption>
+กล่องไร้ฝาสำหรับขนย้ายยา
+</figcaption>
+</figure>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="อนพนธ-derivatives.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/pairote-sat/SCMA104/edit/main/03-derivative.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/pairote-sat/SCMA104/blob/main/03-derivative.Rmd",
+"text": null
+},
+"download": ["SCMA104bookdownproj.pdf", "SCMA104bookdownproj.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

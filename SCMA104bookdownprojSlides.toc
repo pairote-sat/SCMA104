@@ -1,0 +1,2 @@
+\contentsline {chapter}{หลักการและความสำคัญของแคลคูลัสและระบบสมการเชิงอนุพันธ์สามัญ}{1}{chapter*.2}%
+\contentsline {chapter}{ลิมิต (Limits)}{17}{chapter*.7}%

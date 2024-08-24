@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.3)  7 AUG 2024 00:10
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.20)  24 AUG 2024 12:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1327,6 +1327,22 @@ LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
 (./SCMA104bookdownproj.toc
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
 (Font)              scaled to size 12.67639pt on input line 1.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 6.9999pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 4.99992pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00092pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00064pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.00046pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 3.
 )
 \tf@toc=\write4
 \openout4 = `SCMA104bookdownproj.toc'.
@@ -1357,87 +1373,360 @@ File: images/fig-drug-absorption.jpeg Graphic file (type bmp)
 [4]
 File: images/fig-binary-fission.png Graphic file (type bmp)
 <images/fig-binary-fission.png>
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.9999pt on input line 224.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 4.99992pt on input line 224.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 224.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 224.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 224.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 224.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 224.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 224.
 File: SCMA104bookdownproj_files/figure-latex/population-plot-1.pdf Graphic file (type pdf)
 <use SCMA104bookdownproj_files/figure-latex/population-plot-1.pdf>
 
 
 [5]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 8.87347pt on input line 257.
+(Font)              scaled to size 8.87347pt on input line 255.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 6.3382pt on input line 257.
+(Font)              scaled to size 6.3382pt on input line 255.
 
-Overfull \hbox (18.83191pt too wide) detected at line 257
-[]
+Overfull \hbox (23.79756pt too wide) detected at line 259
+[][][][][][][][][] [] [][][][][][][][][][] [] [][][][][][] [] [][]
  []
 
 
 
 [6]
-Overfull \hbox (9.22911pt too wide) in paragraph at lines 277--279
+Overfull \hbox (9.22911pt too wide) in paragraph at lines 279--281
 []\TU/THSarabunNew(0)/m/n/10 เมื่อ แทน จำนวน แบคทีเรีย ที่ เกิด ใหม่ และ ตาย ไป ระหว่าง ช่วง เวลา ที่ กำหนด ลง ใน สมการ @ref(eq:population-
  []
 
 LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 12.67639pt on input line 300.
+(Font)              scaled to size 12.67639pt on input line 302.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 8.87347pt on input line 300.
+(Font)              scaled to size 8.87347pt on input line 302.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 6.3382pt on input line 300.
+(Font)              scaled to size 6.3382pt on input line 302.
 
 
 [7]
-Underfull \hbox (badness 2042) in paragraph at lines 340--343
+Underfull \hbox (badness 2042) in paragraph at lines 342--345
 []\TU/THSarabunNew(1)/m/n/10 เขียน แบบ จำลอง ทาง คณิตศาสตร์ โดย ใช้ ค่า $[]$ และ $[]$ ที่ ประมาณ ค่า ได้ (สมการ
  []
 
 File: images/fig-yeast-cells.png Graphic file (type bmp)
 <images/fig-yeast-cells.png>
 
+Underfull \hbox (badness 3735) in paragraph at lines 387--388
+[][]\TU/THSarabunNew(1)/m/n/10 เภสัช จลนศาสตร์ (Pharmacokinetics) และ เภสชั พลศาสตร์ (Pharmacodynam-
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 387--388
+\TU/THSarabunNew(1)/m/n/10 ics) (https:// ns.mahidol.ac.th/ english/ th/ departments/ MN/ th/ doc/ km54/ เภสัช
+ []
+
+
 
 [8]
+File: images/fig-drub-absorption.png Graphic file (type bmp)
+<images/fig-drub-absorption.png>
 
-[9
 
-]
+[9]
 
 [10
 
 ]
 
 [11]
+File: images/fig-tangent-line.png Graphic file (type bmp)
+<images/fig-tangent-line.png>
+File: images/fig-area-under-curve.png Graphic file (type bmp)
+<images/fig-area-under-curve.png>
 
-[12
 
-] (./SCMA104bookdownproj.aux)
+[12]
+File: images/fig-tangent-line-2.png Graphic file (type bmp)
+<images/fig-tangent-line-2.png>
+
+
+[13]
+File: images/fig-right-limit.png Graphic file (type bmp)
+<images/fig-right-limit.png>
+File: images/fig-left-limit.png Graphic file (type bmp)
+<images/fig-left-limit.png>
+File: images/fig-limit-1.png Graphic file (type bmp)
+<images/fig-limit-1.png>
+
+
+[14]
+
+[15]
+
+[16]
+
+[17]
+
+[18]
+LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
+(Font)              scaled to size 18.25398pt on input line 905.
+LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
+(Font)              scaled to size 18.25398pt on input line 905.
+File: images/fig-continuity-1.png Graphic file (type bmp)
+<images/fig-continuity-1.png>
+
+
+[19]
+
+[20]
+
+[21]
+File: images/fig-continuity-2.png Graphic file (type bmp)
+<images/fig-continuity-2.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1156--1158
+
+ []
+
+
+
+[22]
+
+[23]
+
+[24
+
+]
+File: images/fig-derivative-1.png Graphic file (type bmp)
+<images/fig-derivative-1.png>
+File: images/fig-derivative-2.png Graphic file (type bmp)
+<images/fig-derivative-2.png>
+
+
+[25]
+
+[26]
+Underfull \vbox (badness 3657) has occurred while \output is active []
+
+
+
+[27]
+
+[28]
+Overfull \hbox (25.34334pt too wide) detected at line 1385
+[][][][][]
+ []
+
+
+
+[29]
+Overfull \hbox (22.00453pt too wide) detected at line 1398
+[][][][][] [] [][][] [] [][] [] [][] [] [][][][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][] [] [][] [] [][][][][][][] [] [][][] [] [][][] [] [][][][]
+ []
+
+
+Overfull \hbox (15.70384pt too wide) in paragraph at lines 1412--1417
+[]\TU/THSarabunNew(1)/m/n/10 ถ้า ให้ $[] [] [][][][]$ เรา สามารถ ใช้ สัญลักษณ์ $[][][] [][][] [][][] [][][] [] [] [][]$ หรือ $[][] [][] [][] [][] [] [] []$
+ []
+
+
+
+[30]
+LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
+(Font)              scaled to size 15.21167pt on input line 1437.
+
+LaTeX Warning: Hyper reference `fig-mountain' on page 31 undefined on input line 1463.
+
+
+
+[31]
+File: images/fig-derivative-3.png Graphic file (type bmp)
+<images/fig-derivative-3.png>
+
+
+[32]
+
+[33]
+Overfull \hbox (24.6513pt too wide) in paragraph at lines 1586--1588
+[]$[]$ \TU/THSarabunNew(1)/m/n/10 เมื่อ $[] [] [] []$ 
+ []
+
+
+Underfull \vbox (badness 1845) has occurred while \output is active []
+
+
+
+[34]
+
+[35]
+
+[36]
+
+[37]
+
+[38]
+
+[39]
+
+[40]
+
+[41]
+
+[42]
+
+[43]
+File: images/fig-derivative-4.png Graphic file (type bmp)
+<images/fig-derivative-4.png>
+
+
+[44]
+
+[45]
+
+[46]
+
+[47]
+
+[48]
+
+LaTeX Warning: Hyper reference `fig-fly' on page 49 undefined on input line 2241.
+
+
+
+[49]
+File: images/fig-derivative-5.png Graphic file (type bmp)
+<images/fig-derivative-5.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2260--2262
+
+ []
+
+
+Underfull \vbox (badness 2197) has occurred while \output is active []
+
+
+
+[50]
+Underfull \vbox (badness 1043) has occurred while \output is active []
+
+
+
+[51]
+
+[52]
+
+[53]
+Underfull \hbox (badness 10000) in paragraph at lines 2412--2413
+
+ []
+
+
+
+[54]
+Underfull \vbox (badness 6825) has occurred while \output is active []
+
+
+
+[55]
+
+[56]
+Underfull \hbox (badness 1242) in paragraph at lines 2472--2476
+[]\TU/THSarabunNew(1)/m/n/10 หลัก การ หา อนุพันธ์ สามารถ นำ ไป ประยุกต์ ใช้ได้ ใน หลาก หลาย สาขา วิชาชีพ ไม่ ว่า จะ เป็น ธุรกิจ
+ []
+
+
+
+[57
+
+]
+
+[58]
+
+[59]
+
+[60]
+
+[61]
+
+[62]
+
+LaTeX Warning: Hyper reference `Fig:graph1' on page 63 undefined on input line 2776.
+
+Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
+
+
+[63]
+
+LaTeX Warning: Hyper reference `Fig:graph2' on page 64 undefined on input line 2810.
+
+
+
+[64]
+
+LaTeX Warning: Hyper reference `Fig:graph3' on page 65 undefined on input line 2847.
+
+
+
+[65]
+
+LaTeX Warning: Hyper reference `Fig:graph4' on page 66 undefined on input line 2882.
+
+Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2006) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
+
+LaTeX Warning: Hyper reference `Fig:graph5' on page 66 undefined on input line 2888.
+
+
+
+[66]
+
+LaTeX Warning: Hyper reference `Fig:graph6' on page 67 undefined on input line 2996.
+
+
+
+[67]
+
+[68]
+
+LaTeX Warning: Hyper reference `fig-monod' on page 69 undefined on input line 3061.
+
+
+
+[69]
+
+LaTeX Warning: Hyper reference `fig-nitrogen' on page 70 undefined on input line 3124.
+
+
+
+[70]
+Missing character: There is no ฒ ("E12) in font lmmi10!
+
+
+[71]
+
+LaTeX Warning: Hyper reference `fig-artery' on page 72 undefined on input line 3208.
+
+
+LaTeX Warning: Hyper reference `fig-box-area' on page 72 undefined on input line 3214.
+
+
+
+[72] (./SCMA104bookdownproj.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 30929 strings out of 476234
- 627235 string characters out of 5786214
- 1936609 words of memory out of 5000000
- 52996 multiletter control sequences out of 15000+600000
- 564584 words of font info for 97 fonts, out of 8000000 for 9000
+ 31252 strings out of 476234
+ 637851 string characters out of 5786213
+ 1948609 words of memory out of 5000000
+ 53302 multiletter control sequences out of 15000+600000
+ 564608 words of font info for 100 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,10n,126p,1016b,621s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,18n,126p,1016b,550s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on SCMA104bookdownproj.pdf (16 pages).
+Output written on SCMA104bookdownproj.pdf (76 pages).

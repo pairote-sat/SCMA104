@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>บทที่ 2 ลิมิต (Limits) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</title>
+  <meta name="description" content="บทที่ 2 ลิมิต (Limits) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="บทที่ 2 ลิมิต (Limits) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="บทที่ 2 ลิมิต (Limits) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  
+  
+  
+
+<meta name="author" content="Pairote Satiracoo" />
+
+
+<meta name="date" content="2024-08-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="อนพนธ-derivatives.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SCMA104</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> หลักการและความสำคัญของแคลคูลัสและระบบสมการเชิงอนุพันธ์สามัญ</a></li>
+<li class="chapter" data-level="2" data-path="ลมต-limits.html"><a href="ลมต-limits.html"><i class="fa fa-check"></i><b>2</b> ลิมิต (Limits)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ลมต-limits.html"><a href="ลมต-limits.html#ความตอเนอง-continuity"><i class="fa fa-check"></i><b>2.1</b> ความต่อเนื่อง (Continuity)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html"><i class="fa fa-check"></i><b>3</b> อนุพันธ์ (Derivatives)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธ-derivatives-1"><i class="fa fa-check"></i><b>3.1</b> อนุพันธ์ (Derivatives)</a></li>
+<li class="chapter" data-level="3.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#การคำนวณหาอนพนธ"><i class="fa fa-check"></i><b>3.2</b> การคำนวณหาอนุพันธ์</a></li>
+<li class="chapter" data-level="3.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#สตรสำหรบหาอนพนธ"><i class="fa fa-check"></i><b>3.3</b> สูตรสำหรับหาอนุพันธ์</a></li>
+<li class="chapter" data-level="3.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธอนดบสง-high-order-derivatives"><i class="fa fa-check"></i><b>3.4</b> อนุพันธ์อันดับสูง (High Order Derivatives)</a></li>
+<li class="chapter" data-level="3.5" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#การตความอนพนธ-interpretation-of-derivatives"><i class="fa fa-check"></i><b>3.5</b> การตีความอนุพันธ์ (Interpretation of Derivatives)</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงความชน-derivatives-as-slopes"><i class="fa fa-check"></i><b>3.5.1</b> อนุพันธ์ในเชิงความชัน (Derivatives as Slopes)</a></li>
+<li class="chapter" data-level="3.5.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงอตราเรว-derivatives-as-speeds"><i class="fa fa-check"></i><b>3.5.2</b> อนุพันธ์ในเชิงอัตราเร็ว (Derivatives as Speeds)</a></li>
+<li class="chapter" data-level="3.5.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงอตราการเปลยนแปลง-derivatives-as-rates-of-change"><i class="fa fa-check"></i><b>3.5.3</b> อนุพันธ์ในเชิงอัตราการเปลี่ยนแปลง (Derivatives as Rates of Change)</a></li>
+<li class="chapter" data-level="3.5.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-exercises"><i class="fa fa-check"></i><b>3.5.4</b> แบบฝึกหัด (Exercises)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#กฎลกโซ-the-chain-rule"><i class="fa fa-check"></i><b>3.6</b> กฎลูกโซ่ (The Chain Rule)</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด"><i class="fa fa-check"></i><b>3.6.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนอนเวอรส-derivatives-of-inverse-functions"><i class="fa fa-check"></i><b>3.7</b> อนุพันธ์ของฟังก์ชันอินเวอร์ส (Derivatives of Inverse Functions)</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-1"><i class="fa fa-check"></i><b>3.7.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#differentials-implicit-differentiation-and-related-rates"><i class="fa fa-check"></i><b>3.8</b> Differentials, Implicit Differentiation and Related Rates</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#differentials"><i class="fa fa-check"></i><b>3.8.1</b> Differentials</a></li>
+<li class="chapter" data-level="3.8.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#implicit-differentiation"><i class="fa fa-check"></i><b>3.8.2</b> Implicit Differentiation</a></li>
+<li class="chapter" data-level="3.8.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#related-rates"><i class="fa fa-check"></i><b>3.8.3</b> Related Rates</a></li>
+<li class="chapter" data-level="3.8.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-2"><i class="fa fa-check"></i><b>3.8.4</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนตรโกณมตและอนเวอรสของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9</b> อนุพันธ์ของฟังก์ชันตรีโกณมิติและอินเวอร์สของฟังก์ชันตรีโกณมิติ</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9.1</b> อนุพันธ์ของฟังก์ชันตรีโกณมิติ</a></li>
+<li class="chapter" data-level="3.9.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนอนเวอรสของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9.2</b> อนุพันธ์ของฟังก์ชันอินเวอร์สของฟังก์ชันตรีโกณมิติ</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html"><i class="fa fa-check"></i><b>4</b> การประยุกต์ของอนุพันธ์ (Applications of Differentiation)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#applications-of-derivatives-related-to-students-discipline"><i class="fa fa-check"></i><b>4.1</b> Applications of derivatives related to students discipline</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-3"><i class="fa fa-check"></i><b>4.1.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#sec-sketch"><i class="fa fa-check"></i><b>4.2</b> Sketching the graph of a function from the derivative</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-4"><i class="fa fa-check"></i><b>4.2.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การประยกตของ-monotonicity-และ-concavity"><i class="fa fa-check"></i><b>4.3</b> การประยุกต์ของ Monotonicity และ Concavity</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-5"><i class="fa fa-check"></i><b>4.3.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาคาเหมาะทสด-optimization"><i class="fa fa-check"></i><b>4.4</b> การหาค่าเหมาะที่สุด (Optimization)</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-6"><i class="fa fa-check"></i><b>4.4.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ลมต-limits" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">บทที่ 2</span> ลิมิต (Limits)<a href="ลมต-limits.html#ลมต-limits" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>อาจกล่าวได้ว่า วิชาแคลคูลัส
+ถือกำเนิดขึ้นมาจากความพยายามในการแก้ปัญหาทางเรขาคณิตบนระนาบ 2 ปัญหาหลักๆ คือ</p>
+<ul>
+<li><p>การหาเส้นตรงที่สัมผัสเส้นโค้งที่กำหนดให้</p>
+<div class="boxit">
+<p>กำหนดฟังก์ชัน (function) <span class="math inline">\(f\)</span> และกำหนดจุด <span class="math inline">\(P(x_{0},y_{0})\)</span> บนกราฟ
+<span class="math inline">\(y = f(x)\)</span> จงหาสมการของเส้นตรงที่สัมผัสกราฟ <span class="math inline">\(y = f(x)\)</span> ที่จุด <span class="math inline">\(P\)</span></p>
+</div></li>
+<li><p>การหาพื้นที่ของบริเวณที่กำหนดให้</p>
+<div class="boxit">
+<p>กำหนด function <span class="math inline">\(f\)</span> และช่วง <span class="math inline">\([a,b]\)</span> ในโดเมนของ <span class="math inline">\(f\)</span>
+จงหาพื้นที่ที่ถูกปิดล้อมด้วยแกน <span class="math inline">\(X\)</span> และกราฟ <span class="math inline">\(y = f(x)\)</span> สำหรับ <span class="math inline">\(x \in [a,b]\)</span></p>
+</div></li>
+</ul>
+<p>แนวความคิดในการแก้ปัญหาทั้งสอง นำไปสู่การศึกษาเรื่อง ลิมิต (Limits)
+ซึ่งเป็นพื้นฐานของวิชาแคลคูลัสนั่นเอง</p>
+<p>แต่ในปัจจุบันเราพบว่าวิชาแคลคูลัสมีประโยชน์ในการช่วยแก้ปัญหาในสาขาวิชาต่าง ๆ มากมาย เช่น
+เราจะพบในการศึกษาวิชานี้ว่า แคลคูลัสมีบทบาทในการแก้ปัญหาต่อไปนี้</p>
+<ul>
+<li><p>โดยทั่วไป ยาชนิดฉีดจะต้องใช้เวลาระยะหนึ่งหลังจากฉีดเข้าสู่ร่างกาย
+ในการที่จะไหลเวียนในกระแสโลหิต จนกระทั่งมีความเข้มข้นสูงสุด สมมุติว่า
+ยาฉีดชนิดหนึ่งหลังจากฉีดเข้าสู่ร่างกายนาน <span class="math inline">\(t\)</span> ชั่วโมง จะมีความเข้มข้นเป็น
+<span class="math inline">\(C(t) = 0.15(e^{-0.18t}-e^{-1.2t})\)</span> มิลลิกรัมต่อมิลลิลิตร จงหาว่า
+นานเท่าใดหลังจากฉีดยา จึงจะมีความเข้มข้นของยา ในกระแสโลหิตสูงที่สุด</p></li>
+<li><p>เราอาจประมาณได้อย่างมีเหตุผลว่า artery มีรูปร่างที่เป็นผลมาจากการหมุนรอบแกน
+ของเส้นโค้งในระนาบ โดยในสภาวะนิ่ง รัศมีของ artery มีค่าคงที่เท่ากับ 1 หน่วย
+(รูปทรงกระบอก) แต่ในขณะที่หัวใจสูบฉีดโลหิตผ่าน artery artery จะพองตัวออก
+ทำให้รัศมีเปลี่ยนไปตามสมการ <span class="math inline">\(R(x) = 1+0.4x-0.04x^{2}\)</span> หน่วย เมื่อ
+<span class="math inline">\(0 \leq x\leq 10\)</span> เป็นตำแหน่งบนแนวยาวของ artery จงหาว่า ปริมาณโลหิตที่อยู่ใน
+artery ขณะที่หัวใจสูบฉีดโลหิตผ่านเข้ามาเป็นกี่เท่าของความจุโลหิตในสภาวะนิ่ง</p></li>
+<li><p>ความก้าวหน้าในทางการแพทย์ และเทคโนโลยีปัจจุบัน
+ทำให้มีการประดิษฐ์อุปกรณ์ช่วยในการรักษาโรคเบาหวานชิ้นหนึ่งขึ้น
+อุปกรณ์นี้มีลักษณะเป็นแคปซูล ซึ่งเมื่อฝังอุปกรณ์นี้ภายในร่างกายแล้ว
+มันจะหลั่งสารอินซูลินที่บรรจุอยู่ภายใน ออกสู่กระแสโลหิต โดยมีอัตราการหลั่งเป็น
+<span class="math inline">\(f\left( t\right) =0.5te^{-0.09t}\)</span> ลูกบาศก์เซนติเมตรต่อวัน เมื่อ t คือ
+เวลาเป็นวัน นับจากอุปกรณ์เริ่มทำงาน จงหาว่า
+แพทย์จะต้องสั่งให้บรรจุอินซูลินในแคปซูลเป็นปริมาณเท่าใด
+เพื่อให้อุปกรณ์นี้สามารถให้อินซูลินแก่ผู้ป่วยได้นาน 3 เดือน</p></li>
+<li><p>การหาเส้นตรงที่สัมผัสเส้นโค้ง <span class="math inline">\(y = f(x)\)</span> ณ จุด <span class="math inline">\(P_{0}(x_{0},y_{0})\)</span></p></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-tangent-line"></span>
+<img src="images/fig-tangent-line.png" alt="การหาเส้นตรงที่สัมผัสเส้นโค้ง" width="50%" />
+<p class="caption">
+Figure 2.1: การหาเส้นตรงที่สัมผัสเส้นโค้ง
+</p>
+</div>
+<p>ขั้นตอนสรุปการหาเส้นตรงที่สัมผัสเส้นโค้ง <a href="ลมต-limits.html#fig:fig-tangent-line">2.1</a></p>
+<ol style="list-style-type: decimal">
+<li><p>เลือกจุดอื่นบนกราฟ เรียกจุดนี้ว่า <span class="math inline">\(P(x,y)\)</span></p></li>
+<li><p>ลากเส้นผ่าน <span class="math inline">\(PP_{0}\)</span></p></li>
+<li><p>ทำซ้ำโดยเลือกจุด P ให้ใกล้ <span class="math inline">\(P_{0}\)</span> มากขึ้น</p></li>
+<li><p>เส้น <span class="math inline">\(PP_{0}\)</span> ที่ได้จะ “เข้าใกล้” เส้นสัมผัสมากขึ้นทุกที</p></li>
+</ol>
+<ul>
+<li>การหาพื้นที่ “ใต้กราฟ” ระหว่าง x = a กับ x = b</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-area-under-curve"></span>
+<img src="images/fig-area-under-curve.png" alt="การหาพื้นที่ใต้กราฟ" width="50%" />
+<p class="caption">
+Figure 2.2: การหาพื้นที่ใต้กราฟ
+</p>
+</div>
+<p>ขั้นตอนเบื้องต้นสำหรับการหาพื้นที่ใต้กราฟ</p>
+<ol style="list-style-type: decimal">
+<li>แบ่ง <span class="math inline">\([a,b]\)</span> เป็นช่วงเล็กๆ</li>
+<li>หาพื้นที่รวมของสี่เหลี่ยมผืนผ้าทั้งหมด</li>
+<li>ทำซ้ำๆ โดยแบ่งช่วงให้เล็กมากขึ้น</li>
+<li>พื้นที่ที่ได้จะ “เข้าใกล้” พื้นที่ที่ต้องการมากขึ้นทุกที</li>
+</ol>
+<div class="example" label="ex-limit-1">
+<p><span id="exm:ex-limit-1" class="example"><strong>ตัวอย่าง 2.1  </strong></span>จงหาสมการของเส้นสัมผัสกราฟ <span class="math inline">\(y=-x^{2}+6x-2\)</span> ณ จุด <span class="math inline">\(P_{0}(2,6)\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> เลือกจุด <span class="math inline">\(P(x,y)\)</span> โดยที่ <span class="math inline">\(x \neq 2\)</span> และลากเส้น <span class="math inline">\(PP_{0}\)</span> จะได้ว่า
+ความชันของ <span class="math inline">\(PP_{0}\)</span> เท่ากับ</p>
+<p><span class="math display">\[\begin{equation}
+  \begin{aligned}
+    \frac{y-6}{x-2} &amp;= \frac{-x^{2}+6x-8}{x-2} \\
+                    &amp;=-\frac{\left( x-2\right) \left( x-4\right) }{x-2} \\
+                    &amp;=4-x
+  \end{aligned}
+\end{equation}\]</span></p>
+<p>ถ้า <span class="math inline">\(P\)</span> อยู่ใกล้ <span class="math inline">\(P_{0}\)</span> มากขึ้น ค่า x ย่อมเกือบเป็น 2 ดังนั้น ความชันของ <span class="math inline">\(PP_{0}\)</span>
+จึงเข้าใกล้ <span class="math inline">\(4-2 = 2\)</span> มากขึ้นเรื่อย ๆ เส้นสัมผัสจึงควรมีความชันเป็น 2 และสมการเส้นสัมผัส
+คือ <span class="math inline">\(y-6=2\left( x-2\right)\)</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-tangent-line-2"></span>
+<img src="images/fig-tangent-line-2.png" alt="การหาเส้นตรงที่สัมผัสเส้นโค้ง \(y=-x^{2}+6x-2\)" width="50%" />
+<p class="caption">
+Figure 2.3: การหาเส้นตรงที่สัมผัสเส้นโค้ง <span class="math inline">\(y=-x^{2}+6x-2\)</span>
+</p>
+</div>
+<p>จะเห็นว่า ในตัวอย่าง <a href="ลมต-limits.html#exm:ex-limit-1">2.1</a> นี้ เราสนใจพฤติกรรมของ function</p>
+<p><span class="math inline">\(\frac{-x^{2}+6x-8}{x-2}\)</span> เมื่อ <span class="math inline">\(x \neq 2\)</span> แต่มีค่าใกล้ 2 มาก ๆ นี่คือ ที่มาของเรื่อง</p>
+<div class="definition" label="def-limit">
+<p><span id="def:def-limit" class="definition"><strong>นิยาม 2.1  </strong></span>ให้ <span class="math inline">\(f : D_{f}\rightarrow R\)</span> โดยที่ <span class="math inline">\(D_{f}\subseteq R\)</span> และให้ <span class="math inline">\(a \in R\)</span>
+โดยที่มีช่วง <span class="math inline">\((a,b)\)</span> บางช่วงที่
+<span class="math inline">\(\left( a,b\right) \subseteq D_{f}\left( b&gt;a\right)\)</span></p>
+<p>เรากล่าวว่า “ลิมิต (limit) ของ <span class="math inline">\(f(x)\)</span> เมื่อ x เข้าใกล้ a ทางขวา
+หาค่าได้และมีค่าเท่ากับจำนวนจริง L” ถ้า “ไม่ว่าเราจะกำหนดบริเวณรอบ ๆ <span class="math inline">\(L\)</span>
+ไว้แคบเพียงใด เมื่อเราพิจารณาค่าของ <span class="math inline">\(f(x)\)</span> สำหรับค่า <span class="math inline">\(x\)</span> ที่มากกว่า a โดยที่ให้ค่า ของ
+<span class="math inline">\(x\)</span> ลดลงเรื่อย ๆ จนถีงจุดหนึ่ง ค่าของ <span class="math inline">\(f(x)\)</span> จะอยู่ในบริเวณรอบ ๆ <span class="math inline">\(L\)</span> ที่เรากำหนดไว้นั้น
+และยังคงเป็นเช่นนี้สำหรับ <span class="math inline">\(x\)</span> อื่น ๆ ที่น้อยกว่านั้น (แต่มากกว่า <span class="math inline">\(a\)</span> ) ทั้งหมดด้วย”</p>
+<p>ในทำนองเดียวกัน ถ้าเราพิจารณาพฤติกรรมของ function สำหรับ <span class="math inline">\(x\)</span> ที่น้อยกว่า <span class="math inline">\(a\)</span> จะได้
+limit ทางซ้าย ดังนี้ ให้ <span class="math inline">\(f : D_{f}\rightarrow R\)</span> โดยที่ <span class="math inline">\(D_{f}\subseteq R\)</span>
+และให้ <span class="math inline">\(a \in R\)</span> โดยที่มีช่วง <span class="math inline">\((b,a)\)</span> บางช่วงที่
+<span class="math inline">\(\left( b,a\right) \subseteq D_{f}\left( b&lt;a\right)\)</span></p>
+<p>เรากล่าวว่า “limit ของ <span class="math inline">\(f(x)\)</span> เมื่อ <span class="math inline">\(x\)</span> เข้าใกล้ a ทางซ้าย หาค่าได้
+และมีค่าเท่ากับจำนวนจริง <span class="math inline">\(L\)</span>” ถ้า “ไม่ว่าเราจะกำหนดบริเวณรอบ ๆ <span class="math inline">\(L\)</span> ไว้แคบเพียงใด</p>
+<p>เมื่อเราพิจารณาค่าของ <span class="math inline">\(f(x)\)</span> สำหรับค่า <span class="math inline">\(x\)</span> ที่น้อยกว่า <span class="math inline">\(a\)</span> โดยที่ให้ค่า ของ <span class="math inline">\(x\)</span>
+เพิ่มขึ้นเรื่อย ๆ จนถีงจุดหนึ่ง ค่าของ <span class="math inline">\(f(x)\)</span> จะอยู่ในบริเวณรอบ ๆ <span class="math inline">\(L\)</span> ที่เรากำหนดไว้นั้น
+และยังคงเป็นเช่นนี้สำหรับ <span class="math inline">\(x\)</span> อื่น ๆ ที่มากกว่านั้น (แต่น้อยกว่า <span class="math inline">\(a\)</span> ) ทั้งหมดด้วย”</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-right-limit"></span>
+<img src="images/fig-right-limit.png" alt="ลิมิตทางขวา" width="50%" />
+<p class="caption">
+Figure 2.4: ลิมิตทางขวา
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-left-limit"></span>
+<img src="images/fig-left-limit.png" alt="ลิมิตทางซ้าย" width="50%" />
+<p class="caption">
+Figure 2.5: ลิมิตทางซ้าย
+</p>
+</div>
+<p>เราใช้สัญลักษณ์ <span class="math inline">\(\underset{x\rightarrow a^{+}}{\lim}f(x)\)</span> แทนข้อความ “limit
+ของ <span class="math inline">\(f(x)\)</span> เมื่อ <span class="math inline">\(x\)</span> เข้าใกล้ a ทางขวา” และใช้สัญลักษณ์
+<span class="math inline">\(\underset{x\rightarrow a^{-}}{\lim}f(x)\)</span> แทนข้อความ “limit ของ <span class="math inline">\(f(x)\)</span>
+เมื่อ <span class="math inline">\(x\)</span> เข้าใกล้ a ทางซ้าย</p>
+<div class="definition" label="def-limit-2">
+<p><span id="def:def-limit-2" class="definition"><strong>นิยาม 2.2  </strong></span>ในกรณีที่ทั้ง <span class="math inline">\(\underset{x\rightarrow a^{+}}{\lim}f(x)\)</span> และ
+<span class="math inline">\(\underset{x\rightarrow a^{-}}{\lim}f(x)\)</span> หาค่าได้ และมีค่าเท่ากัน</p>
+<p>เรากล่าวว่า <span class="math inline">\(\underset{x\rightarrow a}{\lim}f(x)\)</span> หาค่าได้ และมีค่าเท่ากับค่านั้น</p>
+</div>
+<div class="example" label="ex-limit-2">
+<p><span id="exm:ex-limit-2" class="example"><strong>ตัวอย่าง 2.2  </strong></span>function <span class="math inline">\(f\)</span> ที่ <span class="math inline">\(\underset{x\rightarrow a^{+}}{\lim}f(x)\)</span> หาค่าไม่ได้ ดังนั้น</p>
+<p><span class="math inline">\(\underset{x\rightarrow a}{\lim}f(x)\)</span> จึงหาค่าไม่ได้ด้วย</p>
+</div>
+<p><strong>วิธีทำ</strong> จากรูปต่อไปนี้</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-limit-1"></span>
+<img src="images/fig-limit-1.png" alt="กราฟของฟังก์ชันที่หาลิมิตไม่ได้" width="50%" />
+<p class="caption">
+Figure 2.6: กราฟของฟังก์ชันที่หาลิมิตไม่ได้
+</p>
+</div>
+<p>ในกรณีนี้ จะเห็นว่า ไม่ว่าจะเลือก <span class="math inline">\(L\)</span> เป็นค่าใด ก็ไม่สามารถสรุปได้ว่า
+<span class="math inline">\(\underset{x\rightarrow 0^{+}}{\lim}f(x)=L\)</span>
+เพราะไม่ใช่ทุกครั้งที่เรากำหนดบริเวณรอบ ๆ <span class="math inline">\(L\)</span> แล้ว function
+จะสอดคล้องตามนิยามเสมอไป จึงสรุปว่า <span class="math inline">\(\underset{x\rightarrow a}{\lim}f(x)=L\)</span>
+หาค่าไม่ได้ด้วย</p>
+<div class="theorem" label="“thm-limit-1&quot;">
+<p><span id="thm:thm-limit-1" class="theorem"><strong>ทฤษฎี 2.1  </strong></span></p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\underset{x\rightarrow c}{\lim}c=c\)</span> ถ้า c เป็นจำนวนจริง</p></li>
+<li><p><span class="math inline">\(\underset{x\rightarrow a}{\lim}x=a\)</span></p></li>
+</ol>
+</div>
+<div class="theorem" label="“thm-limit-2&quot;">
+<p><span id="thm:thm-limit-2" class="theorem"><strong>ทฤษฎี 2.2  </strong></span>ถ้า <span class="math inline">\(\underset{x\rightarrow a}{\lim}f(x)\)</span> และ
+<span class="math inline">\(\underset{x\rightarrow a}{\lim}g(x)\)</span> หาค่าได้แล้ว จะได้</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\underset{x\rightarrow a}{\lim}(f+g)(x)=\underset{x\rightarrow a}{\lim}f(x)+\underset{x\rightarrow a}{\lim}g(x)\)</span></p></li>
+<li><p><span class="math inline">\(\underset{x\rightarrow a}{\lim}(f-g)(x)=\underset{x\rightarrow a}{\lim}f(x)-\underset{x\rightarrow a}{\lim}g(x)\)</span></p></li>
+<li><p><span class="math inline">\(\underset{x\rightarrow a}{\lim}(f\cdot g)(x)=\left( \underset{x\rightarrow a}{\lim}f(x)\right) \cdot \left( \underset{x\rightarrow a}{\lim}g(x)\right)\)</span></p></li>
+<li><p><span class="math inline">\(\underset{x\rightarrow a}{\lim}\left( \frac{f}{g}\right) (x)=\frac{\underset{x\rightarrow a}{\lim}f(x)}{\underset{x\rightarrow a}{\lim}g(x)}\)</span>
+ถ้า <span class="math inline">\(\underset{x\rightarrow a}{\lim}g(x)\neq 0\)</span></p></li>
+</ol>
+</div>
+<p><strong>หมายเหตุ</strong> ทฤษฎีบททั้งสองนี้ยังคงเป็นจริงสำหรับ limit ทางซ้าย และ limit ทางขวาด้วย</p>
+<div class="theorem" label="“thm-limit-3&quot;">
+<p><span id="thm:thm-limit-3" class="theorem"><strong>ทฤษฎี 2.3  </strong></span>ถ้า <span class="math inline">\(\underset{x\rightarrow a}{\lim}f(x)\)</span> หาค่าได้ และ
+<span class="math inline">\(\root{n}\of{f\left( x\right) }\)</span> หาค่าได้ สำหรับทุก ๆ <span class="math inline">\(x\)</span> ในช่วงเปิดบางช่วงที่มี
+<span class="math inline">\(a\)</span> อยู่ด้วย แล้ว
+<span class="math inline">\(\underset{x\rightarrow a}{\lim}\root{n}\of{f\left( x\right) }=\root{n}\of{\underset{x\rightarrow a}{\lim}f(x)}\)</span></p>
+</div>
+<p><strong>หมายเหตุ</strong> ทฤษฎีบทนี้เป็นจริงสำหรับ limit ทางซ้าย และ limit ทางขวาด้วย
+โดยเปลี่ยนเงื่อนไข “ทุก ๆ <span class="math inline">\(x\)</span>” เป็น “ทุก ๆ <span class="math inline">\(x &lt; a\)</span>” และ “ทุก ๆ <span class="math inline">\(x &gt; a\)</span>” ตามลำดับ</p>
+<div class="theorem" label="“thm-limit-4&quot;">
+<p><span id="thm:thm-limit-4" class="theorem"><strong>ทฤษฎี 2.4  </strong></span>ถ้า <span class="math inline">\(f\)</span> และ <span class="math inline">\(g\)</span> เป็น function ซึ่ง <span class="math inline">\(f\left( x\right) =g\left( x\right)\)</span>
+สำหรับทุก ๆ <span class="math inline">\(x\)</span> ยกเว้นบาง <span class="math inline">\(x\)</span> ซึ่งมีอยู่เพียงจำนวนจำกัด แล้ว
+<span class="math inline">\(\underset{x\rightarrow a}{\lim}f(x)=\underset{x\rightarrow a}{\lim}g(x)\)</span>
+ถ้า limit อันใดอันหนึ่งหาค่าได้</p>
+</div>
+<p><strong>หมายเหตุ</strong> ทฤษฎีบทนี้ยังคงเป็นจริงสำหรับ limit ทางซ้าย และ limit ทางขวาด้วย</p>
+<div class="example" label="ex-limit-3">
+<p><span id="exm:ex-limit-3" class="example"><strong>ตัวอย่าง 2.3  </strong></span>จงหาค่าของ <span class="math inline">\(\underset{x\rightarrow 2}{\lim}\frac{-x^{2}+6x-8}{x-2}\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<span class="math display">\[\begin{equation}
+  \begin{aligned}
+    \lim_{x\rightarrow 2}\frac{-x^{2}+6x-8}{x-2}
+    &amp;= \lim_{x\rightarrow 2} -\frac{\left( x-2\right) \left( x-4\right) }{x-2}\\
+    &amp;= \lim_{x\rightarrow 2} -\left( x-4\right) \\ %ต่างกับ function เดิม ที่ค่าเดียของ x คือ x = 2
+    &amp;= \lim_{x\rightarrow 2}\left( 4-x\right) \\
+    &amp;= \lim_{x\rightarrow 2}4-\lim_{x\rightarrow 2}x\\
+    &amp;= 4-2 \\
+    &amp;= 2
+  \end{aligned}
+\end{equation}\]</span>
+<div class="example" label="ex-limit-4">
+<p><span id="exm:ex-limit-4" class="example"><strong>ตัวอย่าง 2.4  </strong></span>จงหาค่าของ <span class="math inline">\(\underset{x\rightarrow 3}{\lim}\frac{\sqrt{x}-\sqrt{3}}{x-3}\)</span>
+<strong>วิธีทำ</strong></p>
+<p><span class="math display">\[\begin{equation}
+  \begin{aligned}
+    \lim_{x\rightarrow 3}\frac{\sqrt{x}-\sqrt{3}}{x-3}
+    &amp;= \lim_{x\rightarrow 3}\frac{\sqrt{x}-\sqrt{3}}{x-3}\cdot \frac{\sqrt{x}+\sqrt{3}}{\sqrt{x}+\sqrt{3}} \\
+    &amp;= \lim_{x\rightarrow 3}\frac{x-3}{\left( x-3\right) \left( \sqrt{x}+\sqrt{3}\right) } \\
+    &amp;= \lim_{x\rightarrow 3}\frac{1}{\sqrt{x}+\sqrt{3}}\\
+    &amp;= \frac{\lim_{x\rightarrow 3}1}{\lim_{x\rightarrow 3} \sqrt{x} + \lim_{x\rightarrow 3} \sqrt{3}} \\
+    &amp;= \frac{\lim_{x\rightarrow 3}1}{\sqrt{\lim_{x\rightarrow 3}x}+\lim_{x\rightarrow 3}\sqrt{3}} \\
+    &amp;= \frac{1}{\sqrt{3}+\sqrt{3}} \\
+    &amp;= \frac{1}{2\sqrt{3}} \\
+  \end{aligned}
+\end{equation}\]</span></p>
+</div>
+<div class="example" label="ex-limit-5">
+<p><span id="exm:ex-limit-5" class="example"><strong>ตัวอย่าง 2.5  </strong></span>จงหา limits ต่อไปนี้</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\underset{x\rightarrow 0^{+}}{\lim}\frac{\sqrt{x}-\sqrt{3}}{x-3}\)</span></p></li>
+<li><p><span class="math inline">\(\underset{x\rightarrow 0^{-}}{\lim}\frac{\sqrt{x}-\sqrt{3}}{x-3}\)</span></p></li>
+<li><p><span class="math inline">\(\underset{x\rightarrow 0}{\lim}\frac{\sqrt{x}-\sqrt{3}}{x-3}\)</span></p></li>
+</ol>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\underset{x\rightarrow 0^{+}}{\lim}\frac{\sqrt{x}-\sqrt{3}}{x-3}\)</span><span class="math inline">\(=\frac{0-\sqrt{3}}{x-3}=\frac{\sqrt{3}}{3}\)</span></p></li>
+<li><p>เนื่องจาก function <span class="math inline">\(\frac{\sqrt{x}-\sqrt{3}}{x-3}\)</span> ไม่ใช่ function
+ที่หาค่าได้บนช่วงเปิด <span class="math inline">\(\left( b,0\right)\)</span> ใด ๆ เลย ดังนั้น
+<span class="math inline">\(\underset{x\rightarrow 0^{-}}{\lim}\frac{\sqrt{x}-\sqrt{3}}{x-3}\)</span>
+จึงหาค่าไม่ได้</p></li>
+<li><p>เนื่องจาก
+<span class="math inline">\(\underset{x\rightarrow 0^{-}}{\lim}\frac{\sqrt{x}-\sqrt{3}}{x-3}\)</span>
+หาค่าไม่ได้ ดังนั้น
+<span class="math inline">\(\underset{x\rightarrow 0}{\lim}\frac{\sqrt{x}-\sqrt{3}}{x-3}\)</span>
+จึงหาค่าไม่ได้</p></li>
+</ol>
+<p><strong>ข้อสังเกต</strong> ในกรณีที่ function ที่มีค่ามากขึ้นโดยไม่มีขอบเขต เมื่อตัวแปรต้นเข้าใกล้ <span class="math inline">\(a\)</span>
+(ทางซ้ายหรือขวา หรือทั้งสองทาง) บางตำรากล่าวว่า limit ของ function มีค่าเป็น
+<span class="math inline">\(+\infty\)</span> และถ้า function มีค่าลดลงโดยไม่มีขอบเขต จะกล่าวว่า limit ของ function
+มีค่าเป็น <span class="math inline">\(-\infty\)</span> ในวิชานี้เราจะถือตามนิยามที่ให้ไว้ ดังนั้นในกรณีข้างต้น จะกล่าวว่า limit
+ดังกล่าวหาค่าไม่ได้ (เว้นแต่จะระบุให้พิจารณาค่า <span class="math inline">\(\pm \infty\)</span> ด้วย)</p>
+<div class="example" label="ex-limit-6">
+<p><span id="exm:ex-limit-6" class="example"><strong>ตัวอย่าง 2.6  </strong></span>จงหา limit ของ function <span class="math inline">\(f\left( x\right) =\frac{1}{x}\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p>เมื่อ <span class="math inline">\(x\)</span> เข้าใกล้ 0 ทางซ้าย</p></li>
+<li><p>เมื่อ <span class="math inline">\(x\)</span> เข้าใกล้ 0 ทางขวา</p></li>
+<li><p>เมื่อ <span class="math inline">\(x\)</span> เข้าใกล้ 0</p></li>
+</ol>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\underset{x\rightarrow 0^{-}}{\lim}\frac{1}{x}\)</span> หาค่าไม่ได้ (หรือเท่ากับ
+<span class="math inline">\(-\infty\)</span>)</p></li>
+<li><p><span class="math inline">\(\underset{x\rightarrow 0^{+}}{\lim}\frac{1}{x}\)</span> หาค่าไม่ได้ (หรือเท่ากับ
+<span class="math inline">\(+\infty\)</span>)</p></li>
+<li><p><span class="math inline">\(\underset{x\rightarrow 0}{\lim}\frac{1}{x}\)</span> หาค่าไม่ได้</p></li>
+</ol>
+<p>ในบางครั้ง เราสนใจพฤติกรรมของ function <span class="math inline">\(f\)</span> เมื่อค่าตัวแปรต้นมีค่ามากขึ้นโดยไม่มีขอบเขต
+หรือน้อยลงโดยไม่มีขอบเขต ในกรณีเช่นนี้ เราใช้สัญลักษณ์
+<span class="math inline">\(\underset{x\rightarrow +\infty }{\lim}f\left( x\right)\)</span> และ
+<span class="math inline">\(\underset{x\rightarrow -\infty }{\lim}f\left( x\right)\)</span> ตามลำดับ
+แทนที่จะใช้ <span class="math inline">\(\underset{x\rightarrow \infty ^{-}}{\lim}f\left( x\right)\)</span> และ
+<span class="math inline">\(\underset{x\rightarrow \infty ^{+}}{\lim}f\left( x\right)\)</span>
+(โปรดอ่านนิยามในเอกสารอ้างอิง) ทฤษฎีบทเกี่ยวกับ limit ที่กล่าวมาข้างต้นทั้งหมด
+เป็นจริงในกรณีนี้ด้ย นอกจากนี้ เรายังมี ทฤษฎีบทต่อไปนี้</p>
+<div class="theorem" label="“thm-limit-5&quot;">
+<p><span id="thm:thm-limit-5" class="theorem"><strong>ทฤษฎี 2.5  </strong></span></p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\underset{x\rightarrow +\infty }{\lim}x=+\infty\)</span></p></li>
+<li><p><span class="math inline">\(\underset{x\rightarrow -\infty }{\lim}x=-\infty\)</span></p></li>
+<li><p>ถ้า <span class="math inline">\(\underset{x\rightarrow a}{\lim}f\left( x\right) =\pm \infty\)</span> แล้ว
+<span class="math inline">\(\underset{x\rightarrow a}{\lim}f\left( x\right) =0\)</span> ซึ่งเป็นจริงสำหรับ
+limit ทางซ้าย และ limit ทางขวาด้วย ในที่นี้ <span class="math inline">\(a\in R\)</span> หรือ a เป็น <span class="math inline">\(+\infty\)</span>
+หรือ <span class="math inline">\(-\infty\)</span></p></li>
+</ol>
+</div>
+<div class="example" label="ex-limit-7">
+<p><span id="exm:ex-limit-7" class="example"><strong>ตัวอย่าง 2.7  </strong></span><span class="math inline">\(\underset{x\rightarrow -\infty }{\lim}\frac{x^{2}+12}{x^{3}-5}=?\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<p><span class="math display">\[\begin{equation}
+  \begin{aligned}
+    \underset{x\rightarrow -\infty }{\lim}\frac{x^{2}+12}{x^{3}-5}
+        &amp;=\underset{x\rightarrow -\infty }{\lim}\frac{\left( x^{2}+12\right) /x^{3}}{\left( x^{3}-5\right) /x^{3}} \\
+        &amp;=\underset{x\rightarrow -\infty }{\lim}\frac{\frac{1}{x}+\frac{12}{x^{3}}}{1-\frac{5}{x^{3}}}
+    =\frac{0+0}{1-0}=0
+  \end{aligned}
+\end{equation}\]</span></p>
+<div class="example" label="ex-limit-8">
+<p><span id="exm:ex-limit-8" class="example"><strong>ตัวอย่าง 2.8  </strong></span><span class="math inline">\(\underset{x\rightarrow +\infty }{\lim}x^{-\frac{2}{3}}=?\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<p><span class="math display">\[\begin{equation}
+  \begin{aligned}
+    \underset{x\rightarrow +\infty }{\lim}x^{-\frac{2}{3}}
+        &amp;=\underset{x\rightarrow +\infty }{\lim}\root{3}\of{\left( \frac{1}{x}\right) ^{2}} \\
+        &amp;=\root{3}\of{\left( \underset{x\rightarrow +\infty }{\lim}\frac{1}{x}\right) ^{2}}
+            =0
+  \end{aligned}
+\end{equation}\]</span></p>
+<div class="example" label="ex-limit-9">
+<p><span id="exm:ex-limit-9" class="example"><strong>ตัวอย่าง 2.9  </strong></span><span class="math inline">\(\underset{x\rightarrow +\infty }{\lim}\frac{x^{\frac{1}{3}}+3x^{\frac{1}{5}}+5x^{\frac{1}{7}}}{3x^{\frac{1}{3}}+5x^{\frac{1}{5}}+7x^{\frac{1}{7}}}=?\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<p><span class="math display">\[\begin{equation}
+  \begin{aligned}
+    \underset{x\rightarrow +\infty }{\lim}\frac{x^{\frac{1}{3}}+3x^{\frac{1}{5}}+5x^{\frac{1}{7}}}{3x^{\frac{1}{3}}+5x^{\frac{1}{5}}+7x^{\frac{1}{7}}}
+        &amp;=\underset{x\rightarrow +\infty }{\lim}\frac{x^{\frac{1}{3}}\left( 1+3x^{-\frac{2}{15}}+5x^{-\frac{4}{21}}\right) }{x^{\frac{1}{3}}\left( 3+5x^{-\frac{2}{15}}+7x^{-\frac{4}{21}}\right) } \\
+        &amp;=\underset{x\rightarrow +\infty }{\lim}\frac{1+3x^{-\frac{2}{15}}+5x^{-\frac{4}{21}}}{3+5x^{-\frac{2}{15}}+7x^{-\frac{4}{21}}}
+=\frac{1}{3}
+  \end{aligned}
+\end{equation}\]</span></p>
+<p><strong>ข้อสังเกต</strong> ตัวแปร <span class="math inline">\(x\)</span> ในสัญลักษณ์
+<span class="math inline">\(\underset{x\rightarrow a}{\lim}f\left( x\right)\)</span> เรียกว่า “ตัวแปรหุ่น”
+(dummy variable) เพราะไม่ได้กล่าวถึงตัวแปร <span class="math inline">\(x\)</span>
+แต่เราใช้มันเพื่อเขียนสัญลักษณ์แทนจำนวนจริงจำนวนหนึ่งที่ค่าของ function <span class="math inline">\(f\)</span> ใกล้เข้าไปหา
+ในยามที่ตัวแปรต้นของมันมีค่าใกล้ <span class="math inline">\(a\)</span> เข้าไปทุกที เราอาจเขียน
+<span class="math inline">\(\underset{t\rightarrow a}{\lim}f\left( t\right)\)</span> แทนจำนวนจำนวนนี้ก็ได้
+เป็นต้น ตัวอย่างของ dummy variable อื่น ๆ เช่น ตัวแปร <span class="math inline">\(n\)</span> ในสัญลักษณ์
+<span class="math inline">\(\underset{n=1}{\overset{4}{\sum }}n^{2}\)</span> ซึ่งอาจเขียนใหม่เป็น
+<span class="math inline">\(\underset{k=1}{\overset{4}{\sum }}k^{2}\)</span> ก็ได้ ทั้งสองสัญลักษณ์นี้แทนจำนวน
+<span class="math inline">\(1^{2}+2^{2}+3^{3}+4^{4}\)</span></p>
+<div class="example" label="ex-limit-10">
+<p><span id="exm:ex-limit-10" class="example"><strong>ตัวอย่าง 2.10  </strong></span>จงหา <span class="math inline">\(\underset{x\rightarrow 3}{\lim}f\left( x\right)\)</span> เมื่อ
+<span class="math inline">\(f\left( x\right) =x^{2}-5\)</span> ถ้า <span class="math inline">\(x\leq 3\)</span> <span class="math inline">\(=\sqrt{x+13}\)</span> ถ้า <span class="math inline">\(x&gt;3\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<p><span class="math display">\[\begin{equation}
+  \begin{aligned}
+    \underset{x\rightarrow 3^{-}}{\lim}f\left( x\right)
+    &amp;=\underset{x\rightarrow 3^{-}}{\lim}x^{2}-5 \leftarrow \boxed{  f(x) = x^{2}-5  \mbox{ เมื่อ $x$ อยู่ทางซ้ายของ 3}}\\
+    &amp;=4
+  \end{aligned}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+  \begin{aligned}
+    \underset{x\rightarrow 3^{+}}{\lim}f\left( x\right)
+        &amp;= \underset{x\rightarrow 3^{+}}{\lim}\sqrt{x+13} \leftarrow
+        \boxed{ f(x)=\sqrt{x+13} \mbox{ เมื่อ $x$ อยู่ทางขวาของ 3}} \\
+        &amp;=4
+  \end{aligned}
+\end{equation}\]</span></p>
+<p>เนื่องจาก
+<span class="math inline">\(\underset{x\rightarrow 3^{-}}{\lim}f\left( x\right) =\)</span> <span class="math inline">\(\underset{x\rightarrow 3^{+}}{\lim}f\left( x\right) =4\)</span>
+ดังนั้น  <span class="math inline">\(\underset{x\rightarrow 3}{\lim}f\left( x\right)\)</span> หาค่าได้
+และมีค่าเท่ากับ 4</p>
+<div class="example" label="ex-limit-11">
+<p><span id="exm:ex-limit-11" class="example"><strong>ตัวอย่าง 2.11  </strong></span>จงหา <span class="math inline">\(\underset{x\rightarrow 0}{\lim}f\left( x\right)\)</span> เมื่อ
+<span class="math display">\[f(x) = \begin{cases}
+            x^{2}-5 &amp; \text{ ถ้า } x\leq 3 \\
+            \sqrt{x+13}  &amp; \text{ ถ้า } x&gt;3
+              \end{cases}\]</span></p>
+</div>
+<p><strong>วิธีทำ</strong> <span class="math inline">\(\underset{x\rightarrow 0}{\lim}f(x)=\underset{x\rightarrow 0}{\lim}(x^{2}-5)=-5\)</span></p>
+<div id="ความตอเนอง-continuity" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> ความต่อเนื่อง (Continuity)<a href="ลมต-limits.html#ความตอเนอง-continuity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>ในวิชาฟิสิกส์ เราสามารถเขียนตำแหน่งของวัตถุที่กำลังเคลื่อนที่ในรูป function ของเวลาได้
+(วัตถุย่อมอยู่ในที่ใดที่หนึ่งเพียงที่เดียว ณ เวลาหนึ่ง ๆ)</p>
+<p><strong>คำถาม</strong> : function ใด ๆ เป็น function
+ที่แสดงตำแหน่งของวัตถุใดวัตถุหนึ่งได้เสมอหรือไม่</p>
+<p>ลองอธิบายการเคลื่อนที่ของวัตถุ ถ้า function ที่แสดงตำแหน่งของมัน คือ</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(s_{1}(t)  = \begin{cases}
+            1 &amp; \text{ ถ้า } t&lt;3 \\
+            1  &amp; \text{ ถ้า } t&gt;3
+              \end{cases}\)</span></p></li>
+<li><p><span class="math inline">\(s_{2}(t)  = \begin{cases}
+            0 &amp; \text{ ถ้า } t \le 3 \\
+            1  &amp; \text{ ถ้า } t&gt;3
+              \end{cases}\)</span></p></li>
+<li><p><span class="math inline">\(s_{3}(t)  = \begin{cases}
+            1 &amp; \text{ ถ้า } t \neq 3 \\
+            0  &amp; \text{ ถ้า } t=3
+              \end{cases}\)</span></p></li>
+</ol>
+<p>กราฟของ <span class="math inline">\(s_1,s_2\)</span> และ <span class="math inline">\(s_3\)</span> เป็นดังนี้</p>
+<p><strong>ข้อสังเกต</strong>:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(s_1(3)\)</span> หาค่าไม่ได้</p></li>
+<li><p><span class="math inline">\(s_2(3)\)</span> หาค่าได้ แต่ <span class="math inline">\(\underset{t \rightarrow 3}{\lim} s_2(t)\)</span>
+หาค่าไม่ได้</p></li>
+<li><p><span class="math inline">\(s_3(3)\)</span> หาค่าได้ <span class="math inline">\(\underset{t \rightarrow 3}{\lim} s_3(t)\)</span> หาค่าได้ แต่
+<span class="math inline">\(s_3(3) \neq \underset{t \rightarrow 3}{\lim} s_3(t)\)</span></p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-continuity-1"></span>
+<img src="images/fig-continuity-1.png" alt="กราฟของฟังก์ชัน $s_1$, $s_2$ และ $s_3$" width="50%" />
+<p class="caption">
+Figure 2.7: กราฟของฟังก์ชัน <span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2\)</span> และ <span class="math inline">\(s_3\)</span>
+</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-1" class="definition"><strong>นิยาม 2.3  </strong></span>ให้ <span class="math inline">\(f:D_{f}\rightarrow R\)</span> โดยที่ <span class="math inline">\(D_{f}\subseteq R\)</span> และ <span class="math inline">\(a\in R\)</span> เรากล่าวว่า
+<span class="math inline">\(f\)</span> ต่อเนื่อง (cotinuous) ที่ <span class="math inline">\(a\)</span> ถ้า</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(f \left( a\right)\)</span> หาค่าได้</p></li>
+<li><p><span class="math inline">\(\underset{x\rightarrow a}{\lim}f(x)\)</span> หาค่าได้</p></li>
+<li><p><span class="math inline">\(f\left( a\right) =\underset{x\rightarrow a}{\lim}f(x)\)</span></p></li>
+</ol>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-2" class="definition"><strong>นิยาม 2.4  </strong></span>ให้ <span class="math inline">\(f\)</span> เป็น function และ <span class="math inline">\(S\)</span> เป็นเซต (set) เรากล่าวว่า <span class="math inline">\(f\)</span> ต่อเนื่องบน <span class="math inline">\(S\)</span>
+(continuous on <span class="math inline">\(S\)</span>) ถ้า <span class="math inline">\(f\)</span> ต่อเนื่องที่ทุก ๆ สมาชิกของ <span class="math inline">\(S\)</span> เรียก function ที่
+continuous on <span class="math inline">\(R\)</span> ว่า “ฟังก์ชันต่อเนื่อง (continuous function)”</p>
+</div>
+<p><strong>ข้อสังเกต</strong> จะเห็นว่า function ที่แสดงตำแหน่งของวัตถุต้องเป็น continuous function
+บนช่วงที่สนใจ</p>
+<div class="theorem" label="“thm-cont-1&quot;">
+<p><span id="thm:thm-cont-1" class="theorem"><strong>ทฤษฎี 2.6  </strong></span>ถ้า <span class="math inline">\(f\)</span> และ <span class="math inline">\(g\)</span> เป็น function ที่ต่อเนื่องที่ <span class="math inline">\(a\)</span> แล้ว</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(f+g\)</span> ต่อเนื่องที่ <span class="math inline">\(a\)</span></p></li>
+<li><p><span class="math inline">\(f-g\)</span> ต่อเนื่องที่ <span class="math inline">\(a\)</span></p></li>
+<li><p><span class="math inline">\(f\cdot g\)</span> ต่อเนื่องที่ <span class="math inline">\(a\)</span></p></li>
+<li><p><span class="math inline">\(\frac{f}{g}\)</span> ต่อเนื่องที่ <span class="math inline">\(a\)</span> ถ้า <span class="math inline">\(g\left( a\right) \neq 0\)</span></p></li>
+</ol>
+</div>
+<div class="example" label="ex-cont-1">
+<p><span id="exm:ex-cont-1" class="example"><strong>ตัวอย่าง 2.12  </strong></span>function <span class="math inline">\(f\)</span> ซึ่งนิยามโดย <span class="math inline">\(f\left( x\right) =\left| x\right|\)</span>
+เป็นฟังก์ชันต่อเนื่องหรือไม่</p>
+</div>
+<p><strong>วิธีทำ</strong> ในที่นี้ <span class="math display">\[f\left( x\right) =
+             \begin{cases}
+            x &amp; \text{ ถ้า } x \ge 0 \\
+            -x  &amp; \text{ ถ้า } x&gt;0
+              \end{cases}\]</span> เราต้องพิจารณาว่า <span class="math inline">\(f\)</span> ต่อเนื่องที่ทุก ๆ <span class="math inline">\(a\in R\)</span>
+หรือไม่</p>
+<ul>
+<li><p>ถ้า <span class="math inline">\(a&gt;0\)</span> จะได้
+<span class="math inline">\(\underset{x\rightarrow a}{\lim}f(x)=\underset{x\rightarrow a}{\lim}x=a=f(a)\)</span></p></li>
+<li><p>ถ้า <span class="math inline">\(a&lt;0\)</span> จะได้
+<span class="math inline">\(\underset{x\rightarrow a}{\lim}f(x)=\underset{x\rightarrow a}{\lim}(-x)=-a=f(a)\)</span></p></li>
+<li><p>ถ้า <span class="math inline">\(a=0\)</span>จะได้
+<span class="math inline">\(\underset{x\rightarrow 0^{-}}{\lim}f(x)=\underset{x\rightarrow 0^{-}}{\lim}(-x)=0=f(0)\)</span><br />
+และ
+<span class="math inline">\(\underset{x\rightarrow 0^{+}}{\lim}f(x)=\underset{x\rightarrow 0^{+}}{\lim}x=0=f(0)\)</span><br />
+ดังนั้น <span class="math inline">\(\underset{x\rightarrow 0}{\lim}f(x)=0=f(0)\)</span></p></li>
+</ul>
+<p>ดังนั้น <span class="math inline">\(f\)</span> ต่อเนื่องที่ทุก ๆ <span class="math inline">\(a\in R\)</span> จึงสรุปว่า <span class="math inline">\(f\)</span> เป็น continuous function</p>
+<div class="theorem" label="“thm-cont-2&quot;">
+<p><span id="thm:thm-cont-2" class="theorem"><strong>ทฤษฎี 2.7  </strong></span>ฟังก์ชันตรรกยะ (rational function) เป็น function ที่ต่อเนื่องบน domain ของมัน</p>
+</div>
+<p><strong>หมายเหตุ</strong>: rational function คือ function ที่เป็นเศษส่วนของพหุนาม
+(polynomial) domain ของ rational function
+ได้แก่เซตของจำนวนจริงซึ่งไม่ทำให้ส่วนของมันเป็นศูนย์</p>
+<div class="theorem" label="“thm-cont-3&quot;">
+<p><span id="thm:thm-cont-3" class="theorem"><strong>ทฤษฎี 2.8  </strong></span>ถ้า <span class="math inline">\(f\)</span> และ <span class="math inline">\(g\)</span> เป็น function และ <span class="math inline">\(a\in R\)</span> โดยที่
+<span class="math inline">\(\underset{x\rightarrow a}{\lim}g(x)=L\)</span> และ <span class="math inline">\(f\)</span> ต่อเนื่องที่ <span class="math inline">\(L\)</span> แล้ว
+<span class="math inline">\(\underset{x\rightarrow a}{\lim}f(g(x))=f(\underset{x\rightarrow a}{\lim}g(x))=f(L)\)</span></p>
+</div>
+<div class="example" label="ex-cont-2">
+<p><span id="exm:ex-cont-2" class="example"><strong>ตัวอย่าง 2.13  </strong></span><span class="math inline">\(\underset{x\rightarrow 1}{\lim}\left| \frac{x^{4}-x^{2}+1}{x^{4}+x^{2}+1}\right| =?\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<p><span class="math display">\[\begin{equation}
+  \begin{aligned}
+    \underset{x\rightarrow 1}{\lim}\left| \frac{x^{4}-x^{2}+1}{x^{4}+x^{2}+1}\right|
+    &amp;=\left| \ \underset{x\rightarrow 1}{\lim}\frac{x^{4}-x^{2}+1}{x^{4}+x^{2}+1}\right| \\
+    &amp;=\left| \frac{1^{4}-1^{2}+1}{1^{4}+1^{2}+1}\right| \\
+    &amp;=\left| \frac{1}{3}\right| =\frac{1}{3}
+  \end{aligned}
+\end{equation}\]</span></p>
+<div class="theorem" label="“thm-cont-4&quot;">
+<p><span id="thm:thm-cont-4" class="theorem"><strong>ทฤษฎี 2.9  </strong></span>ถ้า <span class="math inline">\(f\)</span> ต่อเนื่องที่ <span class="math inline">\(a\)</span> และ <span class="math inline">\(g\)</span> ต่อเนื่องที่ <span class="math inline">\(f(a)\)</span> แล้ว <span class="math inline">\(g\circ f\)</span> ต่อเนื่องที่ <span class="math inline">\(a\)</span></p>
+</div>
+<p><strong>จงพิสูจน์ทฤษฎีบทข้างต้น</strong></p>
+<div class="example" label="ex-cont-3">
+<p><span id="exm:ex-cont-3" class="example"><strong>ตัวอย่าง 2.14  </strong></span>function f ซึ่งนิยามโดย
+<span class="math inline">\(\ f\left( x\right) =\left| \frac{x^{4}-x^{2}+1}{x^{4}+x^{2}+1}\right|\)</span>
+เป็น continuous function หรือไม่</p>
+</div>
+<p><strong>วิธีทำ</strong> <span class="math inline">\(f\)</span> เป็น continuous function เพราะ <span class="math inline">\(f =g\circ h\)</span> โดยที่
+<span class="math inline">\(g\left( x\right) =\left| x\right|\)</span> และ
+<span class="math inline">\(h\left( x\right) =\frac{x^{4}-x^{2}+1}{x^{4}+x^{2}+1}\)</span> ซึ่งเป็น continuous
+function ทั้งคู่</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-3" class="definition"><strong>นิยาม 2.5  </strong></span>เรานิยาม “ภาวะต่อเนื่องทางซ้าย” และ “ภาวะต่อเนื่องทางขวา” ได้โดยแทนที่
+<span class="math inline">\(\underset{x\rightarrow a}{\lim}\)</span> ในเงื่อนไขของนิยาม ด้วย
+<span class="math inline">\(\underset{x\rightarrow a^{-}}{\lim}\)</span> และ
+<span class="math inline">\(\underset{x\rightarrow a^{+}}{\lim}\)</span> ตามลำดับ นั่นคือ</p>
+<p>ให้ <span class="math inline">\(f:D_{f}\rightarrow R\)</span> โดยที่ <span class="math inline">\(D_{f}\subseteq R\)</span> และ <span class="math inline">\(a\in R\)</span> เรากล่าวว่า
+<span class="math inline">\(f\)</span> “ต่อเนื่องทางซ้าย (left-continuous) ที่ <span class="math inline">\(a\)</span>” ถ้า</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(f\left( a\right)\)</span> หาค่าได้</p></li>
+<li><p><span class="math inline">\(\underset{x\rightarrow a^{-}}{\lim}f(x)\)</span> หาค่าได้</p></li>
+<li><p><span class="math inline">\(f\left( a\right) =\underset{x\rightarrow a^{-}}{\lim}f(x)\)</span></p></li>
+</ol>
+<p>และกล่าวว่า <span class="math inline">\(f\)</span> “ต่อเนื่องทางขวา (right-continuous) ที่ <span class="math inline">\(a\)</span>” ถ้า</p>
+<ol style="list-style-type: decimal">
+<li><p>f<span class="math inline">\(\left( a\right)\)</span> หาค่าได้</p></li>
+<li><p><span class="math inline">\(\underset{x\rightarrow a^{+}}{\lim}f(x)\)</span> หาค่าได้</p></li>
+<li><p>f<span class="math inline">\(\left( a\right) =\underset{x\rightarrow a^{+}}{\lim}f(x)\)</span></p></li>
+</ol>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-4" class="definition"><strong>นิยาม 2.6  </strong></span>ให้ <span class="math inline">\(f : \left[ a,b\right] \rightarrow R\)</span> เรากล่าวว่า <span class="math inline">\(f\)</span> ต่อเนื่องบน
+<span class="math inline">\(\left[ a,b\right]\)</span> (continuous on <span class="math inline">\(\left[ a,b\right]\)</span>) ถ้า</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(f\)</span> ต่อเนื่องบน <span class="math inline">\((a,b)\)</span></p></li>
+<li><p><span class="math inline">\(f\)</span> ต่อเนื่องทางขวาที่ <span class="math inline">\(a\)</span></p></li>
+<li><p><span class="math inline">\(f\)</span> ต่อเนื่องทางซ้ายที่ <span class="math inline">\(b\)</span></p></li>
+</ol>
+</div>
+<div class="example" label="ex-cont-4">
+<p><span id="exm:ex-cont-4" class="example"><strong>ตัวอย่าง 2.15  </strong></span>function <span class="math inline">\(f\)</span> ที่นิยามโดย <span class="math inline">\(f\left( x\right) =\sqrt{4-x^{2}}\)</span> เป็น continuous
+function บน <span class="math inline">\(\left[ -2,2\right]\)</span> หรือไม่</p>
+</div>
+<p><strong>วิธีทำ</strong> เราตรวจสอบได้ว่า <span class="math inline">\(f\)</span> เป็น continuous function บน
+<span class="math inline">\(\left[ -2,2\right]\)</span> เพราะ<br />
+1. <span class="math inline">\(f\)</span> เป็น continuous function บน <span class="math inline">\(\left( -2,2\right)\)</span><br />
+2. <span class="math inline">\(f\)</span> ต่อเนื่องทางขวาที่ -2 เพราะ $$</p>
+<span class="math display">\[\begin{equation}
+  \begin{aligned}
+    \underset{x\rightarrow -2^{+}}{\lim}f(x)
+        &amp;=\underset{x\rightarrow -2^{+}}{\lim}\sqrt{4-x^{2}} \\
+        &amp;=0=f\left( -2\right)
+  \end{aligned}
+\end{equation}\]</span>
+<ol start="3" style="list-style-type: decimal">
+<li><span class="math inline">\(f\)</span> ต่อเนื่องทางซ้าย ที่ 2 เพราะ</li>
+</ol>
+<span class="math display">\[\begin{equation}
+  \begin{aligned}
+        \underset{x\rightarrow -2^{-}}{\lim}f(x)
+        &amp;=\underset{x\rightarrow -2^{-}}{\lim}\sqrt{4-x^{2}} \\
+        &amp;=0 =f\left( 2\right)
+  \end{aligned}
+\end{equation}\]</span>
+<div class="example" label="ex-cont-5">
+<p><span id="exm:ex-cont-5" class="example"><strong>ตัวอย่าง 2.16  </strong></span>พิจารณา function f ซึ่งมีกราฟดังต่อไปนี้</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-continuity-2"></span>
+<img src="images/fig-continuity-2.png" alt="กราฟของฟังก์ชันในตัวอย่าง \@ref(exm:ex-cont-5)" width="50%" />
+<p class="caption">
+Figure 2.8: กราฟของฟังก์ชันในตัวอย่าง <a href="ลมต-limits.html#exm:ex-cont-5">2.16</a>
+</p>
+</div>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f\)</span> มีความต่อเนื่องที่ <span class="math inline">\(-1,0,1,2,3,4,5\)</span> หรือไม่<br />
+</li>
+<li><span class="math inline">\(f\)</span> มีความต่อเนื่องบน
+<span class="math inline">\(\left[ -1,0\right] ,\left[ 0,1\right] ,\left[ 1,2\right] ,\left[ 2,3\right] ,\left[ 3,4\right] ,\left[ 4,5\right]\)</span>
+หรือไม่</li>
+</ol>
+</div>
+<p><strong>วิธีทำ</strong> ให้นักศึกษาทำเป็นแบบฝึกหัด</p>
+<div class="theorem" label="“thm-cont-5&quot;">
+<p><span id="thm:thm-cont-5" class="theorem"><strong>ทฤษฎี 2.10  </strong></span>ฟังก์ชันตรีโกณมิติ ฟังก์ชันตรีโกณมิติผกผัน ฟังก์ชันเลขชี้กำลัง และฟังก์ชันลอการิทึม
+เป็นฟังก์ชันที่ต่อเนื่องบนโดเมนของมัน</p>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="อนพนธ-derivatives.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/pairote-sat/SCMA104/edit/main/02-limits-continuity.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/pairote-sat/SCMA104/blob/main/02-limits-continuity.Rmd",
+"text": null
+},
+"download": ["SCMA104bookdownproj.pdf", "SCMA104bookdownproj.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

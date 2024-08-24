@@ -8,6 +8,8 @@ language:
     chapter_name: "บทที่ "
   label:  
     exm: "ตัวอย่าง "
+    thm: "ทฤษฎี "
+    def: "นิยาม "    
     
 output:
   bookdown::pdf_document2:

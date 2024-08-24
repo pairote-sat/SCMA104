@@ -125,12 +125,14 @@ ggplot(data, aes(x = Time, y = Size)) +
 :::
 
 ```{=tex}
-\begin{align}
-N(t + h) &= N(t) \\
-&\quad + \text{จำนวนแบคทีเรียที่เกิดขึ้นใหม่ระหว่าง } t \text{ และ } t+h \\
-&\quad - \text{จำนวนแบคทีเรียที่ตายไประหว่าง } t \text{ และ } t+h
-(\#eq:population-growth-2)
-\end{align}
+\begin{equation}
+   \begin{aligned}
+      N(t + h) &= N(t) \\
+               &\quad +     \text{จำนวนแบคทีเรียที่เกิดขึ้นใหม่ระหว่าง } t \text{ และ } t+h \\
+              &\quad - \text{จำนวนแบคทีเรียที่ตายไประหว่าง } t \text{ และ } t+h
+    \end{aligned}          
+    (\#eq:population-growth-2)
+\end{equation}
 ```
 ในที่นี้ "**การเกิด**" เราหมายถึงการเพิ่มจำนวนของแบคทีเรียจากหนึ่งเป็นสอง และเราจะกำหนดให้ $h$ เป็นช่วงเวลาสั้นๆ (ซึ่งเราสามารถใช้ความรู้แคลคูลัสในการสร้างแบบจำลองทางคณิตศาสตร์ในรูปของสมการเชิงอนุพันธ์ (differential equation)) ในสมการ \@ref(eq:population-growth-2) ถ้าเราสมมติว่า การเพิ่มของแบคทีเรียเป็นสัดส่วนกับจำนวนแบคทีเรียที่มีอยู่ในขณะนั้น หรือเขียนในรูปของสมการได้ดังนี้
 
@@ -202,7 +204,7 @@ N(t) = N_0 e^{(b-m)t}
 4.  เปรียบเทียบผลลัพธ์ที่ได้กับรูปภาพแสดงการเปลี่ยนแปลงของยีสต์จากการทดลองในห้องปฏิการ ตามรูปที่ \@ref(fig:fig-yeast-cells) (รูปภาพอ้างอิงจาก [https://homework.study.com/](https://homework.study.com/explanation/a-graph-of-a-population-of-yeast-cells-in-a-new-laboratory-culture-as-a-function-of-time-is-shown-a-describe-how-the-rate-of-population-increase-varies-b-when-is-this-rate-highest-c-on-what-intervals-is-the-population-function-concave-upward-or-d.html){.uri})
 :::
 
-```{r fig-yeast-cells, echo = FALSE,  fig.cap="กราฟการเจริญเติบโตของเซลล์ยีสต์", out.width="50%"}
+```{r fig-yeast-cells, echo = FALSE,  fig.cap="กราฟการเจริญเติบโตของเซลล์ยีสต์", out.width="50%", fig.align="center"}
 
 knitr::include_graphics("images/fig-yeast-cells.png")
 ```
@@ -216,5 +218,38 @@ knitr::include_graphics("images/fig-yeast-cells.png")
 
 3.  เขียนสรุปสั้นๆ ว่าโมเดลนี้ใช้เพื่ออะไร
 :::
+
+**วิธีทำ**
+
+ตัวอย่างของแบบจำลองทางคณิตศาสตร์ที่ได้จากการสืบค้นข้อมูลอินเทอร์เน็ตจาก
+
+-   [CALCULUS IN MEDICINE (https://sites.northwestern.edu/recalculated/2019/05/05/calculus-in-medicine/)](https://sites.northwestern.edu/recalculated/2019/05/05/calculus-in-medicine/ "RE(CALC)ULATED")
+
+-   [เภสัชจลนศาสตร์ (Pharmacokinetics) และ เภสชั พลศาสตร์ (Pharmacodynamics) (https://ns.mahidol.ac.th/english/th/departments/MN/th/doc/km54/เภสัชจลนศาสตร์%20(Pharmacokinetics).pdf)](https://ns.mahidol.ac.th/english/th/departments/MN/th/doc/km54/เภสัชจลนศาสตร์%20(Pharmacokinetics).pdf)
+
+แบบจำลองทางคณิตศาสตร์จำลองการเปลี่ยนแปลงของความเข้มข้นของยา $c$ ณ เวลา $t$ โดยที่กำหนดขนาดยา (drug dosage) เท่ากับ $d$
+
+$$
+\frac{dc}{dt} = \frac{k_a}{k_a - k_e}\left[ k_a \cdot d \cdot b \cdot e^{-at} - k_e \cdot c \cdot v \right]
+$$
+
+โดยที่
+
+-   $k_a$ คือ ค่าคงตัวของการดูดซึมยา
+
+-   $k_e$ คือ ค่าคงตัวของการกำจัดยา
+
+-   $v$ แทน ปริมาตรของยาในร่างกาย
+
+-   $b$ แทน สัดส่วนของปริมาณยาที่ถูกดูดซึมเข้าไปในร่างกายเทียบกับขนาดของยา
+
+ตามหลักเภสัชจลนศาสตร์ เมื่อได้รับยาเข้าสู่ร่างกาย จะมีกระบวนการดูดซึมยา การกระจายตัวของยา การเปลี่ยนแปลงยา และการขัดถ่ายยาออกจากร่างกาย
+
+```{r fig-drub-absorption, echo = FALSE,  fig.cap="การเปลี่ยนแปลงความเข้มข้นของยาในระยะการดูดซึม และการกำจัดออกจากร่างกาย", out.width="50%"}
+
+knitr::include_graphics("images/fig-drub-absorption.png")
+```
+
+การสร้างแบบจำลองทางคณิตศาสตร์จะมีประโยชน์ที่สำคัญที่ทำให้ผู้เชี่ยวชาญด้านยาสามารถกำหนดขนาดของยาที่เหมาะสม อย่างต่อเนื่องเป็นระยะเวลาที่เพียงพอกับการรักษา เพื่อให้ได้ผลการรักษาที่ดีที่สุด
 
 โดยสรุป แคลคูลัสและสมการเชิงอนุพันธ์เป็นเครื่องมือสำคัญในการทำความเข้าใจว่าสิ่งต่างๆ เปลี่ยนแปลงไปอย่างไรและ แคลคูลัสช่วยให้เราวิเคราะห์อัตราการเปลี่ยนแปลงและพื้นที่ใต้เส้นโค้ง ในขณะที่สมการเชิงอนุพันธ์ช่วยให้เราสร้างแบบจำลองระบบที่ซับซ้อนในสาขาต่างๆ เช่น ฟิสิกส์ วิศวกรรม เศรษฐศาสตร์ และชีววิทยา แนวคิดทางคณิตศาสตร์เหล่านี้มีความสำคัญต่อการแก้ปัญหาในโลกแห่งความเป็นจริง เมื่อโลกของเราก้าวหน้ามากขึ้น ความสำคัญของแคลคูลัสและสมการเชิงอนุพันธ์ก็จะเพิ่มขึ้นอย่างต่อเนื่อง ซึ่งสนับสนุนความก้าวหน้าทางวิทยาศาสตร์และเทคโนโลยี
