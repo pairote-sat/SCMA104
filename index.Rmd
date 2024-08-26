@@ -225,7 +225,7 @@ knitr::include_graphics("images/fig-yeast-cells.png")
 
 -   [CALCULUS IN MEDICINE (https://sites.northwestern.edu/recalculated/2019/05/05/calculus-in-medicine/)](https://sites.northwestern.edu/recalculated/2019/05/05/calculus-in-medicine/ "RE(CALC)ULATED")
 
--   [เภสัชจลนศาสตร์ (Pharmacokinetics) และ เภสชั พลศาสตร์ (Pharmacodynamics) (https://ns.mahidol.ac.th/english/th/departments/MN/th/doc/km54/เภสัชจลนศาสตร์%20(Pharmacokinetics).pdf)](https://ns.mahidol.ac.th/english/th/departments/MN/th/doc/km54/เภสัชจลนศาสตร์%20(Pharmacokinetics).pdf)
+-   [เภสัชจลนศาสตร์ (Pharmacokinetics) และ เภสัชพลศาสตร์ (Pharmacodynamics) (https://ns.mahidol.ac.th/english/th/departments/MN/th/doc/km54/เภสัชจลนศาสตร์%20(Pharmacokinetics).pdf)](https://ns.mahidol.ac.th/english/th/departments/MN/th/doc/km54/เภสัชจลนศาสตร์%20(Pharmacokinetics).pdf)
 
 แบบจำลองทางคณิตศาสตร์จำลองการเปลี่ยนแปลงของความเข้มข้นของยา $c$ ณ เวลา $t$ โดยที่กำหนดขนาดยา (drug dosage) เท่ากับ $d$
 
@@ -243,7 +243,7 @@ $$
 
 -   $b$ แทน สัดส่วนของปริมาณยาที่ถูกดูดซึมเข้าไปในร่างกายเทียบกับขนาดของยา
 
-ตามหลักเภสัชจลนศาสตร์ เมื่อได้รับยาเข้าสู่ร่างกาย จะมีกระบวนการดูดซึมยา การกระจายตัวของยา การเปลี่ยนแปลงยา และการขัดถ่ายยาออกจากร่างกาย
+ตามหลักเภสัชจลนศาสตร์ เมื่อได้รับยาเข้าสู่ร่างกาย จะมีกระบวนการดูดซึมยา การกระจายตัวของยา การเปลี่ยนแปลงยา และการขับถ่ายยาออกจากร่างกาย
 
 ```{r fig-drub-absorption, echo = FALSE,  fig.cap="การเปลี่ยนแปลงความเข้มข้นของยาในระยะการดูดซึม และการกำจัดออกจากร่างกาย", out.width="50%"}
 
