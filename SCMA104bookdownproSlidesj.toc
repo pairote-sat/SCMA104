@@ -32,3 +32,6 @@
 \contentsline {subsection}{\numberline {4.3.1}แบบฝึกหัด}{179}{subsection.4.3.1}%
 \contentsline {section}{\numberline {4.4}การหาค่าเหมาะที่สุด (Optimization)}{179}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}แบบฝึกหัด}{185}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L'Hopital Rule)}{187}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด \(0\cdot \infty \) หรือ \(\infty -\infty \)}{190}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด \(0^{0}, 1^{\infty }, \infty ^0\)}{193}{subsection.4.5.2}%

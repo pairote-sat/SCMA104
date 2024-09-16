@@ -23,7 +23,7 @@
 <meta name="author" content="Pairote Satiracoo" />
 
 
-<meta name="date" content="2024-08-26" />
+<meta name="date" content="2024-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -133,6 +133,12 @@
 <ul>
 <li class="chapter" data-level="4.4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-6"><i class="fa fa-check"></i><b>4.4.1</b> แบบฝึกหัด</a></li>
 </ul></li>
+<li class="chapter" data-level="4.5" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule"><i class="fa fa-check"></i><b>4.5</b> รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L’Hopital Rule)</a>
+<ul>
+<li><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty" id="toc-การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty"><span class="toc-section-number">4.5.1</span> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0\cdot \infty\)</span> หรือ <span class="math inline">\(\infty
+-\infty\)</span></a></li>
+<li class="chapter" data-level="4.5.2" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาลมตทอยในรปแบบไมกำหนด-00-1infty-infty0"><i class="fa fa-check"></i><b>4.5.2</b> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0^{0}, 1^{\infty}, \infty^0\)</span></a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -169,12 +175,12 @@
 <div class="definition">
 <p><span id="def:unlabeled-div-5" class="definition"><strong>นิยาม 3.1  </strong></span>ถ้า <span class="math inline">\(f : D_f \rightarrow \mathbb{R}\)</span> โดยที่ <span class="math inline">\(D_f \subseteq \mathbb{R}\)</span>
 และถ้า <span class="math inline">\(\underset{x \rightarrow x_0}{\lim} \frac{f(x)-f(x_0)}{x- x_0}\)</span>
-หาค่าได้แล้ว เรียกค่าของ limit นี้ว่า “อนุพันธ์ (derivative) ของ <span class="math inline">\(f\)</span> ที่ <span class="math inline">\(x_0\)</span>"
+หาค่าได้แล้ว เรียกค่าของ limit นี้ว่า “อนุพันธ์ (derivative) ของ <span class="math inline">\(f\)</span> ที่ <span class="math inline">\(x_0\)</span>”
 และแทนด้วยสัญลักษณ์ <span class="math inline">\(f&#39;(x_0)\)</span></p>
 </div>
 <p>เนื่องจากแต่ละ function <span class="math inline">\(g\)</span> และแต่ละ <span class="math inline">\(x_0\)</span> จะมี
 <span class="math inline">\(\underset{x \rightarrow x_0}{\lim}g(x)\)</span> ได้ค่าเดียว ดังนั้น <span class="math inline">\(f&#39;\)</span> จึงเป็น
-function เรียกว่า “อนุพันธ์ (derivative)" ของ <span class="math inline">\(f\)</span></p>
+function เรียกว่า “อนุพันธ์ (derivative)” ของ <span class="math inline">\(f\)</span></p>
 <p>ในการเขียนนิยามของ <span class="math inline">\(f&#39;(x)\)</span> เพื่อใช้เป็นสูตรทั่วไปสำหรับ function <span class="math inline">\(f&#39;\)</span>
 เราเปลี่ยนตัวแปรเสียใหม่ ดังแสดงในรูป</p>
 <p><img src="images/fig-derivative-2.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -196,16 +202,17 @@ function เรียกว่า “อนุพันธ์ (derivative)" ข�
 <p>อัตราส่วน <span class="math inline">\(\displaystyle\frac{f(x+h) - f(x)}{h}\)</span> คือ อัตราส่วนของค่า function
 ที่เปลี่ยนไป (จาก <span class="math inline">\(f(x_0)\)</span> กลายเป็น <span class="math inline">\(f(x)\)</span>) ต่อค่าตัวแปรต้นที่เปลี่ยนไป (จาก <span class="math inline">\(x_0\)</span>
 กลายเป็น <span class="math inline">\(x\)</span>) เรียกคำนี้ว่า “อัตราการเปลี่ยนแปลงเฉลี่ย (average rate of change)
-ของ <span class="math inline">\(f(x)\)</span> เทียบกับ <span class="math inline">\(x\)</span>" คำว่าเฉลี่ยน แสดงถึงการคิดการเปลี่ยนแปลงบน ‘ช่วง’<br />
+ของ <span class="math inline">\(f(x)\)</span> เทียบกับ <span class="math inline">\(x\)</span>” คำว่าเฉลี่ยน แสดงถึงการคิดการเปลี่ยนแปลงบน ‘ช่วง’<br />
 แต่
 <span class="math inline">\(\displaystyle\underset{x \rightarrow x_0}{\lim}\frac{f(x) - f(x_0)}{x-x_0}\)</span>
-เป็นการหา”แนวโน้ม" ของอัตราการเปลี่ยนแปลงเฉลี่ย เมื่อ <span class="math inline">\(x\)</span> กับ <span class="math inline">\(x_0\)</span> อยู่ใกล้กันมากๆ
+เป็นการหา “แนวโน้ม” ของอัตราการเปลี่ยนแปลงเฉลี่ย เมื่อ <span class="math inline">\(x\)</span> กับ <span class="math inline">\(x_0\)</span> อยู่ใกล้กันมากๆ
 จนแทบจะเป็นจุดเดียวกัน เราจึงเรียกค่านี้ว่า “อัตราการเปลี่ยนแปลงขณะหนึ่ง (instantaneous
-rate of change) ของ <span class="math inline">\(f(x)\)</span> เทียบกับ <span class="math inline">\(x\)</span>"</p>
+rate of change) ของ <span class="math inline">\(f(x)\)</span> เทียบกับ <span class="math inline">\(x\)</span>”</p>
 <p>สัญลักษณ์อื่นๆ สำหรับ derivatives ได้แก่</p>
 <p>ถ้า <span class="math inline">\(f&#39;(x_0)\)</span> หาค่าได้ เรากล่าวว่า function <span class="math inline">\(f\)</span> “หาอนุพันธ์ได้ (differentiable) ที่
-<span class="math inline">\(x_0\)</span>" ถ้า <span class="math inline">\(f&#39;(x_0)\)</span> หาค่าได้สำหรับทุกๆ <span class="math inline">\(x\)</span> ในเซต <span class="math inline">\(S\)</span> เรากล่าวว่า function <span class="math inline">\(f\)</span>”หาอนุพันธ์บน <span class="math inline">\(S\)</span> (differentiable on <span class="math inline">\(S\)</span>)" ถ้า <span class="math inline">\(f&#39;(x_0)\)</span> หาค่าได้สำหรับทุกๆ
-จำนวนจริง <span class="math inline">\(x\)</span> เรากล่าวว่า function <span class="math inline">\(f\)</span> “หาอนุพันธ์ได้ (differentiable)"</p>
+<span class="math inline">\(x_0\)</span>” ถ้า <span class="math inline">\(f&#39;(x_0)\)</span> หาค่าได้สำหรับทุกๆ <span class="math inline">\(x\)</span> ในเซต <span class="math inline">\(S\)</span> เรากล่าวว่า function <span class="math inline">\(f\)</span>
+“หาอนุพันธ์บน <span class="math inline">\(S\)</span> (differentiable on <span class="math inline">\(S\)</span>)” ถ้า <span class="math inline">\(f&#39;(x_0)\)</span> หาค่าได้สำหรับทุกๆ
+จำนวนจริง <span class="math inline">\(x\)</span> เรากล่าวว่า function <span class="math inline">\(f\)</span> “หาอนุพันธ์ได้ (differentiable)”</p>
 </div>
 <div id="การคำนวณหาอนพนธ" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> การคำนวณหาอนุพันธ์<a href="อนพนธ-derivatives.html#การคำนวณหาอนพนธ" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -255,8 +262,8 @@ rate of change) ของ <span class="math inline">\(f(x)\)</span> เทีย
     \underset{h \rightarrow 0}{\lim}\frac{1}{\sqrt{x+h}+\sqrt{x}}
     &amp;=\underset{h \rightarrow 0}{\lim}\frac{1}{\sqrt{0+h}+\sqrt{0}} \\
     &amp;=\underset{h \rightarrow 0}{\lim}\frac{1}{\sqrt{h}}
-  \end{aligned} \end{equation}\]</span> ซึ่งหาค่าไม่ได้ ดังนั้นจึงได้ว่า เซตที่ใหญ่ที่สุดที่ทำให้ function
-<span class="math inline">\(f(x) = \sqrt{x}\)</span> หาอนุพันธ์ได้บน <span class="math inline">\(S\)</span> คือ ช่วงเปิด <span class="math inline">\((0,\infty)\)</span></p>
+  \end{aligned} \end{equation}\]</span> ซึ่งหาค่าไม่ได้ ดังนั้นจึงได้ว่า เซตที่ใหญ่ที่สุดที่ทำให้
+function <span class="math inline">\(f(x) = \sqrt{x}\)</span> หาอนุพันธ์ได้บน <span class="math inline">\(S\)</span> คือ ช่วงเปิด <span class="math inline">\((0,\infty)\)</span></p>
 </div>
 <div id="สตรสำหรบหาอนพนธ" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> สูตรสำหรับหาอนุพันธ์<a href="อนพนธ-derivatives.html#สตรสำหรบหาอนพนธ" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -292,34 +299,34 @@ function ที่ differentiable บนช่วงเปิดในโดเ�
 </div>
 <p><strong>วิธีทำ</strong> ใช้สูตรในทฤษฎีบทข้างต้นหา derivative ได้ดังนี้</p>
 <ol style="list-style-type: decimal">
-<li><p><span class="math display">\[\begin{equation}   \begin{aligned}
+<li><span class="math display">\[\begin{equation}   \begin{aligned}
             f(x) &amp;= 5x^4 \\
             f&#39;(x) &amp;= \frac{d}{dx}(5 \cdot x^4) \\
                 &amp;= 5 \frac{d}{dx}( x^4) = 5 \cdot 4x^3 = 20x^3
-  \end{aligned} \end{equation}\]</span></p></li>
-<li><p><span class="math display">\[\begin{equation}   \begin{aligned}
+  \end{aligned} \end{equation}\]</span></li>
+<li><span class="math display">\[\begin{equation}   \begin{aligned}
             f(x) &amp;= 6x^{11} + 9 \\
             f&#39;(x) &amp;= \frac{d}{dx}(6x^{11} + 9) \\
                 &amp;= 5 \frac{d}{dx}(6x^{11}) + \frac{d}{dx}9\\
                 &amp;= 66x^{10}
-  \end{aligned} \end{equation}\]</span></p></li>
-<li><p><span class="math display">\[\begin{equation}   \begin{aligned}
+  \end{aligned} \end{equation}\]</span></li>
+<li><span class="math display">\[\begin{equation}   \begin{aligned}
             s(t) &amp;= 3t^8 - 2t^5 + 6t + 1 \\
             s&#39;(t) &amp;= \frac{d}{dt}(3t^8 - 2t^5 + 6t + 1) \\
                 &amp;= 24t^7 - 10t^4 + 6
-  \end{aligned} \end{equation}\]</span></p></li>
-<li><p><span class="math display">\[\begin{equation}   \begin{aligned}
+  \end{aligned} \end{equation}\]</span></li>
+<li><span class="math display">\[\begin{equation}   \begin{aligned}
             g(x) &amp;= \left( x^2 - 1 + \frac{1}{2x} \right) \left(2x - 1 + \frac{1}{x^2} \right) \\
             g&#39;(x) &amp;= \frac{d}{dx}\left( x^2 - 1 + \frac{1}{2x} \right)\left(2x - 1 + \frac{1}{x^2} \right)
             +  \left( x^2 - 1 + \frac{1}{2x} \right) \frac{d}{dx} \left(2x - 1 + \frac{1}{x^2} \right)\\
                 &amp;= \left(2x - \frac{1}{2}x^{-1} \right)\left(2x - 1 + \frac{1}{x^2} \right)
             +  \left( x^2 - 1 + \frac{1}{2x} \right) \left(2x -2x^{-3} \right)
-  \end{aligned} \end{equation}\]</span></p></li>
-<li><p><span class="math display">\[\begin{equation}   \begin{aligned}
+  \end{aligned} \end{equation}\]</span></li>
+<li><span class="math display">\[\begin{equation}   \begin{aligned}
 h(x) &amp;= \frac{x^2 -1}{x^4 + 1} \\
         h&#39;(x) &amp;= \frac{(x^4 + 1) \frac{d}{dx}(x^2 -1) - (x^2 -1)\frac{d}{dx}(x^4 + 1)   }{(x^4 + 1)^2}\\
         &amp;= \frac{(x^4 + 1) (2x) - (x^2 -1)(4x^3)   }{(x^4 + 1)^2}
-  \end{aligned} \end{equation}\]</span></p></li>
+  \end{aligned} \end{equation}\]</span></li>
 </ol>
 <div class="example">
 <p><span id="exm:unlabeled-div-12" class="example"><strong>ตัวอย่าง 3.5  </strong></span>จงหา <span class="math inline">\(f&#39;(0)\)</span> เมื่อ <span class="math inline">\(f(x) = (x^6 - x^5-x^4-x^3)(x^5-x^4-x^3-x^2)\)</span></p>
@@ -332,8 +339,8 @@ h(x) &amp;= \frac{x^2 -1}{x^4 + 1} \\
 <h2><span class="header-section-number">3.4</span> อนุพันธ์อันดับสูง (High Order Derivatives)<a href="อนพนธ-derivatives.html#อนพนธอนดบสง-high-order-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>ถ้า <span class="math inline">\(f\)</span> เป็น function ที่หา derivative ได้ และ <span class="math inline">\(f&#39;\)</span> ก็เป็น function ที่หา
 derivative ได้อีก เราเรียก <span class="math inline">\((f&#39;)&#39;\)</span> ว่า “อนุพันธ์อันดับสอง (second derivative) ของ
-<span class="math inline">\(f\)</span>" เขียนแทนด้วย <span class="math inline">\(f&#39;&#39;\)</span> ในทำนองเดียวกัน เราจะมี”อนุพันธ์อันดับสาม (third
-derivative) ของ <span class="math inline">\(f\)</span>" เขียนแทนด้วย <span class="math inline">\(f&#39;&#39;&#39;\)</span> ฯลฯ สำหรับอนุพันธ์อันดับ <span class="math inline">\(n\)</span> (<span class="math inline">\(n\)</span>th
+<span class="math inline">\(f\)</span>” เขียนแทนด้วย <span class="math inline">\(f&#39;&#39;\)</span> ในทำนองเดียวกัน เราจะมี “อนุพันธ์อันดับสาม (third
+derivative) ของ <span class="math inline">\(f\)</span>” เขียนแทนด้วย <span class="math inline">\(f&#39;&#39;&#39;\)</span> ฯลฯ สำหรับอนุพันธ์อันดับ <span class="math inline">\(n\)</span> (<span class="math inline">\(n\)</span>th
 derivative) ของ <span class="math inline">\(f\)</span> โดยที่ <span class="math inline">\(n \ge 4\)</span> เราเขียนแทนด้วย <span class="math inline">\(f^{(n)}\)</span>
 นอกจากนี้เราใช้สัญลักษณ์ <span class="math inline">\(\frac{d^nf(x)}{dx}\)</span> แทน <span class="math inline">\(n\)</span>th derivative ของ <span class="math inline">\(f\)</span> และ
 <span class="math inline">\(\frac{d^nf(x)}{dx}|_{x=x_0}\)</span> แทน <span class="math inline">\(n\)</span>th derivative ของ <span class="math inline">\(f\)</span> ที่ <span class="math inline">\(x_0\)</span> (ซึ่งคือ
@@ -343,7 +350,7 @@ derivative) ของ <span class="math inline">\(f\)</span> โดยที่ 
 <span class="math inline">\(\frac{dy}{dx}, \frac{d^2y}{dx^2}, \frac{d^3y}{dx^3}, \frac{d^4y}{dx^4}, \ldots,
 \frac{d^ny}{dx^n}\)</span> แทนอนุพันธ์อันดับที่ <span class="math inline">\(1,2,3,4,\ldots,n\)</span> ตามลำดับ
 และแทนค่าอนุพันธ์ที่ <span class="math inline">\(x_0\)</span> ด้วย <span class="math inline">\(\frac{d^ny}{dx^n}|_{x=x_0}\)</span></p>
-<p>ด้วยหลักการเดียวกัน “อนุพันธ์อันดับหนึ่ง (first derivative) ของ <span class="math inline">\(f\)</span>" ก็คือ อนุพันธ์ของ
+<p>ด้วยหลักการเดียวกัน “อนุพันธ์อันดับหนึ่ง (first derivative) ของ <span class="math inline">\(f\)</span>” ก็คือ อนุพันธ์ของ
 <span class="math inline">\(f\)</span> นั่นเอง</p>
 <div class="example">
 <p><span id="exm:unlabeled-div-13" class="example"><strong>ตัวอย่าง 3.6  </strong></span>จงหาอนุพันธ์ทั้งหมดของ <span class="math inline">\(f(x) = x^n\)</span> เมื่อ <span class="math inline">\(n &gt; 1\)</span></p>
@@ -379,7 +386,7 @@ derivative) ของ <span class="math inline">\(f\)</span> โดยที่ 
 กราฟของฟังก์ชันนี้ไม่มีเส้นสัมผัสคู่ใดตั้งฉากกัน
 เพราะผลคูณของความชันของเส้นสัมผัสเป็นจำนวนจริงบวกเสมอ ไม่สามารถเป็น <span class="math inline">\(-1\)</span> ได้</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-15" class="example"><strong>ตัวอย่าง 3.8  </strong></span><span id="exa-mountain" label="exa-mountain"></span> ภูเขาจำลองในพิพิธภัณฑ์วิทยาศาสตร์แห่งหนึ่ง
+<p><span id="exm:unlabeled-div-15" class="example"><strong>ตัวอย่าง 3.8  </strong></span>ภูเขาจำลองในพิพิธภัณฑ์วิทยาศาสตร์แห่งหนึ่ง
 เกิดจากการหมุนของพาราโบลาคว่ำรอบแกนสมมาตรของมัน
 โดยที่ฐานของภูเขาจำลองเป็นรูปวงกลมรัศมี 5 เมตร และยอดเขาอยู่สูงจากฐานเป็นระยะทาง 8
 เมตร บนยอดเขาติดตั้งโคมไฟ ณ ตำแหน่งสูงจากยอดเขาขึ้นไปอีก 0.5 เมตร เมื่อเปิดโคมไฟ
@@ -518,7 +525,8 @@ derivative ของผลบวก <span class="math inline">\(f+g\)</span> ผ
 <p><span id="exm:unlabeled-div-19" class="example"><strong>ตัวอย่าง 3.11  </strong></span>พิจารณาฟังก์ชัน <span class="math inline">\(y = \frac{1}{x^2+1}\)</span> กำหนดให้ <span class="math inline">\(u = x^2+1\)</span> จงหา
 <span class="math inline">\(\frac{dy}{dx}\)</span></p>
 </div>
-<p><strong>วิธีทำ</strong> ในที่นี้ <span class="math inline">\(y = \frac{1}{u}\)</span> เราใช้ chain rule ได้ว่า <span class="math display">\[\begin{equation}   \begin{aligned}
+<p><strong>วิธีทำ</strong> ในที่นี้ <span class="math inline">\(y = \frac{1}{u}\)</span> เราใช้ chain rule ได้ว่า
+<span class="math display">\[\begin{equation}   \begin{aligned}
     \frac{dy}{dx}
     &amp;= \frac{dy}{du} \cdot \frac{du}{dx} \\
     &amp;= \frac{d}{du}\left[\frac{1}{u}\right] \cdot \frac{d}{dx}[x^2+1] \\
@@ -538,7 +546,7 @@ derivative ของผลบวก <span class="math inline">\(f+g\)</span> ผ
     &amp;= 100(x^3+x^2+x+1)^{99}(3x^2+2x+1)
   \end{aligned} \end{equation}\]</span> นั่นคือ
 <span class="math inline">\(\displaystyle \frac{dy}{dx} = 100(x^3+x^2+x+1)^{99}(3x^2+2x+1)\)</span></p>
-<p>สูตร <a href="#E:chain1" reference-type="eqref" reference="E:chain1"><span class="math display">\[E:chain1\]</span></a> สามารถเขียนได้ในอีกรูป ซึ่งสะดวกในการนำไปใช้ สังเกตว่า
+<p><strong>ข้อสังเกต</strong> สูตรของกฎลูกโซ่สามารถเขียนได้ในอีกรูป ซึ่งสะดวกในการนำไปใช้ สังเกตว่า
 <span class="math inline">\(y = f(u)\)</span> ดังนั้น
 <span class="math display">\[\frac{dy}{dx} = \frac{d}{dx}[f(u)] \quad \text{และ} \quad
     \frac{dy}{du} = f&#39;(u)\]</span> สูตรของ chain rule จึงเขียนได้ว่า
@@ -549,8 +557,7 @@ derivative ของผลบวก <span class="math inline">\(f+g\)</span> ผ
 <div class="example">
 <p><span id="exm:unlabeled-div-21" class="example"><strong>ตัวอย่าง 3.13  </strong></span>จงหา derivative ของฟังก์ชัน <span class="math inline">\(y = \sqrt{\frac{1}{2}x^2+x+1}\)</span></p>
 </div>
-<p><strong>วิธีทำ</strong> เราแนะนำตัวแปร <span class="math inline">\(u = \frac{1}{2}x^2+x+1\)</span> และใช้สูตร chain
-rule <a href="#E:chain2" reference-type="eqref" reference="E:chain2"><span class="math display">\[E:chain2\]</span></a> ได้ว่า <span class="math display">\[\begin{equation}   \begin{aligned}
+<p><strong>วิธีทำ</strong> เราแนะนำตัวแปร <span class="math inline">\(u = \frac{1}{2}x^2+x+1\)</span> และใช้สูตร chain rule ได้ว่า <span class="math display">\[\begin{equation}   \begin{aligned}
     \frac{d}{dx} \left[\sqrt{\frac{1}{2}x^2+x+1} \right]
     &amp;= \frac{d}{dx}[\sqrt{u}] \\
     &amp;= \frac{d}{du}\sqrt{u} \cdot \frac{du}{dx} \\
@@ -568,9 +575,10 @@ rule <a href="#E:chain2" reference-type="eqref" reference="E:chain2"><span clas
     \frac{d}{dx}[f(x^3+x)]
     &amp;= f&#39;(x^3+x) \frac{d}{dx} [x^3+x] \\
     &amp;= f&#39;(x^3+x) \cdot (3x^2+1)
-  \end{aligned} \end{equation}\]</span> ดังนั้น <span class="math display">\[(3x^2+1)^2 = f&#39;(x^3+x)\cdot(3x^2+1)\]</span> หรือ
-<span class="math display">\[f&#39;(x^3+x) = 3x^2+1\]</span> สังเกตความแตกต่างระหว่าง
-<span class="math inline">\(\displaystyle \frac{d}{dx} f(x^3+x)\)</span> และ <span class="math inline">\(f&#39;(x^3+x)\)</span></p>
+  \end{aligned} \end{equation}\]</span> ดังนั้น
+<span class="math display">\[(3x^2+1)^2 = f&#39;(x^3+x)\cdot(3x^2+1)\]</span> หรือ <span class="math display">\[f&#39;(x^3+x) = 3x^2+1\]</span>
+สังเกตความแตกต่างระหว่าง <span class="math inline">\(\displaystyle \frac{d}{dx} f(x^3+x)\)</span> และ
+<span class="math inline">\(f&#39;(x^3+x)\)</span></p>
 <div class="example">
 <p><span id="exm:unlabeled-div-23" class="example"><strong>ตัวอย่าง 3.15  </strong></span>กำหนดให้ <span class="math inline">\(f(x) = |x|\)</span> จงหา derivative ของฟังก์ชัน <span class="math inline">\(f\)</span> ที่ <span class="math inline">\(x \ne 0\)</span></p>
 </div>
@@ -667,8 +675,8 @@ rule <a href="#E:chain2" reference-type="eqref" reference="E:chain2"><span clas
     \frac{d}{dx}[x]
     &amp;= \frac{d}{dx}[f(y)] \\
     &amp;= f&#39;(y) \cdot \frac{dy}{dx}
-  \end{aligned} \end{equation}\]</span> นั่นคือ <span class="math display">\[1 = f&#39;(y) \cdot \frac{dy}{dx}\]</span> หรือ
-<span class="math display">\[\frac{dy}{dx} = \frac{1}{f&#39;(y)}\]</span> เขียนใหม่ได้ว่า <span class="math display">\[\label{E:inverse}
+  \end{aligned} \end{equation}\]</span> นั่นคือ <span class="math display">\[1 = f&#39;(y) \cdot \frac{dy}{dx}\]</span>
+หรือ <span class="math display">\[\frac{dy}{dx} = \frac{1}{f&#39;(y)}\]</span> เขียนใหม่ได้ว่า <span class="math display">\[\label{E:inverse}
 \boxed{
     \frac{d}{dx}[f^{-1}(x)] = \frac{1}{f&#39;(f^{-1}(x))}
 }\]</span></p>
@@ -676,7 +684,8 @@ rule <a href="#E:chain2" reference-type="eqref" reference="E:chain2"><span clas
 <p><span id="exm:unlabeled-div-25" class="example"><strong>ตัวอย่าง 3.16  </strong></span>กำหนดให้ <span class="math inline">\(f(x) = x^3\)</span> มี <span class="math inline">\(f^{-1}(x) = x^{1/3}\)</span> จงหา
 <span class="math inline">\(\frac{d}{dx} [f^{-1}(x)]\)</span></p>
 </div>
-<p><strong>วิธีทำ</strong> คำนวณหา derivative ได้ว่า <span class="math inline">\(f&#39;(x) = 3x^2\)</span> และ <span class="math display">\[\begin{equation}   \begin{aligned}
+<p><strong>วิธีทำ</strong> คำนวณหา derivative ได้ว่า <span class="math inline">\(f&#39;(x) = 3x^2\)</span> และ
+<span class="math display">\[\begin{equation}   \begin{aligned}
     \frac{d}{dx} [x^{1/3}]  = \frac{d}{dx} [f^{-1}(x)]
     &amp;= \frac{1}{3[f^{-1}(x)]^2} \\
     &amp;= \frac{1}{3[x^{1/3}]^2} \\
@@ -691,7 +700,8 @@ derivative ตามขั้นตอนที่ได้แสดงข้า
 <span class="math display">\[\begin{equation}   \begin{aligned}
     \frac{d}{dx}[x]  &amp;= \frac{d}{dx}[y^3+y+2] \\
     1 &amp;= (3y^2+1)\frac{dy}{dx}
-  \end{aligned} \end{equation}\]</span> ดังนั้น <span class="math inline">\(\displaystyle \frac{dy}{dx} = \frac{1}{3y^2+1}\)</span></p>
+  \end{aligned} \end{equation}\]</span> ดังนั้น
+<span class="math inline">\(\displaystyle \frac{dy}{dx} = \frac{1}{3y^2+1}\)</span></p>
 <div class="example">
 <p><span id="exm:unlabeled-div-27" class="example"><strong>ตัวอย่าง 3.18  </strong></span>กำหนดให้ <span class="math inline">\(f\)</span> เป็นฟังก์ชันซึ่งมีอิสเวอร์ส ถ้า <span class="math inline">\(f(1) = 2\)</span> และ <span class="math inline">\(f&#39;(1) = 3\)</span> แล้ว
 จงหาค่าของ <span class="math inline">\((f^{-1})&#39;(2)\)</span></p>
@@ -792,22 +802,26 @@ x\)</span> ตามเส้นสัมผัสของเส้นโค้
 <span class="math inline">\(y = f(x)\)</span> เช่นในความสัมพันธ์ <span class="math display">\[x^2+y^3 - xy = 0\]</span> การหา derivative ของ <span class="math inline">\(y\)</span>
 เทียบกับ <span class="math inline">\(x\)</span> เราไม่จำเป็นต้องเขียนความสัมพันธ์ ให้อยู่ในรูป <span class="math inline">\(y = f(x)\)</span> ก่อน
 หลักการสำคัญก็คือ เราคิดให้ <span class="math inline">\(y\)</span> เป็น ฟังก์ชันของ <span class="math inline">\(x\)</span> เช่นในตัวอย่างที่ยกมา ถ้าเราหา
-derivative ทั้งสองข้าง ของสมการเทียบกับ <span class="math inline">\(x\)</span> <span class="math display">\[\begin{equation}   \begin{aligned}
+derivative ทั้งสองข้าง ของสมการเทียบกับ <span class="math inline">\(x\)</span>
+<span class="math display">\[\begin{equation}   \begin{aligned}
     \frac{d}{dx}[x^2+y^3-xy] &amp;= \frac{d}{dx}[0] \\
     \frac{d}{dx}[x^2] + \frac{d}{dx}[y^3] - \frac{d}{dx}[xy] &amp;= 0 \\
     2x + 3y^2 \frac{dy}{dx} - x\frac{dy}{dx} -y &amp;= 0
-  \end{aligned} \end{equation}\]</span> เขียนใหม่ได้ว่า <span class="math display">\[\frac{dy}{dx} = \frac{2x-y}{x-3y^2}\]</span></p>
+  \end{aligned} \end{equation}\]</span> เขียนใหม่ได้ว่า
+<span class="math display">\[\frac{dy}{dx} = \frac{2x-y}{x-3y^2}\]</span></p>
 <div class="example">
 <p><span id="exm:unlabeled-div-30" class="example"><strong>ตัวอย่าง 3.21  </strong></span>กำหนดให้ <span class="math inline">\(y^2 = x^3(2-x)\)</span> สังเกตว่า <span class="math inline">\((x,y) = (1,1)\)</span> อยู่บน กราฟของความสัมพันธ์
 จงหาว่าความชันของกราฟนี้ที่จุด <span class="math inline">\((1,1)\)</span></p>
 </div>
-<p><strong>วิธีทำ</strong> หา derivative เทียบกับ <span class="math inline">\(x\)</span> ทั้งสองข้าง ของสมการ <span class="math display">\[\begin{equation}   \begin{aligned}
+<p><strong>วิธีทำ</strong> หา derivative เทียบกับ <span class="math inline">\(x\)</span> ทั้งสองข้าง ของสมการ
+<span class="math display">\[\begin{equation}   \begin{aligned}
     \frac{d}{dx}[y^2] &amp;= \frac{d}{dx}[x^3(2-x)] \\
     \frac{d}{dy}[y^2] \cdot \frac{dy}{dx} &amp;= x^3\frac{d}{dx}[2-x] + (2-x)\frac{d}{dx}[x^3] \\
     (2y) \cdot \frac{dy}{dx} &amp;= -x^3 + (2-x)(3x^2) \\
     \frac{dy}{dx} &amp;= \frac{(2-x)(3x^2)}{2y}
-  \end{aligned} \end{equation}\]</span> ดังนั้นที่จุด <span class="math inline">\((x,y) = (1,1)\)</span> เราจะได้ derivative ของ <span class="math inline">\(y\)</span> เทียบ
-กับ <span class="math inline">\(x\)</span> เป็น <span class="math inline">\(\displaystyle \frac{dy}{dx} = \frac{3}{2}\)</span></p>
+  \end{aligned} \end{equation}\]</span> ดังนั้นที่จุด <span class="math inline">\((x,y) = (1,1)\)</span> เราจะได้
+derivative ของ <span class="math inline">\(y\)</span> เทียบ กับ <span class="math inline">\(x\)</span> เป็น
+<span class="math inline">\(\displaystyle \frac{dy}{dx} = \frac{3}{2}\)</span></p>
 <div class="example">
 <p><span id="exm:unlabeled-div-31" class="example"><strong>ตัวอย่าง 3.22  </strong></span>จงหาสมการเส้นสัมผัสกับเส้นโค้งของสมการ <span class="math display">\[xy^2 = 1\]</span> ที่จุด <span class="math inline">\((1,-1)\)</span></p>
 </div>
@@ -817,8 +831,9 @@ derivative ทั้งสองข้าง ของสมการเที�
     x\frac{d}{dx}[y^2] + y^2\frac{d}{dx}[x] &amp;= 0 \\
     x(2y)\frac{dy}{dx} + y^2 &amp;= 0 \\
     \frac{dy}{dx} &amp;= -\frac{y}{2x}
-  \end{aligned} \end{equation}\]</span> ดังนั้นความชันของเส้นสัมผัสที่จุด <span class="math inline">\((1,-1)\)</span> มีค่าเท่ากับ <span class="math inline">\(1/2\)</span> สมการเส้น
-สัมผัสของเส้นโค้งที่จุด <span class="math inline">\((1,-1)\)</span> จึงเป็น <span class="math display">\[\begin{equation}   \begin{aligned}
+  \end{aligned} \end{equation}\]</span> ดังนั้นความชันของเส้นสัมผัสที่จุด <span class="math inline">\((1,-1)\)</span> มีค่าเท่ากับ
+<span class="math inline">\(1/2\)</span> สมการเส้น สัมผัสของเส้นโค้งที่จุด <span class="math inline">\((1,-1)\)</span> จึงเป็น
+<span class="math display">\[\begin{equation}   \begin{aligned}
     \frac{y-(-1)}{x-1} &amp;= \frac{1}{2} \\
     y+1 &amp;= \frac{1}{2}x -\frac{1}{2}
   \end{aligned} \end{equation}\]</span> นั่นคือ <span class="math inline">\(\displaystyle y=\frac{x-3}{2}\)</span></p>
@@ -826,14 +841,16 @@ derivative ทั้งสองข้าง ของสมการเที�
 <p><span id="exm:unlabeled-div-32" class="example"><strong>ตัวอย่าง 3.23  </strong></span>พิจารณาสมการ <span class="math display">\[\frac{1}{3}x^3+y^3-xy^2 = 5\]</span>
 จงหาว่าที่จุดใดบนเส้นโค้งที่เส้นสัมผัสขนานแกน <span class="math inline">\(x\)</span></p>
 </div>
-<p><strong>วิธีทำ</strong> เราเริ่มด้วยการหา derivative ของสมการ <span class="math display">\[\begin{equation}   \begin{aligned}
+<p><strong>วิธีทำ</strong> เราเริ่มด้วยการหา derivative ของสมการ
+<span class="math display">\[\begin{equation}   \begin{aligned}
     \frac{d}{dx} [\frac{1}{3}x^3 + y^3 -xy^2] &amp;= \frac{d}{dx}[5] \\
     \frac{d}{dx}[\frac{1}{3}x^3] + \frac{d}{dx}[y^3] - \frac{d}{dx}[xy^2] &amp;= 0 \\
     x^2 + 3y^2\frac{dy}{dx} - x\frac{d}{dx}[y^2] - y^2 &amp;= 0 \\
     x^2 + 3y^2\frac{dy}{dx} - x(2y)\frac{dy}{dx} - y^2 &amp;= 0 \\
     \frac{dy}{dx} &amp;= \frac{y^2-x^2}{3y^2-2xy}
-  \end{aligned} \end{equation}\]</span> สังเกตว่าเส้นสัมผัสที่ขนานแกน <span class="math inline">\(x\)</span> จะมีความชันเป็น 0 ดังนั้นที่จุดบน
-เส้นโค้งซึ่งมีเส้นสัมผัสขนานแกน <span class="math inline">\(x\)</span> สอดคล้องกับสมการ <span class="math display">\[\begin{equation}   \begin{aligned}
+  \end{aligned} \end{equation}\]</span> สังเกตว่าเส้นสัมผัสที่ขนานแกน <span class="math inline">\(x\)</span> จะมีความชันเป็น 0
+ดังนั้นที่จุดบน เส้นโค้งซึ่งมีเส้นสัมผัสขนานแกน <span class="math inline">\(x\)</span> สอดคล้องกับสมการ
+<span class="math display">\[\begin{equation}   \begin{aligned}
     y^2-x^2 &amp;= 0 \quad \text{และ}\\
     \frac{1}{3}x^3+y^3-xy^2 &amp;= 5
   \end{aligned} \end{equation}\]</span> เนื่องจาก <span class="math inline">\(y^2-x^2 = (y-x)(y+x) = 0\)</span></p>
@@ -971,13 +988,14 @@ derivative เทียบกับ <span class="math inline">\(t\)</span> ไ�
 เทียบกับ <span class="math inline">\(t\)</span> ทั้งสองข้างของสมการ <span class="math display">\[\begin{equation}   \begin{aligned}
     2x \frac{dx}{dt} + 2y\frac{dy}{dt} &amp;= 0 \\
     x \frac{dx}{dt} + y\frac{dy}{dt} &amp;= 0
-  \end{aligned} \end{equation}\]</span> เนื่องจากลูกรอกอยู่สูงกว่าหัวเรือ 3 เมตร หรือ <span class="math inline">\(y=3\)</span> ในขณะที่
-การดึงเชือกด้วยอัตราเร็ว 6 เมตร หรือ <span class="math inline">\(\frac{dy}{dt} = 6\)</span> เพราะฉะนั้น เมื่อเชือกยาว
-40 เมตร เรืออยู่ห่างออกไปเป็นระยะทาง <span class="math display">\[x^2 + 3^2 = 40^2\]</span> หรือ
+  \end{aligned} \end{equation}\]</span> เนื่องจากลูกรอกอยู่สูงกว่าหัวเรือ 3 เมตร หรือ <span class="math inline">\(y=3\)</span>
+ในขณะที่ การดึงเชือกด้วยอัตราเร็ว 6 เมตร หรือ <span class="math inline">\(\frac{dy}{dt} = 6\)</span> เพราะฉะนั้น
+เมื่อเชือกยาว 40 เมตร เรืออยู่ห่างออกไปเป็นระยะทาง <span class="math display">\[x^2 + 3^2 = 40^2\]</span> หรือ
 <span class="math inline">\(x = \sqrt{1591}\)</span> ดังนั้น <span class="math display">\[\begin{equation}   \begin{aligned}
     \sqrt{1591}\frac{dx}{dt} + 4(6) &amp;= 0 \\
     \frac{dx}{dt} &amp;= -\frac{24}{\sqrt{1591}} = -0.60
-  \end{aligned} \end{equation}\]</span> ซึ่งหมายถึงเรือถูกดึงเข้าหาท่าด้วยอัตราเร็ว 0.6 เมตรต่อนาที</p>
+  \end{aligned} \end{equation}\]</span> ซึ่งหมายถึงเรือถูกดึงเข้าหาท่าด้วยอัตราเร็ว 0.6
+เมตรต่อนาที</p>
 <ol style="list-style-type: decimal">
 <li><p>วาดภาพและกำหนดตัวแปรต่างๆ เช่น <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> เป็นต้น</p></li>
 <li><p>ระบุอัตราการเปลี่ยนแปลงของตัวแปรทุกตัวที่โจทย์กำหนดให้ และที่โจทย์ต้องการให้หา เช่น
@@ -1033,7 +1051,8 @@ derivative เทียบกับ <span class="math inline">\(t\)</span> ไ�
 พื้นที่การแพร่ระบาดมีลักษณะคล้ายวงกลมดังแสดงในรูป
 <a href="#fig-fly" reference-type="ref" reference="fig-fly">1.5</a>
 รัศมีของพื้นที่การแพร่ระบาดขยายเพิ่มขึ้นด้วยอัตรา 1.5 ไมล์ต่อปี
-จงหาอัตราการเปลี่ยนแปลงของพื้นที่การแพร่ระบาด เมื่อรัศมีของพื้นที่การแพร่บาดมีค่าเท่ากับ 4 ไมล์</p></li>
+จงหาอัตราการเปลี่ยนแปลงของพื้นที่การแพร่ระบาด เมื่อรัศมีของพื้นที่การแพร่บาดมีค่าเท่ากับ
+4 ไมล์</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-derivative-5"></span>
 <img src="images/fig-derivative-5.png" alt="การแพร่ระบาดของแมลงวันทอง โดยที่วงรีสีเทาแทนแมลงวัน" width="50%" />
@@ -1057,7 +1076,7 @@ Figure 3.3: การแพร่ระบาดของแมลงวัน�
 <div class="theorem">
 <p><span id="thm:unlabeled-div-39" class="theorem"><strong>ทฤษฎี 3.4  </strong></span>ถ้า <span class="math inline">\(f(x)=\sin x\)</span> แล้ว <span class="math inline">\(\displaystyle \frac{d}{dx}\sin x =\cos x\)</span></p>
 </div>
-<p><span class="math display">\[\begin{equation}   \begin{aligned}
+<span class="math display">\[\begin{equation}   \begin{aligned}
 \displaystyle \frac{d}{dx}\sin x&amp;=\lim_{h\rightarrow 0}(\frac{\sin
 (x+h)-\sin x}{h})\\
 \displaystyle  &amp;=\lim_{h\rightarrow0} \frac{2\cos
@@ -1068,7 +1087,7 @@ Figure 3.3: การแพร่ระบาดของแมลงวัน�
 \frac{h}{2}}{\frac{h}{2}}\\
 \displaystyle &amp;=2(\cos x)\frac{1}{2}\\
 &amp;=\cos x
-  \end{aligned} \end{equation}\]</span></p>
+  \end{aligned} \end{equation}\]</span>
 <p>เนื่องจาก <span class="math display">\[\begin{equation}   \begin{aligned}
 \sin (x+h)- \sin x &amp;=2\cos \frac{x+h+x}{2}\sin \frac{h}{2}\\
                         &amp;=2\cos (x+\frac{h}{2})\sin \frac{h}{2}
@@ -1088,14 +1107,14 @@ x}, \quad \sec x=\frac{1}{\cos x} \text{ และ } \displaystyle \csc x=\frac{
 <li><p><span class="math inline">\(\displaystyle\frac{d}{dx}\csc x=-\csc x\cot x\)</span></p></li>
 </ol>
 </div>
-<p><span class="math display">\[\begin{equation}   \begin{aligned}
+<span class="math display">\[\begin{equation}   \begin{aligned}
 \displaystyle \frac{d}{dx}\sec x&amp;=\frac{d}{dx}.\frac{1}{\cos x}\\
 &amp;=\frac{d}{dx}(\cos x)^{-1}\\
 &amp;=(-1)(\cos x)^{-2}\displaystyle \frac{d}{dx}\cos x\\
 &amp;=\displaystyle \frac{-1}{\cos^{2} x}(-\sin x)\\
 &amp;=\displaystyle \frac{1}{\cos x}.\frac{\sin x}{\cos x}\\
 &amp;=\sec x\tan x
-  \end{aligned} \end{equation}\]</span></p>
+  \end{aligned} \end{equation}\]</span>
 <div class="example">
 <p><span id="exm:unlabeled-div-41" class="example"><strong>ตัวอย่าง 3.30  </strong></span>กำหนดให้ <span class="math inline">\(y=x^{2}\tan 3x\)</span> จงหา <span class="math inline">\(\displaystyle
 \frac{dy}{dx}\)</span></p>

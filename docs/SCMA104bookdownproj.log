@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.15)  5 AUG 2024 16:48
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.15)  10 SEP 2024 22:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1594,44 +1594,61 @@ File: images/fig-covid-19.jpeg Graphic file (type bmp)
 <images/fig-covid-19.jpeg>
 File: images/fig-blood-glucose.png Graphic file (type bmp)
 <images/fig-blood-glucose.png>
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.9999pt on input line 186.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 4.99992pt on input line 186.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 186.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 186.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 186.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 186.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 186.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 186.
+File: images/fig-drug-absorption.jpeg Graphic file (type bmp)
+<images/fig-drug-absorption.jpeg>
 [5] [6] [7] [8]
-Chapter 2.
-[9
+File: images/fig-binary-fission.png Graphic file (type bmp)
+<images/fig-binary-fission.png>
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 6.9999pt on input line 211.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 4.99992pt on input line 211.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00092pt on input line 211.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00064pt on input line 211.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.00046pt on input line 211.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 211.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 211.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 211.
 
-] [10
 
-]
-Chapter 3.
-No file SCMA104bookdownproj.bbl.
-[11] (./SCMA104bookdownproj.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
- ***********
- ) 
+LaTeX Warning: Reference `tab:bacteria-table' on page 9 undefined on input line
+ 220.
+
+
+LaTeX Warning: Reference `fig:population-plot' on page 9 undefined on input lin
+e 220.
+
+
+LaTeX Warning: File `SCMA104bookdownproj_files/figure-latex/population-plot-1.p
+df' not found on input line 231.
+
+./SCMA104bookdownproj.tex:231: Unable to load picture or PDF file 'SCMA104bookd
+ownproj_files/figure-latex/population-plot-1.pdf'.
+<to be read again> 
+                   }
+l.231 ...files/figure-latex/population-plot-1.pdf}
+                                                  
+? 
+./SCMA104bookdownproj.tex:231: Emergency stop.
+<to be read again> 
+                   }
+l.231 ...files/figure-latex/population-plot-1.pdf}
+                                                  
+End of file on the terminal!
+
+ 
 Here is how much of TeX's memory you used:
- 28966 strings out of 474773
- 571530 string characters out of 5757724
- 1927839 words of memory out of 5000000
- 50641 multiletter control sequences out of 15000+600000
+ 29060 strings out of 474773
+ 576496 string characters out of 5757724
+ 1928839 words of memory out of 5000000
+ 50733 multiletter control sequences out of 15000+600000
  564584 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,6n,124p,1016b,362s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on SCMA104bookdownproj.pdf (11 pages).
+ 90i,8n,124p,1016b,421s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on SCMA104bookdownproj.pdf (8 pages).

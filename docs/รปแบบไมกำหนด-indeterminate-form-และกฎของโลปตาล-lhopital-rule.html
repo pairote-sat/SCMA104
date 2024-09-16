@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>บทที่ 5 รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L’Hopital Rule) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</title>
+  <meta name="description" content="บทที่ 5 รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L’Hopital Rule) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="บทที่ 5 รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L’Hopital Rule) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="บทที่ 5 รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L’Hopital Rule) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  
+  
+  
+
+<meta name="author" content="Pairote Satiracoo" />
+
+
+<meta name="date" content="2024-09-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="การประยกตของอนพนธ-applications-of-differentiation.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SCMA104</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> หลักการและความสำคัญของแคลคูลัสและระบบสมการเชิงอนุพันธ์สามัญ</a></li>
+<li class="chapter" data-level="2" data-path="ลมต-limits.html"><a href="ลมต-limits.html"><i class="fa fa-check"></i><b>2</b> ลิมิต (Limits)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ลมต-limits.html"><a href="ลมต-limits.html#ความตอเนอง-continuity"><i class="fa fa-check"></i><b>2.1</b> ความต่อเนื่อง (Continuity)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html"><i class="fa fa-check"></i><b>3</b> อนุพันธ์ (Derivatives)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธ-derivatives-1"><i class="fa fa-check"></i><b>3.1</b> อนุพันธ์ (Derivatives)</a></li>
+<li class="chapter" data-level="3.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#การคำนวณหาอนพนธ"><i class="fa fa-check"></i><b>3.2</b> การคำนวณหาอนุพันธ์</a></li>
+<li class="chapter" data-level="3.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#สตรสำหรบหาอนพนธ"><i class="fa fa-check"></i><b>3.3</b> สูตรสำหรับหาอนุพันธ์</a></li>
+<li class="chapter" data-level="3.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธอนดบสง-high-order-derivatives"><i class="fa fa-check"></i><b>3.4</b> อนุพันธ์อันดับสูง (High Order Derivatives)</a></li>
+<li class="chapter" data-level="3.5" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#การตความอนพนธ-interpretation-of-derivatives"><i class="fa fa-check"></i><b>3.5</b> การตีความอนุพันธ์ (Interpretation of Derivatives)</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงความชน-derivatives-as-slopes"><i class="fa fa-check"></i><b>3.5.1</b> อนุพันธ์ในเชิงความชัน (Derivatives as Slopes)</a></li>
+<li class="chapter" data-level="3.5.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงอตราเรว-derivatives-as-speeds"><i class="fa fa-check"></i><b>3.5.2</b> อนุพันธ์ในเชิงอัตราเร็ว (Derivatives as Speeds)</a></li>
+<li class="chapter" data-level="3.5.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงอตราการเปลยนแปลง-derivatives-as-rates-of-change"><i class="fa fa-check"></i><b>3.5.3</b> อนุพันธ์ในเชิงอัตราการเปลี่ยนแปลง (Derivatives as Rates of Change)</a></li>
+<li class="chapter" data-level="3.5.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-exercises"><i class="fa fa-check"></i><b>3.5.4</b> แบบฝึกหัด (Exercises)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#กฎลกโซ-the-chain-rule"><i class="fa fa-check"></i><b>3.6</b> กฎลูกโซ่ (The Chain Rule)</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด"><i class="fa fa-check"></i><b>3.6.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนอนเวอรส-derivatives-of-inverse-functions"><i class="fa fa-check"></i><b>3.7</b> อนุพันธ์ของฟังก์ชันอินเวอร์ส (Derivatives of Inverse Functions)</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-1"><i class="fa fa-check"></i><b>3.7.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#differentials-implicit-differentiation-and-related-rates"><i class="fa fa-check"></i><b>3.8</b> Differentials, Implicit Differentiation and Related Rates</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#differentials"><i class="fa fa-check"></i><b>3.8.1</b> Differentials</a></li>
+<li class="chapter" data-level="3.8.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#implicit-differentiation"><i class="fa fa-check"></i><b>3.8.2</b> Implicit Differentiation</a></li>
+<li class="chapter" data-level="3.8.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#related-rates"><i class="fa fa-check"></i><b>3.8.3</b> Related Rates</a></li>
+<li class="chapter" data-level="3.8.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-2"><i class="fa fa-check"></i><b>3.8.4</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนตรโกณมตและอนเวอรสของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9</b> อนุพันธ์ของฟังก์ชันตรีโกณมิติและอินเวอร์สของฟังก์ชันตรีโกณมิติ</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9.1</b> อนุพันธ์ของฟังก์ชันตรีโกณมิติ</a></li>
+<li class="chapter" data-level="3.9.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนอนเวอรสของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9.2</b> อนุพันธ์ของฟังก์ชันอินเวอร์สของฟังก์ชันตรีโกณมิติ</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html"><i class="fa fa-check"></i><b>4</b> การประยุกต์ของอนุพันธ์ (Applications of Differentiation)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#applications-of-derivatives-related-to-students-discipline"><i class="fa fa-check"></i><b>4.1</b> Applications of derivatives related to students discipline</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-3"><i class="fa fa-check"></i><b>4.1.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#sec-sketch"><i class="fa fa-check"></i><b>4.2</b> Sketching the graph of a function from the derivative</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-4"><i class="fa fa-check"></i><b>4.2.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การประยกตของ-monotonicity-และ-concavity"><i class="fa fa-check"></i><b>4.3</b> การประยุกต์ของ Monotonicity และ Concavity</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-5"><i class="fa fa-check"></i><b>4.3.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาคาเหมาะทสด-optimization"><i class="fa fa-check"></i><b>4.4</b> การหาค่าเหมาะที่สุด (Optimization)</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-6"><i class="fa fa-check"></i><b>4.4.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule.html"><a href="รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule.html"><i class="fa fa-check"></i><b>5</b> รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L’Hopital Rule)</a>
+<ul>
+<li><a href="รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule.html#การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty" id="toc-การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty"><span class="toc-section-number">5.1</span> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0\cdot \infty\)</span> หรือ <span class="math inline">\(\infty
+-\infty\)</span></a></li>
+<li class="chapter" data-level="5.2" data-path="รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule.html"><a href="รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule.html#การหาลมตทอยในรปแบบไมกำหนด-00-1infty-infty0"><i class="fa fa-check"></i><b>5.2</b> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0^{0}, 1^{\infty}, \infty^0\)</span></a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">บทที่ 5</span> รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L’Hopital Rule)<a href="รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule.html#รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="definition">
+<p><span id="def:unlabeled-div-80" class="definition"><strong>นิยาม 5.1  </strong></span>ถ้า <span class="math inline">\(\mathop {\lim }\limits_{x\to a} f(x)=0\)</span> และ <span class="math inline">\(\displaystyle \mathop
+{\lim
+}\limits_{x\to a} g(x)=0\)</span> เราจะกล่าวว่า <span class="math inline">\(\displaystyle \mathop {\lim
+}\limits_{x\to a}
+\frac{f(x)}{g(x)}\)</span> อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span> อาจแทน
+<span class="math inline">\(x\to a\)</span> ด้วย <span class="math inline">\(x\to a^+\)</span> , <span class="math inline">\(x\to a^-\)</span> , <span class="math inline">\(x\to \infty\)</span> , <span class="math inline">\(x\to -\infty\)</span></p>
+</div>
+<p>ในการหาค่าลิมิตของรูปแบบไม่กำหนดแบบ <span class="math inline">\(\displaystyle \frac{0}{0}\)</span> นั้น
+เราจะนำกฎของโลปิตาลมาประยุกต์ใช้</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-81" class="theorem"><strong>ทฤษฎี 5.1  </strong></span>(กฎของโลปิตาล)<br />
+</p>
+<ol style="list-style-type: decimal">
+<li><p>ถ้า <span class="math inline">\(\mathop {\lim }\limits_{x\to a} f(x)=0\)</span> และ <span class="math inline">\(\mathop {\lim
+    }\limits_{x\to a} g(x)=0\)</span> แล้ว
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to
+    a}
+    \frac{f(x)}{g(x)}\)</span> จะอยู่ในรูปแบบไม่กำหนด
+<span class="math inline">\(\displaystyle \frac{0}{0}\)</span> และได้ว่า
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to a}
+    \frac{f(x)}{g(x)}=\mathop {\lim
+    }\limits_{x\to a} \frac{{f}&#39;(x)}{{g}&#39;(x)}\)</span><br />
+</p></li>
+<li><p>ถ้า <span class="math inline">\(\mathop {\lim }\limits_{x\to a} f(x)=\infty\)</span> และ <span class="math inline">\(\mathop {\lim
+    }\limits_{x\to a} g(x)=\infty\)</span> แล้ว <span class="math inline">\(\displaystyle \mathop {\lim
+    }\limits_{x\to a}
+    \frac{f(x)}{g(x)}\)</span> จะอยู่ในรูปแบบไม่กำหนด
+<span class="math inline">\(\displaystyle \frac{\infty
+    }{\infty }\)</span> และได้ว่า
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to a}
+    \frac{f(x)}{g(x)}=\mathop {\lim
+    }\limits_{x\to a} \frac{{f}&#39;(x)}{{g}&#39;(x)}\)</span></p></li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-82" class="example"><strong>ตัวอย่าง 5.1  </strong></span>จงหาค่าของ <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 5} \frac{\sqrt
+{x-1}
+-2}{x^2-25}\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> เพราะว่า
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 5} \frac{\sqrt
+{x-1}
+-2}{x^2-25}\)</span> อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span>
+<span class="math display">\[\displaystyle \mathop {\lim }\limits_{x\to 5} \frac{\sqrt {x-1}
+-2}{x^2-25}=\mathop {\lim
+}\limits_{x\to 5} \frac{1}{(2\sqrt {x-1} )(2x)}=\frac{1}{40}\]</span></p>
+<p>กฎของโลปิตาลยังคงเป็นจริงในกรณีที่ <span class="math inline">\(x\to a^+\)</span> , <span class="math inline">\(x\to a^-\)</span> , <span class="math inline">\(x\to \infty\)</span> ,
+<span class="math inline">\(x\to -\infty\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-83" class="example"><strong>ตัวอย่าง 5.2  </strong></span>จงหาค่าของ
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to \infty } \frac{\ln
+x}{\sqrt x }\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> เพราะว่า
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to \infty } \frac{\ln
+x}{\sqrt x
+}\)</span> อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{\infty }{\infty }\)</span>
+<span class="math display">\[\displaystyle \mathop {\lim }\limits_{x\to \infty } \frac{\ln x}{\sqrt x
+}=\mathop {\lim
+}\limits_{x\to \infty } \frac{1/x}{1/2\sqrt x }=\mathop {\lim }\limits_{x\to
+\infty } \frac{2}{\sqrt x }=0\]</span></p>
+<p>กฎของโลปิตาลใช้กับลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span> หรือ
+<span class="math inline">\(\displaystyle \frac{\infty }{\infty }\)</span> เท่านั้น หากลิมิตไม่ได้อยู่ในรูปแบบดังกล่าว
+เราจะต้องจัดให้อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span> หรือ
+<span class="math inline">\(\displaystyle \frac{\infty
+}{\infty }\)</span> เสียก่อนแล้วจึงนำกฎของโลปิตาลมาใช้</p>
+<div id="การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty" class="section level2 hasAnchor" number="5.1">
+<h2 class="hasAnchor"><span class="header-section-number">5.1</span> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0\cdot \infty\)</span> หรือ <span class="math inline">\(\infty
+-\infty\)</span><a href="รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule.html#การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>การหาลิมิตในรูปแบบไม่กำหนด <span class="math inline">\(0\cdot \infty\)</span> หรือ <span class="math inline">\(\infty -\infty\)</span>
+สามารถทำได้โดยจัดให้ลิมิตอยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span> หรือ
+<span class="math inline">\(\displaystyle \frac{\infty }{\infty }\)</span> ก่อนแล้วจึงนำกฎของโลปิตาลมาใช้
+ดังตัวอย่างต่อไปนี้</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-84" class="example"><strong>ตัวอย่าง 5.3  </strong></span>จงหาค่าของ <span class="math inline">\(\mathop {\lim }\limits_{x\to 0^+} x\ln x\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> เพราะว่า
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 0^+} x\ln x=\mathop
+{\lim
+}\limits_{x\to 0^+} \frac{\ln x}{1/x}\)</span> อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle
+\frac{\infty
+}{\infty }\)</span>
+<span class="math display">\[\displaystyle \mathop {\lim }\limits_{x\to 0^+} \frac{\ln x}{1/x}=\mathop
+{\lim
+}\limits_{x\to 0^+} \frac{1/x}{-1/x^2}=\mathop {\lim }\limits_{x\to 0^+}
+(-x)=0\]</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-85" class="example"><strong>ตัวอย่าง 5.4  </strong></span>จงหาค่าของ <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 1}
+(\frac{1}{x-1}-\frac{1}{\ln x})\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> เพราะว่า <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 1}
+(\frac{1}{x-1}-\frac{1}{\ln
+x})=\mathop {\lim }\limits_{x\to 1} \frac{\ln x-x+1}{(x-1)\ln x}\)</span>
+อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span></p>
+<p><span class="math display">\[\displaystyle \mathop {\lim }\limits_{x\to 1} \frac{\ln x-x+1}{(x-1)\ln
+x}=\mathop {\lim
+}\limits_{x\to 1} \frac{(\frac{1}{x}-1)}{(\frac{x-1}{x})+\ln x}=\mathop
+{\lim }\limits_{x\to 1} \frac{1-x}{x-1+x\ln x}\]</span> ซึ่งยังอยู่ในรูปแบบไม่กำหนด
+<span class="math inline">\(\displaystyle \frac{0}{0}\)</span>
+<span class="math display">\[\displaystyle \mathop {\lim }\limits_{x\to 1} \frac{1-x}{x-1+x\ln
+x}=\mathop {\lim
+}\limits_{x\to 1} \frac{-1}{1+1+\ln x}=\frac{-1}{2}\]</span> ดังนั้น
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 1}
+(\frac{1}{x-1}-\frac{1}{\ln
+x})=-\frac{1}{2}\)</span></p>
+</div>
+<div id="การหาลมตทอยในรปแบบไมกำหนด-00-1infty-infty0" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0^{0}, 1^{\infty}, \infty^0\)</span><a href="รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule.html#การหาลมตทอยในรปแบบไมกำหนด-00-1infty-infty0" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>ในการหาค่าลิมิตทั้ง 3 แบบนี้ เราสามารถจัดให้ลิมิตอยู่ในรูปแบบไม่กำหนด
+<span class="math inline">\(\displaystyle \frac{0}{0}\)</span> หรือ <span class="math inline">\(\displaystyle \frac{\infty }{\infty }\)</span>
+โดยอาศัยฟังก์ชันลอการิทึมเข้าช่วย แล้วจึงนำกฎของโลปิตาลมาใช้ ดังตัวอย่างต่อไปนี้</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-86" class="example"><strong>ตัวอย่าง 5.5  </strong></span>จงหาค่าของ <span class="math inline">\(\mathop {\lim }\limits_{x\to 0^+} x^x\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> ให้ <span class="math inline">\(y=x^x\)</span> ดังนั้น <span class="math inline">\(\ln y=x\ln x\)</span></p>
+<p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 0^+} \ln y=\mathop {\lim
+}\limits_{x\to 0^+}
+x\ln x=\mathop {\lim }\limits_{x\to 0^+} \frac{\ln x}{1/x}\)</span>
+อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{\infty }{\infty }\)</span></p>
+<p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 0^+} \frac{\ln x}{1/x}=\mathop
+{\lim
+}\limits_{x\to 0^+} \frac{1/x}{-1/x^2}=\mathop {\lim }\limits_{x\to 0^+}
+(-x)=0\)</span></p>
+<p>ดังนั้น <span class="math inline">\(\mathop {\lim }\limits_{x\to 0^+} \ln y=0\)</span></p>
+<p>เพราะว่า <span class="math inline">\(\mathop {\lim }\limits_{x\to 0^+} \ln y=\ln (\mathop {\lim
+}\limits_{x\to 0^+} y)\)</span> ดังนั้น <span class="math inline">\(\ln (\mathop {\lim }\limits_{x\to 0^+}
+y)=0\)</span></p>
+<p>นั่นคือ <span class="math inline">\(\mathop {\lim }\limits_{x\to 0^+} y=e^0=1\)</span></p>
+<p>หรือ <span class="math inline">\(\mathop {\lim }\limits_{x\to 0^+} x^x=1\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-87" class="example"><strong>ตัวอย่าง 5.6  </strong></span>จงหาค่าของ <span class="math inline">\(\mathop {\lim }\limits_{x\to 1} x^{1/(x-1)}\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> ให้ <span class="math inline">\(y=x^{1/(x-1)}\)</span> ดังนั้น <span class="math inline">\(\displaystyle \ln y=\frac{\ln x}{x-1}\)</span></p>
+<p>และ <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 1} \frac{\ln x}{x-1}\)</span>
+อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span></p>
+<p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 1} \ln y=\mathop {\lim
+}\limits_{x\to 1}
+\frac{\ln x}{x-1}=\mathop {\lim }\limits_{x\to 1} \frac{1}{x}=1\)</span></p>
+<p>ดังนั้น <span class="math inline">\(\mathop {\lim }\limits_{x\to 1} \ln y=1\)</span></p>
+<p>เพราะว่า <span class="math inline">\(\mathop {\lim }\limits_{x\to 1} \ln y=\ln (\mathop {\lim
+}\limits_{x\to 1} y)\)</span> ดังนั้น <span class="math inline">\(\ln (\mathop {\lim }\limits_{x\to 1} y)=1\)</span></p>
+<p>นั่นคือ <span class="math inline">\(\mathop {\lim }\limits_{x\to 1} y=e^1=e\)</span></p>
+<p>หรือ <span class="math inline">\(\mathop {\lim }\limits_{x\to 1} x^{1/(x-1)}=e\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-88" class="example"><strong>ตัวอย่าง 5.7  </strong></span>จงหาค่าของ <span class="math inline">\(\mathop {\lim }\limits_{x\to \infty } x^{1/x}\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> ให้ <span class="math inline">\(y=x^{1/x}\)</span> ดังนั้น <span class="math inline">\(\displaystyle \ln y=\frac{\ln x}{x}\)</span></p>
+<p>และ
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to \infty } \frac{\ln x}{x}\)</span>
+อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{\infty }{\infty }\)</span></p>
+<p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to \infty } \ln y=\mathop {\lim
+}\limits_{x\to
+\infty } \frac{\ln x}{x}=\mathop {\lim }\limits_{x\to \infty }
+\frac{1/x}{1}=0\)</span></p>
+<p>ดังนั้น <span class="math inline">\(\mathop {\lim }\limits_{x\to \infty } \ln y=0\)</span></p>
+<p>เพราะว่า <span class="math inline">\(\mathop {\lim }\limits_{x\to \infty } \ln y=\ln (\mathop {\lim
+}\limits_{x\to \infty } y)\)</span> ดังนั้น <span class="math inline">\(\ln (\mathop {\lim }\limits_{x\to
+\infty } y)=0\)</span></p>
+<p>นั่นคือ <span class="math inline">\(\mathop {\lim }\limits_{x\to \infty } y=e^0=1\)</span></p>
+<p>หรือ <span class="math inline">\(\mathop {\lim }\limits_{x\to \infty } x^{1/x}=1\)</span></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="การประยกตของอนพนธ-applications-of-differentiation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/pairote-sat/SCMA104/edit/main/03-derivative.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/pairote-sat/SCMA104/blob/main/03-derivative.Rmd",
+"text": null
+},
+"download": ["SCMA104bookdownproj.pdf", "SCMA104bookdownproj.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

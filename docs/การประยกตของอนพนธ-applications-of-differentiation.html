@@ -23,7 +23,7 @@
 <meta name="author" content="Pairote Satiracoo" />
 
 
-<meta name="date" content="2024-08-26" />
+<meta name="date" content="2024-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -132,6 +132,12 @@
 <li class="chapter" data-level="4.4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาคาเหมาะทสด-optimization"><i class="fa fa-check"></i><b>4.4</b> การหาค่าเหมาะที่สุด (Optimization)</a>
 <ul>
 <li class="chapter" data-level="4.4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-6"><i class="fa fa-check"></i><b>4.4.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule"><i class="fa fa-check"></i><b>4.5</b> รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L’Hopital Rule)</a>
+<ul>
+<li><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty" id="toc-การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty"><span class="toc-section-number">4.5.1</span> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0\cdot \infty\)</span> หรือ <span class="math inline">\(\infty
+-\infty\)</span></a></li>
+<li class="chapter" data-level="4.5.2" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาลมตทอยในรปแบบไมกำหนด-00-1infty-infty0"><i class="fa fa-check"></i><b>4.5.2</b> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0^{0}, 1^{\infty}, \infty^0\)</span></a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -282,8 +288,8 @@ adrenaline ที่ฉีดเข้าไปในร่างกาย</p></
 <span class="math inline">\(f&#39;(x) = 2x-3\)</span> ซึ่งบอกเราว่า <span class="math display">\[\begin{equation}   \begin{aligned}
     f&#39;(x) &amp;&lt; 0 \text{ สำหรับ $x &lt; 3/2$} \\
     f&#39;(x) &amp;&gt; 0 \text{ สำหรับ $x &gt; 3/2$}
-  \end{aligned} \end{equation}\]</span> เนื่องจาก <span class="math inline">\(f\)</span> เป็นฟังก์ชันต่อเนื่องที่ <span class="math inline">\(x=3/2\)</span> เราจึงบอกได้ว่า
-<span class="math display">\[\begin{equation}   \begin{aligned}
+  \end{aligned} \end{equation}\]</span> เนื่องจาก <span class="math inline">\(f\)</span> เป็นฟังก์ชันต่อเนื่องที่ <span class="math inline">\(x=3/2\)</span>
+เราจึงบอกได้ว่า <span class="math display">\[\begin{equation}   \begin{aligned}
     \text{ $f$ เป็นฟังก์ชันลดบนช่วง $(-\infty,3/2]$} \\
     \text{ $f$ เป็นฟังก์ชันเพิ่มบนช่วง $[3/2,\infty)$}
   \end{aligned} \end{equation}\]</span></p>
@@ -430,7 +436,8 @@ inflection point ที่ <span class="math inline">\(0\)</span></p></li>
 ดังรูปที่ <a href="การประยกตของอนพนธ-applications-of-differentiation.html#Fig:graph1" reference-type="eqref" reference="Fig:graph1"><span class="math display">\[Fig:graph1\]</span></a></p>
 <figure id="Fig:graph1">
 <figcaption>
-กราฟของฟังก์ชัน <span class="math inline"><em>f</em>(<em>x</em>) = <em>x</em><sup>3</sup> − 3<em>x</em> + 2</span>
+กราฟของฟังก์ชัน
+<span class="math inline"><em>f</em>(<em>x</em>) = <em>x</em><sup>3</sup> − 3<em>x</em> + 2</span>
 </figcaption>
 </figure>
 <div class="example">
@@ -518,7 +525,8 @@ inflection point ที่ <span class="math inline">\(0\)</span></p></li>
 ดังรูป <a href="การประยกตของอนพนธ-applications-of-differentiation.html#Fig:graph4" reference-type="eqref" reference="Fig:graph4"><span class="math display">\[Fig:graph4\]</span></a></p>
 <figure id="Fig:graph4">
 <figcaption>
-กราฟของฟังก์ชัน <span class="math inline"><em>f</em>(<em>x</em>) = ln (<em>x</em><sup>3</sup>+1)</span>
+กราฟของฟังก์ชัน
+<span class="math inline"><em>f</em>(<em>x</em>) = ln (<em>x</em><sup>3</sup>+1)</span>
 บนช่วง <span class="math inline">(−1,∞)</span>
 </figcaption>
 </figure>
@@ -527,8 +535,8 @@ inflection point ที่ <span class="math inline">\(0\)</span></p></li>
 <span class="math inline">\(f\)</span> มีกราฟดังรูป <a href="การประยกตของอนพนธ-applications-of-differentiation.html#Fig:graph5" reference-type="eqref" reference="Fig:graph5"><span class="math display">\[Fig:graph5\]</span></a></p>
 <figure id="Fig:graph5">
 <figcaption>
-กราฟของฟังก์ชัน <span class="math inline"><em>f</em></span>
-บนช่วง <span class="math inline">(−3,3)</span>
+กราฟของฟังก์ชัน <span class="math inline"><em>f</em></span> บนช่วง
+<span class="math inline">(−3,3)</span>
 </figcaption>
 </figure>
 <p>ที่จุดใดที่ฟังก์ชัน <span class="math inline">\(f&#39;\)</span> เปลี่ยนเครื่องหมาย และที่จุดใด <span class="math inline">\(f&#39;\)</span> มี relative extrema</p>
@@ -583,21 +591,21 @@ inflection point ที่ <span class="math inline">\(0\)</span></p></li>
 <li><p>จงวาดกราฟของฟังก์ชัน <span class="math inline">\(y=f(x)\)</span> และ <span class="math inline">\(a&lt;b&lt;c\)</span> จากข้อมูลต่อไปนี้</p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(f&#39;(a) = f&#39;(b) = 0\)</span></p></li>
-<li><p><span class="math display">\[\begin{equation}   \begin{aligned}
+<li><span class="math display">\[\begin{equation}   \begin{aligned}
     f&#39;(x)  \begin{cases}
     &gt; 0 &amp;\text{สำหรับ $x&lt;a$} \\
     &gt; 0 &amp;\text{สำหรับ $a&lt;x&lt;c$} \\
     &lt; 0 &amp;\text{สำหรับ $x&gt;c$}
     \end{cases}
-  \end{aligned} \end{equation}\]</span></p></li>
+  \end{aligned} \end{equation}\]</span></li>
 <li><p><span class="math inline">\(f&#39;&#39;(a) = f&quot;&#39;(b) = 0\)</span></p></li>
-<li><p><span class="math display">\[\begin{equation}   \begin{aligned}
+<li><span class="math display">\[\begin{equation}   \begin{aligned}
     f&#39;&#39;(x) \begin{cases}
     &lt; 0 &amp;\text{สำหรับ $x&lt;a$} \\
     &gt; 0 &amp;\text{สำหรับ $a&lt;x&lt;b$} \\
     &lt; 0 &amp;\text{สำหรับ $x&gt;b$}
     \end{cases}
-  \end{aligned} \end{equation}\]</span></p></li>
+  \end{aligned} \end{equation}\]</span></li>
 </ol></li>
 <li><p>กำหนดให้ฟังก์ชัน <span class="math inline">\(f&#39;\)</span>
 เป็นดังรูป <a href="การประยกตของอนพนธ-applications-of-differentiation.html#Fig:graph6" reference-type="eqref" reference="Fig:graph6"><span class="math display">\[Fig:graph6\]</span></a></p>
@@ -750,10 +758,10 @@ concave up และแบบ concave down</p></li>
 <span class="math inline">\(y=800-x\)</span> แทน <span class="math inline">\(y\)</span> ลงใน <span class="math inline">\(A=xy\)</span> จะได้ <span class="math display">\[\begin{equation}   \begin{aligned}
     A(x)  &amp;=x(800-x), \quad  0 \le x \le 800 \\
             &amp;=800x-x^2
-  \end{aligned} \end{equation}\]</span> โจทย์ต้องการหาพื้นที่กว้างใหญ่ที่สุด เราจึงต้องหาอนุพันธ์ทั้ง 2 ข้าง
-<span class="math display">\[A&#39;(x)=800-2x\]</span> กำหนดให้ <span class="math inline">\(A&#39;(x)=800-2x=0\)</span> จะได้ <span class="math inline">\(x=400\)</span> และ <span class="math inline">\(A(400)=1600\)</span>
-ตามลำดับ ทดสอบโดยใช้อนุพันธ์อันดับสอง <span class="math inline">\(A&#39;&#39;(x)=-2&lt;0\)</span> พบว่า <span class="math inline">\(x=400\)</span>
-ทำให้เกิดจุดสูงสุดสัมบูรณ์ เพราะ <span class="math inline">\(A(x)\)</span> มีลักษณะแบบ concave down
+  \end{aligned} \end{equation}\]</span> โจทย์ต้องการหาพื้นที่กว้างใหญ่ที่สุด
+เราจึงต้องหาอนุพันธ์ทั้ง 2 ข้าง <span class="math display">\[A&#39;(x)=800-2x\]</span> กำหนดให้ <span class="math inline">\(A&#39;(x)=800-2x=0\)</span> จะได้
+<span class="math inline">\(x=400\)</span> และ <span class="math inline">\(A(400)=1600\)</span> ตามลำดับ ทดสอบโดยใช้อนุพันธ์อันดับสอง <span class="math inline">\(A&#39;&#39;(x)=-2&lt;0\)</span>
+พบว่า <span class="math inline">\(x=400\)</span> ทำให้เกิดจุดสูงสุดสัมบูรณ์ เพราะ <span class="math inline">\(A(x)\)</span> มีลักษณะแบบ concave down
 ดังนั้นนักชีววิทยาควรกั้นรั้วเป็นรูปสี่เหลี่ยมจัตุรัสกว้าง 400 ฟุต จึงจะได้พื้นที่ทดลองที่กว้างใหญ่ที่สุด</p>
 <ol style="list-style-type: decimal">
 <li><p>วาดภาพและกำหนดตัวแปรต่างๆ เช่น <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> เป็นต้น</p></li>
@@ -798,6 +806,171 @@ concave up และแบบ concave down</p></li>
 กล่องไร้ฝาสำหรับขนย้ายยา
 </figcaption>
 </figure>
+</div>
+</div>
+<div id="รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L’Hopital Rule)<a href="การประยกตของอนพนธ-applications-of-differentiation.html#รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-80" class="definition"><strong>นิยาม 4.6  </strong></span>ถ้า <span class="math inline">\(\mathop {\lim }\limits_{x\to a} f(x)=0\)</span> และ <span class="math inline">\(\displaystyle \mathop
+{\lim
+}\limits_{x\to a} g(x)=0\)</span> เราจะกล่าวว่า <span class="math inline">\(\displaystyle \mathop {\lim
+}\limits_{x\to a}
+\frac{f(x)}{g(x)}\)</span> อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span> อาจแทน
+<span class="math inline">\(x\to a\)</span> ด้วย <span class="math inline">\(x\to a^+\)</span> , <span class="math inline">\(x\to a^-\)</span> , <span class="math inline">\(x\to \infty\)</span> , <span class="math inline">\(x\to -\infty\)</span></p>
+</div>
+<p>ในการหาค่าลิมิตของรูปแบบไม่กำหนดแบบ <span class="math inline">\(\displaystyle \frac{0}{0}\)</span> นั้น
+เราจะนำกฎของโลปิตาลมาประยุกต์ใช้</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-81" class="theorem"><strong>ทฤษฎี 4.5  </strong></span>(กฎของโลปิตาล)<br />
+</p>
+<ol style="list-style-type: decimal">
+<li><p>ถ้า <span class="math inline">\(\mathop {\lim }\limits_{x\to a} f(x)=0\)</span> และ <span class="math inline">\(\mathop {\lim
+    }\limits_{x\to a} g(x)=0\)</span> แล้ว
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to
+    a}
+    \frac{f(x)}{g(x)}\)</span> จะอยู่ในรูปแบบไม่กำหนด
+<span class="math inline">\(\displaystyle \frac{0}{0}\)</span> และได้ว่า
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to a}
+    \frac{f(x)}{g(x)}=\mathop {\lim
+    }\limits_{x\to a} \frac{{f}&#39;(x)}{{g}&#39;(x)}\)</span><br />
+</p></li>
+<li><p>ถ้า <span class="math inline">\(\mathop {\lim }\limits_{x\to a} f(x)=\infty\)</span> และ <span class="math inline">\(\mathop {\lim
+    }\limits_{x\to a} g(x)=\infty\)</span> แล้ว <span class="math inline">\(\displaystyle \mathop {\lim
+    }\limits_{x\to a}
+    \frac{f(x)}{g(x)}\)</span> จะอยู่ในรูปแบบไม่กำหนด
+<span class="math inline">\(\displaystyle \frac{\infty
+    }{\infty }\)</span> และได้ว่า
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to a}
+    \frac{f(x)}{g(x)}=\mathop {\lim
+    }\limits_{x\to a} \frac{{f}&#39;(x)}{{g}&#39;(x)}\)</span></p></li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-82" class="example"><strong>ตัวอย่าง 4.22  </strong></span>จงหาค่าของ <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 5} \frac{\sqrt
+{x-1}
+-2}{x^2-25}\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> เพราะว่า
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 5} \frac{\sqrt
+{x-1}
+-2}{x^2-25}\)</span> อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span>
+<span class="math display">\[\displaystyle \mathop {\lim }\limits_{x\to 5} \frac{\sqrt {x-1}
+-2}{x^2-25}=\mathop {\lim
+}\limits_{x\to 5} \frac{1}{(2\sqrt {x-1} )(2x)}=\frac{1}{40}\]</span></p>
+<p>กฎของโลปิตาลยังคงเป็นจริงในกรณีที่ <span class="math inline">\(x\to a^+\)</span> , <span class="math inline">\(x\to a^-\)</span> , <span class="math inline">\(x\to \infty\)</span> ,
+<span class="math inline">\(x\to -\infty\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-83" class="example"><strong>ตัวอย่าง 4.23  </strong></span>จงหาค่าของ
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to \infty } \frac{\ln
+x}{\sqrt x }\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> เพราะว่า
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to \infty } \frac{\ln
+x}{\sqrt x
+}\)</span> อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{\infty }{\infty }\)</span>
+<span class="math display">\[\displaystyle \mathop {\lim }\limits_{x\to \infty } \frac{\ln x}{\sqrt x
+}=\mathop {\lim
+}\limits_{x\to \infty } \frac{1/x}{1/2\sqrt x }=\mathop {\lim }\limits_{x\to
+\infty } \frac{2}{\sqrt x }=0\]</span></p>
+<p>กฎของโลปิตาลใช้กับลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span> หรือ
+<span class="math inline">\(\displaystyle \frac{\infty }{\infty }\)</span> เท่านั้น หากลิมิตไม่ได้อยู่ในรูปแบบดังกล่าว
+เราจะต้องจัดให้อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span> หรือ
+<span class="math inline">\(\displaystyle \frac{\infty
+}{\infty }\)</span> เสียก่อนแล้วจึงนำกฎของโลปิตาลมาใช้</p>
+<div id="การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty" class="section level3 hasAnchor" number="4.5.1">
+<h3 class="hasAnchor"><span class="header-section-number">4.5.1</span> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0\cdot \infty\)</span> หรือ <span class="math inline">\(\infty
+-\infty\)</span><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>การหาลิมิตในรูปแบบไม่กำหนด <span class="math inline">\(0\cdot \infty\)</span> หรือ <span class="math inline">\(\infty -\infty\)</span>
+สามารถทำได้โดยจัดให้ลิมิตอยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span> หรือ
+<span class="math inline">\(\displaystyle \frac{\infty }{\infty }\)</span> ก่อนแล้วจึงนำกฎของโลปิตาลมาใช้
+ดังตัวอย่างต่อไปนี้</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-84" class="example"><strong>ตัวอย่าง 4.24  </strong></span>จงหาค่าของ <span class="math inline">\(\mathop {\lim }\limits_{x\to 0^+} x\ln x\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> เพราะว่า
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 0^+} x\ln x=\mathop
+{\lim
+}\limits_{x\to 0^+} \frac{\ln x}{1/x}\)</span> อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle
+\frac{\infty
+}{\infty }\)</span>
+<span class="math display">\[\displaystyle \mathop {\lim }\limits_{x\to 0^+} \frac{\ln x}{1/x}=\mathop
+{\lim
+}\limits_{x\to 0^+} \frac{1/x}{-1/x^2}=\mathop {\lim }\limits_{x\to 0^+}
+(-x)=0\]</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-85" class="example"><strong>ตัวอย่าง 4.25  </strong></span>จงหาค่าของ <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 1}
+(\frac{1}{x-1}-\frac{1}{\ln x})\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> เพราะว่า <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 1}
+(\frac{1}{x-1}-\frac{1}{\ln
+x})=\mathop {\lim }\limits_{x\to 1} \frac{\ln x-x+1}{(x-1)\ln x}\)</span>
+อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span></p>
+<p><span class="math display">\[\displaystyle \mathop {\lim }\limits_{x\to 1} \frac{\ln x-x+1}{(x-1)\ln
+x}=\mathop {\lim
+}\limits_{x\to 1} \frac{(\frac{1}{x}-1)}{(\frac{x-1}{x})+\ln x}=\mathop
+{\lim }\limits_{x\to 1} \frac{1-x}{x-1+x\ln x}\]</span> ซึ่งยังอยู่ในรูปแบบไม่กำหนด
+<span class="math inline">\(\displaystyle \frac{0}{0}\)</span>
+<span class="math display">\[\displaystyle \mathop {\lim }\limits_{x\to 1} \frac{1-x}{x-1+x\ln
+x}=\mathop {\lim
+}\limits_{x\to 1} \frac{-1}{1+1+\ln x}=\frac{-1}{2}\]</span> ดังนั้น
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 1}
+(\frac{1}{x-1}-\frac{1}{\ln
+x})=-\frac{1}{2}\)</span></p>
+</div>
+<div id="การหาลมตทอยในรปแบบไมกำหนด-00-1infty-infty0" class="section level3 hasAnchor" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0^{0}, 1^{\infty}, \infty^0\)</span><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาลมตทอยในรปแบบไมกำหนด-00-1infty-infty0" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>ในการหาค่าลิมิตทั้ง 3 แบบนี้ เราสามารถจัดให้ลิมิตอยู่ในรูปแบบไม่กำหนด
+<span class="math inline">\(\displaystyle \frac{0}{0}\)</span> หรือ <span class="math inline">\(\displaystyle \frac{\infty }{\infty }\)</span>
+โดยอาศัยฟังก์ชันลอการิทึมเข้าช่วย แล้วจึงนำกฎของโลปิตาลมาใช้ ดังตัวอย่างต่อไปนี้</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-86" class="example"><strong>ตัวอย่าง 4.26  </strong></span>จงหาค่าของ <span class="math inline">\(\mathop {\lim }\limits_{x\to 0^+} x^x\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> ให้ <span class="math inline">\(y=x^x\)</span> ดังนั้น <span class="math inline">\(\ln y=x\ln x\)</span></p>
+<p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 0^+} \ln y=\mathop {\lim
+}\limits_{x\to 0^+}
+x\ln x=\mathop {\lim }\limits_{x\to 0^+} \frac{\ln x}{1/x}\)</span>
+อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{\infty }{\infty }\)</span></p>
+<p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 0^+} \frac{\ln x}{1/x}=\mathop
+{\lim
+}\limits_{x\to 0^+} \frac{1/x}{-1/x^2}=\mathop {\lim }\limits_{x\to 0^+}
+(-x)=0\)</span></p>
+<p>ดังนั้น <span class="math inline">\(\mathop {\lim }\limits_{x\to 0^+} \ln y=0\)</span></p>
+<p>เพราะว่า <span class="math inline">\(\mathop {\lim }\limits_{x\to 0^+} \ln y=\ln (\mathop {\lim
+}\limits_{x\to 0^+} y)\)</span> ดังนั้น <span class="math inline">\(\ln (\mathop {\lim }\limits_{x\to 0^+}
+y)=0\)</span></p>
+<p>นั่นคือ <span class="math inline">\(\mathop {\lim }\limits_{x\to 0^+} y=e^0=1\)</span></p>
+<p>หรือ <span class="math inline">\(\mathop {\lim }\limits_{x\to 0^+} x^x=1\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-87" class="example"><strong>ตัวอย่าง 4.27  </strong></span>จงหาค่าของ <span class="math inline">\(\mathop {\lim }\limits_{x\to 1} x^{1/(x-1)}\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> ให้ <span class="math inline">\(y=x^{1/(x-1)}\)</span> ดังนั้น <span class="math inline">\(\displaystyle \ln y=\frac{\ln x}{x-1}\)</span></p>
+<p>และ <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 1} \frac{\ln x}{x-1}\)</span>
+อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{0}{0}\)</span></p>
+<p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to 1} \ln y=\mathop {\lim
+}\limits_{x\to 1}
+\frac{\ln x}{x-1}=\mathop {\lim }\limits_{x\to 1} \frac{1}{x}=1\)</span></p>
+<p>ดังนั้น <span class="math inline">\(\mathop {\lim }\limits_{x\to 1} \ln y=1\)</span></p>
+<p>เพราะว่า <span class="math inline">\(\mathop {\lim }\limits_{x\to 1} \ln y=\ln (\mathop {\lim
+}\limits_{x\to 1} y)\)</span> ดังนั้น <span class="math inline">\(\ln (\mathop {\lim }\limits_{x\to 1} y)=1\)</span></p>
+<p>นั่นคือ <span class="math inline">\(\mathop {\lim }\limits_{x\to 1} y=e^1=e\)</span></p>
+<p>หรือ <span class="math inline">\(\mathop {\lim }\limits_{x\to 1} x^{1/(x-1)}=e\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-88" class="example"><strong>ตัวอย่าง 4.28  </strong></span>จงหาค่าของ <span class="math inline">\(\mathop {\lim }\limits_{x\to \infty } x^{1/x}\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> ให้ <span class="math inline">\(y=x^{1/x}\)</span> ดังนั้น <span class="math inline">\(\displaystyle \ln y=\frac{\ln x}{x}\)</span></p>
+<p>และ
+<span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to \infty } \frac{\ln x}{x}\)</span>
+อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(\displaystyle \frac{\infty }{\infty }\)</span></p>
+<p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x\to \infty } \ln y=\mathop {\lim
+}\limits_{x\to
+\infty } \frac{\ln x}{x}=\mathop {\lim }\limits_{x\to \infty }
+\frac{1/x}{1}=0\)</span></p>
+<p>ดังนั้น <span class="math inline">\(\mathop {\lim }\limits_{x\to \infty } \ln y=0\)</span></p>
+<p>เพราะว่า <span class="math inline">\(\mathop {\lim }\limits_{x\to \infty } \ln y=\ln (\mathop {\lim
+}\limits_{x\to \infty } y)\)</span> ดังนั้น <span class="math inline">\(\ln (\mathop {\lim }\limits_{x\to
+\infty } y)=0\)</span></p>
+<p>นั่นคือ <span class="math inline">\(\mathop {\lim }\limits_{x\to \infty } y=e^0=1\)</span></p>
+<p>หรือ <span class="math inline">\(\mathop {\lim }\limits_{x\to \infty } x^{1/x}=1\)</span></p>
 
 </div>
 </div>

@@ -8,27 +8,30 @@
 \contentsline {section}{อนุพันธ์อันดับสูง (High Order Derivatives)}{30}{section*.41}%
 \contentsline {section}{การตีความอนุพันธ์ (Interpretation of Derivatives)}{31}{section*.42}%
 \contentsline {subsection}{อนุพันธ์ในเชิงความชัน (Derivatives as Slopes)}{31}{section*.43}%
-\contentsline {subsection}{อนุพันธ์ในเชิงอัตราเร็ว (Derivatives as Speeds)}{32}{section*.45}%
-\contentsline {subsection}{อนุพันธ์ในเชิงอัตราการเปลี่ยนแปลง (Derivatives as Rates of Change)}{33}{section*.46}%
-\contentsline {subsection}{แบบฝึกหัด (Exercises)}{33}{section*.47}%
-\contentsline {section}{กฎลูกโซ่ (The Chain Rule)}{34}{section*.48}%
-\contentsline {subsection}{แบบฝึกหัด}{37}{section*.49}%
-\contentsline {section}{อนุพันธ์ของฟังก์ชันอินเวอร์ส (Derivatives of Inverse Functions)}{38}{section*.50}%
-\contentsline {subsection}{แบบฝึกหัด}{39}{section*.51}%
-\contentsline {section}{Differentials, Implicit Differentiation and Related Rates}{39}{section*.52}%
-\contentsline {subsection}{Differentials}{39}{section*.53}%
-\contentsline {subsection}{Implicit Differentiation}{42}{section*.54}%
-\contentsline {subsection}{Related Rates}{44}{section*.55}%
-\contentsline {subsection}{แบบฝึกหัด}{49}{section*.56}%
-\contentsline {section}{อนุพันธ์ของฟังก์ชันตรีโกณมิติและอินเวอร์สของฟังก์ชันตรีโกณมิติ}{50}{section*.57}%
-\contentsline {subsection}{อนุพันธ์ของฟังก์ชันตรีโกณมิติ}{50}{section*.58}%
-\contentsline {subsection}{อนุพันธ์ของฟังก์ชันอินเวอร์สของฟังก์ชันตรีโกณมิติ}{54}{section*.59}%
-\contentsline {chapter}{การประยุกต์ของอนุพันธ์ (Applications of Differentiation)}{57}{chapter*.60}%
-\contentsline {section}{Applications of derivatives related to students discipline}{57}{section*.61}%
-\contentsline {subsection}{แบบฝึกหัด}{59}{section*.62}%
-\contentsline {section}{Sketching the graph of a function from the derivative}{60}{section*.63}%
-\contentsline {subsection}{แบบฝึกหัด}{66}{section*.64}%
-\contentsline {section}{การประยุกต์ของ Monotonicity และ Concavity}{68}{section*.65}%
-\contentsline {subsection}{แบบฝึกหัด}{69}{section*.66}%
-\contentsline {section}{การหาค่าเหมาะที่สุด (Optimization)}{70}{section*.67}%
-\contentsline {subsection}{แบบฝึกหัด}{72}{section*.68}%
+\contentsline {subsection}{อนุพันธ์ในเชิงอัตราเร็ว (Derivatives as Speeds)}{32}{section*.44}%
+\contentsline {subsection}{อนุพันธ์ในเชิงอัตราการเปลี่ยนแปลง (Derivatives as Rates of Change)}{33}{section*.45}%
+\contentsline {subsection}{แบบฝึกหัด (Exercises)}{33}{section*.46}%
+\contentsline {section}{กฎลูกโซ่ (The Chain Rule)}{34}{section*.47}%
+\contentsline {subsection}{แบบฝึกหัด}{37}{section*.48}%
+\contentsline {section}{อนุพันธ์ของฟังก์ชันอินเวอร์ส (Derivatives of Inverse Functions)}{38}{section*.49}%
+\contentsline {subsection}{แบบฝึกหัด}{39}{section*.50}%
+\contentsline {section}{Differentials, Implicit Differentiation and Related Rates}{39}{section*.51}%
+\contentsline {subsection}{Differentials}{39}{section*.52}%
+\contentsline {subsection}{Implicit Differentiation}{42}{section*.53}%
+\contentsline {subsection}{Related Rates}{44}{section*.54}%
+\contentsline {subsection}{แบบฝึกหัด}{49}{section*.55}%
+\contentsline {section}{อนุพันธ์ของฟังก์ชันตรีโกณมิติและอินเวอร์สของฟังก์ชันตรีโกณมิติ}{50}{section*.56}%
+\contentsline {subsection}{อนุพันธ์ของฟังก์ชันตรีโกณมิติ}{50}{section*.57}%
+\contentsline {subsection}{อนุพันธ์ของฟังก์ชันอินเวอร์สของฟังก์ชันตรีโกณมิติ}{54}{section*.58}%
+\contentsline {chapter}{การประยุกต์ของอนุพันธ์ (Applications of Differentiation)}{57}{chapter*.59}%
+\contentsline {section}{Applications of derivatives related to students discipline}{57}{section*.60}%
+\contentsline {subsection}{แบบฝึกหัด}{59}{section*.61}%
+\contentsline {section}{Sketching the graph of a function from the derivative}{60}{section*.62}%
+\contentsline {subsection}{แบบฝึกหัด}{66}{section*.63}%
+\contentsline {section}{การประยุกต์ของ Monotonicity และ Concavity}{68}{section*.64}%
+\contentsline {subsection}{แบบฝึกหัด}{69}{section*.65}%
+\contentsline {section}{การหาค่าเหมาะที่สุด (Optimization)}{70}{section*.66}%
+\contentsline {subsection}{แบบฝึกหัด}{72}{section*.67}%
+\contentsline {section}{รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L'Hopital Rule)}{73}{section*.68}%
+\contentsline {subsection}{การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด \(0\cdot \infty \) หรือ \(\infty -\infty \)}{74}{section*.69}%
+\contentsline {subsection}{การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด \(0^{0}, 1^{\infty }, \infty ^0\)}{74}{section*.70}%

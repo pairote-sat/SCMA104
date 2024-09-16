@@ -3343,6 +3343,216 @@ relative minimum ที่ \(0\) ในทำนองเดียวกัน �
 
 กล่องไร้ฝาสำหรับขนย้ายยา
 
+
+
+\section{รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L'Hopital Rule)}\label{uxe23uxe1buxe41uxe1auxe1auxe44uxe21uxe01uxe33uxe2buxe19uxe14-indeterminate-form-uxe41uxe25uxe30uxe01uxe0euxe02uxe2duxe07uxe42uxe25uxe1buxe15uxe32uxe25-lhopital-rule}
+
+\begin{definition}
+ถ้า \(\mathop {\lim }\limits_{x\to a} f(x)=0\) และ \(\displaystyle \mathop
+{\lim
+}\limits_{x\to a} g(x)=0\) เราจะกล่าวว่า \(\displaystyle \mathop {\lim
+}\limits_{x\to a}
+\frac{f(x)}{g(x)}\) อยู่ในรูปแบบไม่กำหนด \(\displaystyle \frac{0}{0}\) อาจแทน
+\(x\to a\) ด้วย \(x\to a^+\) , \(x\to a^-\) , \(x\to \infty\) , \(x\to -\infty\)
+\end{definition}
+
+ในการหาค่าลิมิตของรูปแบบไม่กำหนดแบบ \(\displaystyle \frac{0}{0}\) นั้น
+เราจะนำกฎของโลปิตาลมาประยุกต์ใช้
+
+\begin{theorem}
+
+(กฎของโลปิตาล)\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  ถ้า \(\mathop {\lim }\limits_{x\to a} f(x)=0\) และ \(\mathop {\lim
+      }\limits_{x\to a} g(x)=0\) แล้ว
+  \(\displaystyle \mathop {\lim }\limits_{x\to
+      a}
+      \frac{f(x)}{g(x)}\) จะอยู่ในรูปแบบไม่กำหนด
+  \(\displaystyle \frac{0}{0}\) และได้ว่า
+  \(\displaystyle \mathop {\lim }\limits_{x\to a}
+      \frac{f(x)}{g(x)}=\mathop {\lim
+      }\limits_{x\to a} \frac{{f}'(x)}{{g}'(x)}\)\\
+\item
+  ถ้า \(\mathop {\lim }\limits_{x\to a} f(x)=\infty\) และ \(\mathop {\lim
+      }\limits_{x\to a} g(x)=\infty\) แล้ว \(\displaystyle \mathop {\lim
+      }\limits_{x\to a}
+      \frac{f(x)}{g(x)}\) จะอยู่ในรูปแบบไม่กำหนด
+  \(\displaystyle \frac{\infty
+      }{\infty }\) และได้ว่า
+  \(\displaystyle \mathop {\lim }\limits_{x\to a}
+      \frac{f(x)}{g(x)}=\mathop {\lim
+      }\limits_{x\to a} \frac{{f}'(x)}{{g}'(x)}\)
+\end{enumerate}
+
+\end{theorem}
+
+\begin{example}
+จงหาค่าของ \(\displaystyle \mathop {\lim }\limits_{x\to 5} \frac{\sqrt
+{x-1}
+-2}{x^2-25}\)
+\end{example}
+
+\textbf{วิธีทำ} เพราะว่า
+\(\displaystyle \mathop {\lim }\limits_{x\to 5} \frac{\sqrt
+{x-1}
+-2}{x^2-25}\) อยู่ในรูปแบบไม่กำหนด \(\displaystyle \frac{0}{0}\)
+\[\displaystyle \mathop {\lim }\limits_{x\to 5} \frac{\sqrt {x-1} 
+-2}{x^2-25}=\mathop {\lim 
+}\limits_{x\to 5} \frac{1}{(2\sqrt {x-1} )(2x)}=\frac{1}{40}\]
+
+กฎของโลปิตาลยังคงเป็นจริงในกรณีที่ \(x\to a^+\) , \(x\to a^-\) , \(x\to \infty\) ,
+\(x\to -\infty\)
+
+\begin{example}
+จงหาค่าของ
+\(\displaystyle \mathop {\lim }\limits_{x\to \infty } \frac{\ln
+x}{\sqrt x }\)
+\end{example}
+
+\textbf{วิธีทำ} เพราะว่า
+\(\displaystyle \mathop {\lim }\limits_{x\to \infty } \frac{\ln
+x}{\sqrt x
+}\) อยู่ในรูปแบบไม่กำหนด \(\displaystyle \frac{\infty }{\infty }\)
+\[\displaystyle \mathop {\lim }\limits_{x\to \infty } \frac{\ln x}{\sqrt x 
+}=\mathop {\lim 
+}\limits_{x\to \infty } \frac{1/x}{1/2\sqrt x }=\mathop {\lim }\limits_{x\to 
+\infty } \frac{2}{\sqrt x }=0\]
+
+กฎของโลปิตาลใช้กับลิมิตที่อยู่ในรูปแบบไม่กำหนด \(\displaystyle \frac{0}{0}\) หรือ
+\(\displaystyle \frac{\infty }{\infty }\) เท่านั้น หากลิมิตไม่ได้อยู่ในรูปแบบดังกล่าว
+เราจะต้องจัดให้อยู่ในรูปแบบไม่กำหนด \(\displaystyle \frac{0}{0}\) หรือ
+\(\displaystyle \frac{\infty
+}{\infty }\) เสียก่อนแล้วจึงนำกฎของโลปิตาลมาใช้
+
+\subsection{\texorpdfstring{การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด \(0\cdot \infty\) หรือ \(\infty
+-\infty\)}{การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด 0\textbackslash cdot \textbackslash infty หรือ \textbackslash infty
+-\textbackslash infty}}\label{uxe01uxe32uxe23uxe2buxe32uxe25uxe21uxe15uxe17uxe2duxe22uxe43uxe19uxe23uxe1buxe41uxe1auxe1auxe44uxe21uxe01uxe33uxe2buxe19uxe14-0cdot-infty-uxe2buxe23uxe2d-infty--infty}
+
+การหาลิมิตในรูปแบบไม่กำหนด \(0\cdot \infty\) หรือ \(\infty -\infty\)
+สามารถทำได้โดยจัดให้ลิมิตอยู่ในรูปแบบไม่กำหนด \(\displaystyle \frac{0}{0}\) หรือ
+\(\displaystyle \frac{\infty }{\infty }\) ก่อนแล้วจึงนำกฎของโลปิตาลมาใช้
+ดังตัวอย่างต่อไปนี้
+
+\begin{example}
+จงหาค่าของ \(\mathop {\lim }\limits_{x\to 0^+} x\ln x\)
+\end{example}
+
+\textbf{วิธีทำ} เพราะว่า
+\(\displaystyle \mathop {\lim }\limits_{x\to 0^+} x\ln x=\mathop
+{\lim
+}\limits_{x\to 0^+} \frac{\ln x}{1/x}\) อยู่ในรูปแบบไม่กำหนด \(\displaystyle
+\frac{\infty
+}{\infty }\)
+\[\displaystyle \mathop {\lim }\limits_{x\to 0^+} \frac{\ln x}{1/x}=\mathop 
+{\lim 
+}\limits_{x\to 0^+} \frac{1/x}{-1/x^2}=\mathop {\lim }\limits_{x\to 0^+} 
+(-x)=0\]
+
+\begin{example}
+จงหาค่าของ \(\displaystyle \mathop {\lim }\limits_{x\to 1}
+(\frac{1}{x-1}-\frac{1}{\ln x})\)
+\end{example}
+
+\textbf{วิธีทำ} เพราะว่า \(\displaystyle \mathop {\lim }\limits_{x\to 1}
+(\frac{1}{x-1}-\frac{1}{\ln
+x})=\mathop {\lim }\limits_{x\to 1} \frac{\ln x-x+1}{(x-1)\ln x}\)
+อยู่ในรูปแบบไม่กำหนด \(\displaystyle \frac{0}{0}\)
+
+\[\displaystyle \mathop {\lim }\limits_{x\to 1} \frac{\ln x-x+1}{(x-1)\ln 
+x}=\mathop {\lim 
+}\limits_{x\to 1} \frac{(\frac{1}{x}-1)}{(\frac{x-1}{x})+\ln x}=\mathop 
+{\lim }\limits_{x\to 1} \frac{1-x}{x-1+x\ln x}\] ซึ่งยังอยู่ในรูปแบบไม่กำหนด
+\(\displaystyle \frac{0}{0}\)
+\[\displaystyle \mathop {\lim }\limits_{x\to 1} \frac{1-x}{x-1+x\ln 
+x}=\mathop {\lim 
+}\limits_{x\to 1} \frac{-1}{1+1+\ln x}=\frac{-1}{2}\] ดังนั้น
+\(\displaystyle \mathop {\lim }\limits_{x\to 1}
+(\frac{1}{x-1}-\frac{1}{\ln
+x})=-\frac{1}{2}\)
+
+\subsection{\texorpdfstring{การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด \(0^{0}, 1^{\infty}, \infty^0\)}{การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด 0\^{}\{0\}, 1\^{}\{\textbackslash infty\}, \textbackslash infty\^{}0}}\label{uxe01uxe32uxe23uxe2buxe32uxe25uxe21uxe15uxe17uxe2duxe22uxe43uxe19uxe23uxe1buxe41uxe1auxe1auxe44uxe21uxe01uxe33uxe2buxe19uxe14-00-1infty-infty0}
+
+ในการหาค่าลิมิตทั้ง 3 แบบนี้ เราสามารถจัดให้ลิมิตอยู่ในรูปแบบไม่กำหนด
+\(\displaystyle \frac{0}{0}\) หรือ \(\displaystyle \frac{\infty }{\infty }\)
+โดยอาศัยฟังก์ชันลอการิทึมเข้าช่วย แล้วจึงนำกฎของโลปิตาลมาใช้ ดังตัวอย่างต่อไปนี้
+
+\begin{example}
+จงหาค่าของ \(\mathop {\lim }\limits_{x\to 0^+} x^x\)
+\end{example}
+
+\textbf{วิธีทำ} ให้ \(y=x^x\) ดังนั้น \(\ln y=x\ln x\)
+
+\(\displaystyle \mathop {\lim }\limits_{x\to 0^+} \ln y=\mathop {\lim
+}\limits_{x\to 0^+}
+x\ln x=\mathop {\lim }\limits_{x\to 0^+} \frac{\ln x}{1/x}\)
+อยู่ในรูปแบบไม่กำหนด \(\displaystyle \frac{\infty }{\infty }\)
+
+\(\displaystyle \mathop {\lim }\limits_{x\to 0^+} \frac{\ln x}{1/x}=\mathop
+{\lim
+}\limits_{x\to 0^+} \frac{1/x}{-1/x^2}=\mathop {\lim }\limits_{x\to 0^+}
+(-x)=0\)
+
+ดังนั้น \(\mathop {\lim }\limits_{x\to 0^+} \ln y=0\)
+
+เพราะว่า \(\mathop {\lim }\limits_{x\to 0^+} \ln y=\ln (\mathop {\lim
+}\limits_{x\to 0^+} y)\) ดังนั้น \(\ln (\mathop {\lim }\limits_{x\to 0^+}
+y)=0\)
+
+นั่นคือ \(\mathop {\lim }\limits_{x\to 0^+} y=e^0=1\)
+
+หรือ \(\mathop {\lim }\limits_{x\to 0^+} x^x=1\)
+
+\begin{example}
+จงหาค่าของ \(\mathop {\lim }\limits_{x\to 1} x^{1/(x-1)}\)
+\end{example}
+
+\textbf{วิธีทำ} ให้ \(y=x^{1/(x-1)}\) ดังนั้น \(\displaystyle \ln y=\frac{\ln x}{x-1}\)
+
+และ \(\displaystyle \mathop {\lim }\limits_{x\to 1} \frac{\ln x}{x-1}\)
+อยู่ในรูปแบบไม่กำหนด \(\displaystyle \frac{0}{0}\)
+
+\(\displaystyle \mathop {\lim }\limits_{x\to 1} \ln y=\mathop {\lim
+}\limits_{x\to 1}
+\frac{\ln x}{x-1}=\mathop {\lim }\limits_{x\to 1} \frac{1}{x}=1\)
+
+ดังนั้น \(\mathop {\lim }\limits_{x\to 1} \ln y=1\)
+
+เพราะว่า \(\mathop {\lim }\limits_{x\to 1} \ln y=\ln (\mathop {\lim
+}\limits_{x\to 1} y)\) ดังนั้น \(\ln (\mathop {\lim }\limits_{x\to 1} y)=1\)
+
+นั่นคือ \(\mathop {\lim }\limits_{x\to 1} y=e^1=e\)
+
+หรือ \(\mathop {\lim }\limits_{x\to 1} x^{1/(x-1)}=e\)
+
+\begin{example}
+จงหาค่าของ \(\mathop {\lim }\limits_{x\to \infty } x^{1/x}\)
+\end{example}
+
+\textbf{วิธีทำ} ให้ \(y=x^{1/x}\) ดังนั้น \(\displaystyle \ln y=\frac{\ln x}{x}\)
+
+และ
+\(\displaystyle \mathop {\lim }\limits_{x\to \infty } \frac{\ln x}{x}\)
+อยู่ในรูปแบบไม่กำหนด \(\displaystyle \frac{\infty }{\infty }\)
+
+\(\displaystyle \mathop {\lim }\limits_{x\to \infty } \ln y=\mathop {\lim
+}\limits_{x\to
+\infty } \frac{\ln x}{x}=\mathop {\lim }\limits_{x\to \infty }
+\frac{1/x}{1}=0\)
+
+ดังนั้น \(\mathop {\lim }\limits_{x\to \infty } \ln y=0\)
+
+เพราะว่า \(\mathop {\lim }\limits_{x\to \infty } \ln y=\ln (\mathop {\lim
+}\limits_{x\to \infty } y)\) ดังนั้น \(\ln (\mathop {\lim }\limits_{x\to
+\infty } y)=0\)
+
+นั่นคือ \(\mathop {\lim }\limits_{x\to \infty } y=e^0=1\)
+
+หรือ \(\mathop {\lim }\limits_{x\to \infty } x^{1/x}=1\)
+
+
   \bibliography{book.bib}
 
 \end{document}

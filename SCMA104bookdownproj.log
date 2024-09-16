@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.20)  26 AUG 2024 09:13
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.20)  10 SEP 2024 22:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1463,14 +1463,15 @@ File: images/fig-limit-1.png Graphic file (type bmp)
 
 [18]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 18.25398pt on input line 905.
+(Font)              scaled to size 18.25398pt on input line 912.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
-(Font)              scaled to size 18.25398pt on input line 905.
-File: images/fig-continuity-1.png Graphic file (type bmp)
-<images/fig-continuity-1.png>
+(Font)              scaled to size 18.25398pt on input line 912.
 
 
 [19]
+File: images/fig-continuity-1.png Graphic file (type bmp)
+<images/fig-continuity-1.png>
+
 
 [20]
 
@@ -1478,7 +1479,7 @@ File: images/fig-continuity-1.png Graphic file (type bmp)
 File: images/fig-continuity-2.png Graphic file (type bmp)
 <images/fig-continuity-2.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1156--1158
+Underfull \hbox (badness 10000) in paragraph at lines 1163--1165
 
  []
 
@@ -1507,19 +1508,19 @@ Underfull \vbox (badness 3657) has occurred while \output is active []
 [27]
 
 [28]
-Overfull \hbox (25.34334pt too wide) detected at line 1385
+Overfull \hbox (25.34334pt too wide) detected at line 1392
 [][][][][]
  []
 
 
 
 [29]
-Overfull \hbox (22.00453pt too wide) detected at line 1398
+Overfull \hbox (22.00453pt too wide) detected at line 1405
 [][][][][] [] [][][] [] [][] [] [][] [] [][][][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][] [] [][] [] [][][][][][][] [] [][][] [] [][][] [] [][][][]
  []
 
 
-Overfull \hbox (15.70384pt too wide) in paragraph at lines 1412--1417
+Overfull \hbox (15.70384pt too wide) in paragraph at lines 1419--1424
 []\TU/THSarabunNew(1)/m/n/10 ถ้า ให้ $[] [] [][][][]$ เรา สามารถ ใช้ สัญลักษณ์ $[][][] [][][] [][][] [][][] [] [] [][]$ หรือ $[][] [][] [][] [][] [] [] []$
  []
 
@@ -1527,9 +1528,9 @@ Overfull \hbox (15.70384pt too wide) in paragraph at lines 1412--1417
 
 [30]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
-(Font)              scaled to size 15.21167pt on input line 1437.
+(Font)              scaled to size 15.21167pt on input line 1444.
 
-LaTeX Warning: Hyper reference `fig-mountain' on page 31 undefined on input line 1463.
+LaTeX Warning: Hyper reference `fig-mountain' on page 31 undefined on input line 1470.
 
 
 
@@ -1541,7 +1542,7 @@ File: images/fig-derivative-3.png Graphic file (type bmp)
 [32]
 
 [33]
-Overfull \hbox (24.6513pt too wide) in paragraph at lines 1586--1588
+Overfull \hbox (24.6513pt too wide) in paragraph at lines 1593--1595
 []$[]$ \TU/THSarabunNew(1)/m/n/10 เมื่อ $[] [] [] []$ 
  []
 
@@ -1583,7 +1584,7 @@ File: images/fig-derivative-4.png Graphic file (type bmp)
 
 [48]
 
-LaTeX Warning: Hyper reference `fig-fly' on page 49 undefined on input line 2241.
+LaTeX Warning: Hyper reference `fig-fly' on page 49 undefined on input line 2247.
 
 
 
@@ -1591,7 +1592,7 @@ LaTeX Warning: Hyper reference `fig-fly' on page 49 undefined on input line 2241
 File: images/fig-derivative-5.png Graphic file (type bmp)
 <images/fig-derivative-5.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 2260--2262
+Underfull \hbox (badness 10000) in paragraph at lines 2266--2268
 
  []
 
@@ -1610,7 +1611,7 @@ Underfull \vbox (badness 1043) has occurred while \output is active []
 [52]
 
 [53]
-Underfull \hbox (badness 10000) in paragraph at lines 2412--2413
+Underfull \hbox (badness 10000) in paragraph at lines 2418--2419
 
  []
 
@@ -1624,7 +1625,7 @@ Underfull \vbox (badness 6825) has occurred while \output is active []
 [55]
 
 [56]
-Underfull \hbox (badness 1242) in paragraph at lines 2472--2476
+Underfull \hbox (badness 1242) in paragraph at lines 2478--2482
 []\TU/THSarabunNew(1)/m/n/10 หลัก การ หา อนุพันธ์ สามารถ นำ ไป ประยุกต์ ใช้ได้ ใน หลาก หลาย สาขา วิชาชีพ ไม่ ว่า จะ เป็น ธุรกิจ
  []
 
@@ -1644,7 +1645,7 @@ Underfull \hbox (badness 1242) in paragraph at lines 2472--2476
 
 [62]
 
-LaTeX Warning: Hyper reference `Fig:graph1' on page 63 undefined on input line 2776.
+LaTeX Warning: Hyper reference `Fig:graph1' on page 63 undefined on input line 2782.
 
 Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
 Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
@@ -1656,31 +1657,31 @@ Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=tha
 
 [63]
 
-LaTeX Warning: Hyper reference `Fig:graph2' on page 64 undefined on input line 2810.
+LaTeX Warning: Hyper reference `Fig:graph2' on page 64 undefined on input line 2816.
 
 
 
 [64]
 
-LaTeX Warning: Hyper reference `Fig:graph3' on page 65 undefined on input line 2847.
+LaTeX Warning: Hyper reference `Fig:graph3' on page 65 undefined on input line 2853.
 
 
 
 [65]
 
-LaTeX Warning: Hyper reference `Fig:graph4' on page 66 undefined on input line 2882.
+LaTeX Warning: Hyper reference `Fig:graph4' on page 66 undefined on input line 2888.
 
 Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
 Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
 Missing character: There is no   (U+2006) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
 
-LaTeX Warning: Hyper reference `Fig:graph5' on page 66 undefined on input line 2888.
+LaTeX Warning: Hyper reference `Fig:graph5' on page 66 undefined on input line 2894.
 
 
 
 [66]
 
-LaTeX Warning: Hyper reference `Fig:graph6' on page 67 undefined on input line 2996.
+LaTeX Warning: Hyper reference `Fig:graph6' on page 67 undefined on input line 3002.
 
 
 
@@ -1688,13 +1689,13 @@ LaTeX Warning: Hyper reference `Fig:graph6' on page 67 undefined on input line 2
 
 [68]
 
-LaTeX Warning: Hyper reference `fig-monod' on page 69 undefined on input line 3061.
+LaTeX Warning: Hyper reference `fig-monod' on page 69 undefined on input line 3067.
 
 
 
 [69]
 
-LaTeX Warning: Hyper reference `fig-nitrogen' on page 70 undefined on input line 3124.
+LaTeX Warning: Hyper reference `fig-nitrogen' on page 70 undefined on input line 3130.
 
 
 
@@ -1704,14 +1705,40 @@ Missing character: There is no ฒ ("E12) in font lmmi10!
 
 [71]
 
-LaTeX Warning: Hyper reference `fig-artery' on page 72 undefined on input line 3208.
+LaTeX Warning: Hyper reference `fig-artery' on page 72 undefined on input line 3214.
 
 
-LaTeX Warning: Hyper reference `fig-box-area' on page 72 undefined on input line 3214.
+LaTeX Warning: Hyper reference `fig-box-area' on page 72 undefined on input line 3220.
 
 
 
-[72] (./SCMA104bookdownproj.aux)
+[72]
+Underfull \hbox (badness 10000) in paragraph at lines 3247--3248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3252--3262
+
+ []
+
+LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
+(Font)              scaled to size 15.21167pt on input line 3310.
+LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
+(Font)              scaled to size 10.14111pt on input line 3310.
+LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
+(Font)              scaled to size 7.60583pt on input line 3310.
+
+
+[73]
+
+[74]
+
+[75]
+
+[76
+
+] (./SCMA104bookdownproj.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
@@ -1721,12 +1748,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 31252 strings out of 476234
- 637851 string characters out of 5786213
- 1948609 words of memory out of 5000000
- 53302 multiletter control sequences out of 15000+600000
- 564608 words of font info for 100 fonts, out of 8000000 for 9000
+ 31263 strings out of 476234
+ 638616 string characters out of 5786213
+ 1951609 words of memory out of 5000000
+ 53311 multiletter control sequences out of 15000+600000
+ 564624 words of font info for 102 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  98i,18n,126p,1016b,550s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on SCMA104bookdownproj.pdf (76 pages).
+Output written on SCMA104bookdownproj.pdf (80 pages).

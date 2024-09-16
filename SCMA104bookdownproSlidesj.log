@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.15)  21 AUG 2024 08:16
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.15)  10 SEP 2024 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2128,12 +2128,47 @@ LaTeX Warning: Hyper reference `fig-artery' on page 186 undefined on input line
 LaTeX Warning: Hyper reference `fig-box-area' on page 186 undefined on input li
 ne 3333.
 
-No file SCMA104bookdownproSlidesj.bbl.
 
 Underfull \vbox (badness 3919) has occurred while \output is active []
 
  [186]
-[187] (./SCMA104bookdownproSlidesj.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 3364--3365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3369--3379
+
+ []
+
+[187] [188] [189
+
+]
+LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
+(Font)              scaled to size 30.42325pt on input line 3432.
+LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
+(Font)              scaled to size 21.29617pt on input line 3432.
+LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
+(Font)              scaled to size 15.21162pt on input line 3432.
+ [190
+
+] [191
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [192
+
+]
+[193] [194
+
+] [195
+
+]
+No file SCMA104bookdownproSlidesj.bbl.
+[196
+
+] (./SCMA104bookdownproSlidesj.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -2144,12 +2179,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 30093 strings out of 474773
- 598940 string characters out of 5757724
- 1937839 words of memory out of 5000000
- 51718 multiletter control sequences out of 15000+600000
- 567549 words of font info for 126 fonts, out of 8000000 for 9000
+ 30105 strings out of 474773
+ 599759 string characters out of 5757724
+ 1938839 words of memory out of 5000000
+ 51728 multiletter control sequences out of 15000+600000
+ 567565 words of font info for 128 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,18n,124p,1022b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,18n,124p,1022b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on SCMA104bookdownproSlidesj.pdf (191 pages).
+Output written on SCMA104bookdownproSlidesj.pdf (200 pages).
