@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>บทที่ 6 เทคนิคของการหาปริพันธ์ (Techniques of Integration) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</title>
+  <meta name="description" content="บทที่ 6 เทคนิคของการหาปริพันธ์ (Techniques of Integration) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="บทที่ 6 เทคนิคของการหาปริพันธ์ (Techniques of Integration) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="บทที่ 6 เทคนิคของการหาปริพันธ์ (Techniques of Integration) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  
+  
+  
+
+<meta name="author" content="Pairote Satiracoo" />
+
+
+<meta name="date" content="2024-09-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="การหาปรพนธ-integrations.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SCMA104</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> หลักการและความสำคัญของแคลคูลัสและระบบสมการเชิงอนุพันธ์สามัญ</a></li>
+<li class="chapter" data-level="2" data-path="ลมต-limits.html"><a href="ลมต-limits.html"><i class="fa fa-check"></i><b>2</b> ลิมิต (Limits)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ลมต-limits.html"><a href="ลมต-limits.html#ความตอเนอง-continuity"><i class="fa fa-check"></i><b>2.1</b> ความต่อเนื่อง (Continuity)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html"><i class="fa fa-check"></i><b>3</b> อนุพันธ์ (Derivatives)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธ-derivatives-1"><i class="fa fa-check"></i><b>3.1</b> อนุพันธ์ (Derivatives)</a></li>
+<li class="chapter" data-level="3.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#การคำนวณหาอนพนธ"><i class="fa fa-check"></i><b>3.2</b> การคำนวณหาอนุพันธ์</a></li>
+<li class="chapter" data-level="3.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#สตรสำหรบหาอนพนธ"><i class="fa fa-check"></i><b>3.3</b> สูตรสำหรับหาอนุพันธ์</a></li>
+<li class="chapter" data-level="3.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธอนดบสง-high-order-derivatives"><i class="fa fa-check"></i><b>3.4</b> อนุพันธ์อันดับสูง (High Order Derivatives)</a></li>
+<li class="chapter" data-level="3.5" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#การตความอนพนธ-interpretation-of-derivatives"><i class="fa fa-check"></i><b>3.5</b> การตีความอนุพันธ์ (Interpretation of Derivatives)</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงความชน-derivatives-as-slopes"><i class="fa fa-check"></i><b>3.5.1</b> อนุพันธ์ในเชิงความชัน (Derivatives as Slopes)</a></li>
+<li class="chapter" data-level="3.5.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงอตราเรว-derivatives-as-speeds"><i class="fa fa-check"></i><b>3.5.2</b> อนุพันธ์ในเชิงอัตราเร็ว (Derivatives as Speeds)</a></li>
+<li class="chapter" data-level="3.5.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงอตราการเปลยนแปลง-derivatives-as-rates-of-change"><i class="fa fa-check"></i><b>3.5.3</b> อนุพันธ์ในเชิงอัตราการเปลี่ยนแปลง (Derivatives as Rates of Change)</a></li>
+<li class="chapter" data-level="3.5.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-exercises"><i class="fa fa-check"></i><b>3.5.4</b> แบบฝึกหัด (Exercises)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#กฎลกโซ-the-chain-rule"><i class="fa fa-check"></i><b>3.6</b> กฎลูกโซ่ (The Chain Rule)</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด"><i class="fa fa-check"></i><b>3.6.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนอนเวอรส-derivatives-of-inverse-functions"><i class="fa fa-check"></i><b>3.7</b> อนุพันธ์ของฟังก์ชันอินเวอร์ส (Derivatives of Inverse Functions)</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-1"><i class="fa fa-check"></i><b>3.7.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#differentials-implicit-differentiation-and-related-rates"><i class="fa fa-check"></i><b>3.8</b> Differentials, Implicit Differentiation and Related Rates</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#differentials"><i class="fa fa-check"></i><b>3.8.1</b> Differentials</a></li>
+<li class="chapter" data-level="3.8.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#implicit-differentiation"><i class="fa fa-check"></i><b>3.8.2</b> Implicit Differentiation</a></li>
+<li class="chapter" data-level="3.8.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#related-rates"><i class="fa fa-check"></i><b>3.8.3</b> Related Rates</a></li>
+<li class="chapter" data-level="3.8.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-2"><i class="fa fa-check"></i><b>3.8.4</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนตรโกณมตและอนเวอรสของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9</b> อนุพันธ์ของฟังก์ชันตรีโกณมิติและอินเวอร์สของฟังก์ชันตรีโกณมิติ</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9.1</b> อนุพันธ์ของฟังก์ชันตรีโกณมิติ</a></li>
+<li class="chapter" data-level="3.9.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนอนเวอรสของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9.2</b> อนุพันธ์ของฟังก์ชันอินเวอร์สของฟังก์ชันตรีโกณมิติ</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนเอกซโพเนนเชยลและฟงกชนลอการทม"><i class="fa fa-check"></i><b>3.10</b> อนุพันธ์ของฟังก์ชันเอกซ์โพเนนเชียลและฟังก์ชันลอการิทึม</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html"><i class="fa fa-check"></i><b>4</b> การประยุกต์ของอนุพันธ์ (Applications of Differentiation)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#applications-of-derivatives-related-to-students-discipline"><i class="fa fa-check"></i><b>4.1</b> Applications of derivatives related to students discipline</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-3"><i class="fa fa-check"></i><b>4.1.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#sec-sketch"><i class="fa fa-check"></i><b>4.2</b> Sketching the graph of a function from the derivative</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-4"><i class="fa fa-check"></i><b>4.2.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การประยกตของ-monotonicity-และ-concavity"><i class="fa fa-check"></i><b>4.3</b> การประยุกต์ของ Monotonicity และ Concavity</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-5"><i class="fa fa-check"></i><b>4.3.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาคาเหมาะทสด-optimization"><i class="fa fa-check"></i><b>4.4</b> การหาค่าเหมาะที่สุด (Optimization)</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-6"><i class="fa fa-check"></i><b>4.4.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule"><i class="fa fa-check"></i><b>4.5</b> รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L’Hopital Rule)</a>
+<ul>
+<li><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty" id="toc-การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty"><span class="toc-section-number">4.5.1</span> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0\cdot \infty\)</span> หรือ <span class="math inline">\(\infty
+-\infty\)</span></a></li>
+<li class="chapter" data-level="4.5.2" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาลมตทอยในรปแบบไมกำหนด-00-1infty-infty0"><i class="fa fa-check"></i><b>4.5.2</b> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0^{0}, 1^{\infty}, \infty^0\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html"><i class="fa fa-check"></i><b>5</b> การหาปริพันธ์ (Integrations)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#ปฏยานพนธ-antiderivatives"><i class="fa fa-check"></i><b>5.1</b> ปฏิยานุพันธ์ (Antiderivatives)</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#prob-anti"><i class="fa fa-check"></i><b>5.1.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#ปรพนธจำกดเขต-the-definite-integral"><i class="fa fa-check"></i><b>5.2</b> ปริพันธ์จำกัดเขต (The Definite Integral)</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#integration-คออะไร"><i class="fa fa-check"></i><b>5.2.1</b> Integration คืออะไร</a></li>
+<li class="chapter" data-level="5.2.2" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#การประมาณคาพนทและปรพนธจำกดเขต"><i class="fa fa-check"></i><b>5.2.2</b> การประมาณค่าพื้นที่และปริพันธ์จำกัดเขต</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#ทฤษฎพนฐานของแคลคลส-the-fundamental-theorem-of-calculus"><i class="fa fa-check"></i><b>5.3</b> ทฤษฎีพื้นฐานของแคลคูลัส (The fundamental Theorem of Calculus)</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#สตรพนฐานของการอนทเกรท-basic-integration-rules"><i class="fa fa-check"></i><b>5.3.1</b> สูตรพื้นฐานของการอินทิเกรท (Basic Integration Rules)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html"><i class="fa fa-check"></i><b>6</b> เทคนิคของการหาปริพันธ์ (Techniques of Integration)</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยการเปลยนตวแปร-integration-by-substitution"><i class="fa fa-check"></i><b>6.1</b> การหาปริพันธ์โดยการเปลี่ยนตัวแปร (Integration by Substitution)</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด"><i class="fa fa-check"></i><b>6.1.1</b> แบบฝึกหัด</a></li>
+<li class="chapter" data-level="6.1.2" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยการแทนดวยฟงกชนตรโกณมต-trigonometric-substitutions"><i class="fa fa-check"></i><b>6.1.2</b> การหาปริพันธ์โดยการแทนด้วยฟังก์ชันตรีโกณมิติ (Trigonometric Substitutions)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยแยกสวน-integration-by-parts"><i class="fa fa-check"></i><b>6.2</b> การหาปริพันธ์โดยแยกส่วน (Integration by Parts)</a></li>
+<li class="chapter" data-level="6.3" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยเศษสวนยอย-integration-by-partial-fractions"><i class="fa fa-check"></i><b>6.3</b> การหาปริพันธ์โดยเศษส่วนย่อย (Integration by Partial Fractions)</a></li>
+<li class="chapter" data-level="6.4" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#ปรพนธไมตรงแบบ-improper-integrals"><i class="fa fa-check"></i><b>6.4</b> ปริพันธ์ไม่ตรงแบบ (Improper Integrals)</a></li>
+<li class="chapter" data-level="6.5" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-1"><i class="fa fa-check"></i><b>6.5</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="เทคนคของการหาปรพนธ-techniques-of-integration" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">บทที่ 6</span> เทคนิคของการหาปริพันธ์ (Techniques of Integration)<a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#เทคนคของการหาปรพนธ-techniques-of-integration" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>ในบทนี้เราจะศึกษาวิธีต่างๆ ที่สำคัญในการช่วยหาปริพันธ์ของฟังก์ชันต่างๆ เทคนิคแรก คือ
+การเปลี่ยนตัวแปร (the substitution rule) ซึ่งวิธีนี้มีการประยุกต์มาจากกฎลูกโซ่
+เทคนิคถัดมา คือ integration by part ซึ่งประยุกต์มาจากการหาอนุพันธ์ของผลคูณของฟังก์ชัน
+และเทคนิคสุดท้าย คือ integration by partial fraction โดยการเลือกใช้เทคนิคต่างๆ
+จะขึ้นอยู่กับ integrand</p>
+<div id="การหาปรพนธโดยการเปลยนตวแปร-integration-by-substitution" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> การหาปริพันธ์โดยการเปลี่ยนตัวแปร (Integration by Substitution)<a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยการเปลยนตวแปร-integration-by-substitution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>พิจารณา indefinite integral ที่อยู่ในรูปของ <span class="math display">\[\int f(g(x))g&#39;(x) dx\]</span> ถ้ากำหนดให้
+<span class="math inline">\(F(x)\)</span> เป็น antiderivative ของ <span class="math inline">\(f(x)\)</span>, นั่นคือ <span class="math inline">\(F&#39;(x) = f(x)\)</span>
+แล้วโดยการใช้กฏลูกโซ่เราจะได้ว่า <span class="math display">\[\frac{d}{dx} F(g(x)) = F&#39;(g(x)) g&#39;(x)\]</span> หรือ
+<span class="math display">\[\label{eqn-sub}    
+            \int F&#39;(g(x)) g&#39;(x) dx = F(g(x)) + C\]</span> และถ้ากำหนดให้
+<span class="math inline">\(u = g(x)\)</span> และพิจารณาสมการที่ <a href="#eqn-sub" reference-type="ref" reference="eqn-sub"><span class="math display">\[eqn-sub\]</span></a> เราจะได้ว่า
+<span class="math display">\[\int F&#39;(g(x)) g&#39;(x) dx = F(g(x)) + C = F(u) + C = \int F&#39;(u) du\]</span> หรือ
+<span class="math display">\[\int f(g(x))g&#39;(x) dx  = \int f(u) du\]</span></p>
+<p>สรุปแล้วเมื่อเราทำการเปลี่ยนตัวแปร <span class="math inline">\(u = g(x)\)</span> เราจะได้ว่า <span class="math inline">\(du = g&#39;(x)dx\)</span> ดังนั้น
+<span class="math inline">\(\int f(g(x)) g&#39;(x) dx\)</span> สามารถถูกเขียนให้อยู่ในรูปของ <span class="math inline">\(\int f(u)du\)</span>
+ซึ่งทำให้สามารถหาปริพันธ์ได้นั่นเอง</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-105" class="theorem"><strong>ทฤษฎี 6.1  </strong></span>ถ้า <span class="math inline">\(u = g(x)\)</span> แล้ว <span class="math display">\[\int f(g(x)) g&#39;(x) dx  = \int f(u) du\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-106" class="example"><strong>ตัวอย่าง 6.1  </strong></span>จงหาปริพันธ์ต่อไปนี้ <span class="math inline">\(\int x^2 (x^3 + 1)^5 dx\)</span></p>
+</div>
+<strong>วิธีทำ</strong> โดยการเปลี่ยนตัวแปร <span class="math inline">\(u = x^3 + 1\)</span> เราจะได้ว่า <span class="math inline">\(du = 3x^2 dx\)</span>
+ดังนั้นเราสามารถเขียน integral ใหม่ได้ดังนี้ $$
+<span class="math display">\[\begin{aligned}
+        \int x^2 (x^3 + 1)^5 dx &amp;= \int u^5 \frac{1}{3} du \\
+                                &amp;= \frac{1}{3}\int u^5 du\\
+                                &amp;= \frac{1}{3} \frac{u^6}{6} + C\\
+                                &amp;= \frac{1}{18} (x^3+1)^6 + C
+        
+\end{aligned}\]</span>
+<p>$$</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-107" class="example"><strong>ตัวอย่าง 6.2  </strong></span>จงหาปริพันธ์ต่อไปนี้ <span class="math inline">\(\int \sqrt{2x + 3} dx\)</span></p>
+</div>
+<strong>วิธีทำ</strong> โดยการเปลี่ยนตัวแปร <span class="math inline">\(u = 2x + 3\)</span> เราจะได้ว่า <span class="math inline">\(du = 2 dx\)</span>
+ดังนั้นเราสามารถเขียน integral ใหม่ได้ดังนี้ $$
+<span class="math display">\[\begin{aligned}
+        \int \sqrt{2x + 3} dx  &amp;= \int \sqrt{u} \frac{1}{2} du \\
+                                &amp;= \frac{1}{2}\int u^{1/2} du\\
+                                &amp;= \frac{1}{2} \frac{ u^{3/2}}{3/2} + C\\
+                                &amp;= \frac{1}{3} (2x + 3)^{3/2} + C
+        
+\end{aligned}\]</span>
+<p>$$</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-108" class="example"><strong>ตัวอย่าง 6.3  </strong></span>จงหาปริพันธ์ต่อไปนี้ <span class="math inline">\(\int \frac{1}{x} (1+ \ln x)^2 dx\)</span></p>
+</div>
+<strong>วิธีทำ</strong> โดยการเปลี่ยนตัวแปร <span class="math inline">\(u = 1 + \ln x\)</span> เราจะได้ว่า <span class="math inline">\(du =  \frac{dx}{x}\)</span>
+ดังนั้นเราสามารถเขียน integral ใหม่ได้ดังนี้ $$
+<span class="math display">\[\begin{aligned}
+        \int \frac{1}{x} (1+ \ln x)^2 dx  &amp;= \int u^2 du \\
+                                &amp;= \frac{u^3}{3} + C\\
+                                &amp;= \frac{1}{3} (1 + \ln x)^3 + C
+        
+\end{aligned}\]</span>
+<p>$$</p>
+<div id="แบบฝกหด" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> แบบฝึกหัด<a href="อนพนธ-derivatives.html#แบบฝกหด" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>จงหาปริพันธ์ต่อไปนี้</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\int \sqrt{x+1} dx\)</span></p></li>
+<li><p><span class="math inline">\(\int (x^2 - 2x) \sqrt{x^3 - 3x^2 +1} dx\)</span></p></li>
+<li><p><span class="math inline">\(\int \sin x e^{\cos x} dx\)</span></p></li>
+<li><p><span class="math inline">\(\int \tan \sec^2 x dx\)</span></p></li>
+<li><p><span class="math inline">\(\int \frac{(\ln x)^2}{x} dx\)</span></p></li>
+</ol>
+</div>
+<div id="การหาปรพนธโดยการแทนดวยฟงกชนตรโกณมต-trigonometric-substitutions" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> การหาปริพันธ์โดยการแทนด้วยฟังก์ชันตรีโกณมิติ (Trigonometric Substitutions)<a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยการแทนดวยฟงกชนตรโกณมต-trigonometric-substitutions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>เราสามารถใช้วิธีการเปลี่ยนตัวแปรเพื่อหาปริพันธ์ของฟังก์ชันในรูปแบบต่อไปนี้</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\int \sin^m x \cos^n x dx\)</span></p></li>
+<li><p><span class="math inline">\(\int \tan^m x \sec^n x dx\)</span></p></li>
+<li><p><span class="math inline">\(\int \cot^m x \csc^n x dx\)</span></p></li>
+</ol>
+<p>โดยในบทนี้จะยกตัวอย่างเฉพาะในกรณีแรกเท่านั้น ส่วนกรณีที่เหลือสามารถใช้หลักการเดียวกัน</p>
+<p>พิจารณาจากตัวอย่างต่อไปนี้</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-109" class="example"><strong>ตัวอย่าง 6.4  </strong></span>จงหาปริพันธ์ต่อไปนี้ <span class="math inline">\(\int \sin^3 x \cos x dx\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> โดยการเปลี่ยนตัวแปร <span class="math inline">\(u = \sin x\)</span> เราจะได้ว่า <span class="math inline">\(du = \cos x dx\)</span> ดังนั้น
+<span class="math display">\[\int \sin^3 x \cos x dx = \int u^3 du = \frac{1}{4}u^4 + C = \frac{1}{4} \sin ^4 x + C\]</span></p>
+<p>ในกรณีของ integral แบบแรก <span class="math inline">\(\int \sin^m x \cos^n x dx\)</span>
+เราจะแบ่งการพิจารณาเป็น 2 กรณี ดังนี้</p>
+<strong>กรณีที่ 1</strong> ถ้า <span class="math inline">\(m\)</span> หรือ <span class="math inline">\(n\)</span> อย่างน้อยหนึ่งตัวที่เป็นจำนวนบวกคี่ สมมติให้ <span class="math inline">\(m\)</span>
+เป็นจำนวนบวกคี่ ดังนั้นเราสามารถที่จะเขียน <span class="math inline">\(m = 2k +1\)</span> เราจะแยก <span class="math inline">\(\sin x\)</span> ออกมาจาก
+<span class="math inline">\(\sin^{2k} x\)</span> และจะใช้เอกลักษณ์ <span class="math inline">\(\sin^2 x = (1 - \cos^2 x)\)</span> ในการจัดรูป
+integral ดังนี้ $$
+<span class="math display">\[\begin{aligned}
+        \int \sin^m x \cos^n x dx &amp;= \int (\sin^{2}x)^k \cos^n x \sin x dx \\
+                                    &amp;= \int (1 - \cos^2 x)^k \cos^n x \sin x dx \\
+                                    &amp;= - \int (1 - u^2)^k u^n du
+    
+\end{aligned}\]</span>
+<p>$$ โดยเรากำหนดให้ <span class="math inline">\(u = \cos x\)</span> สังเกตว่า integral
+สุดท้ายจะง่ายต่อการหาอนุพันธ์</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-110" class="example"><strong>ตัวอย่าง 6.5  </strong></span>จงหาปริพันธ์ของ <span class="math inline">\(\int \sin^3 x \cos^3 x dx\)</span></p>
+</div>
+<p><strong>กรณีที่ 2</strong> ถ้า <span class="math inline">\(m\)</span> และ <span class="math inline">\(n\)</span> เป็นจำนวนบวกคู่
+ในกรณีนี้เราสามารถที่จะใช้เอกลักษณ์ตรีโกณมิติต่อไปนี้ในการทำให้ integral
+อยู่ในรูปที่ง่ายต่อการหาค่าปริพันธ์
+<span class="math display">\[\sin^2 x = \frac{1}{2}(1-\cos 2x) \quad  \cos^2 x = \frac{1}{2}(1 + \cos 2x)\]</span>
+โดยพิจารณาจากตัวอย่างต่อไปนี้</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-111" class="example"><strong>ตัวอย่าง 6.6  </strong></span>จงหาปริพันธ์ของ <span class="math inline">\(\int \sin^2 x \cos^2 x dx\)</span></p>
+</div>
+</div>
+</div>
+<div id="การหาปรพนธโดยแยกสวน-integration-by-parts" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> การหาปริพันธ์โดยแยกส่วน (Integration by Parts)<a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยแยกสวน-integration-by-parts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>ในบทนี้เราจะใช้การแปลง (transformation) ในการเปลี่ยนรูปของ integral
+บางประเภทให้อยู่ในรูปที่ง่ายต่อการหา โดยเริ่มต้นจากการพิจารณาอนุพันธ์ของผลคูณของฟังก์ชัน
+ต่อไปนี้ <span class="math display">\[\frac{d}{dx} (uv) = v\frac{du}{dx} + u\frac{dv}{dx}\]</span> หรือ
+เขียนให้อยู่ในรูปของ <span class="math display">\[u(x) v&#39;(x) = \frac{d}{dx}(u(x)v(x)) - v(x)u&#39;(x)\]</span>
+โดยการหาปริพันธ์เทียบกับ <span class="math inline">\(x\)</span> เราจะได้ว่า
+<span class="math display">\[\int u(x) v&#39;(x) dx = u(x)v(x) -  \int v(x)u&#39;(x)dx\]</span> หรือ
+<span class="math display">\[\int u dv = uv -  \int v du\]</span> สูตรการหาปริพันธ์นี้ เรียกว่า integration by
+parts</p>
+<p>ในการใช้สูตรดังกล่าว เราจำเป็นที่จะต้องแบ่ง integrand ออกเป็น 2 ส่วนด้วยกัน คือ ส่วนของ
+u และ dv โดยอาศัยหลักการต่อไปนี้</p>
+<ol style="list-style-type: decimal">
+<li><p>ส่วน <span class="math inline">\(dv\)</span> ต้องเป็นส่วนที่ง่ายต่อการหาปริพันธ์</p></li>
+<li><p>ในพจน์ของ <span class="math inline">\(\int v du\)</span> จะต้องง่ายต่อการหา</p></li>
+</ol>
+<div class="example">
+<p><span id="exm:unlabeled-div-112" class="example"><strong>ตัวอย่าง 6.7  </strong></span>จงหาปริพันธ์ของ <span class="math inline">\(\int x e^x dx\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-113" class="example"><strong>ตัวอย่าง 6.8  </strong></span>จงหาปริพันธ์ของ <span class="math inline">\(\int x \sin x dx\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-114" class="example"><strong>ตัวอย่าง 6.9  </strong></span>จงหาปริพันธ์ของ <span class="math inline">\(\int e^x \sin 2x dx\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-115" class="example"><strong>ตัวอย่าง 6.10  </strong></span>จงหาปริพันธ์ของ <span class="math inline">\(\int \ln xdx\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-116" class="example"><strong>ตัวอย่าง 6.11  </strong></span>จงหาปริพันธ์ของ <span class="math inline">\(\int x \sqrt{x+1}dx\)</span></p>
+</div>
+</div>
+<div id="การหาปรพนธโดยเศษสวนยอย-integration-by-partial-fractions" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> การหาปริพันธ์โดยเศษส่วนย่อย (Integration by Partial Fractions)<a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยเศษสวนยอย-integration-by-partial-fractions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>เราจะศึกษาวิธีการหาปริพันธ์ของ rational ฟังก์ชัน หรือฟังก์ชันที่อยู่ในรูปของ
+<span class="math display">\[R(x) = \frac{P(x)}{Q(x)}\]</span> โดยที่ <span class="math inline">\(P(x),Q(x)\)</span> คือพหุนามใดๆ
+ซึ่งจะเรียกวิธีต่อไปนี้ว่า partial fractions หลักการอยู่ที่การแยกเศษส่วน <span class="math inline">\(R(x)\)</span>
+ให้อยู่ในรูปของผลรวมต่อไปนี้ <span class="math display">\[\label{partial-frac}
+       R(x) = \frac{P(x)}{Q(x)} = p(x) + F_1(x) + F_2(x) + \ldots + F_m(x)\]</span>
+โดยที่ <span class="math inline">\(p(x)\)</span> คือ พหุนามที่ได้จากการหาร และ <span class="math inline">\(F_k(x)\)</span>
+จะเป็นเศษส่วนที่ง่ายต่อการหาปริพันธ์</p>
+พิจารณาตัวอย่างต่อไปนี้ <span class="math display">\[\label{exa-partial-frac}
+     \begin{split}
+        \frac{-1+x^2+x^3+x^4}{x + x^3} &amp;= 1 +x - \frac{x+1}{x + x^3}  \\
+                                       &amp;= 1 +x -\frac{1}{x} + \frac{x-1}{1+x^2} \\
+     \end{split}\]</span> หลังการแยกเศษส่วน เราสามารถที่จะหาปริพันธ์ได้ง่ายขึ้น
+$$
+<span class="math display">\[\begin{aligned}
+        \int \frac{-1+x^2+x^3+x^4}{x + x^3}dx &amp;= \int\left(1 +x -\frac{1}{x} + \frac{x}{1+x^2} -\frac{1}{1+x^2}\right)dx \\   
+            &amp;=x + \frac{1}{2}x^2 - \ln|x| +\frac{1}{2}\ln(x^2+1) -\tan^{-1}x + C
+    
+\end{aligned}\]</span>
+<p>$$</p>
+<p>ในการแยกเศษส่วน <span class="math inline">\(R(x)\)</span> ในสมการ
+<a href="#partial-frac" reference-type="ref" reference="partial-frac"><span class="math display">\[partial-frac\]</span></a> ผลลัพธ์ที่ได้จะมีเศษส่วน <span class="math inline">\(F_k(x)\)</span> เพิ่มขึ้นมา โดยเศษส่วน
+<span class="math inline">\(F_k(x)\)</span> นี้จะอยู่ในรูปของ <span class="math display">\[\label{partial-frac-1}
+     \frac{A}{(ax + b)^n} \text{ หรือ } \frac{Ax + B}{(ax^2 + bx +c)^n}\]</span>
+อย่างใดอย่างหนึ่ง (ซึ่งมีการพิสูจน์ในวิชาคณิตศาสตร์ขั้นสูง) และเราจะเรียกเศษส่วนนี้ว่า
+partial fraction หรือเศษส่วนย่อย ตัวอย่างในสมการ
+<a href="#exa-partial-frac" reference-type="ref" reference="exa-partial-frac"><span class="math display">\[exa-partial-frac\]</span></a> เศษส่วนย่อย คือ <span class="math inline">\(-\frac{1}{x}\)</span> และ
+<span class="math inline">\(\frac{x-1}{1+x^2}\)</span></p>
+<p>โดยทั่วไปเราสามารถจำแนก rational function ได้เป็น 2 ประเภท</p>
+<ol style="list-style-type: decimal">
+<li><p>proper rational function ซึ่งเป็นกรณีที่ดีกรีของ <span class="math inline">\(P(x)\)</span> น้อยกว่าดีกรีของ <span class="math inline">\(Q(x)\)</span></p></li>
+<li><p>improper rational function ในกรณีนี้ดีกรีของ <span class="math inline">\(P(x)\)</span> มากกว่าหรือเท่ากับดีกรีของ
+<span class="math inline">\(Q(x)\)</span></p></li>
+</ol>
+<p>ในสมการ <a href="#exa-partial-frac" reference-type="ref" reference="exa-partial-frac"><span class="math display">\[exa-partial-frac\]</span></a> rational function นี้เป็นแบบ improper
+ดังนั้นเมื่อทำการตั้งหารยาวผลลัพท์ที่ได้จะเป็นผลบวกของพหุนาม <span class="math inline">\(1 +x\)</span> และ proper
+rational function <span class="math inline">\(- \frac{x+1}{x + x^3}\)</span> ดังนั้นเราสามารถที่จะสมมติ ให้
+rational function ของเราที่จะศึกษาต่อไปในบทนี้เป็น proper และเราจะหาวิธี ในการแยก
+proper rational function ให้อยู่ในรูปผลรวมของเศษส่วนย่อยให้ได้
+โดยเราจะเริ่มต้นจากกรณีที่ตัวประกอบของตัวหารเป็น linear factors
+แล้วจึงพิจารณาในกรณีที่เป็น quadratic factors</p>
+<p><strong>Linear Factors</strong> สมมติให้ rational function <span class="math inline">\(R(x) = \frac{P(x)}{Q(x)}\)</span>
+เป็น proper และถ้าทำการแยกตัวประกอบของ <span class="math inline">\(Q(x)\)</span> แล้วมีเทอม <span class="math inline">\(ax + b\)</span> ซ้ำกันทั้งหมด
+<span class="math inline">\(n\)</span> เทอม (นั่นคือ <span class="math inline">\((ax +b)^n\)</span> เป็นตัวประกอบของ <span class="math inline">\(Q(x)\)</span>) แล้วการแยก <span class="math inline">\(R(x)\)</span>
+เพื่อทำให้เป็นเศษส่วนย่อยจะต้องประกอบด้วย <span class="math inline">\(n\)</span> เทอมต่อไปนี้
+<span class="math display">\[\frac{A_1}{ax+b} +  \frac{A_2}{(ax+b)^2} + \cdots +  \frac{A_n}{(ax+b)^n}\]</span>
+โดยที่ <span class="math inline">\(A_1, A_2, \ldots, A_n\)</span> เป็นค่าคงตัว</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-117" class="example"><strong>ตัวอย่าง 6.12  </strong></span><strong>Distinct Linear Factors</strong> จงหา <span class="math inline">\(\int\frac{1}{x(x+1)} dx\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> โดยการแยกหาเศษย่อย เราจะได้ว่า
+<span class="math display">\[\frac{1}{x(x+1)} = \frac{1}{x} - \frac{1}{x+1}\]</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-118" class="example"><strong>ตัวอย่าง 6.13  </strong></span><strong>Repeated Linear Factors</strong> จงหา <span class="math inline">\(\int\frac{1}{x^2(x+1)} dx\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> โดยการแยกหาเศษย่อย เราจะได้ว่า
+<span class="math display">\[\frac{1}{x^2(x+1)} = -\frac{1}{x} + \frac{1}{x^2} + \frac{1}{x+1}\]</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-119" class="example"><strong>ตัวอย่าง 6.14  </strong></span>จงหาปริพันธ์ต่อไปนี้</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\int \frac{x}{x^2+1} dx\)</span></p></li>
+<li><p><span class="math inline">\(\int \frac{x^2+1}{x} dx\)</span></p></li>
+<li><p><span class="math inline">\(\int \frac{1}{x(x+1)^2} dx\)</span></p></li>
+<li><p><span class="math inline">\(\int \frac{1}{x^2(x+1)^2} dx\)</span></p></li>
+</ol>
+</div>
+<p><strong>วิธีทำ</strong> เนื่องจาก
+<span class="math display">\[\frac{1}{x(x+1)^2} = \frac{1}{x} -\frac{1}{x+1} -\frac{1}{(x+1)^2}\]</span>
+และ
+<span class="math display">\[\frac{1}{x^2(x+1)^2} = \frac{1}{x^2} - \frac{2}{x} + \frac{2}{x+1} + \frac{1}{(1+x)^2}\]</span></p>
+<p><strong>Quadratic Factors</strong> ในกรณีที่ rational function
+<span class="math inline">\(R(x) = \frac{P(x)}{Q(x)}\)</span> เป็น proper และ <span class="math inline">\((ax^2 +bx+c)^n\)</span>
+เป็นตัวประกอบของ <span class="math inline">\(Q(x)\)</span> แล้วการแยก <span class="math inline">\(R(x)\)</span> เพื่อทำให้เป็นเศษส่วนย่อยจะต้องประกอบด้วย
+<span class="math inline">\(n\)</span> เทอมต่อไปนี้
+<span class="math display">\[\frac{A_1x + B_1}{ax^2+bx+c} +  \frac{A_2x + B_2}{({ax^2+bx+c})^2} + \cdots +  \frac{A_nx + B_n}{({ax^2+bx+c})^n}\]</span></p>
+</div>
+<div id="ปรพนธไมตรงแบบ-improper-integrals" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> ปริพันธ์ไม่ตรงแบบ (Improper Integrals)<a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#ปรพนธไมตรงแบบ-improper-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>ในการนิยาม definite integral <span class="math inline">\(\int_{a}^{b} f(x) dx\)</span> เราจะสมมติให้ฟังก์ชัน
+<span class="math inline">\(f(x)\)</span> นี้นิยามบนช่วงปิด <span class="math inline">\([a,b]\)</span> อย่างไรก็ตามในทางปฎิบัติเราอาจจะสนใจในกรณีต่อไปนี้</p>
+<ol style="list-style-type: decimal">
+<li><p>กรณีที่ช่วงที่ใช้ในการหาปริพันธ์นั้นไม่ใช่ช่วงปิด เช่น
+<span class="math display">\[[a, \infty) , (-\infty,b] \text{ หรือ } (-\infty,\infty)\]</span></p></li>
+<li><p>ตัว integrand <span class="math inline">\(f(x)\)</span> ไม่ต่อเนื่องที่จุดใดจุดหนึ่งบนช่วงของการหาปริพันธ์</p></li>
+</ol>
+<p>และเราจะเรียก integral ใน 2 กรณีนี้ว่า improper integral
+ในการหาปริพันธ์นี้เราจำเป็นที่จะต้องใช้เทคนิคพิเศษที่ช่วย
+โดยเราจะเริ่มต้นจากการพิจารณาตัวอย่างต่อไปนี้</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-120" class="example"><strong>ตัวอย่าง 6.15  </strong></span>พิจารณา <span class="math inline">\(\int_{1}^{\infty} \frac{1}{x^2} dx\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> ค่าของปริพันธ์นี้ควรจะเป็นพื้นที่ที่อยู่ระหว่างกราฟ <span class="math inline">\(y =  1/x^2\)</span> แกน <span class="math inline">\(x\)</span>
+และเส้นตรง <span class="math inline">\(x=1\)</span> ถ้าเราพิจารณาช่วงปิด <span class="math inline">\([1,t]\)</span> เราจะสามารถหาค่าของ
+<span class="math display">\[A(t) = \int_{1}^{t} \frac{1}{x^2} dx =  \left[-\frac{1}{x}\right]_{1}^{t} = 1 - \frac{1}{t}\]</span>
+ถ้าสมมติให้ <span class="math inline">\(t \rightarrow \infty\)</span> เราจะสามารถหาลิมิตของ <span class="math inline">\(A(t)\)</span>
+ได้ในกรณีซึ่งเท่ากับ 1 ดังนั้น เราจะนิยามให้พื้นที่ของบริเวณที่ถูกปิดล้อมด้วย <span class="math inline">\(y =  1/x^2\)</span>
+สำหรับ <span class="math inline">\(x \in [1,\infty)\)</span> เท่ากับค่าของลิมิตดังกล่าว และ
+<span class="math display">\[\int_{1}^{\infty} \frac{1}{x^2} dx = \lim_{t \rightarrow \infty} \int_{a}^t \frac{1}{x^2}dx =
+    \lim_{t \rightarrow \infty} (1 - \frac{1}{t}) = 1\]</span> โดยที่ลิมิตนี้หาค่าได้</p>
+<p>จากตัวอย่างข้างต้น ทำให้เราสามารถสร้างนิยามได้ดังต่อไปนี้</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-121" class="definition"><strong>นิยาม 6.1  </strong></span>(Infinite Limits of Integration)</p>
+<ol style="list-style-type: decimal">
+<li><p><span id="improper1" label="improper1"></span> ถ้า <span class="math inline">\(\int_{a}^{t}f(x)dx\)</span>
+หาค่าได้สำหรับทุกๆ จำนวนจริง <span class="math inline">\(t \ge a\)</span> แล้ว
+<span class="math display">\[\int_{a}^{\infty} f(x) dx  = \lim_{t \rightarrow \infty} \int_{a}^t f(x) dx\]</span>
+ถ้าลิมิตหาค่าได้</p></li>
+<li><p><span id="improper2" label="improper2"></span> ถ้า <span class="math inline">\(\int_{t}^{b}f(x)dx\)</span>
+หาค่าได้สำหรับทุกๆ จำนวนจริง <span class="math inline">\(t \le b\)</span> แล้ว
+<span class="math display">\[\int_{-\infty}^{b} f(x) dx  = \lim_{t \rightarrow -\infty} \int_{t}^b f(x) dx\]</span>
+ถ้าลิมิตหาค่าได้</p></li>
+</ol>
+<p>ถ้าลิมิตในข้อ <a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#improper1" reference-type="ref" reference="improper1"><span class="math display">\[improper1\]</span></a> และ
+<a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#improper2" reference-type="ref" reference="improper2"><span class="math display">\[improper2\]</span></a>
+หาค่าได้ เราจะเรียก improper integral นี้ว่า convergent แต่ถ้าลิมิตหาค่าไม่ได้ว่า
+divergent เราจะเรียก integral นี้ว่า divergent</p>
+<ol start="3" style="list-style-type: decimal">
+<li>ถ้า improper integrals <span class="math inline">\(\int_{a}^{\infty} f(x) dx\)</span> และ
+<span class="math inline">\(\int_{-\infty}^{a} f(x) dx\)</span> convergent แล้ว
+<span class="math display">\[\int_{-\infty}^{\infty} f(x) dx  =
+              \int_{-\infty}^{a} f(x) dx + \int_{a}^{\infty} f(x) dx\]</span></li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-122" class="example"><strong>ตัวอย่าง 6.16  </strong></span>จงหา <span class="math inline">\(\int_{-\infty}^0 x e^x dx\)</span></p>
+</div>
+<strong>วิธีทำ</strong> โดยการใช้ integration by part เราสามารถแสดงว่า
+<span class="math display">\[\int x e^x dx = x e^x - e^x +C\]</span> ดังนั้น $$
+<span class="math display">\[\begin{aligned}
+         \int_{-\infty}^0 x e^x dx &amp;=  \lim_{t \rightarrow -\infty} \int_{t}^0 x e^x dx \\
+                        &amp;=  \lim_{t \rightarrow -\infty} (-t e^t -1 + e^t) = -1
+    
+\end{aligned}\]</span>
+<p>$$</p>
+<p>สำหรับกรณีที่ตัว integrand <span class="math inline">\(f(x)\)</span> ไม่ต่อเนื่อง อาจจะไม่ต่อเนื่องที่จุด <span class="math inline">\(c\)</span> โดยที่ <span class="math inline">\(c\)</span>
+อาจจะเป็นจุดภายในช่วงปิด <span class="math inline">\([a,b]\)</span> หรืออาจจะเป็นที่ขอบของช่วงปิดก็ได้
+ในกรณีเราสามารถหาค่าของ improper integral ได้ดังต่อไปนี้</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-123" class="definition"><strong>นิยาม 6.2  </strong></span><span id="def-improper" label="def-improper"></span> (Infinite Integrands)</p>
+<ol style="list-style-type: decimal">
+<li><p><span id="improper3" label="improper3"></span> ถ้า <span class="math inline">\(f\)</span> ต่อเนื่องบนช่วง <span class="math inline">\([a,b)\)</span>
+แต่ไม่ต่อเนื่องที่จุด <span class="math inline">\(b\)</span> แล้ว
+<span class="math display">\[\int_{a}^b f(x) dx = \lim_{t \rightarrow b^{-}} \int_{a}^t f(x) dx\]</span>
+ถ้าลิมิตนี้หาค่าได้</p></li>
+<li><p><span id="improper4" label="improper4"></span> ถ้า <span class="math inline">\(f\)</span> ต่อเนื่องบนช่วง <span class="math inline">\((a,b]\)</span>
+แต่ไม่ต่อเนื่องที่จุด <span class="math inline">\(a\)</span> แล้ว
+<span class="math display">\[\int_{a}^b f(x) dx = \lim_{t \rightarrow a^{+}} \int_{t}^b f(x) dx\]</span>
+ถ้าลิมิตนี้หาค่าได้</p></li>
+</ol>
+<p>ถ้าลิมิตในข้อ <a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#improper3" reference-type="ref" reference="improper3"><span class="math display">\[improper3\]</span></a> และ
+<a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#improper4" reference-type="ref" reference="improper4"><span class="math display">\[improper4\]</span></a>
+หาค่าได้ เราจะเรียก improper integral นี้ว่า convergent แต่ถ้าลิมิตหาค่าไม่ได้ว่า
+divergent เราจะเรียก integral นี้ว่า divergent</p>
+<ol start="3" style="list-style-type: decimal">
+<li>ถ้า <span class="math inline">\(f\)</span> ไม่ต่อเนื่องที่จุด <span class="math inline">\(c\)</span> โดยที่ <span class="math inline">\(a &lt; c &lt;b\)</span> และ <span class="math inline">\(\int_{a}^{c} f(x) dx\)</span>
+และ <span class="math inline">\(\int_{c}^{b} f(x) dx\)</span> convergent แล้ว <span class="math display">\[\int_{a}^{b} f(x) dx  =
+              \int_{a}^{c} f(x) dx + \int_{c}^{b} f(x) dx\]</span></li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-124" class="example"><strong>ตัวอย่าง 6.17  </strong></span>จงหา <span class="math inline">\(\int_{1}^{5} \frac{1}{\sqrt{x-1}} dx\)</span></p>
+</div>
+<strong>วิธีทำ</strong> เราสามารถใช้นิยาม
+<a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#def-improper" reference-type="ref" reference="def-improper"><span class="math display">\[def-improper\]</span></a> ในการหาค่าปริพันธ์ดังต่อไปนี้ $$
+<span class="math display">\[\begin{aligned}
+  \int_{1}^{5} \frac{1}{\sqrt{x-1}} dx &amp;= \lim_{t \rightarrow 1^{+} }\int_{t}^{5} \frac{1}{\sqrt{x-1}} dx \\
+         &amp;= \lim_{t \rightarrow 1^{+}} 2\sqrt{x-1} |_{t}^{5} \\
+         &amp;= \lim_{t \rightarrow 1^{+}} (4 - 2\sqrt{t-1}) = 4           
+    
+\end{aligned}\]</span>
+<p>$$ ดังนั้น improper integral นี้จะ converge เข้าสู่ค่า 4</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-125" class="example"><strong>ตัวอย่าง 6.18  </strong></span>จงหา <span class="math inline">\(\int_{-1}^{1} \frac{1}{x^2} dx\)</span></p>
+</div>
+<strong>วิธีทำ</strong> เนื่องจาก <span class="math inline">\(f(x)\)</span> ไม่ต่อเนื่องที่จุด 0 ดังนั้นเราสามารถใช้นิยาม
+<a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#def-improper" reference-type="ref" reference="def-improper"><span class="math display">\[def-improper\]</span></a> ในการหาค่าปริพันธ์ดังกล่าว $$
+<span class="math display">\[\begin{aligned}
+        \int_{-1}^{1} \frac{1}{x^2} dx &amp;= \lim_{t \rightarrow 0^{-} }\int_{-1}^{t} \frac{1}{x^2}dx
+                                            + \lim_{s \rightarrow 0^{+}} \int_{s}^{1} \frac{1}{x^2}dx \\
+        &amp;= \lim_{t \rightarrow 0^{-}} \left[ -\frac{1}{x}\right]_{-1}^t
+        + \lim_{s \rightarrow 0^{+}} \left[ -\frac{1}{x}\right]_{s}^1 \\
+        &amp;= \lim_{t \rightarrow 0^{-}} (-\frac{1}{t} - 1) + \lim_{s \rightarrow 0^{+}} (-1 +\frac{1}{s})
+    
+\end{aligned}\]</span>
+<p>$$ แต่เนื่องจากลิมิตในบรรทัดสุดท้ายนี้หาค่าไม่ได้ เราจึงสรุปว่า
+<span class="math inline">\(\int_{-1}^{1} \frac{1}{x^2} dx\)</span> เป็น divergent</p>
+<p>หมายเหตุถ้าเราไม่ใช่วิธีเบื้องต้น โดยเลือกที่จะคำนวณโดยตรงโดยไม่สนใจจุดที่ฟังก์ชันไม่ต่อเนื่อง
+เราจะได้ว่า
+<span class="math display">\[\int_{-1}^{1} \frac{1}{x^2} dx  = \left[ -\frac{1}{x}\right]_{-1}^1 = -1 + -1 = -2\]</span>
+ซึ่งไม่ใช่ผลลัพธ์ที่ถูกต้อง (เพราะว่ากราฟ <span class="math inline">\(y = \frac{1}{x^2}\)</span> อยู่เหนือแกน <span class="math inline">\(x\)</span> ดังนั้น
+<span class="math inline">\(\int_{-1}^{1} \frac{1}{x^2} dx\)</span> จะต้องมีค่าที่เป็นบวก)</p>
+</div>
+<div id="แบบฝกหด-1" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> แบบฝึกหัด<a href="อนพนธ-derivatives.html#แบบฝกหด-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>ตอนที่ 1</strong> <strong>ตอนที่ 2</strong> จงหา improper integrals ต่อไปนี้</p>
+<div class="enumerate">
+<div class="multicols">
+<p>2</p>
+<p><span class="math inline">\(\int_{1}^{\infty} \frac{1}{\sqrt{x+1}} dx\)</span> divergent</p>
+<p><span class="math inline">\(\int_{1}^{\infty} \frac{1}{(x+1)^{3/2}}dx = \sqrt{2}\)</span></p>
+<p><span class="math inline">\(\int_{-\infty}^{-1} \frac{1}{(2x + 1)^2} dx = \frac{1}{2}\)</span></p>
+<p><span class="math inline">\(\int_{-\infty}^{\infty} x e^{-x^2} dx = 0\)</span></p>
+<p><span class="math inline">\(\int_{1}^{\infty} \frac{\ln x}{x^2}  dx = 1\)</span></p>
+<p><span class="math inline">\(\int_0^1 \frac{1}{\sqrt{1-x}} dx = 2\)</span></p>
+<p><span class="math inline">\(\int_0^{1} \frac{x}{x^2-1} dx\)</span> divergent</p>
+<p><span class="math inline">\(\int_0^{1/2} \frac{x}{x^2-1} dx = -\frac{1}{2} \ln (\frac{4}{3})\)</span></p>
+</div>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="การหาปรพนธ-integrations.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/pairote-sat/SCMA104/edit/main/04-integration.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/pairote-sat/SCMA104/blob/main/04-integration.Rmd",
+"text": null
+},
+"download": ["SCMA104bookdownproj.pdf", "SCMA104bookdownproj.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

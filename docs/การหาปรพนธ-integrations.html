@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>บทที่ 5 การหาปริพันธ์ (Integrations) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</title>
+  <meta name="description" content="บทที่ 5 การหาปริพันธ์ (Integrations) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="บทที่ 5 การหาปริพันธ์ (Integrations) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="บทที่ 5 การหาปริพันธ์ (Integrations) | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  
+  
+  
+
+<meta name="author" content="Pairote Satiracoo" />
+
+
+<meta name="date" content="2024-09-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="การประยกตของอนพนธ-applications-of-differentiation.html"/>
+<link rel="next" href="เทคนคของการหาปรพนธ-techniques-of-integration.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SCMA104</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> หลักการและความสำคัญของแคลคูลัสและระบบสมการเชิงอนุพันธ์สามัญ</a></li>
+<li class="chapter" data-level="2" data-path="ลมต-limits.html"><a href="ลมต-limits.html"><i class="fa fa-check"></i><b>2</b> ลิมิต (Limits)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ลมต-limits.html"><a href="ลมต-limits.html#ความตอเนอง-continuity"><i class="fa fa-check"></i><b>2.1</b> ความต่อเนื่อง (Continuity)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html"><i class="fa fa-check"></i><b>3</b> อนุพันธ์ (Derivatives)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธ-derivatives-1"><i class="fa fa-check"></i><b>3.1</b> อนุพันธ์ (Derivatives)</a></li>
+<li class="chapter" data-level="3.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#การคำนวณหาอนพนธ"><i class="fa fa-check"></i><b>3.2</b> การคำนวณหาอนุพันธ์</a></li>
+<li class="chapter" data-level="3.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#สตรสำหรบหาอนพนธ"><i class="fa fa-check"></i><b>3.3</b> สูตรสำหรับหาอนุพันธ์</a></li>
+<li class="chapter" data-level="3.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธอนดบสง-high-order-derivatives"><i class="fa fa-check"></i><b>3.4</b> อนุพันธ์อันดับสูง (High Order Derivatives)</a></li>
+<li class="chapter" data-level="3.5" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#การตความอนพนธ-interpretation-of-derivatives"><i class="fa fa-check"></i><b>3.5</b> การตีความอนุพันธ์ (Interpretation of Derivatives)</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงความชน-derivatives-as-slopes"><i class="fa fa-check"></i><b>3.5.1</b> อนุพันธ์ในเชิงความชัน (Derivatives as Slopes)</a></li>
+<li class="chapter" data-level="3.5.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงอตราเรว-derivatives-as-speeds"><i class="fa fa-check"></i><b>3.5.2</b> อนุพันธ์ในเชิงอัตราเร็ว (Derivatives as Speeds)</a></li>
+<li class="chapter" data-level="3.5.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงอตราการเปลยนแปลง-derivatives-as-rates-of-change"><i class="fa fa-check"></i><b>3.5.3</b> อนุพันธ์ในเชิงอัตราการเปลี่ยนแปลง (Derivatives as Rates of Change)</a></li>
+<li class="chapter" data-level="3.5.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-exercises"><i class="fa fa-check"></i><b>3.5.4</b> แบบฝึกหัด (Exercises)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#กฎลกโซ-the-chain-rule"><i class="fa fa-check"></i><b>3.6</b> กฎลูกโซ่ (The Chain Rule)</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด"><i class="fa fa-check"></i><b>3.6.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนอนเวอรส-derivatives-of-inverse-functions"><i class="fa fa-check"></i><b>3.7</b> อนุพันธ์ของฟังก์ชันอินเวอร์ส (Derivatives of Inverse Functions)</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-1"><i class="fa fa-check"></i><b>3.7.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#differentials-implicit-differentiation-and-related-rates"><i class="fa fa-check"></i><b>3.8</b> Differentials, Implicit Differentiation and Related Rates</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#differentials"><i class="fa fa-check"></i><b>3.8.1</b> Differentials</a></li>
+<li class="chapter" data-level="3.8.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#implicit-differentiation"><i class="fa fa-check"></i><b>3.8.2</b> Implicit Differentiation</a></li>
+<li class="chapter" data-level="3.8.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#related-rates"><i class="fa fa-check"></i><b>3.8.3</b> Related Rates</a></li>
+<li class="chapter" data-level="3.8.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-2"><i class="fa fa-check"></i><b>3.8.4</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนตรโกณมตและอนเวอรสของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9</b> อนุพันธ์ของฟังก์ชันตรีโกณมิติและอินเวอร์สของฟังก์ชันตรีโกณมิติ</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9.1</b> อนุพันธ์ของฟังก์ชันตรีโกณมิติ</a></li>
+<li class="chapter" data-level="3.9.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนอนเวอรสของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9.2</b> อนุพันธ์ของฟังก์ชันอินเวอร์สของฟังก์ชันตรีโกณมิติ</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนเอกซโพเนนเชยลและฟงกชนลอการทม"><i class="fa fa-check"></i><b>3.10</b> อนุพันธ์ของฟังก์ชันเอกซ์โพเนนเชียลและฟังก์ชันลอการิทึม</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html"><i class="fa fa-check"></i><b>4</b> การประยุกต์ของอนุพันธ์ (Applications of Differentiation)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#applications-of-derivatives-related-to-students-discipline"><i class="fa fa-check"></i><b>4.1</b> Applications of derivatives related to students discipline</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-3"><i class="fa fa-check"></i><b>4.1.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#sec-sketch"><i class="fa fa-check"></i><b>4.2</b> Sketching the graph of a function from the derivative</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-4"><i class="fa fa-check"></i><b>4.2.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การประยกตของ-monotonicity-และ-concavity"><i class="fa fa-check"></i><b>4.3</b> การประยุกต์ของ Monotonicity และ Concavity</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-5"><i class="fa fa-check"></i><b>4.3.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาคาเหมาะทสด-optimization"><i class="fa fa-check"></i><b>4.4</b> การหาค่าเหมาะที่สุด (Optimization)</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-6"><i class="fa fa-check"></i><b>4.4.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule"><i class="fa fa-check"></i><b>4.5</b> รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L’Hopital Rule)</a>
+<ul>
+<li><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty" id="toc-การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty"><span class="toc-section-number">4.5.1</span> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0\cdot \infty\)</span> หรือ <span class="math inline">\(\infty
+-\infty\)</span></a></li>
+<li class="chapter" data-level="4.5.2" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาลมตทอยในรปแบบไมกำหนด-00-1infty-infty0"><i class="fa fa-check"></i><b>4.5.2</b> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0^{0}, 1^{\infty}, \infty^0\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html"><i class="fa fa-check"></i><b>5</b> การหาปริพันธ์ (Integrations)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#ปฏยานพนธ-antiderivatives"><i class="fa fa-check"></i><b>5.1</b> ปฏิยานุพันธ์ (Antiderivatives)</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#prob-anti"><i class="fa fa-check"></i><b>5.1.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#ปรพนธจำกดเขต-the-definite-integral"><i class="fa fa-check"></i><b>5.2</b> ปริพันธ์จำกัดเขต (The Definite Integral)</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#integration-คออะไร"><i class="fa fa-check"></i><b>5.2.1</b> Integration คืออะไร</a></li>
+<li class="chapter" data-level="5.2.2" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#การประมาณคาพนทและปรพนธจำกดเขต"><i class="fa fa-check"></i><b>5.2.2</b> การประมาณค่าพื้นที่และปริพันธ์จำกัดเขต</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#ทฤษฎพนฐานของแคลคลส-the-fundamental-theorem-of-calculus"><i class="fa fa-check"></i><b>5.3</b> ทฤษฎีพื้นฐานของแคลคูลัส (The fundamental Theorem of Calculus)</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#สตรพนฐานของการอนทเกรท-basic-integration-rules"><i class="fa fa-check"></i><b>5.3.1</b> สูตรพื้นฐานของการอินทิเกรท (Basic Integration Rules)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html"><i class="fa fa-check"></i><b>6</b> เทคนิคของการหาปริพันธ์ (Techniques of Integration)</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยการเปลยนตวแปร-integration-by-substitution"><i class="fa fa-check"></i><b>6.1</b> การหาปริพันธ์โดยการเปลี่ยนตัวแปร (Integration by Substitution)</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด"><i class="fa fa-check"></i><b>6.1.1</b> แบบฝึกหัด</a></li>
+<li class="chapter" data-level="6.1.2" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยการแทนดวยฟงกชนตรโกณมต-trigonometric-substitutions"><i class="fa fa-check"></i><b>6.1.2</b> การหาปริพันธ์โดยการแทนด้วยฟังก์ชันตรีโกณมิติ (Trigonometric Substitutions)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยแยกสวน-integration-by-parts"><i class="fa fa-check"></i><b>6.2</b> การหาปริพันธ์โดยแยกส่วน (Integration by Parts)</a></li>
+<li class="chapter" data-level="6.3" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยเศษสวนยอย-integration-by-partial-fractions"><i class="fa fa-check"></i><b>6.3</b> การหาปริพันธ์โดยเศษส่วนย่อย (Integration by Partial Fractions)</a></li>
+<li class="chapter" data-level="6.4" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#ปรพนธไมตรงแบบ-improper-integrals"><i class="fa fa-check"></i><b>6.4</b> ปริพันธ์ไม่ตรงแบบ (Improper Integrals)</a></li>
+<li class="chapter" data-level="6.5" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-1"><i class="fa fa-check"></i><b>6.5</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="การหาปรพนธ-integrations" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">บทที่ 5</span> การหาปริพันธ์ (Integrations)<a href="การหาปรพนธ-integrations.html#การหาปรพนธ-integrations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="ปฏยานพนธ-antiderivatives" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> ปฏิยานุพันธ์ (Antiderivatives)<a href="การหาปรพนธ-integrations.html#ปฏยานพนธ-antiderivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>จากเรื่องการหาอนุพันธ์ ถ้าวัตถุชนิดหนึ่งมีสมการการเคลื่อนที่ คือ <span class="math inline">\(s = t^{3}\)</span>
+โดยที่วัตถุนี้เคลื่อนที่ได้ระยะทาง <span class="math inline">\(s\)</span> เมตร เมื่อเวลาผ่านไป <span class="math inline">\(t\)</span> วินาที
+แล้วเราสามารถบอกได้ว่าวัตถุเคลื่อนที่ด้วยความเร็ว <span class="math inline">\(v =
+3t^2\)</span> เมตร/วินาที แต่เรารู้ว่า <span class="math inline">\(\displaystyle v = \frac{ds}{dt}\)</span> ดังนั้น
+<span class="math inline">\(\displaystyle  \frac{ds}{dt} = 3t\)</span>
+ในทางกลับกันถ้าเรารู้ว่าสมการความเร็วของวัตถุชนิดหนึ่ง ถ้า <span class="math inline">\(v = 3t^{2}\)</span> แสดงว่า
+<span class="math inline">\(\displaystyle \frac{ds}{dt} = 3t^2\)</span>
+แล้วลองนึกย้อนกลับว่าสมการการเคลื่อนที่ของวัตถุชนิดนี้ คือ สมการใด
+จะเห็นว่าสมการการเคลื่อนที่ของวัตถุนี้อาจจะอยู่ในรูป <span class="math display">\[\begin{aligned}
+    s &amp;= t^3 \\
+    s &amp;= t^3 -2 \\
+    \text{หรือ  } s &amp;= t^3 + 5
+\end{aligned}\]</span> ซึ่งทั้งสามสมการนี้มี <span class="math inline">\(\displaystyle  \frac{ds}{dt}= 3t^2\)</span>
+แต่เราก็ยังไม่แน่ใจว่าเป็นสมการใดกันแน่หรืออาจไม่ใช่ทั้งสามสมการนี้ก็ได้
+แต่เราสามารถคาดคะเนได้ว่าสมการการเคลื่อนที่ของวัตถุนี้ควรจะอยู่ในรูป <span class="math display">\[s = t^{3} + c\]</span>
+โดยที่ <span class="math inline">\(c\)</span> เป็นค่าคงตัว สมการการเคลื่อนที่ทั้งสี่สมการดังกล่าวนี้เป็นตัวอย่างของ “ปฏิยานุพันธ์”
+ของ <span class="math inline">\(v = 3t^{2}\)</span></p>
+<p>ในกรณีทั่วไป เราจะนิยามปฏิยานุพันธ์ของฟังก์ชันดังต่อไปนี้</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-93" class="definition"><strong>นิยาม 5.1  </strong></span>ฟังก์ชัน <span class="math inline">\(F\)</span> เป็นปฏิยานุพันธ์ (antiderivative) ของฟังก์ชัน <span class="math inline">\(f\)</span> บนช่วง <span class="math inline">\(I\)</span> ถ้า
+<span class="math inline">\(F&#39;(x) = f(x)\)</span> สำหรับทุก ๆ ค่าของ <span class="math inline">\(x\)</span> ในช่วง <span class="math inline">\(I\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-94" class="example"><strong>ตัวอย่าง 5.1  </strong></span>จงแสดงว่า <span class="math inline">\(F(x) = x^{2}-2x- 3\)</span> เป็นปฏิยานุพันธ์ของฟังก์ชัน <span class="math inline">\(f(x)=2x-2\)</span> บนช่วง
+<span class="math inline">\(\left( {-\infty ,\infty } \right)\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> จาก <span class="math inline">\(F(x) = x^{2} - 2x - 3\)</span> จะได้ <span class="math inline">\(F&#39;(x)
+= 2x - 2\)</span> นั่นคือ <span class="math inline">\(F&#39;(x) = f(x)\)</span> สำหรับทุก ๆ <span class="math inline">\(x\)</span> ในช่วง <span class="math inline">\(\left( {-\infty
+,\infty } \right)\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-95" class="example"><strong>ตัวอย่าง 5.2  </strong></span>ให้ <span class="math inline">\(f(x) = 2x^{3/2}\)</span> จงหาปฏิยานุพันธ์ของ <span class="math inline">\(f\)</span> บนช่วง
+<span class="math inline">\(\left( {0 ,\infty } \right)\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> ให้ <span class="math inline">\(\displaystyle F_{1}(x) = \frac{4}{5} x^{5/2}\)</span> จะได้
+<span class="math inline">\(F&#39;_1(x) = 2x^{3/2}\)</span> สำหรับ <span class="math inline">\(x &gt; 0\)</span></p>
+<p>และให้ <span class="math inline">\(\displaystyle F_{2}(x) = \frac{4}{5} x^{5/2} + 2\)</span> จะได้
+<span class="math inline">\(F&#39;_2(x) = 2x^{3/2}\)</span> สำหรับ <span class="math inline">\(x &gt; 0\)</span></p>
+<p>และให้ <span class="math inline">\(\displaystyle F_{3}(x) = \frac{4}{5} x^{5/2} - 5\)</span> จะได้
+<span class="math inline">\(F&#39;_3(x) = 2x^{3/2}\)</span> สำหรับ <span class="math inline">\(x &gt; 0\)</span></p>
+<p>ดังนั้น <span class="math inline">\(F_1,F_2\)</span> และ <span class="math inline">\(F_3\)</span> ต่างก็เป็นปฏิยานุพันธ์ของ <span class="math inline">\(f(x) = 2x^{3/2}\)</span> บนช่วง
+<span class="math inline">\(\left( {0 ,\infty } \right)\)</span> และแต่ละค่าคงตัว <span class="math inline">\(C\)</span> ถ้าให้
+<span class="math inline">\(F(x) =(4/5)x^{5/2} + C\)</span> จะทำให้ <span class="math inline">\(F&#39;(x) = 2x^{3/2}\)</span> สำหรับทุก
+<span class="math inline">\(x \in \left( 0 ,\infty  \right)\)</span></p>
+<p>ดังนั้น เราสามารถสรุปได้ว่าฟังก์ชัน <span class="math inline">\(F\)</span> ใด ๆ ที่ <span class="math display">\[\label{eq111}
+    F(x) = \frac{4}{5} x^{5/2} + C\]</span> เป็นปฏิยานุพัน์ของ <span class="math inline">\(f(x) = 2x^{3/2}\)</span>
+บนช่วง <span class="math inline">\(\left( 0 ,\infty  \right)\)</span> เมื่อ <span class="math inline">\(C\)</span> เป็นค่าคงตัว</p>
+<p>จากตัวอย่างนี้ฟังก์ชัน <span class="math inline">\(F\)</span> ที่นิยาม โดย (<a href="#eq111" reference-type="ref" reference="eq111"><span class="math display">\[eq111\]</span></a>) เป็นรูปทั่วไปของปฏิยานุพันธ์ของ <span class="math inline">\(f(x) = 2x^{3/2}\)</span> บน
+<span class="math inline">\(\left( 0 ,\infty  \right)\)</span> และให้สังเกตว่าช่วง <span class="math inline">\(\left( 0
+,\infty  \right)\)</span> เป็นโดเมนของ <span class="math inline">\(f\)</span></p>
+<p><strong>ข้อสังเกต</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>ถ้า <span class="math inline">\(f\)</span> และ <span class="math inline">\(g\)</span> เป็นฟังก์ชันซึ่ง <span class="math inline">\(f^{&#39;}(x) = g^{&#39;}(x)\)</span> สำหรับทุก ๆ <span class="math inline">\(x\)</span> ในช่วง
+<span class="math inline">\(I\)</span> แล้วจะมีค่าคงที่ <span class="math inline">\(K\)</span> ที่ทำให้ <span class="math inline">\(f(x) = g(x) + K\)</span></p></li>
+<li><p>ถ้า <span class="math inline">\(F\)</span> เป็นปฏิยานุพันธ์เฉพาะของ <span class="math inline">\(f\)</span> บนช่วง <span class="math inline">\(I\)</span> แล้วแต่ละปฏิยานุพันธ์ของ <span class="math inline">\(f\)</span>
+บนช่วง สามารถถูกเขียนได้ในรูป <span class="math inline">\(F(x) + C\)</span> เมื่อ <span class="math inline">\(C\)</span> เป็นค่าคงตัว</p></li>
+</ol>
+<div id="prob-anti" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> แบบฝึกหัด<a href="การหาปรพนธ-integrations.html#prob-anti" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>จงหาปฏิยานุพันธ์ของฟังก์ชันที่กำหนดให้ดังต่อไปนี้</p>
+<div class="enumerate">
+<div class="multicols">
+<p>2</p>
+<p><span class="math inline">\(f(x) = 0\)</span></p>
+<p><span class="math inline">\(f(x) = 4x\)</span></p>
+<p><span class="math inline">\(f(x) = 3x^{2 }\)</span></p>
+<p><span class="math inline">\(f(x) = x^{3}\)</span></p>
+<p><span class="math inline">\(f(x) = \sqrt{x}\)</span></p>
+<p><span class="math inline">\(f(x) = e^{x}\)</span></p>
+<p><span class="math inline">\(f(x) = \sin x\)</span></p>
+<p><span class="math inline">\(f(x) = \frac{1}{x^{2}+1}\)</span></p>
+</div>
+</div>
+<p><strong>เฉลยแบบฝึกหัด</strong> <a href="การหาปรพนธ-integrations.html#prob-anti" reference-type="ref" reference="prob-anti">1.1.1</a> กำหนดให้ <span class="math inline">\(C\)</span> แทนค่าคงตัวใด ๆ</p>
+<div class="multicols">
+<p>2</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(C\)</span></p></li>
+<li><p><span class="math inline">\(2x^{2} + C\)</span></p></li>
+<li><p><span class="math inline">\(x^{3} + C\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \frac{x^{4}}{4}+c\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \frac{2x^{3/2}}{3} + C\)</span></p></li>
+<li><p><span class="math inline">\(e^{x} + C\)</span></p></li>
+<li><p><span class="math inline">\(-\cos x + C\)</span></p></li>
+<li><p><span class="math inline">\(\tan^{-1}x + C\)</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="ปรพนธจำกดเขต-the-definite-integral" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> ปริพันธ์จำกัดเขต (The Definite Integral)<a href="การหาปรพนธ-integrations.html#ปรพนธจำกดเขต-the-definite-integral" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="integration-คออะไร" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Integration คืออะไร<a href="การหาปรพนธ-integrations.html#integration-คออะไร" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Integration Calculus เป็นวิชาที่เกี่ยวกับการคำนวณหา
+พื้นที่และปริมาตรของรูปทรงต่างๆโดยอาศัยหลัก การที่ว่า รูปทรงใดๆเกิดจากการ
+ประกอบกันของชิ้นส่วนเล็กๆจำนวนมากมาย (infinity) ในบทนี้เราจะศึกษา เกี่ยวกับ</p>
+<ul>
+<li><p>การประมาณค่าพื้นที่</p></li>
+<li><p>The definite integral</p></li>
+<li><p>ทฤษฎีเบื้องต้น และทฤษฎีพื้นฐานของแคลคูลัส</p></li>
+</ul>
+</div>
+<div id="การประมาณคาพนทและปรพนธจำกดเขต" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> การประมาณค่าพื้นที่และปริพันธ์จำกัดเขต<a href="การหาปรพนธ-integrations.html#การประมาณคาพนทและปรพนธจำกดเขต" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>พิจารณาฟังก์ชัน <span class="math inline">\(y=f(x) \ge 0\)</span> บนช่วงเปิด <span class="math inline">\([a,b]\)</span>
+ถ้าเราต้องการประมาณค่าพื้นที่ที่ล้อมรอบด้วยส่วนโค้ง <span class="math inline">\(y=f(x)\)</span> แกน <span class="math inline">\(x\)</span> และเส้นตรง
+<span class="math inline">\(x=a\;,\;x=b\)</span><br />
+</p>
+<figure>
+<figcaption>
+การประมาณค่าพื้นที่
+</figcaption>
+</figure>
+<p>วิธีการหนึ่งที่ทำได้ก็คือ การหาผลรวมของพื้นที่รูปสี่เหลี่ยมผืนผ้าที่มาประกอบกันคุมพื้นที่ดังรูป
+ยิ่งขนาดของรูปสี่เหลี่ยม ผืนผ้าเล็กมากๆ
+ความถูกต้องของการประมาณค่าจะยิ่งใกล้เคียงค่าจริงยิ่งขึ้น
+แนวคิดเกี่ยวกับการประมาณค่าโดยอาศัยรูปสี่เหลี่ยมผืนผ้านั้นเป็นวิธีการพื้นฐานที่ใช้ในการคำนวณหาพื้นที่ใต้ส่วนโค้ง
+การหาพื้นที่ <span class="math inline">\(A\)</span> ที่ล้อมรอบด้วย ส่วนโค้ง <span class="math inline">\(y=f(x)\)</span> แกน <span class="math inline">\(x\)</span> และเส้นตรง <span class="math inline">\(x=a\;,\;x=b\)</span>
+เราต้องแบ่งช่วง <span class="math inline">\([a,b]\)</span> ออกเป็น <span class="math inline">\(n\)</span> ช่วงเล็กๆขนาด เท่ากันคือ <span class="math inline">\(\frac{b-a}{n}\)</span>
+สำหรับ <span class="math inline">\(I=0,1,2,…,n-1\)</span>
+ลากเส้นตรงแนวดิ่งตัวส่วนโค้งและสร้างรูปสี่เหลี่ยมผืนผ้าทางด้านขวาของ เส้นตรงแนวดิ่งนี้
+จะได้ว่าความสูงของสี่เหลี่ยมผืนผ้ารูปที่ <span class="math inline">\(I\)</span> คือ <span class="math inline">\(f(x_i)\)</span> และ พื้นที่ของสี่เหลี่ยมผืนผ้ารูปที่
+<span class="math inline">\(\;I\;\)</span> คือ <span class="math inline">\(\;\;\frac{b-a}{n}\times f(x_i)\;\;\)</span> ดังนั้น
+พ.ท.ทั้งหมดของสี่เหลี่ยมผืนผ้า <span class="math inline">\(n\)</span> รูป คือ
+<span class="math display">\[A(n)= \sum_{i=0}^{n-1}\frac{b-1}{n}f(x_i)\]</span> โดยที่
+<span class="math inline">\(x_i = a + \frac{i}{n}(b-a)\)</span></p>
+<p>ขณะที่จำนวนของช่วงย่อยต่างๆเพิ่มขึ้น ขนาดของช่วงย่อยเหล่านี้คือ <span class="math inline">\(\frac{b-a}{n}\)</span> จะลดลง
+และพื้นที่ <span class="math inline">\(A(n)\)</span> จะเข้าใกล้ พื้นที่ <span class="math inline">\(A\)</span> ที่เราต้องการคำนวณ ดังนั้นพื้นที่ <span class="math inline">\(A\)</span>
+สามารถหาค่าได้จากสมการข้างล่างนี้
+<span class="math display">\[A= \lim\limits_{n\rightarrow\infty}\sum_{i=0}^{n-1}\frac{b-a}{n}f(x_i)\]</span></p>
+<figure>
+</figure>
+<p>ถ้าเรากำหนดให้ <span class="math inline">\(\Delta x=\frac{b-a}{n}\)</span> นิยามของการ integrate คือ
+<span class="math inline">\(\int^b_af(x)dx=
+\lim\limits_{\Delta\rightarrow 0}\sum_a^bf(x_i)\Delta x\)</span><br />
+โดยที่ <span class="math inline">\(a\)</span> และ <span class="math inline">\(b\)</span> เป็นลิมิตของการอินทิเกรท และสัญลักษณ์ <span class="math inline">\(\int^b_af(x)dx\)</span> เป็นจำนวน
+ไม่ใช่ฟังก์ชัน และเรียกสัญลักษณ์นี้ว่า definite integral</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-96" class="example"><strong>ตัวอย่าง 5.3  </strong></span>จงคำนวณหาพื้นที่ ที่ล้อมรอบด้วยส่วนโค้ง <span class="math inline">\(y=x^2\)</span> เส้นตรง <span class="math inline">\(x=0,x=4\)</span> และแกน <span class="math inline">\(x\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> สูตรสำหรับประมาณค่าพื้นที่ คือ <span class="math inline">\(\sum_{i=0}^{n-1}\frac{b-a}{n}f(x_i)\)</span></p>
+<p><strong>กรณีที่ 1</strong> : ใช้รูปสี่เหลี่ยมผืนผ้า 4 รูป</p>
+<p>เรามี <span class="math inline">\(f(x)=x^2\;\;,\;\;a=0\;\;,\;\;b=4\;\;,\;\;n=4\;\;\;\)</span> และ</p>
+<p><span class="math inline">\(x_0=0\;\;,\;\;x_1=1\;\;,\;\;x_2=2\;\;,\;\;x_3=3\;\;\)</span> จะได้ว่า<br />
+พื้นที่โดยประมาณคือ</p>
+<p><span class="math inline">\([1\times (0)^2]+[1\times (1)^2]+[1\times (1)^2]+ [1\times (3)^2]\)</span></p>
+<p><span class="math inline">\(=[0]+[1]+[4]+[9]=14\)</span></p>
+<p><strong>กรณีที่ 2</strong> : ใช้รูปสี่เหลี่ยมผืนผ้า 8 รูป<br />
+พื้นที่โดยประมาณคือ</p>
+<p><span class="math inline">\([1\times (0)^2]+[0.5\times (0.5)^2]+[0.5\times (1)^2]+ [0.5\times (1.5)^2]+ [0.5\times (2)^2]+ [0.5\times (2.5)^2]+ [0.5\times (3)^2]= [0.5\times (3.5)^2]\)</span><br />
+<span class="math inline">\(=[0]+[0.125]+[0.5]+[1.125]+[2]+[3.125]+[4.5]+[6.125]=17.5\)</span></p>
+<figure>
+<figcaption>
+การประมาณค่าพื้นที่ที่ล้อมรอบด้วยส่วนโค้ง <span class="math inline"><em>y</em> = <em>x</em><sup>2</sup></span> เส้นตรง
+<span class="math inline"><em>x</em> = 0, <em>x</em> = 4</span> และแกน
+<span class="math inline"><em>x</em></span>
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="ทฤษฎพนฐานของแคลคลส-the-fundamental-theorem-of-calculus" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> ทฤษฎีพื้นฐานของแคลคูลัส (The fundamental Theorem of Calculus)<a href="การหาปรพนธ-integrations.html#ทฤษฎพนฐานของแคลคลส-the-fundamental-theorem-of-calculus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>วิชาแคลคูลัสแบ่งออกเป็น 2 สาขา คือ แคลคูลัสที่เกี่ยวกับการหาอนุพันธ์
+ซึ่งถือกำเนิดมาจากความต้องการที่จะหาความชันของฟังก์ชัน และแคลคูลัส ที่เกี่ยวกับการอินทิเกรท
+ซึ่งถือกำเนิดมาจากความต้องการที่จะหาพื้นที่ใต้กราฟ</p>
+<p>ทฤษฎีพื้นฐานของแคลคูลัสเป็นทฤษฎีที่เป็นตัวเชื่อมระหว่าง 2 สาขาทางแคลคูลัส
+และใช้แสดงความเกี่ยวเนื่องของการหา antiderivative ของฟังก์ชันหนึ่งกับการคำนวณหา
+definite integral ของฟังก์ชันนั้น
+<span class="math display">\[\int^b_af(x)dx= \lim\limits_{\Delta\rightarrow 0}\sum_a^bf(x_i)\Delta x\]</span>
+เราใช้สัญลักษณ์ <span class="math inline">\(\int f(x)dx\)</span> แทน antiderivative ของฟังก์ชัน <span class="math inline">\(f(x)\)</span>
+และเรียกสัญลักษณ์นี้ว่า indefinite integral</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-97" class="theorem"><strong>ทฤษฎี 5.1  </strong></span><span class="math inline">\(( \mbox{ทฤษฎีพื้นฐานของแคลคูลัส})\)</span> ถ้า <span class="math inline">\(f\)</span> เป็นฟังก์ชันต่อเนื่องในช่วง <span class="math inline">\([a,b]\)</span> แล้ว</p>
+<ol style="list-style-type: decimal">
+<li><p>ถ้า <span class="math inline">\(\displaystyle g(x)=\int_{a}^{x}f(t) \ dt\)</span> แล้ว <span class="math inline">\(g&#39;(x)=f(x)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int_{a}^{b}f(x) \ dx=F(b)-F(a)\)</span> เมื่อ <span class="math inline">\(F\)</span> คือ
+antiderivative ของ <span class="math inline">\(f\)</span></p></li>
+</ol>
+</div>
+<p><strong>ข้อสังเกต</strong> ข้อสรุป 1. ในทฤษฎีข้างต้นสามารถเขียนในรูป</p>
+<div class="center">
+<p><span class="math inline">\(\displaystyle \frac{d}{dx}\left(\int_{a}^{x}f(t) \ dt\right)=f(x)\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-98" class="example"><strong>ตัวอย่าง 5.4  </strong></span>จงหาอนุพันธ์ของ <span class="math inline">\(\displaystyle
+g(x)=\int_{0}^{x}\sqrt{1+t^{4}} \ dt\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> เนื่องจาก <span class="math inline">\(\displaystyle f(t)=\sqrt{1+t^{4}}\)</span> เป็นฟังก์ต่อเนื่อง</p>
+<p>ดังนั้น จากทฤษฎีพื้นฐานของแคลคูลัส <span class="math inline">\(\displaystyle
+\frac{d}{dx}\left(g(x)\right)=\sqrt{1+x^{4}}\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-99" class="example"><strong>ตัวอย่าง 5.5  </strong></span>จงหา <span class="math inline">\(\displaystyle \frac{d}{dx}\int_{0}^{x^{2}}\sin t \ dt\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> ให้ <span class="math inline">\(U=x^{2}\)</span> ดังนั้น</p>
+<p><span class="math inline">\(\qquad \qquad \ \displaystyle \frac{d}{dx}\int_{0}^{x^{2}}\sin t \ dt
+=\frac{d}{dx}\int_{0}^{U}\sin t \ dt\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \quad =\displaystyle
+\frac{d}{dU}\left(\int_{0}^{U}\sin t \ dt\right) \frac{dU}{dx} \quad (
+\mbox{โดยกฎลูกโซ่})\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \quad =\displaystyle \sin U \,
+\frac{dU}{dx} \quad ( \mbox{โดยทฤษฎีพื้นฐานทางแคลคูลัส} )\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \quad =\displaystyle \sin x^{2}\cdot 2x\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \quad =\displaystyle 2x\cdot \sin x^{2}\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-100" class="example"><strong>ตัวอย่าง 5.6  </strong></span>จงหา <span class="math inline">\(\displaystyle \int_{0}^{2}e^{x} \ dx\)</span> โดยใช้ทฤษฎีพื้นฐานทางแคลคูลัส</p>
+</div>
+<p><strong>วิธีทำ</strong> เนื่องจาก <span class="math inline">\(F(x)=e^{x}\)</span> เป็น antiderivative ของ <span class="math inline">\(f(x)=e^{x}\)</span> และ
+<span class="math inline">\(f(x)\)</span> เป็นฟังก์ต่อเนื่อง ในช่วง <span class="math inline">\([0,2]\)</span></p>
+<p>ดังนั้น <span class="math inline">\(\displaystyle \int_{0}^{2}e^{x}\ dx = F(2)-F(0) =e^{2}-e^{0} =
+e^{2}-1\)</span></p>
+<div id="สตรพนฐานของการอนทเกรท-basic-integration-rules" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> สูตรพื้นฐานของการอินทิเกรท (Basic Integration Rules)<a href="การหาปรพนธ-integrations.html#สตรพนฐานของการอนทเกรท-basic-integration-rules" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>จากทฤษฎีพื้นฐานทางแคลคูลัส (The fundamental Theorem of Calculus) เราทราบว่า ถ้า
+<span class="math inline">\(\displaystyle g(x)=\int_{a}^{x}f(t) \ dt\)</span> แล้ว <span class="math inline">\(g&#39;(x)=f(x)\)</span>
+และจากนิยามของ antiderivative เราสรุปได้ว่า
+<span class="math inline">\(\displaystyle g(x)=\int_{a}^{x}f(t) \ dt\)</span> เป็น antiderivative ของ <span class="math inline">\(f(x)\)</span>
+ซึ่งเรามักจะเขียน <span class="math inline">\(\displaystyle \int f(x) \ dx\)</span> แทน antiderivative ของ
+<span class="math inline">\(f(x)\)</span></p>
+<p>นั่นคือ</p>
+<div class="center">
+
+</div>
+<p>จากเนื้อหาเรื่องการหาอนุพันธ์ของฟังก์ชันเราทราบว่า
+<span class="math inline">\(\displaystyle \frac{d}{dx} \left( \ln |x|+C
+\right)=\frac{1}{x}\)</span> , เมื่อ <span class="math inline">\(C\)</span> เป็นค่าคงที่</p>
+<p>ดังนั้นจากคำอธิบายในข้างต้น เราสรุปได้ว่า</p>
+<p><span class="math display">\[\displaystyle \int \frac{1}{x} \ dx = \ln|x|+C\]</span></p>
+<p>ในทำนองเดียวกัน
+เราสามารถใช้ความรู้เรื่องการหาอนุพันธ์สร้างสูตรพื้นฐานของการอินทิเกรทได้ดังนี้</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\displaystyle \int C f(x) \ dx = C \int f(x) \ dx\)</span> เมื่อ <span class="math inline">\(C\)</span> เป็นค่าคงที่</p></li>
+<li><p><span class="math inline">\(\displaystyle \int [f(x)+g(x)] \ dx = \int f(x) \ dx+\int
+g(x) \ dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int k \ dx = kx+C \quad\)</span> เมื่อ <span class="math inline">\(k, C\)</span> เป็นค่าคงที่</p></li>
+<li><p><span class="math inline">\(\displaystyle \int x^{n} \ dx = \frac{x^{n+1}}{n+1}+C
+\quad\)</span> เมื่อ <span class="math inline">\(n\neq -1\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \frac{1}{x} \ dx = \ln|x|+C\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int e^{x} \ dx = e^{x}+C\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int a^{x} \ dx = \frac{a^{x}}{ \ln a}+C
+\quad\)</span> เมื่อ <span class="math inline">\(a\)</span> เป็นจำนวนบวก และ <span class="math inline">\(a\neq 1\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \sin x \ dx = -\cos x+C\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \cos x \ dx = \sin x+C\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \sec^{2} x \ dx = \tan x+C\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \csc^{2} x \ dx = -\cot x+C\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \sec x \tan x \ dx = \sec x+C\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \csc x \cot x \ dx = -\csc x+C\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \frac{1}{x^{2}+1} \ dx = \arctan x+C\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \frac{1}{\sqrt{1-x^{2}}} \ dx =
+\arcsin x+C\)</span></p></li>
+</ol>
+<div class="example">
+<p><span id="exm:unlabeled-div-101" class="example"><strong>ตัวอย่าง 5.7  </strong></span>จงหา <span class="math inline">\(\displaystyle \int (9x^{5}-4 \csc^{2} x) \ dx\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<p><span class="math inline">\(\qquad \qquad \ \displaystyle \int (9x^{5}-4 \csc^{2} x) \ dx \ = 9\int
+x^{5} \ dx -4 \int \csc^{2} x \ dx \quad ( \mbox{สูตร} \ 1 \ \mbox{และ} \
+2)\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \quad \ \ =\displaystyle
+\frac{9}{ 6}x^{6} -4(-\cot x)+C \quad ( \mbox{สูตร} \ 4 \ \mbox{และ} \ 11)\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \quad \ \ =\displaystyle
+\frac{3}{2}x^{6}+4\cot x+C\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-102" class="example"><strong>ตัวอย่าง 5.8  </strong></span>จงหา <span class="math inline">\(\displaystyle \int \frac{\cos \theta}{\sin^{2} \theta}
+\ d\theta\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<p><span class="math inline">\(\qquad \qquad \ \displaystyle \int \frac{\cos \theta}{\sin^{2} \theta} \
+d\theta \ = \int \left(\frac{1}{\sin \theta}\right) \left(\frac{\cos
+\theta}{\sin \theta}\right) \ d\theta\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad = \displaystyle \int \csc \theta \cot
+\theta \ d\theta\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad = \displaystyle -\csc \theta +C \quad (
+\mbox{สูตร} \ 13)\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-103" class="example"><strong>ตัวอย่าง 5.9  </strong></span>จงหา <span class="math inline">\(\displaystyle \int
+\frac{x^{3}+2\sqrt{x}-3}{x^{\frac{3}{2}}} \ dx\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong> จะเห็นว่า <span class="math inline">\(\displaystyle
+\frac{x^{3}+2\sqrt{x}-3}{x^{\frac{3}{2}}} \ = \
+\frac{x^{3}}{x^{\frac{3}{2}}}+\frac{2\sqrt{x}}{x^{\frac{3}{2}}}-\frac{3}{x^{\frac{3}{2}}}\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ = \
+x^{\frac{3}{2}}+2x^{-1}-3x^{-\frac{3}{2}}\)</span></p>
+<p><span class="math inline">\(\qquad \qquad\ \displaystyle \int \frac{x^{3}+2\sqrt{x}-3}{x^{\frac{3}{2}}}
+\ dx \quad \ = \int x^{\frac{3}{2}} \ dx +2 \int x^{-1} \ dx -3 \int
+x^{-\frac{3}{2}} \ dx\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ =\displaystyle
+\frac{x^{\frac{3}{2}+1}}{\frac{3}{2}+1}  + 2 \ln |x|
+-\frac{3x^{-\frac{3}{2}+1}}{-\frac{3}{2}+1} + C\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ =\displaystyle
+\frac{x^{\frac{5}{2}}}{\frac{5}{2}} + 2 \ln
+|x|-\frac{3x^{-\frac{1}{2}}}{-\frac{1}{2}}+ C\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ =\displaystyle
+\frac{2}{5}x^{\frac{5}{2}}+ 2 \ln |x|+\frac{6}{\sqrt{x}}+ C\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-104" class="example"><strong>ตัวอย่าง 5.10  </strong></span>จงหา <span class="math inline">\(\displaystyle \int_{0}^{1} \left( x^{4} -
+\frac{2}{1+x^{2}} \right) \ dx\)</span></p>
+</div>
+<p><strong>วิธีทำ</strong></p>
+<p><span class="math inline">\(\qquad \qquad\ \displaystyle \int_{0}^{1} \left( x^{4} - \frac{2}{1+x^{2}}
+\right) \ dx \ = \int_{0}^{1} x^{4} \ dx - 2 \int_{0}^{1} \frac{1}{1+x^{2}}
+\ dx\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ \ =\displaystyle
+\frac{x^{5}}{5} \bigg |_{0}^{1}-2 \arctan x \bigg |_{0}^{1}\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ \ = \displaystyle \left(
+\frac{1}{5} - 0 \right) - 2 \left( \arctan 1 - \arctan 0 \right)\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ \ =\displaystyle
+\frac{1}{5}-2 \left( \frac{ \pi }{4}-0 \right)\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ \ =\displaystyle
+\frac{1}{5}- \frac{ \pi }{2}\)</span></p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="การประยกตของอนพนธ-applications-of-differentiation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="เทคนคของการหาปรพนธ-techniques-of-integration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/pairote-sat/SCMA104/edit/main/04-integration.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/pairote-sat/SCMA104/blob/main/04-integration.Rmd",
+"text": null
+},
+"download": ["SCMA104bookdownproj.pdf", "SCMA104bookdownproj.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

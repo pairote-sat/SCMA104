@@ -1105,7 +1105,7 @@ function บน \(\left[ -2,2\right]\) หรือไม่
 \textbf{วิธีทำ} เราตรวจสอบได้ว่า \(f\) เป็น continuous function บน
 \(\left[ -2,2\right]\) เพราะ\\
 1. \(f\) เป็น continuous function บน \(\left( -2,2\right)\)\\
-2. \(f\) ต่อเนื่องทางขวาที่ -2 เพราะ \$\$
+2. \(f\) ต่อเนื่องทางขวาที่ -2 เพราะ  
 
 \begin{equation}
   \begin{aligned}
@@ -2510,6 +2510,179 @@ x^{2}\\
 \displaystyle &=\frac{2}{x^{4}-1}
   \end{aligned} \end{equation}
 
+
+\section{อนุพันธ์ของฟังก์ชันเอกซ์โพเนนเชียลและฟังก์ชันลอการิทึม}\label{uxe2duxe19uxe1euxe19uxe18uxe02uxe2duxe07uxe1fuxe07uxe01uxe0auxe19uxe40uxe2duxe01uxe0buxe42uxe1euxe40uxe19uxe19uxe40uxe0auxe22uxe25uxe41uxe25uxe30uxe1fuxe07uxe01uxe0auxe19uxe25uxe2duxe01uxe32uxe23uxe17uxe21}
+
+ในบทที่ 1 เราอธิบายการขยายพันธ์แบคทีเรีย \(N(t)\) ในรูปของเวลา \(t\)
+ในรูปของแบบจำลองทางคณิตศาสตร์ โดยมีสมการดังต่อไปนี้
+
+\begin{align}
+\frac{N(t + h) - N(t)}{h} &= b\cdot N(t)  - m\cdot N(t)\\
+\label{eq:population-growth-chapter3}
+\end{align}
+
+ในทางคณิตศาสตร์เราเรียกสมการดังกล่าวว่า สมการเชิงอนุพันธ์สามัญ (ordinary
+differential equation) และมีเนื้อหาในรายวิชานี้ที่จะเรียนในบทถัดๆ ไป ทั้งนี้ฟังก์ชัน
+\(N(t)\) ที่ปรากฏในสมการเป็นฟังก์ชันไม่ทราบค่า (unknown function)
+และเราสามารถหาคำตอบของสมการเชิงอนุพันธ์ที่มีเงื่อนไขเริ่มต้นโดยวิธีการหาปริพันธ์
+(Integration) ได้คำตอบของสมการดังนี้
+
+\begin{equation}
+N(t) = N_0 e^{(b-m)t}
+\label{eq:population-growth-chapter3-2}
+\end{equation}
+
+ดังนั้นในบทนี้ เราจะกล่าวถึงอนุพันธ์ของฟังก์ชันเอกซ์โพเนนเชียลและฟังก์ชันลอการิทึม
+เราสามารถใช้นิยาม หรือสูตรต่อไปนี้ในการหาอนุพันธ์
+
+\begin{theorem}
+\leavevmode
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\displaystyle\frac{d}{dx}e^x = e^x\)
+\item
+  \(\displaystyle\frac{d}{dx}a^x = a^x \ln a \quad (a > 0, a \neq 1)\)
+\item
+  \(\displaystyle\frac{d}{dx}\ln x = \frac{1}{x}\)
+\item
+  \(\displaystyle\frac{d}{dx}\log_a x = \frac{1}{x \ln a} \quad (a > 0, a \neq 1)\)
+\end{enumerate}
+
+\end{theorem}
+
+\begin{example}
+จงหาอนุพันธ์ของ \(f(x) = e^{x^2 + 1}\)
+\end{example}
+
+\textbf{วิธีทำ}
+
+เราสามารถใช้กฏลูกโซ่ในการหาอนุพันธ์ของ \(f(x) = e^{x^2 + 1}\) ได้ดังต่อไปนี้
+
+โดยการกำหนดให้ \(u = x^2 + 1\), แล้ว \(f(x) = e^u\) และจะได้ว่า
+
+\[ \frac{d}{dx} f(x) = \frac{d}{du} e^u \cdot \frac{d}{dx} u \]
+
+เนื่องจาก \(\frac{d}{du} e^u = e^u\) และ
+\(\frac{d}{dx} u = \frac{d}{dx} (x^2 + 1) = 2x\).
+
+ดังนั้น
+
+\[ \frac{d}{dx} f(x) = e^u \cdot 2x \]
+
+เมื่อแทนตัวแปร \(u = x^2 + 1\) ลงในสมการข้างต้น เราจะได้ว่า
+
+\[ \frac{d}{dx} f(x) = e^{x^2 + 1} \cdot 2x \]
+
+ดังนั้น อนุพันธ์ของ \(f(x) = e^{x^2 + 1}\) คือ
+
+\[ \boxed{\frac{d}{dx} f(x) = 2x e^{x^2 + 1}} \]
+
+\begin{example}
+จงแสดงว่า \(N(t) = \frac{K}{1 + (K - 1) e^{-rt}}\) เป็นคำตอบของสมการเชิงอนุพันธ์
+
+\[ \frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) \]โดยที่ \(r\) และ \(K\)
+เป็นค่าคงตัวที่เป็นบวก สมการเชิงอนุพันธ์นี้มีชื่อเรียกว่า the logistic growth equation
+\end{example}
+
+\textbf{วิธีทำ}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{หาอนุพันธ์ของฟังก์ชัน} \(N(t)\):
+
+  กำหนดให้ \(N(t) = \frac{K}{1 + (K - 1) e^{-rt}}\).
+
+  เราสามารถใช้กฏลูกโซ่ในการหาอนุพันธ์ได้ผลลัพธ์ดังต่อไปนี้
+
+  \[ \frac{dN}{dt} = -\frac{K \cdot (K - 1) \cdot (-r) e^{-rt}}{(1 + (K - 1) e^{-rt})^2} \]
+\item
+  \textbf{จัดรูปสมการให้อยู่ในรูปอย่างง่าย}
+
+  \[ \frac{dN}{dt} = \frac{rK(K - 1) e^{-rt}}{(1 + (K - 1) e^{-rt})^2} \]
+\item
+  \textbf{แทน} \(N(t)\) ลงใน the logistic equation:
+
+  เนื่องจาก\[ \frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) \]
+
+  โดยการแทน \(N(t) = \frac{K}{1 + (K - 1) e^{-rt}}\) ลงไปในสมการข้างต้น
+  เราจะได้ว่า
+
+  \[ rN\left(1 - \frac{N}{K}\right) = \frac{rK(K - 1) e^{-rt}}{(1 + (K - 1) e^{-rt})^2} \]
+\item
+  \textbf{ผลสรุปที่ได้จากการหาอนุพันธ์ และการแทนค่าฟังก์ชัน}
+
+  เราจะเห็นว่าทั้ง 2 ข้างของสมการข้างต้นเท่ากัน แสดงว่า ฟังก์ชัน
+  \(N(t) = \frac{K}{1 + (K - 1) e^{-rt}}\) เป็นคำตอบของสมการ the logistic
+  growth equation
+\end{enumerate}
+
+\textbf{หมายเหตุ} จากตัวอย่างข้างต้นเราสมมติให้ \(N(0) = 1\) ในกรณีที่กำหนดให้
+\(N(0) = N_0\) แล้วคำตอบของสมการ the logistic growth equation จะอยู่ในรูป
+
+\[N(t) = \frac{N_0 \cdot K}{1 + (K - 1) e^{-rt}}\]
+
+รูปต่อไปนี้แสดงกราฟของคำตอบของแบบจำลองการเติบโตแบบ logistic เมื่อกำหนดให้
+\(N_0 = 25\), \(K = 4\) และ \(r = 2\) กราฟจะมีลักษณะเป็นรูปตัว \(S\) (ซิกมอยด์,
+sigmoidal) ซึ่งสะท้อนการเติบโตที่จำกัดเนื่องจากความจุที่รองรับได้ (carrying capacity)
+หรือค่า K ในตอนแรก ประชากรจะเติบโตแบบเอ็กซ์โพเนนเชียล แต่เมื่อเข้าใกล้ \(K\)
+อัตราการเติบโตจะช้าลงและกราฟจะแบนลง
+ซึ่งแตกต่างจากแบบจำลองการเติบโตแบบเอ็กซ์โพเนนเชียลธรรมดา
+โดยประชากรจะเติบโตโดยไม่มีขอบเขต โดยเป็นไปตามกราฟที่เพิ่มขึ้นอย่างต่อเนื่อง
+ในโมเดลโลจิสติกส์ การเติบโตถูกจำกัดและจะคงตัวเมื่อจำนวนประชากรใกล้ถึงขีดจำกัดความจุ
+
+\includegraphics{SCMA104bookdownproj_files/figure-latex/graph-logistic equation-1.pdf}
+
+\begin{example}
+จงหาอนุพันธ์ของฟังก์ชัน:
+
+\[ y = \frac{e^x \cdot x^2}{\sqrt{x^2 + 1}} \]
+
+โดยใช้การลอการิทึมทั้งสองฝั่งก่อนทำการหาอนุพันธ์
+\end{example}
+
+\textbf{วิธีทำ}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{ลอการิทึมทั้งสองข้าง:}
+
+  \[ \ln y = \ln\left( \frac{e^x \cdot x^2}{\sqrt{x^2 + 1}} \right) \]
+
+  ใช้สมบัติลอการิทึม
+
+  \[ \ln y = \ln(e^x) + \ln(x^2) - \frac{1}{2} \ln(x^2 + 1) \]
+
+  ย่อ:
+
+  \[ \ln y = x + 2 \ln x - \frac{1}{2} \ln(x^2 + 1) \]
+\item
+  \textbf{หาอนุพันธ์ทั้งสองข้าง:}
+
+  \[ \frac{1}{y} \frac{dy}{dx} = 1 + \frac{2}{x} - \frac{1}{2} \cdot \frac{2x}{x^2 + 1} \]
+
+  ย่อ:
+
+  \[ \frac{1}{y} \frac{dy}{dx} = 1 + \frac{2}{x} - \frac{x}{x^2 + 1} \]
+\item
+  \textbf{จัดรูปหา} \(\frac{dy}{dx}\):
+
+  \[ \frac{dy}{dx} = y \left( 1 + \frac{2}{x} - \frac{x}{x^2 + 1} \right) \]
+\item
+  \textbf{แทนค่า} \(y = \frac{e^x \cdot x^2}{\sqrt{x^2 + 1}}\):
+
+  \[ \frac{dy}{dx} = \frac{e^x \cdot x^2}{\sqrt{x^2 + 1}} \left( 1 + \frac{2}{x} - \frac{x}{x^2 + 1} \right) \]
+\end{enumerate}
+
+ดังนั้น อนุพันธ์ของ \(y = \frac{e^x \cdot x^2}{\sqrt{x^2 + 1}}\) คือ:
+
+\[ \boxed{\frac{dy}{dx} = \frac{e^x \cdot x^2}{\sqrt{x^2 + 1}} \left( 1 + \frac{2}{x} - \frac{x}{x^2 + 1} \right)} \]
+
+
 \chapter{การประยุกต์ของอนุพันธ์ (Applications of Differentiation)}\label{uxe01uxe32uxe23uxe1buxe23uxe30uxe22uxe01uxe15uxe02uxe2duxe07uxe2duxe19uxe1euxe19uxe18-applications-of-differentiation}
 
 \section{Applications of derivatives related to students discipline}\label{applications-of-derivatives-related-to-students-discipline}
@@ -3553,6 +3726,906 @@ y)=0\)
 หรือ \(\mathop {\lim }\limits_{x\to \infty } x^{1/x}=1\)
 
 
-  \bibliography{book.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{การหาปริพันธ์ (Integrations)}\label{uxe01uxe32uxe23uxe2buxe32uxe1buxe23uxe1euxe19uxe18-integrations}
+
+\section{ปฏิยานุพันธ์ (Antiderivatives)}\label{uxe1buxe0fuxe22uxe32uxe19uxe1euxe19uxe18-antiderivatives}
+
+จากเรื่องการหาอนุพันธ์ ถ้าวัตถุชนิดหนึ่งมีสมการการเคลื่อนที่ คือ \(s = t^{3}\)
+โดยที่วัตถุนี้เคลื่อนที่ได้ระยะทาง \(s\) เมตร เมื่อเวลาผ่านไป \(t\) วินาที
+แล้วเราสามารถบอกได้ว่าวัตถุเคลื่อนที่ด้วยความเร็ว \(v =
+3t^2\) เมตร/วินาที แต่เรารู้ว่า \(\displaystyle v = \frac{ds}{dt}\) ดังนั้น
+\(\displaystyle  \frac{ds}{dt} = 3t\)
+ในทางกลับกันถ้าเรารู้ว่าสมการความเร็วของวัตถุชนิดหนึ่ง ถ้า \(v = 3t^{2}\) แสดงว่า
+\(\displaystyle \frac{ds}{dt} = 3t^2\)
+แล้วลองนึกย้อนกลับว่าสมการการเคลื่อนที่ของวัตถุชนิดนี้ คือ สมการใด
+จะเห็นว่าสมการการเคลื่อนที่ของวัตถุนี้อาจจะอยู่ในรูป 
+\[\begin{aligned}
+    s &= t^3 \\ 
+    s &= t^3 -2 \\
+    \text{หรือ  } s &= t^3 + 5
+\end{aligned}\]
+ซึ่งทั้งสามสมการนี้มี \(\displaystyle  \frac{ds}{dt}= 3t^2\)
+แต่เราก็ยังไม่แน่ใจว่าเป็นสมการใดกันแน่หรืออาจไม่ใช่ทั้งสามสมการนี้ก็ได้
+แต่เราสามารถคาดคะเนได้ว่าสมการการเคลื่อนที่ของวัตถุนี้ควรจะอยู่ในรูป \[s = t^{3} + c\]
+โดยที่ \(c\) เป็นค่าคงตัว สมการการเคลื่อนที่ทั้งสี่สมการดังกล่าวนี้เป็นตัวอย่างของ ``ปฏิยานุพันธ์''
+ของ \(v = 3t^{2}\)
+
+ในกรณีทั่วไป เราจะนิยามปฏิยานุพันธ์ของฟังก์ชันดังต่อไปนี้
+
+\begin{definition}
+ฟังก์ชัน \(F\) เป็นปฏิยานุพันธ์ (antiderivative) ของฟังก์ชัน \(f\) บนช่วง \(I\) ถ้า
+\(F'(x) = f(x)\) สำหรับทุก ๆ ค่าของ \(x\) ในช่วง \(I\)
+\end{definition}
+
+\begin{example}
+จงแสดงว่า \(F(x) = x^{2}-2x- 3\) เป็นปฏิยานุพันธ์ของฟังก์ชัน \(f(x)=2x-2\) บนช่วง
+\(\left( {-\infty ,\infty } \right)\)
+\end{example}
+
+\textbf{วิธีทำ} จาก \(F(x) = x^{2} - 2x - 3\) จะได้ \(F'(x)
+= 2x - 2\) นั่นคือ \(F'(x) = f(x)\) สำหรับทุก ๆ \(x\) ในช่วง \(\left( {-\infty
+,\infty } \right)\)
+
+\begin{example}
+ให้ \(f(x) = 2x^{3/2}\) จงหาปฏิยานุพันธ์ของ \(f\) บนช่วง
+\(\left( {0 ,\infty } \right)\)
+\end{example}
+
+\textbf{วิธีทำ} ให้ \(\displaystyle F_{1}(x) = \frac{4}{5} x^{5/2}\) จะได้
+\(F'_1(x) = 2x^{3/2}\) สำหรับ \(x > 0\)
+
+และให้ \(\displaystyle F_{2}(x) = \frac{4}{5} x^{5/2} + 2\) จะได้
+\(F'_2(x) = 2x^{3/2}\) สำหรับ \(x > 0\)
+
+และให้ \(\displaystyle F_{3}(x) = \frac{4}{5} x^{5/2} - 5\) จะได้
+\(F'_3(x) = 2x^{3/2}\) สำหรับ \(x > 0\)
+
+ดังนั้น \(F_1,F_2\) และ \(F_3\) ต่างก็เป็นปฏิยานุพันธ์ของ \(f(x) = 2x^{3/2}\) บนช่วง
+\(\left( {0 ,\infty } \right)\) และแต่ละค่าคงตัว \(C\) ถ้าให้
+\(F(x) =(4/5)x^{5/2} + C\) จะทำให้ \(F'(x) = 2x^{3/2}\) สำหรับทุก
+\(x \in \left( 0 ,\infty  \right)\)
+
+ดังนั้น เราสามารถสรุปได้ว่าฟังก์ชัน \(F\) ใด ๆ ที่ \[\label{eq111} 
+    F(x) = \frac{4}{5} x^{5/2} + C\] เป็นปฏิยานุพัน์ของ \(f(x) = 2x^{3/2}\)
+บนช่วง \(\left( 0 ,\infty  \right)\) เมื่อ \(C\) เป็นค่าคงตัว
+
+จากตัวอย่างนี้ฟังก์ชัน \(F\) ที่นิยาม โดย (\hyperref[eq111]{\[eq111\]}) เป็นรูปทั่วไปของปฏิยานุพันธ์ของ \(f(x) = 2x^{3/2}\) บน
+\(\left( 0 ,\infty  \right)\) และให้สังเกตว่าช่วง \(\left( 0
+,\infty  \right)\) เป็นโดเมนของ \(f\)
+
+\textbf{ข้อสังเกต}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  ถ้า \(f\) และ \(g\) เป็นฟังก์ชันซึ่ง \(f^{'}(x) = g^{'}(x)\) สำหรับทุก ๆ \(x\) ในช่วง
+  \(I\) แล้วจะมีค่าคงที่ \(K\) ที่ทำให้ \(f(x) = g(x) + K\)
+\item
+  ถ้า \(F\) เป็นปฏิยานุพันธ์เฉพาะของ \(f\) บนช่วง \(I\) แล้วแต่ละปฏิยานุพันธ์ของ \(f\)
+  บนช่วง สามารถถูกเขียนได้ในรูป \(F(x) + C\) เมื่อ \(C\) เป็นค่าคงตัว
+\end{enumerate}
+
+\subsection{แบบฝึกหัด}\label{prob-anti}
+
+จงหาปฏิยานุพันธ์ของฟังก์ชันที่กำหนดให้ดังต่อไปนี้
+
+2
+
+\(f(x) = 0\)
+
+\(f(x) = 4x\)
+
+\(f(x) = 3x^{2 }\)
+
+\(f(x) = x^{3}\)
+
+\(f(x) = \sqrt{x}\)
+
+\(f(x) = e^{x}\)
+
+\(f(x) = \sin x\)
+
+\(f(x) = \frac{1}{x^{2}+1}\)
+
+\textbf{เฉลยแบบฝึกหัด} \hyperref[prob-anti]{1.1.1} กำหนดให้ \(C\) แทนค่าคงตัวใด ๆ
+
+2
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(C\)
+\item
+  \(2x^{2} + C\)
+\item
+  \(x^{3} + C\)
+\item
+  \(\displaystyle \frac{x^{4}}{4}+c\)
+\item
+  \(\displaystyle \frac{2x^{3/2}}{3} + C\)
+\item
+  \(e^{x} + C\)
+\item
+  \(-\cos x + C\)
+\item
+  \(\tan^{-1}x + C\)
+\end{enumerate}
+
+\section{ปริพันธ์จำกัดเขต (The Definite Integral)}\label{uxe1buxe23uxe1euxe19uxe18uxe08uxe33uxe01uxe14uxe40uxe02uxe15-the-definite-integral}
+
+\subsection{Integration คืออะไร}\label{integration-uxe04uxe2duxe2duxe30uxe44uxe23}
+
+Integration Calculus เป็นวิชาที่เกี่ยวกับการคำนวณหา
+พื้นที่และปริมาตรของรูปทรงต่างๆโดยอาศัยหลัก การที่ว่า รูปทรงใดๆเกิดจากการ
+ประกอบกันของชิ้นส่วนเล็กๆจำนวนมากมาย (infinity) ในบทนี้เราจะศึกษา เกี่ยวกับ
+
+\begin{itemize}
+\item
+  การประมาณค่าพื้นที่
+\item
+  The definite integral
+\item
+  ทฤษฎีเบื้องต้น และทฤษฎีพื้นฐานของแคลคูลัส
+\end{itemize}
+
+\subsection{การประมาณค่าพื้นที่และปริพันธ์จำกัดเขต}\label{uxe01uxe32uxe23uxe1buxe23uxe30uxe21uxe32uxe13uxe04uxe32uxe1euxe19uxe17uxe41uxe25uxe30uxe1buxe23uxe1euxe19uxe18uxe08uxe33uxe01uxe14uxe40uxe02uxe15}
+
+พิจารณาฟังก์ชัน \(y=f(x) \ge 0\) บนช่วงเปิด \([a,b]\)
+ถ้าเราต้องการประมาณค่าพื้นที่ที่ล้อมรอบด้วยส่วนโค้ง \(y=f(x)\) แกน \(x\) และเส้นตรง
+\(x=a\;,\;x=b\)\\
+
+การประมาณค่าพื้นที่
+
+วิธีการหนึ่งที่ทำได้ก็คือ การหาผลรวมของพื้นที่รูปสี่เหลี่ยมผืนผ้าที่มาประกอบกันคุมพื้นที่ดังรูป
+ยิ่งขนาดของรูปสี่เหลี่ยม ผืนผ้าเล็กมากๆ
+ความถูกต้องของการประมาณค่าจะยิ่งใกล้เคียงค่าจริงยิ่งขึ้น
+แนวคิดเกี่ยวกับการประมาณค่าโดยอาศัยรูปสี่เหลี่ยมผืนผ้านั้นเป็นวิธีการพื้นฐานที่ใช้ในการคำนวณหาพื้นที่ใต้ส่วนโค้ง
+การหาพื้นที่ \(A\) ที่ล้อมรอบด้วย ส่วนโค้ง \(y=f(x)\) แกน \(x\) และเส้นตรง \(x=a\;,\;x=b\)
+เราต้องแบ่งช่วง \([a,b]\) ออกเป็น \(n\) ช่วงเล็กๆขนาด เท่ากันคือ \(\frac{b-a}{n}\)
+สำหรับ \(I=0,1,2,…,n-1\)
+ลากเส้นตรงแนวดิ่งตัวส่วนโค้งและสร้างรูปสี่เหลี่ยมผืนผ้าทางด้านขวาของ เส้นตรงแนวดิ่งนี้
+จะได้ว่าความสูงของสี่เหลี่ยมผืนผ้ารูปที่ \(I\) คือ \(f(x_i)\) และ พื้นที่ของสี่เหลี่ยมผืนผ้ารูปที่
+\(\;I\;\) คือ \(\;\;\frac{b-a}{n}\times f(x_i)\;\;\) ดังนั้น
+พ.ท.ทั้งหมดของสี่เหลี่ยมผืนผ้า \(n\) รูป คือ
+\[A(n)= \sum_{i=0}^{n-1}\frac{b-1}{n}f(x_i)\] โดยที่
+\(x_i = a + \frac{i}{n}(b-a)\)
+
+ขณะที่จำนวนของช่วงย่อยต่างๆเพิ่มขึ้น ขนาดของช่วงย่อยเหล่านี้คือ \(\frac{b-a}{n}\) จะลดลง
+และพื้นที่ \(A(n)\) จะเข้าใกล้ พื้นที่ \(A\) ที่เราต้องการคำนวณ ดังนั้นพื้นที่ \(A\)
+สามารถหาค่าได้จากสมการข้างล่างนี้
+\[A= \lim\limits_{n\rightarrow\infty}\sum_{i=0}^{n-1}\frac{b-a}{n}f(x_i)\]
+
+ถ้าเรากำหนดให้ \(\Delta x=\frac{b-a}{n}\) นิยามของการ integrate คือ
+\(\int^b_af(x)dx=
+\lim\limits_{\Delta\rightarrow 0}\sum_a^bf(x_i)\Delta x\)\\
+โดยที่ \(a\) และ \(b\) เป็นลิมิตของการอินทิเกรท และสัญลักษณ์ \(\int^b_af(x)dx\) เป็นจำนวน
+ไม่ใช่ฟังก์ชัน และเรียกสัญลักษณ์นี้ว่า definite integral
+
+\begin{example}
+จงคำนวณหาพื้นที่ ที่ล้อมรอบด้วยส่วนโค้ง \(y=x^2\) เส้นตรง \(x=0,x=4\) และแกน \(x\)
+\end{example}
+
+\textbf{วิธีทำ} สูตรสำหรับประมาณค่าพื้นที่ คือ \(\sum_{i=0}^{n-1}\frac{b-a}{n}f(x_i)\)
+
+\textbf{กรณีที่ 1} : ใช้รูปสี่เหลี่ยมผืนผ้า 4 รูป
+
+เรามี \(f(x)=x^2\;\;,\;\;a=0\;\;,\;\;b=4\;\;,\;\;n=4\;\;\;\) และ
+
+\(x_0=0\;\;,\;\;x_1=1\;\;,\;\;x_2=2\;\;,\;\;x_3=3\;\;\) จะได้ว่า\\
+พื้นที่โดยประมาณคือ
+
+\([1\times (0)^2]+[1\times (1)^2]+[1\times (1)^2]+ [1\times (3)^2]\)
+
+\(=[0]+[1]+[4]+[9]=14\)
+
+\textbf{กรณีที่ 2} : ใช้รูปสี่เหลี่ยมผืนผ้า 8 รูป\\
+พื้นที่โดยประมาณคือ
+
+\([1\times (0)^2]+[0.5\times (0.5)^2]+[0.5\times (1)^2]+ [0.5\times (1.5)^2]+ [0.5\times (2)^2]+ [0.5\times (2.5)^2]+ [0.5\times (3)^2]= [0.5\times (3.5)^2]\)\\
+\(=[0]+[0.125]+[0.5]+[1.125]+[2]+[3.125]+[4.5]+[6.125]=17.5\)
+
+การประมาณค่าพื้นที่ที่ล้อมรอบด้วยส่วนโค้ง {y = x2} เส้นตรง
+{x = 0, x = 4} และแกน
+{x}
+
+\section{ทฤษฎีพื้นฐานของแคลคูลัส (The fundamental Theorem of Calculus)}\label{uxe17uxe24uxe29uxe0euxe1euxe19uxe10uxe32uxe19uxe02uxe2duxe07uxe41uxe04uxe25uxe04uxe25uxe2a-the-fundamental-theorem-of-calculus}
+
+วิชาแคลคูลัสแบ่งออกเป็น 2 สาขา คือ แคลคูลัสที่เกี่ยวกับการหาอนุพันธ์
+ซึ่งถือกำเนิดมาจากความต้องการที่จะหาความชันของฟังก์ชัน และแคลคูลัส ที่เกี่ยวกับการอินทิเกรท
+ซึ่งถือกำเนิดมาจากความต้องการที่จะหาพื้นที่ใต้กราฟ
+
+ทฤษฎีพื้นฐานของแคลคูลัสเป็นทฤษฎีที่เป็นตัวเชื่อมระหว่าง 2 สาขาทางแคลคูลัส
+และใช้แสดงความเกี่ยวเนื่องของการหา antiderivative ของฟังก์ชันหนึ่งกับการคำนวณหา
+definite integral ของฟังก์ชันนั้น
+\[\int^b_af(x)dx= \lim\limits_{\Delta\rightarrow 0}\sum_a^bf(x_i)\Delta x\]
+เราใช้สัญลักษณ์ \(\int f(x)dx\) แทน antiderivative ของฟังก์ชัน \(f(x)\)
+และเรียกสัญลักษณ์นี้ว่า indefinite integral
+
+\begin{theorem}
+
+\(( \mbox{ทฤษฎีพื้นฐานของแคลคูลัส})\) ถ้า \(f\) เป็นฟังก์ชันต่อเนื่องในช่วง \([a,b]\) แล้ว
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  ถ้า \(\displaystyle g(x)=\int_{a}^{x}f(t) \ dt\) แล้ว \(g'(x)=f(x)\)
+\item
+  \(\displaystyle \int_{a}^{b}f(x) \ dx=F(b)-F(a)\) เมื่อ \(F\) คือ
+  antiderivative ของ \(f\)
+\end{enumerate}
+
+\end{theorem}
+
+\textbf{ข้อสังเกต} ข้อสรุป 1. ในทฤษฎีข้างต้นสามารถเขียนในรูป
+
+\(\displaystyle \frac{d}{dx}\left(\int_{a}^{x}f(t) \ dt\right)=f(x)\)
+
+\begin{example}
+จงหาอนุพันธ์ของ \(\displaystyle
+g(x)=\int_{0}^{x}\sqrt{1+t^{4}} \ dt\)
+\end{example}
+
+\textbf{วิธีทำ} เนื่องจาก \(\displaystyle f(t)=\sqrt{1+t^{4}}\) เป็นฟังก์ต่อเนื่อง
+
+ดังนั้น จากทฤษฎีพื้นฐานของแคลคูลัส \(\displaystyle
+\frac{d}{dx}\left(g(x)\right)=\sqrt{1+x^{4}}\)
+
+\begin{example}
+จงหา \(\displaystyle \frac{d}{dx}\int_{0}^{x^{2}}\sin t \ dt\)
+\end{example}
+
+\textbf{วิธีทำ} ให้ \(U=x^{2}\) ดังนั้น
+
+\(\qquad \qquad \ \displaystyle \frac{d}{dx}\int_{0}^{x^{2}}\sin t \ dt
+=\frac{d}{dx}\int_{0}^{U}\sin t \ dt\)
+
+\(\qquad \qquad \qquad \qquad \qquad \quad =\displaystyle
+\frac{d}{dU}\left(\int_{0}^{U}\sin t \ dt\right) \frac{dU}{dx} \quad (
+\mbox{โดยกฎลูกโซ่})\)
+
+\(\qquad \qquad \qquad \qquad \qquad \quad =\displaystyle \sin U \,
+\frac{dU}{dx} \quad ( \mbox{โดยทฤษฎีพื้นฐานทางแคลคูลัส} )\)
+
+\(\qquad \qquad \qquad \qquad \qquad \quad =\displaystyle \sin x^{2}\cdot 2x\)
+
+\(\qquad \qquad \qquad \qquad \qquad \quad =\displaystyle 2x\cdot \sin x^{2}\)
+
+\begin{example}
+จงหา \(\displaystyle \int_{0}^{2}e^{x} \ dx\) โดยใช้ทฤษฎีพื้นฐานทางแคลคูลัส
+\end{example}
+
+\textbf{วิธีทำ} เนื่องจาก \(F(x)=e^{x}\) เป็น antiderivative ของ \(f(x)=e^{x}\) และ
+\(f(x)\) เป็นฟังก์ต่อเนื่อง ในช่วง \([0,2]\)
+
+ดังนั้น \(\displaystyle \int_{0}^{2}e^{x}\ dx = F(2)-F(0) =e^{2}-e^{0} =
+e^{2}-1\)
+
+\subsection{สูตรพื้นฐานของการอินทิเกรท (Basic Integration Rules)}\label{uxe2auxe15uxe23uxe1euxe19uxe10uxe32uxe19uxe02uxe2duxe07uxe01uxe32uxe23uxe2duxe19uxe17uxe40uxe01uxe23uxe17-basic-integration-rules}
+
+จากทฤษฎีพื้นฐานทางแคลคูลัส (The fundamental Theorem of Calculus) เราทราบว่า ถ้า
+\(\displaystyle g(x)=\int_{a}^{x}f(t) \ dt\) แล้ว \(g'(x)=f(x)\)
+และจากนิยามของ antiderivative เราสรุปได้ว่า
+\(\displaystyle g(x)=\int_{a}^{x}f(t) \ dt\) เป็น antiderivative ของ \(f(x)\)
+ซึ่งเรามักจะเขียน \(\displaystyle \int f(x) \ dx\) แทน antiderivative ของ
+\(f(x)\)
+
+นั่นคือ
+
+จากเนื้อหาเรื่องการหาอนุพันธ์ของฟังก์ชันเราทราบว่า
+\(\displaystyle \frac{d}{dx} \left( \ln |x|+C
+\right)=\frac{1}{x}\) , เมื่อ \(C\) เป็นค่าคงที่
+
+ดังนั้นจากคำอธิบายในข้างต้น เราสรุปได้ว่า
+
+\[\displaystyle \int \frac{1}{x} \ dx = \ln|x|+C\]
+
+ในทำนองเดียวกัน
+เราสามารถใช้ความรู้เรื่องการหาอนุพันธ์สร้างสูตรพื้นฐานของการอินทิเกรทได้ดังนี้
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\displaystyle \int C f(x) \ dx = C \int f(x) \ dx\) เมื่อ \(C\) เป็นค่าคงที่
+\item
+  \(\displaystyle \int [f(x)+g(x)] \ dx = \int f(x) \ dx+\int
+  g(x) \ dx\)
+\item
+  \(\displaystyle \int k \ dx = kx+C \quad\) เมื่อ \(k, C\) เป็นค่าคงที่
+\item
+  \(\displaystyle \int x^{n} \ dx = \frac{x^{n+1}}{n+1}+C
+  \quad\) เมื่อ \(n\neq -1\)
+\item
+  \(\displaystyle \int \frac{1}{x} \ dx = \ln|x|+C\)
+\item
+  \(\displaystyle \int e^{x} \ dx = e^{x}+C\)
+\item
+  \(\displaystyle \int a^{x} \ dx = \frac{a^{x}}{ \ln a}+C
+  \quad\) เมื่อ \(a\) เป็นจำนวนบวก และ \(a\neq 1\)
+\item
+  \(\displaystyle \int \sin x \ dx = -\cos x+C\)
+\item
+  \(\displaystyle \int \cos x \ dx = \sin x+C\)
+\item
+  \(\displaystyle \int \sec^{2} x \ dx = \tan x+C\)
+\item
+  \(\displaystyle \int \csc^{2} x \ dx = -\cot x+C\)
+\item
+  \(\displaystyle \int \sec x \tan x \ dx = \sec x+C\)
+\item
+  \(\displaystyle \int \csc x \cot x \ dx = -\csc x+C\)
+\item
+  \(\displaystyle \int \frac{1}{x^{2}+1} \ dx = \arctan x+C\)
+\item
+  \(\displaystyle \int \frac{1}{\sqrt{1-x^{2}}} \ dx =
+  \arcsin x+C\)
+\end{enumerate}
+
+\begin{example}
+จงหา \(\displaystyle \int (9x^{5}-4 \csc^{2} x) \ dx\)
+\end{example}
+
+\textbf{วิธีทำ}
+
+\(\qquad \qquad \ \displaystyle \int (9x^{5}-4 \csc^{2} x) \ dx \ = 9\int
+x^{5} \ dx -4 \int \csc^{2} x \ dx \quad ( \mbox{สูตร} \ 1 \ \mbox{และ} \ 
+2)\)
+
+\(\qquad \qquad \qquad \qquad \qquad \qquad \quad \ \ =\displaystyle
+\frac{9}{ 6}x^{6} -4(-\cot x)+C \quad ( \mbox{สูตร} \ 4 \ \mbox{และ} \ 11)\)
+
+\(\qquad \qquad \qquad \qquad \qquad \qquad \quad \ \ =\displaystyle
+\frac{3}{2}x^{6}+4\cot x+C\)
+
+\begin{example}
+จงหา \(\displaystyle \int \frac{\cos \theta}{\sin^{2} \theta}
+\ d\theta\)
+\end{example}
+
+\textbf{วิธีทำ}
+
+\(\qquad \qquad \ \displaystyle \int \frac{\cos \theta}{\sin^{2} \theta} \ 
+d\theta \ = \int \left(\frac{1}{\sin \theta}\right) \left(\frac{\cos
+\theta}{\sin \theta}\right) \ d\theta\)
+
+\(\qquad \qquad \qquad \qquad \qquad = \displaystyle \int \csc \theta \cot
+\theta \ d\theta\)
+
+\(\qquad \qquad \qquad \qquad \qquad = \displaystyle -\csc \theta +C \quad (
+\mbox{สูตร} \ 13)\)
+
+\begin{example}
+จงหา \(\displaystyle \int
+\frac{x^{3}+2\sqrt{x}-3}{x^{\frac{3}{2}}} \ dx\)
+\end{example}
+
+\textbf{วิธีทำ} จะเห็นว่า \(\displaystyle
+\frac{x^{3}+2\sqrt{x}-3}{x^{\frac{3}{2}}} \ = \ 
+\frac{x^{3}}{x^{\frac{3}{2}}}+\frac{2\sqrt{x}}{x^{\frac{3}{2}}}-\frac{3}{x^{\frac{3}{2}}}\)
+
+\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ = \ 
+x^{\frac{3}{2}}+2x^{-1}-3x^{-\frac{3}{2}}\)
+
+\(\qquad \qquad\ \displaystyle \int \frac{x^{3}+2\sqrt{x}-3}{x^{\frac{3}{2}}}
+\ dx \quad \ = \int x^{\frac{3}{2}} \ dx +2 \int x^{-1} \ dx -3 \int
+x^{-\frac{3}{2}} \ dx\)
+
+\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ =\displaystyle
+\frac{x^{\frac{3}{2}+1}}{\frac{3}{2}+1}  + 2 \ln |x|
+-\frac{3x^{-\frac{3}{2}+1}}{-\frac{3}{2}+1} + C\)
+
+\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ =\displaystyle
+\frac{x^{\frac{5}{2}}}{\frac{5}{2}} + 2 \ln
+|x|-\frac{3x^{-\frac{1}{2}}}{-\frac{1}{2}}+ C\)
+
+\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ =\displaystyle
+\frac{2}{5}x^{\frac{5}{2}}+ 2 \ln |x|+\frac{6}{\sqrt{x}}+ C\)
+
+\begin{example}
+จงหา \(\displaystyle \int_{0}^{1} \left( x^{4} -
+\frac{2}{1+x^{2}} \right) \ dx\)
+\end{example}
+
+\textbf{วิธีทำ}
+
+\(\qquad \qquad\ \displaystyle \int_{0}^{1} \left( x^{4} - \frac{2}{1+x^{2}}
+\right) \ dx \ = \int_{0}^{1} x^{4} \ dx - 2 \int_{0}^{1} \frac{1}{1+x^{2}}
+\ dx\)
+
+\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ \ =\displaystyle
+\frac{x^{5}}{5} \bigg |_{0}^{1}-2 \arctan x \bigg |_{0}^{1}\)
+
+\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ \ = \displaystyle \left(
+\frac{1}{5} - 0 \right) - 2 \left( \arctan 1 - \arctan 0 \right)\)
+
+\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ \ =\displaystyle
+\frac{1}{5}-2 \left( \frac{ \pi }{4}-0 \right)\)
+
+\(\qquad \qquad \qquad \qquad \qquad \qquad \qquad \ \ =\displaystyle
+\frac{1}{5}- \frac{ \pi }{2}\)
+
+\chapter{เทคนิคของการหาปริพันธ์ (Techniques of Integration)}\label{uxe40uxe17uxe04uxe19uxe04uxe02uxe2duxe07uxe01uxe32uxe23uxe2buxe32uxe1buxe23uxe1euxe19uxe18-techniques-of-integration}
+
+ในบทนี้เราจะศึกษาวิธีต่างๆ ที่สำคัญในการช่วยหาปริพันธ์ของฟังก์ชันต่างๆ เทคนิคแรก คือ
+การเปลี่ยนตัวแปร (the substitution rule) ซึ่งวิธีนี้มีการประยุกต์มาจากกฎลูกโซ่
+เทคนิคถัดมา คือ integration by part ซึ่งประยุกต์มาจากการหาอนุพันธ์ของผลคูณของฟังก์ชัน
+และเทคนิคสุดท้าย คือ integration by partial fraction โดยการเลือกใช้เทคนิคต่างๆ
+จะขึ้นอยู่กับ integrand
+
+\section{การหาปริพันธ์โดยการเปลี่ยนตัวแปร (Integration by Substitution)}\label{uxe01uxe32uxe23uxe2buxe32uxe1buxe23uxe1euxe19uxe18uxe42uxe14uxe22uxe01uxe32uxe23uxe40uxe1buxe25uxe22uxe19uxe15uxe27uxe41uxe1buxe23-integration-by-substitution}
+
+พิจารณา indefinite integral ที่อยู่ในรูปของ \[\int f(g(x))g'(x) dx\] ถ้ากำหนดให้
+\(F(x)\) เป็น antiderivative ของ \(f(x)\), นั่นคือ \(F'(x) = f(x)\)
+แล้วโดยการใช้กฏลูกโซ่เราจะได้ว่า \[\frac{d}{dx} F(g(x)) = F'(g(x)) g'(x)\] หรือ
+\[\label{eqn-sub}    
+            \int F'(g(x)) g'(x) dx = F(g(x)) + C\] และถ้ากำหนดให้
+\(u = g(x)\) และพิจารณาสมการที่ \hyperref[eqn-sub]{\[eqn-sub\]} เราจะได้ว่า
+\[\int F'(g(x)) g'(x) dx = F(g(x)) + C = F(u) + C = \int F'(u) du\] หรือ
+\[\int f(g(x))g'(x) dx  = \int f(u) du\]
+
+สรุปแล้วเมื่อเราทำการเปลี่ยนตัวแปร \(u = g(x)\) เราจะได้ว่า \(du = g'(x)dx\) ดังนั้น
+\(\int f(g(x)) g'(x) dx\) สามารถถูกเขียนให้อยู่ในรูปของ \(\int f(u)du\)
+ซึ่งทำให้สามารถหาปริพันธ์ได้นั่นเอง
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{theorem}
+ถ้า \(u = g(x)\) แล้ว \[\int f(g(x)) g'(x) dx  = \int f(u) du\]
+\end{theorem}
+
+\begin{example}
+จงหาปริพันธ์ต่อไปนี้ \(\int x^2 (x^3 + 1)^5 dx\)
+\end{example}
+
+\textbf{วิธีทำ} โดยการเปลี่ยนตัวแปร \(u = x^3 + 1\) เราจะได้ว่า \(du = 3x^2 dx\)
+ดังนั้นเราสามารถเขียน integral ใหม่ได้ดังนี้  
+
+\[\begin{aligned}
+        \int x^2 (x^3 + 1)^5 dx &= \int u^5 \frac{1}{3} du \\
+                                &= \frac{1}{3}\int u^5 du\\
+                                &= \frac{1}{3} \frac{u^6}{6} + C\\
+                                &= \frac{1}{18} (x^3+1)^6 + C
+\end{aligned}\]
+
+
+
+\begin{example}
+จงหาปริพันธ์ต่อไปนี้ \(\int \sqrt{2x + 3} dx\)
+\end{example}
+
+\textbf{วิธีทำ} โดยการเปลี่ยนตัวแปร \(u = 2x + 3\) เราจะได้ว่า \(du = 2 dx\)
+ดังนั้นเราสามารถเขียน integral ใหม่ได้ดังนี้  
+
+\[\begin{aligned}
+        \int \sqrt{2x + 3} dx  &= \int \sqrt{u} \frac{1}{2} du \\
+                                &= \frac{1}{2}\int u^{1/2} du\\
+                                &= \frac{1}{2} \frac{ u^{3/2}}{3/2} + C\\
+                                &= \frac{1}{3} (2x + 3)^{3/2} + C        
+\end{aligned}\]
+
+ 
+
+\begin{example}
+จงหาปริพันธ์ต่อไปนี้ \(\int \frac{1}{x} (1+ \ln x)^2 dx\)
+\end{example}
+
+\textbf{วิธีทำ} โดยการเปลี่ยนตัวแปร \(u = 1 + \ln x\) เราจะได้ว่า \(du =  \frac{dx}{x}\)
+ดังนั้นเราสามารถเขียน integral ใหม่ได้ดังนี้  
+
+\[\begin{aligned}
+        \int \frac{1}{x} (1+ \ln x)^2 dx  &= \int u^2 du \\
+                                &= \frac{u^3}{3} + C\\
+                                &= \frac{1}{3} (1 + \ln x)^3 + C
+\end{aligned}\]
+
+ 
+
+\subsection{แบบฝึกหัด}\label{uxe41uxe1auxe1auxe1duxe01uxe2buxe14}
+
+จงหาปริพันธ์ต่อไปนี้
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\int \sqrt{x+1} dx\)
+\item
+  \(\int (x^2 - 2x) \sqrt{x^3 - 3x^2 +1} dx\)
+\item
+  \(\int \sin x e^{\cos x} dx\)
+\item
+  \(\int \tan \sec^2 x dx\)
+\item
+  \(\int \frac{(\ln x)^2}{x} dx\)
+\end{enumerate}
+
+\subsection{การหาปริพันธ์โดยการแทนด้วยฟังก์ชันตรีโกณมิติ (Trigonometric Substitutions)}\label{uxe01uxe32uxe23uxe2buxe32uxe1buxe23uxe1euxe19uxe18uxe42uxe14uxe22uxe01uxe32uxe23uxe41uxe17uxe19uxe14uxe27uxe22uxe1fuxe07uxe01uxe0auxe19uxe15uxe23uxe42uxe01uxe13uxe21uxe15-trigonometric-substitutions}
+
+เราสามารถใช้วิธีการเปลี่ยนตัวแปรเพื่อหาปริพันธ์ของฟังก์ชันในรูปแบบต่อไปนี้
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\int \sin^m x \cos^n x dx\)
+\item
+  \(\int \tan^m x \sec^n x dx\)
+\item
+  \(\int \cot^m x \csc^n x dx\)
+\end{enumerate}
+
+โดยในบทนี้จะยกตัวอย่างเฉพาะในกรณีแรกเท่านั้น ส่วนกรณีที่เหลือสามารถใช้หลักการเดียวกัน
+
+พิจารณาจากตัวอย่างต่อไปนี้
+
+\begin{example}
+จงหาปริพันธ์ต่อไปนี้ \(\int \sin^3 x \cos x dx\)
+\end{example}
+
+\textbf{วิธีทำ} โดยการเปลี่ยนตัวแปร \(u = \sin x\) เราจะได้ว่า \(du = \cos x dx\) ดังนั้น
+\[\int \sin^3 x \cos x dx = \int u^3 du = \frac{1}{4}u^4 + C = \frac{1}{4} \sin ^4 x + C\]
+
+ในกรณีของ integral แบบแรก \(\int \sin^m x \cos^n x dx\)
+เราจะแบ่งการพิจารณาเป็น 2 กรณี ดังนี้
+
+\textbf{กรณีที่ 1} ถ้า \(m\) หรือ \(n\) อย่างน้อยหนึ่งตัวที่เป็นจำนวนบวกคี่ สมมติให้ \(m\)
+เป็นจำนวนบวกคี่ ดังนั้นเราสามารถที่จะเขียน \(m = 2k +1\) เราจะแยก \(\sin x\) ออกมาจาก
+\(\sin^{2k} x\) และจะใช้เอกลักษณ์ \(\sin^2 x = (1 - \cos^2 x)\) ในการจัดรูป
+integral ดังนี้  
+
+\[\begin{aligned}
+        \int \sin^m x \cos^n x dx &= \int (\sin^{2}x)^k \cos^n x \sin x dx \\
+                                    &= \int (1 - \cos^2 x)^k \cos^n x \sin x dx \\
+                                    &= - \int (1 - u^2)^k u^n du 
+\end{aligned}\]
+
+  โดยเรากำหนดให้ \(u = \cos x\) สังเกตว่า integral
+สุดท้ายจะง่ายต่อการหาอนุพันธ์
+
+\begin{example}
+จงหาปริพันธ์ของ \(\int \sin^3 x \cos^3 x dx\)
+\end{example}
+
+\textbf{กรณีที่ 2} ถ้า \(m\) และ \(n\) เป็นจำนวนบวกคู่
+ในกรณีนี้เราสามารถที่จะใช้เอกลักษณ์ตรีโกณมิติต่อไปนี้ในการทำให้ integral
+อยู่ในรูปที่ง่ายต่อการหาค่าปริพันธ์
+\[\sin^2 x = \frac{1}{2}(1-\cos 2x) \quad  \cos^2 x = \frac{1}{2}(1 + \cos 2x)\]
+โดยพิจารณาจากตัวอย่างต่อไปนี้
+
+\begin{example}
+จงหาปริพันธ์ของ \(\int \sin^2 x \cos^2 x dx\)
+\end{example}
+
+\section{การหาปริพันธ์โดยแยกส่วน (Integration by Parts)}\label{uxe01uxe32uxe23uxe2buxe32uxe1buxe23uxe1euxe19uxe18uxe42uxe14uxe22uxe41uxe22uxe01uxe2auxe27uxe19-integration-by-parts}
+
+ในบทนี้เราจะใช้การแปลง (transformation) ในการเปลี่ยนรูปของ integral
+บางประเภทให้อยู่ในรูปที่ง่ายต่อการหา โดยเริ่มต้นจากการพิจารณาอนุพันธ์ของผลคูณของฟังก์ชัน
+ต่อไปนี้ \[\frac{d}{dx} (uv) = v\frac{du}{dx} + u\frac{dv}{dx}\] หรือ
+เขียนให้อยู่ในรูปของ \[u(x) v'(x) = \frac{d}{dx}(u(x)v(x)) - v(x)u'(x)\]
+โดยการหาปริพันธ์เทียบกับ \(x\) เราจะได้ว่า
+\[\int u(x) v'(x) dx = u(x)v(x) -  \int v(x)u'(x)dx\] หรือ
+\[\int u dv = uv -  \int v du\] สูตรการหาปริพันธ์นี้ เรียกว่า integration by
+parts
+
+ในการใช้สูตรดังกล่าว เราจำเป็นที่จะต้องแบ่ง integrand ออกเป็น 2 ส่วนด้วยกัน คือ ส่วนของ
+u และ dv โดยอาศัยหลักการต่อไปนี้
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  ส่วน \(dv\) ต้องเป็นส่วนที่ง่ายต่อการหาปริพันธ์
+\item
+  ในพจน์ของ \(\int v du\) จะต้องง่ายต่อการหา
+\end{enumerate}
+
+\begin{example}
+จงหาปริพันธ์ของ \(\int x e^x dx\)
+\end{example}
+
+\begin{example}
+จงหาปริพันธ์ของ \(\int x \sin x dx\)
+\end{example}
+
+\begin{example}
+จงหาปริพันธ์ของ \(\int e^x \sin 2x dx\)
+\end{example}
+
+\begin{example}
+จงหาปริพันธ์ของ \(\int \ln xdx\)
+\end{example}
+
+\begin{example}
+จงหาปริพันธ์ของ \(\int x \sqrt{x+1}dx\)
+\end{example}
+
+\section{การหาปริพันธ์โดยเศษส่วนย่อย (Integration by Partial Fractions)}\label{uxe01uxe32uxe23uxe2buxe32uxe1buxe23uxe1euxe19uxe18uxe42uxe14uxe22uxe40uxe28uxe29uxe2auxe27uxe19uxe22uxe2duxe22-integration-by-partial-fractions}
+
+เราจะศึกษาวิธีการหาปริพันธ์ของ rational ฟังก์ชัน หรือฟังก์ชันที่อยู่ในรูปของ
+\[R(x) = \frac{P(x)}{Q(x)}\] โดยที่ \(P(x),Q(x)\) คือพหุนามใดๆ
+ซึ่งจะเรียกวิธีต่อไปนี้ว่า partial fractions หลักการอยู่ที่การแยกเศษส่วน \(R(x)\)
+ให้อยู่ในรูปของผลรวมต่อไปนี้ \[\label{partial-frac}
+       R(x) = \frac{P(x)}{Q(x)} = p(x) + F_1(x) + F_2(x) + \ldots + F_m(x)\]
+โดยที่ \(p(x)\) คือ พหุนามที่ได้จากการหาร และ \(F_k(x)\)
+จะเป็นเศษส่วนที่ง่ายต่อการหาปริพันธ์
+
+พิจารณาตัวอย่างต่อไปนี้ \[\label{exa-partial-frac}
+     \begin{split}
+        \frac{-1+x^2+x^3+x^4}{x + x^3} &= 1 +x - \frac{x+1}{x + x^3}  \\
+                                       &= 1 +x -\frac{1}{x} + \frac{x-1}{1+x^2} \\
+     \end{split}\] หลังการแยกเศษส่วน เราสามารถที่จะหาปริพันธ์ได้ง่ายขึ้น
+ 
+
+\[\begin{aligned}
+        \int \frac{-1+x^2+x^3+x^4}{x + x^3}dx &= \int\left(1 +x -\frac{1}{x} + \frac{x}{1+x^2} -\frac{1}{1+x^2}\right)dx \\   
+            &=x + \frac{1}{2}x^2 - \ln|x| +\frac{1}{2}\ln(x^2+1) -\tan^{-1}x + C
+\end{aligned}\]
+
+ 
+
+ในการแยกเศษส่วน \(R(x)\) ในสมการ
+\hyperref[partial-frac]{\[partial-frac\]} ผลลัพธ์ที่ได้จะมีเศษส่วน \(F_k(x)\) เพิ่มขึ้นมา โดยเศษส่วน
+\(F_k(x)\) นี้จะอยู่ในรูปของ \[\label{partial-frac-1}
+     \frac{A}{(ax + b)^n} \text{ หรือ } \frac{Ax + B}{(ax^2 + bx +c)^n}\]
+อย่างใดอย่างหนึ่ง (ซึ่งมีการพิสูจน์ในวิชาคณิตศาสตร์ขั้นสูง) และเราจะเรียกเศษส่วนนี้ว่า
+partial fraction หรือเศษส่วนย่อย ตัวอย่างในสมการ
+\hyperref[exa-partial-frac]{\[exa-partial-frac\]} เศษส่วนย่อย คือ \(-\frac{1}{x}\) และ
+\(\frac{x-1}{1+x^2}\)
+
+โดยทั่วไปเราสามารถจำแนก rational function ได้เป็น 2 ประเภท
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  proper rational function ซึ่งเป็นกรณีที่ดีกรีของ \(P(x)\) น้อยกว่าดีกรีของ \(Q(x)\)
+\item
+  improper rational function ในกรณีนี้ดีกรีของ \(P(x)\) มากกว่าหรือเท่ากับดีกรีของ
+  \(Q(x)\)
+\end{enumerate}
+
+ในสมการ \hyperref[exa-partial-frac]{\[exa-partial-frac\]} rational function นี้เป็นแบบ improper
+ดังนั้นเมื่อทำการตั้งหารยาวผลลัพท์ที่ได้จะเป็นผลบวกของพหุนาม \(1 +x\) และ proper
+rational function \(- \frac{x+1}{x + x^3}\) ดังนั้นเราสามารถที่จะสมมติ ให้
+rational function ของเราที่จะศึกษาต่อไปในบทนี้เป็น proper และเราจะหาวิธี ในการแยก
+proper rational function ให้อยู่ในรูปผลรวมของเศษส่วนย่อยให้ได้
+โดยเราจะเริ่มต้นจากกรณีที่ตัวประกอบของตัวหารเป็น linear factors
+แล้วจึงพิจารณาในกรณีที่เป็น quadratic factors
+
+\textbf{Linear Factors} สมมติให้ rational function \(R(x) = \frac{P(x)}{Q(x)}\)
+เป็น proper และถ้าทำการแยกตัวประกอบของ \(Q(x)\) แล้วมีเทอม \(ax + b\) ซ้ำกันทั้งหมด
+\(n\) เทอม (นั่นคือ \((ax +b)^n\) เป็นตัวประกอบของ \(Q(x)\)) แล้วการแยก \(R(x)\)
+เพื่อทำให้เป็นเศษส่วนย่อยจะต้องประกอบด้วย \(n\) เทอมต่อไปนี้
+\[\frac{A_1}{ax+b} +  \frac{A_2}{(ax+b)^2} + \cdots +  \frac{A_n}{(ax+b)^n}\]
+โดยที่ \(A_1, A_2, \ldots, A_n\) เป็นค่าคงตัว
+
+\begin{example}
+\textbf{Distinct Linear Factors} จงหา \(\int\frac{1}{x(x+1)} dx\)
+\end{example}
+
+\textbf{วิธีทำ} โดยการแยกหาเศษย่อย เราจะได้ว่า
+\[\frac{1}{x(x+1)} = \frac{1}{x} - \frac{1}{x+1}\]
+
+\begin{example}
+\textbf{Repeated Linear Factors} จงหา \(\int\frac{1}{x^2(x+1)} dx\)
+\end{example}
+
+\textbf{วิธีทำ} โดยการแยกหาเศษย่อย เราจะได้ว่า
+\[\frac{1}{x^2(x+1)} = -\frac{1}{x} + \frac{1}{x^2} + \frac{1}{x+1}\]
+
+\begin{example}
+
+จงหาปริพันธ์ต่อไปนี้
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\int \frac{x}{x^2+1} dx\)
+\item
+  \(\int \frac{x^2+1}{x} dx\)
+\item
+  \(\int \frac{1}{x(x+1)^2} dx\)
+\item
+  \(\int \frac{1}{x^2(x+1)^2} dx\)
+\end{enumerate}
+
+\end{example}
+
+\textbf{วิธีทำ} เนื่องจาก
+\[\frac{1}{x(x+1)^2} = \frac{1}{x} -\frac{1}{x+1} -\frac{1}{(x+1)^2}\]
+และ
+\[\frac{1}{x^2(x+1)^2} = \frac{1}{x^2} - \frac{2}{x} + \frac{2}{x+1} + \frac{1}{(1+x)^2}\]
+
+\textbf{Quadratic Factors} ในกรณีที่ rational function
+\(R(x) = \frac{P(x)}{Q(x)}\) เป็น proper และ \((ax^2 +bx+c)^n\)
+เป็นตัวประกอบของ \(Q(x)\) แล้วการแยก \(R(x)\) เพื่อทำให้เป็นเศษส่วนย่อยจะต้องประกอบด้วย
+\(n\) เทอมต่อไปนี้
+\[\frac{A_1x + B_1}{ax^2+bx+c} +  \frac{A_2x + B_2}{({ax^2+bx+c})^2} + \cdots +  \frac{A_nx + B_n}{({ax^2+bx+c})^n}\]
+
+\section{ปริพันธ์ไม่ตรงแบบ (Improper Integrals)}\label{uxe1buxe23uxe1euxe19uxe18uxe44uxe21uxe15uxe23uxe07uxe41uxe1auxe1a-improper-integrals}
+
+ในการนิยาม definite integral \(\int_{a}^{b} f(x) dx\) เราจะสมมติให้ฟังก์ชัน
+\(f(x)\) นี้นิยามบนช่วงปิด \([a,b]\) อย่างไรก็ตามในทางปฎิบัติเราอาจจะสนใจในกรณีต่อไปนี้
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  กรณีที่ช่วงที่ใช้ในการหาปริพันธ์นั้นไม่ใช่ช่วงปิด เช่น
+  \[[a, \infty) , (-\infty,b] \text{ หรือ } (-\infty,\infty)\]
+\item
+  ตัว integrand \(f(x)\) ไม่ต่อเนื่องที่จุดใดจุดหนึ่งบนช่วงของการหาปริพันธ์
+\end{enumerate}
+
+และเราจะเรียก integral ใน 2 กรณีนี้ว่า improper integral
+ในการหาปริพันธ์นี้เราจำเป็นที่จะต้องใช้เทคนิคพิเศษที่ช่วย
+โดยเราจะเริ่มต้นจากการพิจารณาตัวอย่างต่อไปนี้
+
+\begin{example}
+พิจารณา \(\int_{1}^{\infty} \frac{1}{x^2} dx\)
+\end{example}
+
+\textbf{วิธีทำ} ค่าของปริพันธ์นี้ควรจะเป็นพื้นที่ที่อยู่ระหว่างกราฟ \(y =  1/x^2\) แกน \(x\)
+และเส้นตรง \(x=1\) ถ้าเราพิจารณาช่วงปิด \([1,t]\) เราจะสามารถหาค่าของ
+\[A(t) = \int_{1}^{t} \frac{1}{x^2} dx =  \left[-\frac{1}{x}\right]_{1}^{t} = 1 - \frac{1}{t}\]
+ถ้าสมมติให้ \(t \rightarrow \infty\) เราจะสามารถหาลิมิตของ \(A(t)\)
+ได้ในกรณีซึ่งเท่ากับ 1 ดังนั้น เราจะนิยามให้พื้นที่ของบริเวณที่ถูกปิดล้อมด้วย \(y =  1/x^2\)
+สำหรับ \(x \in [1,\infty)\) เท่ากับค่าของลิมิตดังกล่าว และ
+\[\int_{1}^{\infty} \frac{1}{x^2} dx = \lim_{t \rightarrow \infty} \int_{a}^t \frac{1}{x^2}dx = 
+    \lim_{t \rightarrow \infty} (1 - \frac{1}{t}) = 1\] โดยที่ลิมิตนี้หาค่าได้
+
+จากตัวอย่างข้างต้น ทำให้เราสามารถสร้างนิยามได้ดังต่อไปนี้
+
+\begin{definition}
+
+(Infinite Limits of Integration)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \phantomsection\label{improper1}{} ถ้า \(\int_{a}^{t}f(x)dx\)
+  หาค่าได้สำหรับทุกๆ จำนวนจริง \(t \ge a\) แล้ว
+  \[\int_{a}^{\infty} f(x) dx  = \lim_{t \rightarrow \infty} \int_{a}^t f(x) dx\]
+  ถ้าลิมิตหาค่าได้
+\item
+  \phantomsection\label{improper2}{} ถ้า \(\int_{t}^{b}f(x)dx\)
+  หาค่าได้สำหรับทุกๆ จำนวนจริง \(t \le b\) แล้ว
+  \[\int_{-\infty}^{b} f(x) dx  = \lim_{t \rightarrow -\infty} \int_{t}^b f(x) dx\]
+  ถ้าลิมิตหาค่าได้
+\end{enumerate}
+
+ถ้าลิมิตในข้อ \hyperref[improper1]{\[improper1\]} และ
+\hyperref[improper2]{\[improper2\]}
+หาค่าได้ เราจะเรียก improper integral นี้ว่า convergent แต่ถ้าลิมิตหาค่าไม่ได้ว่า
+divergent เราจะเรียก integral นี้ว่า divergent
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  ถ้า improper integrals \(\int_{a}^{\infty} f(x) dx\) และ
+  \(\int_{-\infty}^{a} f(x) dx\) convergent แล้ว
+  \[\int_{-\infty}^{\infty} f(x) dx  = 
+                \int_{-\infty}^{a} f(x) dx + \int_{a}^{\infty} f(x) dx\]
+\end{enumerate}
+
+\end{definition}
+
+\begin{example}
+จงหา \(\int_{-\infty}^0 x e^x dx\)
+\end{example}
+
+\textbf{วิธีทำ} โดยการใช้ integration by part เราสามารถแสดงว่า
+\[\int x e^x dx = x e^x - e^x +C\] ดังนั้น  
+
+\[\begin{aligned}
+         \int_{-\infty}^0 x e^x dx &=  \lim_{t \rightarrow -\infty} \int_{t}^0 x e^x dx \\
+                        &=  \lim_{t \rightarrow -\infty} (-t e^t -1 + e^t) = -1   
+\end{aligned}\]
+
+ 
+
+สำหรับกรณีที่ตัว integrand \(f(x)\) ไม่ต่อเนื่อง อาจจะไม่ต่อเนื่องที่จุด \(c\) โดยที่ \(c\)
+อาจจะเป็นจุดภายในช่วงปิด \([a,b]\) หรืออาจจะเป็นที่ขอบของช่วงปิดก็ได้
+ในกรณีเราสามารถหาค่าของ improper integral ได้ดังต่อไปนี้
+
+\begin{definition}
+
+\phantomsection\label{def-improper}{} (Infinite Integrands)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \phantomsection\label{improper3}{} ถ้า \(f\) ต่อเนื่องบนช่วง \([a,b)\)
+  แต่ไม่ต่อเนื่องที่จุด \(b\) แล้ว
+  \[\int_{a}^b f(x) dx = \lim_{t \rightarrow b^{-}} \int_{a}^t f(x) dx\]
+  ถ้าลิมิตนี้หาค่าได้
+\item
+  \phantomsection\label{improper4}{} ถ้า \(f\) ต่อเนื่องบนช่วง \((a,b]\)
+  แต่ไม่ต่อเนื่องที่จุด \(a\) แล้ว
+  \[\int_{a}^b f(x) dx = \lim_{t \rightarrow a^{+}} \int_{t}^b f(x) dx\]
+  ถ้าลิมิตนี้หาค่าได้
+\end{enumerate}
+
+ถ้าลิมิตในข้อ \hyperref[improper3]{\[improper3\]} และ
+\hyperref[improper4]{\[improper4\]}
+หาค่าได้ เราจะเรียก improper integral นี้ว่า convergent แต่ถ้าลิมิตหาค่าไม่ได้ว่า
+divergent เราจะเรียก integral นี้ว่า divergent
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  ถ้า \(f\) ไม่ต่อเนื่องที่จุด \(c\) โดยที่ \(a < c <b\) และ \(\int_{a}^{c} f(x) dx\)
+  และ \(\int_{c}^{b} f(x) dx\) convergent แล้ว \[\int_{a}^{b} f(x) dx  = 
+                \int_{a}^{c} f(x) dx + \int_{c}^{b} f(x) dx\]
+\end{enumerate}
+
+\end{definition}
+
+\begin{example}
+จงหา \(\int_{1}^{5} \frac{1}{\sqrt{x-1}} dx\)
+\end{example}
+
+\textbf{วิธีทำ} เราสามารถใช้นิยาม
+\hyperref[def-improper]{\[def-improper\]} ในการหาค่าปริพันธ์ดังต่อไปนี้  
+
+\[\begin{aligned}
+  \int_{1}^{5} \frac{1}{\sqrt{x-1}} dx &= \lim_{t \rightarrow 1^{+} }\int_{t}^{5} \frac{1}{\sqrt{x-1}} dx \\
+         &= \lim_{t \rightarrow 1^{+}} 2\sqrt{x-1} |_{t}^{5} \\
+         &= \lim_{t \rightarrow 1^{+}} (4 - 2\sqrt{t-1}) = 4               
+\end{aligned}\]
+
+  ดังนั้น improper integral นี้จะ converge เข้าสู่ค่า 4
+
+\begin{example}
+จงหา \(\int_{-1}^{1} \frac{1}{x^2} dx\)
+\end{example}
+
+\textbf{วิธีทำ} เนื่องจาก \(f(x)\) ไม่ต่อเนื่องที่จุด 0 ดังนั้นเราสามารถใช้นิยาม
+\hyperref[def-improper]{\[def-improper\]} ในการหาค่าปริพันธ์ดังกล่าว  
+
+\[\begin{aligned}
+        \int_{-1}^{1} \frac{1}{x^2} dx &= \lim_{t \rightarrow 0^{-} }\int_{-1}^{t} \frac{1}{x^2}dx
+                                            + \lim_{s \rightarrow 0^{+}} \int_{s}^{1} \frac{1}{x^2}dx \\
+        &= \lim_{t \rightarrow 0^{-}} \left[ -\frac{1}{x}\right]_{-1}^t 
+        + \lim_{s \rightarrow 0^{+}} \left[ -\frac{1}{x}\right]_{s}^1 \\
+        &= \lim_{t \rightarrow 0^{-}} (-\frac{1}{t} - 1) + \lim_{s \rightarrow 0^{+}} (-1 +\frac{1}{s})    
+\end{aligned}\]
+
+  แต่เนื่องจากลิมิตในบรรทัดสุดท้ายนี้หาค่าไม่ได้ เราจึงสรุปว่า
+\(\int_{-1}^{1} \frac{1}{x^2} dx\) เป็น divergent
+
+หมายเหตุถ้าเราไม่ใช่วิธีเบื้องต้น โดยเลือกที่จะคำนวณโดยตรงโดยไม่สนใจจุดที่ฟังก์ชันไม่ต่อเนื่อง
+เราจะได้ว่า
+\[\int_{-1}^{1} \frac{1}{x^2} dx  = \left[ -\frac{1}{x}\right]_{-1}^1 = -1 + -1 = -2\]
+ซึ่งไม่ใช่ผลลัพธ์ที่ถูกต้อง (เพราะว่ากราฟ \(y = \frac{1}{x^2}\) อยู่เหนือแกน \(x\) ดังนั้น
+\(\int_{-1}^{1} \frac{1}{x^2} dx\) จะต้องมีค่าที่เป็นบวก)
+
+\section{แบบฝึกหัด}\label{uxe41uxe1auxe1auxe1duxe01uxe2buxe14-1}
+
+\textbf{ตอนที่ 1} \textbf{ตอนที่ 2} จงหา improper integrals ต่อไปนี้
+
+2
+
+\(\int_{1}^{\infty} \frac{1}{\sqrt{x+1}} dx\) divergent
+
+\(\int_{1}^{\infty} \frac{1}{(x+1)^{3/2}}dx = \sqrt{2}\)
+
+\(\int_{-\infty}^{-1} \frac{1}{(2x + 1)^2} dx = \frac{1}{2}\)
+
+\(\int_{-\infty}^{\infty} x e^{-x^2} dx = 0\)
+
+\(\int_{1}^{\infty} \frac{\ln x}{x^2}  dx = 1\)
+
+\(\int_0^1 \frac{1}{\sqrt{1-x}} dx = 2\)
+
+\(\int_0^{1} \frac{x}{x^2-1} dx\) divergent
+
+\(\int_0^{1/2} \frac{x}{x^2-1} dx = -\frac{1}{2} \ln (\frac{4}{3})\)
+
+
+
+\bibliography{book.bib}
 
 \end{document}

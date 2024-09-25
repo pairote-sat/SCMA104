@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.15)  10 SEP 2024 22:26
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.15)  25 SEP 2024 08:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1018,7 +1018,14 @@ Package: amsthm 2020/05/29 v2.20.6
 \c@exercise=\count346
 \c@hypothesis=\count347
 
-(./SCMA104bookdownproSlidesj.aux)
+(./SCMA104bookdownproSlidesj.aux
+
+LaTeX Warning: Label `uxe41uxe1auxe1auxe1duxe01uxe2buxe14' multiply defined.
+
+
+LaTeX Warning: Label `uxe41uxe1auxe1auxe1duxe01uxe2buxe14-1' multiply defined.
+
+)
 \openout1 = `SCMA104bookdownproSlidesj.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
@@ -1646,11 +1653,17 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 13.9985pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 9.99893pt on input line 3.
- [3])
+ [3]
+Underfull \vbox (badness 7326) has occurred while \output is active []
+
+ [4])
 \tf@toc=\write4
 \openout4 = `SCMA104bookdownproSlidesj.toc'.
 
- [4]
+
+[5] [6
+
+]
 Chapter 1.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
 (Font)              scaled to size 52.58179pt on input line 172.
@@ -1663,7 +1676,6 @@ Underfull \hbox (badness 1571) in paragraph at lines 184--185
  []
 
 [1
-
 
 ]
 File: images/fig-covid-19.jpeg Graphic file (type bmp)
@@ -1996,49 +2008,67 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ] [140
 
-] [141
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [142
+ [141
 
 ]
+[142] [143] [144
+
+] [145] [146
+
+] [147]
+File: SCMA104bookdownproj_files/figure-latex/graph-logistic equation-1.pdf Grap
+hic file (type pdf)
+<use SCMA104bookdownproj_files/figure-latex/graph-logistic equation-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [148]
+[149] [150
+
+] [151] [152]
 Chapter 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [143]
+ [153
+
+]
 Overfull \vbox (12.85434pt too high) has occurred while \output is active []
 
 
-[144] [145] [146
+[154] [155] [156
 
-] [147
+] [157
 
-] [148
+] [158
 
-] [149
+] [159
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [150]
-[151] [152] [153
+ [160]
+[161] [162] [163
 
-] [154] [155
+] [164] [165
 
-] [156
+] [166
 
-] [157] [158
+] [167] [168
 
-] [159
+] [169
 
-] [160
+] [170
 
-] [161] [162
+] [171] [172
 
 ]
 
-LaTeX Warning: Hyper reference `Fig:graph1' on page 163 undefined on input line
- 2879.
+LaTeX Warning: Hyper reference `Fig:graph1' on page 173 undefined on input line
+ 3052.
 
 Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
 ;language=dflt;mapping=tex-text;!
@@ -2052,30 +2082,30 @@ Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=tha
 ;language=dflt;mapping=tex-text;!
 Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai
 ;language=dflt;mapping=tex-text;!
-[163]
+[173]
 
-LaTeX Warning: Hyper reference `Fig:graph2' on page 164 undefined on input line
- 2916.
+LaTeX Warning: Hyper reference `Fig:graph2' on page 174 undefined on input line
+ 3089.
 
 
 Underfull \vbox (badness 2435) has occurred while \output is active []
 
- [164
+ [174
 
 ]
-[165] [166
-
-]
-
-LaTeX Warning: Hyper reference `Fig:graph3' on page 167 undefined on input line
- 2956.
-
-[167] [168
+[175] [176
 
 ]
 
-LaTeX Warning: Hyper reference `Fig:graph4' on page 169 undefined on input line
- 2993.
+LaTeX Warning: Hyper reference `Fig:graph3' on page 177 undefined on input line
+ 3129.
+
+[177] [178
+
+]
+
+LaTeX Warning: Hyper reference `Fig:graph4' on page 179 undefined on input line
+ 3166.
 
 Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
 ;language=dflt;mapping=tex-text;!
@@ -2083,92 +2113,201 @@ Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=tha
 ;language=dflt;mapping=tex-text;!
 Missing character: There is no   (U+2006) in font TH Sarabun New/OT:script=thai
 ;language=dflt;mapping=tex-text;!
-[169]
+[179]
 
-LaTeX Warning: Hyper reference `Fig:graph5' on page 170 undefined on input line
- 3000.
+LaTeX Warning: Hyper reference `Fig:graph5' on page 180 undefined on input line
+ 3173.
 
-[170
+[180
 
-] [171] [172]
+] [181] [182]
 
-LaTeX Warning: Hyper reference `Fig:graph6' on page 173 undefined on input line
- 3110.
+LaTeX Warning: Hyper reference `Fig:graph6' on page 183 undefined on input line
+ 3283.
 
-[173] [174] [175] [176
-
-]
-
-LaTeX Warning: Hyper reference `fig-monod' on page 177 undefined on input line 
-3176.
-
-[177
-
-] [178
-
-] [179] [180
+[183] [184] [185] [186
 
 ]
 
-LaTeX Warning: Hyper reference `fig-nitrogen' on page 181 undefined on input li
-ne 3240.
+LaTeX Warning: Hyper reference `fig-monod' on page 187 undefined on input line 
+3349.
 
-[181]
+[187
+
+] [188
+
+] [189] [190
+
+]
+
+LaTeX Warning: Hyper reference `fig-nitrogen' on page 191 undefined on input li
+ne 3413.
+
+[191]
 Missing character: There is no ฒ ("E12) in font lmmi12!
-[182
+[192
 
-] [183] [184
+] [193] [194
 
-] [185]
+] [195]
 
-LaTeX Warning: Hyper reference `fig-artery' on page 186 undefined on input line
- 3326.
+LaTeX Warning: Hyper reference `fig-artery' on page 196 undefined on input line
+ 3499.
 
 
-LaTeX Warning: Hyper reference `fig-box-area' on page 186 undefined on input li
-ne 3333.
+LaTeX Warning: Hyper reference `fig-box-area' on page 196 undefined on input li
+ne 3506.
 
 
 Underfull \vbox (badness 3919) has occurred while \output is active []
 
- [186]
-Underfull \hbox (badness 10000) in paragraph at lines 3364--3365
+ [196]
+Underfull \hbox (badness 10000) in paragraph at lines 3537--3538
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3369--3379
+Underfull \hbox (badness 10000) in paragraph at lines 3542--3552
 
  []
 
-[187] [188] [189
+[197] [198] [199
 
 ]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 30.42325pt on input line 3432.
+(Font)              scaled to size 30.42325pt on input line 3605.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 21.29617pt on input line 3432.
+(Font)              scaled to size 21.29617pt on input line 3605.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 15.21162pt on input line 3432.
- [190
+(Font)              scaled to size 15.21162pt on input line 3605.
+ [200
 
-] [191
+] [201
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [192
+ [202
 
 ]
-[193] [194
+[203] [204
 
-] [195
+] [205
+
+] [206
 
 ]
+Chapter 5.
+
+Underfull \vbox (badness 8019) has occurred while \output is active []
+
+ [207
+
+]
+[208] [209
+
+] [210
+
+] [211]
+Underfull \vbox (badness 2318) has occurred while \output is active []
+
+ [212]
+[213]
+Underfull \hbox (badness 10000) in paragraph at lines 3876--3879
+
+ []
+
+
+Underfull \vbox (badness 3088) has occurred while \output is active []
+
+ [214]
+[215]
+Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
+;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
+;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
+;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
+;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2006) in font TH Sarabun New/OT:script=thai
+;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
+;language=dflt;mapping=tex-text;!
+Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
+;language=dflt;mapping=tex-text;!
+[216
+
+] [217] [218] [219
+
+] [220
+
+] [221
+
+] [222] [223] [224] [225
+
+] [226
+
+] [227
+
+]
+[228
+
+]
+Chapter 6.
+
+Underfull \vbox (badness 1297) has occurred while \output is active []
+
+ [229
+
+]
+[230]
+Underfull \hbox (badness 1681) in paragraph at lines 4168--4171
+[]\TU/THSarabunNew(1)/m/n/20 สรุป แล้ว เมื่อ เรา ทำการ เปลี่ยน ตัวแปร $[] [] []
+[][][]$ เรา จะ ได้ ว่า $[][] [] [][][][][][][]$ ดัง นั้น
+ []
+
+[231] [232
+
+] [233
+
+] [234
+
+] [235] [236
+
+] [237] [238
+
+] [239
+
+] [240] [241
+
+] [242
+
+]
+[243
+
+] [244
+
+] [245
+
+] [246] [247] [248] [249
+
+] [250
+
+] [251
+
+] [252] [253
+
+] [254]
+[255] [256
+
+] [257] [258] [259
+
+] [260
+
+] [261]
 No file SCMA104bookdownproSlidesj.bbl.
-[196
-
-] (./SCMA104bookdownproSlidesj.aux)
+[262] (./SCMA104bookdownproSlidesj.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -2177,14 +2316,17 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 30105 strings out of 474773
- 599759 string characters out of 5757724
- 1938839 words of memory out of 5000000
- 51728 multiletter control sequences out of 15000+600000
+ 30154 strings out of 474773
+ 602404 string characters out of 5757724
+ 1941839 words of memory out of 5000000
+ 51776 multiletter control sequences out of 15000+600000
  567565 words of font info for 128 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,18n,124p,1022b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,18n,124p,1022b,579s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on SCMA104bookdownproSlidesj.pdf (200 pages).
+Output written on SCMA104bookdownproSlidesj.pdf (268 pages).

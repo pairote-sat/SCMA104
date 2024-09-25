@@ -1,0 +1,568 @@
+1.  จงหาอนุพันธ์ต่อไปนี้ ถ้าอนุพันธ์ดังกล่าวหาค่าได้ ในกรณีที่หาค่าไม่ได้ ให้ระบุว่าหาค่าไม่ได้
+
+    1.  $\displaystyle f'(x)$ เมื่อ $f(x)=g(x)h(x)k(x)$
+
+    2.  $\displaystyle f^{(n)}(0)$ เมื่อ $\displaystyle f(x)=\sum_{i=1}^k x^i$ โดยที่ $k$ และ $n$ เป็นจำนวนนับ
+
+    3.  $\displaystyle\frac{d}{dt}\frac1{1-t}$ และ $\displaystyle\frac{d^2}{dt^2}\frac1{1-t}$
+
+    4.  $\displaystyle\frac{d}{dt}\frac{f(t)}t$ เมื่อ $f$ เป็นฟังก์ชันซึ่ง $\displaystyle\frac{d}{dt}f(t)=\frac{f(t)}t$ สำหรับทุกๆ $t\neq0$
+
+    5.  $f'(-1)$, $f'(-\frac23)$, $f'(0)$, $f'(1)$ เมื่อ $f(x)=x\sqrt{1+x}$
+
+    6.  $\displaystyle\left.\frac d{dx}\,\frac x{\sqrt{1+x}-\sqrt{1-x}}\right|_{x=0}$
+
+    7.  $\displaystyle\frac {dy}{dx}\;$, $\displaystyle\left.\frac {dy}{dx}\,\right|_{x=0}$, $\displaystyle\left.\frac {dy}{dx}\,\right|_{x=0.25}$, $\displaystyle\left.\frac {dy}{dx}\,\right|_{x=1}$ เมื่อ $\displaystyle y=\frac{1-\sqrt x}{\sqrt{1-x}}$
+
+    8.  $\displaystyle\frac d{dx}\,\left(x^2\sqrt{1+x}\right)$
+
+    9.  $\displaystyle\frac {d^2y}{dx^2}$ เมื่อ $y=(1+x^2)\sqrt{1-2x}$ ( หาอนุพันธ์ของ $\sqrt{1-2x}$ และ $1/\sqrt{1-2x}$ ก่อน)
+
+    10. $\displaystyle\frac {d^{10}y}{dx^{10}}$ เมื่อ $y=\left(x^5-x^4-x^3-x^2-x-1\right)\left(x^5+2x^4+2x^3+2x^2+2x+2\right)$
+
+### Solution:
+
+1.  Given the function $f(x) = g(x)h(x)k(x)$, we apply the product rule for differentiation.
+
+The product rule for three functions $g(x), h(x), k(x)$ is:
+
+$$
+f'(x) = g'(x)h(x)k(x) + g(x)h'(x)k(x) + g(x)h(x)k'(x)
+$$
+
+Therefore, the derivative of $f(x) = g(x)h(x)k(x)$ is:
+
+$$
+f'(x) = g'(x)h(x)k(x) + g(x)h'(x)k(x) + g(x)h(x)k'(x)
+$$
+
+2.  Given $f(x) = \sum_{i=1}^k x^i = x + x^2 + x^3 + \dots + x^k$, we aim to find $f^{(n)}(0)$.
+
+The general form of the function is a sum of powers of $x$. The derivative of each term $x^i$ is:
+
+$$
+\frac{d}{dx}x^i = ix^{i-1}
+$$
+
+Now, for the $n$-th derivative $f^{(n)}(x)$:
+
+-   If $n \leq k$, $f^{(n)}(x)$ will be non-zero.
+-   If $n > k$, all terms become zero because derivatives of powers of $x$ vanish after the $k$-th derivative.
+
+Evaluating at $x = 0$:
+
+-   If $n > 1$, $f^{(n)}(0) = 0$ for all terms except the $n$-th power, where $i = n$, leading to:
+
+$$
+f^{(n)}(0) = n! \text{ (if } n \leq k \text{)}
+$$
+
+$$
+f^{(n)}(0) = 0 \text{ (if } n > k \text{)}
+$$
+
+3.  The solution is given as follows:
+
+-   First derivative $\frac{d}{dt} \frac{1}{1-t}$
+
+Let $f(t) = \frac{1}{1-t}$.
+
+We use the chain rule for differentiation:
+
+$$
+\frac{d}{dt} \frac{1}{1-t} = \frac{d}{dt} (1-t)^{-1}
+$$
+
+Using the power rule:
+
+$$
+= -1(1-t)^{-2} \cdot (-1) = \frac{1}{(1-t)^2}
+$$
+
+-   Second derivative $\frac{d^2}{dt^2} \frac{1}{1-t}$
+
+To find the second derivative, differentiate $\frac{1}{(1-t)^2}$ again:
+
+$$
+\frac{d^2}{dt^2} \frac{1}{1-t} = \frac{d}{dt} \frac{1}{(1-t)^2}
+$$
+
+Using the chain rule:
+
+$$
+= 2(1-t)^{-3} \cdot (-1) = \frac{2}{(1-t)^3}
+$$
+
+4.  We are asked to find $\frac{d}{dt} \left( \frac{f(t)}{t} \right)$, where it is given that $\frac{d}{dt} f(t) = \frac{f(t)}{t}$ for all $t \neq 0$.
+
+We use the quotient rule for differentiation:
+
+$$
+\frac{d}{dt} \left( \frac{f(t)}{t} \right) = \frac{t \cdot \frac{d}{dt} f(t) - f(t) \cdot \frac{d}{dt} t}{t^2}
+$$
+
+Now, substitute $\frac{d}{dt} f(t) = \frac{f(t)}{t}$:
+
+$$
+= \frac{t \cdot \frac{f(t)}{t} - f(t) \cdot 1}{t^2}
+$$
+
+Simplify the expression:
+
+$$
+= \frac{f(t) - f(t)}{t^2} = 0
+$$
+
+Therefore,
+
+$$
+\frac{d}{dt} \left( \frac{f(t)}{t} \right) = 0 \quad \text{for all } t \neq 0
+$$
+
+5.  Given $f(x) = x\sqrt{1+x}$, we want to find the derivatives at specific points $f'(-1)$, $f'(-\frac{2}{3})$, $f'(0)$, and $f'(1)$.
+
+**Step 1:** **Find the derivative of** $f(x)$
+
+We use the product rule for $f(x) = x \cdot \sqrt{1+x}$:
+
+$$
+f'(x) = \frac{d}{dx} \left( x \right) \cdot \sqrt{1+x} + x \cdot \frac{d}{dx} \left( \sqrt{1+x} \right)
+$$
+
+The derivative of $\sqrt{1+x}$ is $\frac{1}{2\sqrt{1+x}}$, so:
+
+$$
+f'(x) = 1 \cdot \sqrt{1+x} + x \cdot \frac{1}{2\sqrt{1+x}} = \sqrt{1+x} + \frac{x}{2\sqrt{1+x}}
+$$
+
+**Step 2:** **Evaluate at specific points**
+
+-   **At** $x = -1$:
+
+$$
+f'(-1) = \sqrt{1+(-1)} + \frac{-1}{2\sqrt{1+(-1)}} = \sqrt{0} + \frac{-1}{2\sqrt{0}} \text{( undefined term due to division by 0)}
+$$
+
+-   **At** $x = -\frac{2}{3}$:
+
+$$
+f'\left( -\frac{2}{3} \right) = \sqrt{1 - \frac{2}{3}} + \frac{-\frac{2}{3}}{2\sqrt{1-\frac{2}{3}}} = \sqrt{\frac{1}{3}} + \frac{-\frac{2}{3}}{2\sqrt{\frac{1}{3}}}
+$$
+
+$$
+= \frac{1}{\sqrt{3}} + \frac{-\frac{2}{3}}{2 \cdot \frac{1}{\sqrt{3}}} = \frac{1}{\sqrt{3}} - \frac{2}{2\sqrt{3}} = 0
+$$
+
+-   **At** $x = 0$:
+
+$$
+f'(0) = \sqrt{1+0} + \frac{0}{2\sqrt{1+0}} = \sqrt{1} + 0 = 1
+$$
+
+-   **At** $x = 1$:
+
+$$
+f'(1) = \sqrt{1+1} + \frac{1}{2\sqrt{1+1}} = \sqrt{2} + \frac{1}{2\sqrt{2}} = \sqrt{2} + \frac{1}{2\sqrt{2}} = \frac{2\sqrt{2}}{2} = \frac{3\sqrt{2}}{2}
+$$
+
+**Step 3:** **Final Results**:
+
+$$
+f'(-1) = \text{undefined}, \quad f'\left( -\frac{2}{3} \right) = 0, \quad f'(0) = 1, \quad f'(1) = \frac{3\sqrt{2}}{2}
+$$
+
+6.  We are asked to find the derivative of $\frac{x}{\sqrt{1+x} - \sqrt{1-x}}$ at $x = 0$.
+
+**Step 1:** **Differentiate** $f(x)$:
+
+Let $f(x) = \frac{x}{\sqrt{1+x} - \sqrt{1-x}}$. To differentiate, we use the quotient rule:
+
+$$
+f'(x) = \frac{(\sqrt{1+x} - \sqrt{1-x}) \cdot 1 - x \cdot \left( \frac{1}{2\sqrt{1+x}} + \frac{1}{2\sqrt{1-x}} \right)}{(\sqrt{1+x} - \sqrt{1-x})^2}
+$$
+
+This can be simplified to:
+
+$$
+f'(x) = \frac{x \sqrt{1 - x} + x \sqrt{x + 1} + 2 \sqrt{1 - x} - 2 \sqrt{x + 1}}{4 \left( x^2 + \sqrt{1 - x} \sqrt{x + 1} - 1 \right)}
+$$
+
+We want to find $f'(0)$ using the expression:
+
+$$
+f'(x) = \frac{x \sqrt{1 - x} + x \sqrt{x + 1} + 2 \sqrt{1 - x} - 2 \sqrt{x + 1}}{4 \left( x^2 + \sqrt{1 - x} \sqrt{x + 1} - 1 \right)}
+$$
+
+**Step 2: Evaluate the Limit at** $x = 0$
+
+-   **Evaluate the numerator**:
+
+    -   At $x = 0$: $$
+        0 \cdot \sqrt{1 - 0} + 0 \cdot \sqrt{0 + 1} + 2 \sqrt{1 - 0} - 2 \sqrt{0 + 1} = 0 + 0 + 2 - 2 = 0
+        $$
+    -   The numerator equals $0$.
+
+-   **Evaluate the denominator**:
+
+    -   At $x = 0$: $$
+        4 \left( 0^2 + \sqrt{1 - 0} \sqrt{0 + 1} - 1 \right) = 4(0 + 1 - 1) = 0
+        $$
+    -   The denominator also equals $0$.
+
+    Since the limit is of the indeterminate form $\frac{0}{0}$, we apply **L'Hospital's Rule**.
+
+**Step 3: Differentiate the Numerator and Denominator**
+
+-   **Differentiate the numerator**: The derivative of the numerator, using the product and chain rules: $$
+      \text{Numerator}' = \left( x \sqrt{1 - x} \right)' + \left( x \sqrt{x + 1} \right)' + \left( 2 \sqrt{1 - x} \right)' - \left( 2 \sqrt{x + 1} \right)'
+      $$
+
+    Simplifying:
+
+$$
+    \text{Numerator}' = \sqrt{1 - x} - \frac{x}{2\sqrt{1 - x}} + \sqrt{x + 1} + \frac{x}{2\sqrt{x + 1}} - \frac{1}{\sqrt{1 - x}} - \frac{1}{\sqrt{x + 1}}
+$$
+
+The simplified form of the derivative is:
+
+$$
+\text{Numerator}' = \frac{3x}{2} \left( \frac{1}{\sqrt{x + 1}} - \frac{1}{\sqrt{1 - x}} \right).
+$$
+
+-   **Differentiate the denominator**: The derivative of the denominator is: $$
+      \text{Denominator}' = 4 \left( 2x + \frac{1}{2\sqrt{1 - x}} \cdot \frac{1}{2\sqrt{x + 1}} - \frac{1}{2\sqrt{x + 1}} \cdot \frac{1}{2\sqrt{1 - x}} \right)
+      $$ Simplifying: $$
+      \text{Denominator}' = 8x
+      $$
+
+We substitute $x = 0$ into the simplified expressions:
+
+-   **Numerator at** $x = 0$:
+
+    $$
+      \text{Numerator}'(0) = \frac{3 \cdot 0}{2} \left( \frac{1}{\sqrt{0 + 1}} - \frac{1}{\sqrt{1 - 0}} \right) = 0.
+    $$
+
+-   **Denominator at** $x = 0$:
+
+    $$
+      \text{Denominator}'(0) = 8 \cdot 0 = 0.
+    $$
+
+Since we again encounter the indeterminate form $\frac{0}{0}$, we need to apply **L'Hospital's Rule** a second time.
+
+**Step 4: Differentiate Again**
+
+-   **Second Derivative of the Numerator**:
+
+    We differentiate the numerator:
+
+    $$
+      \text{Numerator}'' = \frac{3}{2} \left( \frac{1}{\sqrt{x + 1}} - \frac{1}{\sqrt{1 - x}} \right) + \frac{3x}{2} \left( -\frac{1}{2(1 + x)^{3/2}} - \frac{1}{2(1 - x)^{3/2}} \right).
+      $$
+
+-   **Second Derivative of the Denominator**:
+
+    The second derivative of the denominator is:
+
+    $$
+      \text{Denominator}'' = 8.
+      $$
+
+**Step 5: Evaluate the Limit Again**
+
+Now, the limit becomes:
+
+$$
+f'(0) = \lim_{x \to 0} \frac{\text{Numerator}''(x)}{\text{Denominator}''(x)}.
+$$
+
+Evaluating the second derivative of the numerator at $x = 0$:
+
+-   **Numerator at** $x = 0$:
+
+$$
+      \text{Numerator}''(0) = \frac{3}{2} \left( 1 - 1 \right) + \frac{3 \cdot 0}{2} \left( -\frac{1}{2(1)^{3/2}} - \frac{1}{2(1)^{3/2}} \right) = 0.
+  $$
+
+-   **Denominator at** $x = 0$:
+
+    $$
+     \text{Denominator}''(0) = 8.
+     $$
+
+Since this results in a $\frac{0}{8}$ form, we can directly conclude:
+
+$$
+f'(0) = \frac{0}{8} = 0.
+$$
+
+Thus, the value of $f'(0)$ is:
+
+$$
+f'(0) = 0.
+$$
+
+**Step 6: Final Evaluation**
+
+With the second derivative of the numerator evaluated to zero, we can conclude:
+
+$$
+f'(0) = \frac{0}{8} = 0.
+$$
+
+Thus, the value of $f'(0)$ is:
+
+$$
+f'(0) = 0.
+$$
+
+**Step 7:** **Conclusion**
+
+By applying L'Hospital's Rule twice and differentiating the numerator and denominator, we confirm that $f'(0) = 0$.
+
+7.  We need to compute the derivative $\frac{dy}{dx}$ for the function
+
+$$
+y = \frac{1 - \sqrt{x}}{\sqrt{1 - x}}
+$$
+
+and evaluate it at the points $x = 0$, $x = 0.25$, and $x = 1$.
+
+**Step 1:** **Differentiate** $y$:
+
+We will use the quotient rule for differentiation, which states:
+
+$$
+\frac{d}{dx}\left(\frac{u}{v}\right) = \frac{u'v - uv'}{v^2}
+$$
+
+where $u = 1 - \sqrt{x}$ and $v = \sqrt{1 - x}$.
+
+-   Find $u'$: $$
+    u' = \frac{d}{dx}(1 - \sqrt{x}) = -\frac{1}{2\sqrt{x}}
+    $$
+
+-   Find $v'$: $$
+    v' = \frac{d}{dx}(\sqrt{1 - x}) = -\frac{1}{2\sqrt{1 - x}}
+    $$
+
+Using the quotient rule: $$
+\frac{dy}{dx} = \frac{\left(-\frac{1}{2\sqrt{x}}\right) \sqrt{1 - x} - (1 - \sqrt{x}) \left(-\frac{1}{2\sqrt{1 - x}}\right)}{1 - x}
+$$
+
+This simplifies to:
+
+$$
+\frac{dy}{dx} = \frac{-\frac{\sqrt{1 - x}}{2\sqrt{x}} + \frac{(1 - \sqrt{x})}{2\sqrt{1 - x}}}{1 - x}
+$$
+
+**Step 2:** **Evaluate** $\frac{dy}{dx}$ at specified points:
+
+-   **At** $x = 0$:
+
+$$
+    \frac{dy}{dx}\bigg|_{x=0} = \text{undefined} \quad (\text{since } \sqrt{0} \text{ in denominator})
+$$
+
+-   **At** $x = 0.25$:
+
+$$
+    \frac{dy}{dx}\bigg|_{x=0.25} = \text{Calculate using the derived expression.}
+$$
+
+Plugging $x = 0.25$ into the expression:
+
+$$
+    = \frac{-\frac{\sqrt{1 - 0.25}}{2\sqrt{0.25}} + \frac{(1 - \sqrt{0.25})}{2\sqrt{1 - 0.25}}}{1 - 0.25}
+$$
+
+$$
+    = \frac{-\frac{\sqrt{0.75}}{2 \cdot 0.5} + \frac{(1 - 0.5)}{2\sqrt{0.75}}}{0.75}
+$$
+
+$$
+    = \frac{-\frac{\sqrt{0.75}}{1} + \frac{0.5}{2\sqrt{0.75}}}{0.75}
+$$
+
+$$
+    = \frac{-\sqrt{0.75} + \frac{0.25}{\sqrt{0.75}}}{0.75}
+$$
+
+-   **At** $x = 1$:
+
+$$
+    \frac{dy}{dx}\bigg|_{x=1} = \text{undefined} \quad (\text{since } \sqrt{1 - 1} \text{ in denominator})
+$$
+
+**Step 3:** **Conclusion**
+
+The derivatives evaluated at the points are: - $\frac{dy}{dx}\bigg|_{x=0}$: undefined - $\frac{dy}{dx}\bigg|_{x=0.25}$: evaluate using the derived expression - $\frac{dy}{dx}\bigg|_{x=1}$: undefined
+
+8.  Differentiate the function
+
+$$
+y = x^2\sqrt{1 + x}
+$$
+
+Using the product rule:
+
+-   Let $u = x^2$ and $v = \sqrt{1 + x}$.
+
+    -   $u' = 2x$
+    -   $v' = \frac{1}{2\sqrt{1 + x}}$
+
+-   Apply the product rule:
+
+$$
+\frac{dy}{dx} = u'v + uv' = (2x)\sqrt{1 + x} + x^2\left(\frac{1}{2\sqrt{1 + x}}\right)
+$$
+
+-   Combine over a common denominator:
+
+$$
+= \frac{2x(1 + x) + \frac{x^2}{2}}{\sqrt{1 + x}} = \frac{2x + \frac{5x^2}{2}}{\sqrt{1 + x}}
+$$
+
+**Conclusion**
+
+The derivative is
+
+$$
+\frac{dy}{dx} = \frac{2x + \frac{5x^2}{2}}{\sqrt{1 + x}}
+$$
+
+9.  We need to find the second derivative
+
+$$
+\frac{d^2y}{dx^2}
+$$
+
+for the function
+
+$$
+y = (1 + x^2)\sqrt{1 - 2x}
+$$
+
+**Solution**
+
+-   **Differentiate** $\sqrt{1 - 2x}$:
+
+    Using the chain rule: $$
+    v = \sqrt{1 - 2x} \implies v' = \frac{1}{2\sqrt{1 - 2x}} \cdot (-2) = -\frac{1}{\sqrt{1 - 2x}}
+    $$
+
+-   **Differentiate** $\frac{1}{\sqrt{1 - 2x}}$:
+
+    Using the quotient rule: $$
+    w = (1 - 2x)^{-1/2} \implies w' = -\frac{1}{2}(1 - 2x)^{-3/2} \cdot (-2) = \frac{1}{(1 - 2x)^{3/2}}
+    $$
+
+-   **Differentiate** $y$ using the product rule:
+
+    Let $u = 1 + x^2$ and $v = \sqrt{1 - 2x}$.
+
+    -   $u' = 2x$
+    -   $v' = -\frac{1}{\sqrt{1 - 2x}}$
+
+    Applying the product rule: $$
+    \frac{dy}{dx} = u'v + uv' = (2x)\sqrt{1 - 2x} + (1 + x^2)\left(-\frac{1}{\sqrt{1 - 2x}}\right)
+    $$
+
+    Simplifying: $$
+    = 2x\sqrt{1 - 2x} - \frac{1 + x^2}{\sqrt{1 - 2x}} = \frac{2x(1 - 2x) - (1 + x^2)}{\sqrt{1 - 2x}}
+    $$
+
+    Further simplifying: $$
+    = \frac{2x - 4x^2 - 1 - x^2}{\sqrt{1 - 2x}} = \frac{-5x^2 + 2x - 1}{\sqrt{1 - 2x}}
+    $$
+
+-   **Differentiate** $\frac{dy}{dx}$ to find $\frac{d^2y}{dx^2}$:
+
+    Let $p = -5x^2 + 2x - 1$ and $q = \sqrt{1 - 2x}$.
+
+    Using the quotient rule: $$
+    \frac{d^2y}{dx^2} = \frac{p'q - pq'}{q^2}
+    $$
+
+    -   Find $p'$: $$
+        p' = -10x + 2
+        $$
+
+    -   Find $q'$ (already computed): $$
+        q' = -\frac{1}{\sqrt{1 - 2x}}
+        $$
+
+    Now substituting: $$
+    \frac{d^2y}{dx^2} = \frac{(-10x + 2)\sqrt{1 - 2x} - (-5x^2 + 2x - 1)\left(-\frac{1}{\sqrt{1 - 2x}}\right)}{1 - 2x}
+    $$
+
+    Simplifying: $$
+    = \frac{(-10x + 2)(1 - 2x) + (5x^2 - 2x + 1)}{(1 - 2x)^{3/2}}
+    $$
+
+-   **Conclusion**
+
+Thus, the second derivative is
+
+$$
+\frac{d^2y}{dx^2} = \frac{(-10x + 2)(1 - 2x) + (5x^2 - 2x + 1)}{(1 - 2x)^{3/2}}
+$$
+
+10. We need to find the tenth derivative
+
+$$
+\frac{d^{10}y}{dx^{10}}
+$$
+
+for the function
+
+$$
+y = (x^5 - x^4 - x^3 - x^2 - x - 1)(x^5 + 2x^4 + 2x^3 + 2x^2 + 2x + 2).
+$$
+
+**Solution**
+
+-   **Identify the degree of** $y$:
+
+    Each polynomial is of degree 5. The product of two degree 5 polynomials results in a polynomial of degree
+
+    $$
+    5 + 5 = 10.
+    $$
+
+-   **Differentiate** $y$:
+
+    Since $y$ is a polynomial of degree 10, the tenth derivative will be a constant if the leading term is not zero. The leading term of $y$ is obtained by multiplying the leading terms of the two polynomials:
+
+    $$
+    (x^5)(x^5) = x^{10}.
+    $$
+
+-   **Compute the tenth derivative**:
+
+    The $n$-th derivative of $x^n$ is given by:
+
+    $$
+    \frac{d^n}{dx^n}(x^n) = n!.
+    $$
+
+    Therefore,
+
+    $$
+    \frac{d^{10}}{dx^{10}}(x^{10}) = 10!.
+    $$
+
+-   **Conclusion**
+
+The tenth derivative is
+
+$$
+\frac{d^{10}y}{dx^{10}} = 10!.
+$$
+
+Thus,
+
+$$
+\frac{d^{10}y}{dx^{10}} = 3628800.
+$$
