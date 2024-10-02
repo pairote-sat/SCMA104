@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.24)  24 SEP 2024 22:14
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.24)  2 OCT 2024 13:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -688,12 +688,6 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box85
 \tcb@temp=\box86
 \tcb@temp=\box87
-) (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip63
-\bibsep=\skip64
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count335
 ) (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -725,19 +719,19 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count336
+\c@section@level=\count335
 ) (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen284
-\Hy@linkcounter=\count337
-\Hy@pagecounter=\count338
+\Hy@linkcounter=\count336
+\Hy@pagecounter=\count337
 (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-07-10 v7.01j Hyperref: PDFDocEncoding definition (HO)
 ) (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count339
+\Hy@SavedSpaceFactor=\count338
 (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-07-10 v7.01j Hyperref: PDF Unicode definition (HO)
 )
@@ -749,7 +743,7 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count340
+\c@Hy@tempcnt=\count339
 (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip19
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -761,7 +755,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count341
+\Fld@menulength=\count340
 \Field@Width=\dimen286
 \Fld@charsize=\dimen287
 Package hyperref Info: Hyper figures OFF on input line 6042.
@@ -775,18 +769,18 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count342
-\c@Item=\count343
-\c@Hfootnote=\count344
+\Hy@abspage=\count341
+\c@Item=\count342
+\c@Hfootnote=\count343
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
 File: hxetex.def 2024-07-10 v7.01j Hyperref driver for XeTeX
 \pdfm@box=\box88
-\c@Hy@AnnotLevel=\count345
-\HyField@AnnotCount=\count346
-\Fld@listcount=\count347
-\c@bookmark@seq@number=\count348
+\c@Hy@AnnotLevel=\count344
+\HyField@AnnotCount=\count345
+\Fld@listcount=\count346
+\c@bookmark@seq@number=\count347
 (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
@@ -797,62 +791,41 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip65
+\Hy@SectionHShift=\skip63
 ) (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
 File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
-\BKM@id=\count349
-)) (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks45
-\thm@bodyfont=\toks46
-\thm@headfont=\toks47
-\thm@notefont=\toks48
-\thm@headpunct=\toks49
-\thm@preskip=\skip66
-\thm@postskip=\skip67
-\thm@headsep=\skip68
-\dth@everypar=\toks50
-)
-\c@theorem=\count350
-\c@lemma=\count351
-\c@corollary=\count352
-\c@proposition=\count353
-\c@conjecture=\count354
-\c@definition=\count355
-\c@example=\count356
-\c@exercise=\count357
-\c@hypothesis=\count358
-(./SCMA104bookdownproj.aux)
+\BKM@id=\count348
+)) (./SCMA104bookdownproj.aux)
 \openout1 = `SCMA104bookdownproj.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 135.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 117.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 135.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 117.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 135.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 117.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 135.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 117.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999893790647206.
@@ -880,7 +853,7 @@ Package fontspec Info:
 (fontspec)             <->s*[0.9999893790647206]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 9.99985pt on input line 135.
+(Font)              scaled to size 9.99985pt on input line 117.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999893790647206.
@@ -916,15 +889,15 @@ Package fontspec Info:
 (fontspec)             <->s*[0.9999893790647206]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 9.99985pt on input line 135.
+(Font)              scaled to size 9.99985pt on input line 117.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 135.
+(Font)              `operators' in the math version `normal' on input line 117.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 135.
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 117.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 135.
+(Font)              `operators' in the math version `bold' on input line 117.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 135.
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 117.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999893790647206.
@@ -990,13 +963,13 @@ Package fontspec Info:
 (fontspec)             <->s*[1.000089378002627]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 135.
+(Font)              `symbols' in the math version `normal' on input line 117.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 135.
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 117.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 135.
+(Font)              `symbols' in the math version `bold' on input line 117.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 135.
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 117.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999893790647206.
@@ -1056,19 +1029,19 @@ Package fontspec Info:
 (fontspec)             <->s*[0.9998893801268141]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 135.
+(Font)              `largesymbols' in the math version `normal' on input line 117.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 135.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 117.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 135.
+(Font)              `largesymbols' in the math version `bold' on input line 117.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 135.
-LaTeX Info: Redefining \microtypecontext on input line 135.
-Package microtype Info: Applying patch `item' on input line 135.
-Package microtype Info: Applying patch `toc' on input line 135.
-Package microtype Info: Applying patch `eqnum' on input line 135.
-Package microtype Info: Applying patch `footnote' on input line 135.
-Package microtype Info: Applying patch `verbatim' on input line 135.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 117.
+LaTeX Info: Redefining \microtypecontext on input line 117.
+Package microtype Info: Applying patch `item' on input line 117.
+Package microtype Info: Applying patch `toc' on input line 117.
+Package microtype Info: Applying patch `eqnum' on input line 117.
+Package microtype Info: Applying patch `footnote' on input line 117.
+Package microtype Info: Applying patch `verbatim' on input line 117.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -1294,40 +1267,40 @@ Package microtype Warning: Unknown slot number of character
 (microtype)                in font encoding `TU' in inheritance list
 (microtype)                `microtype.cfg/411(protrusion)'.
 
-Package hyperref Info: Link coloring OFF on input line 135.
+Package hyperref Info: Link coloring OFF on input line 117.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 21.9048pt on input line 137.
+(Font)              scaled to size 21.9048pt on input line 120.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 15.21167pt on input line 137.
+(Font)              scaled to size 15.21167pt on input line 120.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 11.99982pt on input line 137.
+(Font)              scaled to size 11.99982pt on input line 120.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.99988pt on input line 137.
+(Font)              scaled to size 7.99988pt on input line 120.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.99991pt on input line 137.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 137.
+(Font)              scaled to size 5.99991pt on input line 120.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 120.
 (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.0011pt on input line 137.
+(Font)              scaled to size 12.0011pt on input line 120.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00073pt on input line 137.
+(Font)              scaled to size 8.00073pt on input line 120.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 137.
+(Font)              scaled to size 6.00055pt on input line 120.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 137.
+(Font)              scaled to size 11.99872pt on input line 120.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 137.
+(Font)              scaled to size 7.99915pt on input line 120.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 137.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 137.
+(Font)              scaled to size 5.99936pt on input line 120.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 120.
 (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 137.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 120.
 (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/Users/Kaemyui/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1337,19 +1310,20 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 [1
 
 
+
 ]
 
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/sl' in size <10> not available
-(Font)              Font shape `TU/THSarabunNew(0)/m/it' tried instead on input line 140.
+(Font)              Font shape `TU/THSarabunNew(0)/m/it' tried instead on input line 123.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/it' will be
-(Font)              scaled to size 12.67639pt on input line 140.
+(Font)              scaled to size 12.67639pt on input line 123.
 [2
 
 ]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 31.53886pt on input line 140.
+(Font)              scaled to size 31.53886pt on input line 123.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
-(Font)              scaled to size 31.53886pt on input line 140.
+(Font)              scaled to size 31.53886pt on input line 123.
 (./SCMA104bookdownproj.toc
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
 (Font)              scaled to size 12.67639pt on input line 1.
@@ -1369,22 +1343,15 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 3.
-)
+
+
+[3])
 \tf@toc=\write4
 \openout4 = `SCMA104bookdownproj.toc'.
 
 
 
-[3]
-
-[4
-
-]
-Chapter 1.
-LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 26.29083pt on input line 142.
-LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
-(Font)              scaled to size 26.29083pt on input line 142.
+[4]
 File: images/fig-covid-19.jpeg Graphic file (type bmp)
 <images/fig-covid-19.jpeg>
 File: images/fig-blood-glucose.png Graphic file (type bmp)
@@ -1393,181 +1360,203 @@ File: images/fig-drug-absorption.jpeg Graphic file (type bmp)
 <images/fig-drug-absorption.jpeg>
 
 
-[5]
+[1
 
-[6]
 
-[7]
+]
 
-[8]
+[2]
+
+[3]
+
+[4]
 File: images/fig-binary-fission.png Graphic file (type bmp)
 <images/fig-binary-fission.png>
-
-
-[9]
 File: SCMA104bookdownproj_files/figure-latex/population-plot-1.pdf Graphic file (type pdf)
 <use SCMA104bookdownproj_files/figure-latex/population-plot-1.pdf>
+
+
+[5]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 8.87347pt on input line 242.
+(Font)              scaled to size 8.87347pt on input line 255.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 6.3382pt on input line 242.
+(Font)              scaled to size 6.3382pt on input line 255.
+
+Overfull \hbox (23.79756pt too wide) detected at line 259
+[][][][][][][][][] [] [][][][][][][][][][] [] [][][][][][] [] [][]
+ []
 
 
-[10]
+
+[6]
+Overfull \hbox (9.22911pt too wide) in paragraph at lines 279--281
+[]\TU/THSarabunNew(0)/m/n/10 เมื่อ แทน จำนวน แบคทีเรีย ที่ เกิด ใหม่ และ ตาย ไป ระหว่าง ช่วง เวลา ที่ กำหนด ลง ใน สมการ @ref(eq:population-
+ []
+
 LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 12.67639pt on input line 279.
+(Font)              scaled to size 12.67639pt on input line 302.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 8.87347pt on input line 279.
+(Font)              scaled to size 8.87347pt on input line 302.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 6.3382pt on input line 279.
+(Font)              scaled to size 6.3382pt on input line 302.
 
 
-[11]
+[7]
+Underfull \hbox (badness 2042) in paragraph at lines 342--345
+[]\TU/THSarabunNew(1)/m/n/10 เขียน แบบ จำลอง ทาง คณิตศาสตร์ โดย ใช้ ค่า $[]$ และ $[]$ ที่ ประมาณ ค่า ได้ (สมการ
+ []
+
 File: images/fig-yeast-cells.png Graphic file (type bmp)
 <images/fig-yeast-cells.png>
 
-Underfull \hbox (badness 6944) in paragraph at lines 357--358
+Underfull \hbox (badness 6944) in paragraph at lines 387--388
 [][]\TU/THSarabunNew(1)/m/n/10 เภสัช จลนศาสตร์ (Pharmacokinetics) และ เภสัช พลศาสตร์ (Pharmacodynam-
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 357--358
+Underfull \hbox (badness 1297) in paragraph at lines 387--388
 \TU/THSarabunNew(1)/m/n/10 ics) (https:// ns.mahidol.ac.th/ english/ th/ departments/ MN/ th/ doc/ km54/ เภสัช
  []
 
 
 
-[12]
+[8]
 File: images/fig-drub-absorption.png Graphic file (type bmp)
 <images/fig-drub-absorption.png>
 
 
-[13]
+[9]
 
-[14]
-Chapter 2.
-
-
-[15
+[10
 
 ]
+
+[11]
 File: images/fig-tangent-line.png Graphic file (type bmp)
 <images/fig-tangent-line.png>
 File: images/fig-area-under-curve.png Graphic file (type bmp)
 <images/fig-area-under-curve.png>
 
 
-[16]
+[12]
 File: images/fig-tangent-line-2.png Graphic file (type bmp)
 <images/fig-tangent-line-2.png>
 
 
-[17]
+[13]
 File: images/fig-right-limit.png Graphic file (type bmp)
 <images/fig-right-limit.png>
 File: images/fig-left-limit.png Graphic file (type bmp)
 <images/fig-left-limit.png>
-
-
-[18]
 File: images/fig-limit-1.png Graphic file (type bmp)
 <images/fig-limit-1.png>
 
 
-[19]
+[14]
 
-[20]
+[15]
 
-[21]
+[16]
 
-[22]
+[17]
+
+[18]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/n' will be
-(Font)              scaled to size 18.25398pt on input line 899.
+(Font)              scaled to size 18.25398pt on input line 912.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
-(Font)              scaled to size 18.25398pt on input line 899.
+(Font)              scaled to size 18.25398pt on input line 912.
 
 
-[23]
+[19]
 File: images/fig-continuity-1.png Graphic file (type bmp)
 <images/fig-continuity-1.png>
 
 
-[24]
+[20]
 
-[25]
+[21]
 File: images/fig-continuity-2.png Graphic file (type bmp)
 <images/fig-continuity-2.png>
 
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 1176--1178
+Underfull \hbox (badness 10000) in paragraph at lines 1163--1165
 
  []
 
 
 
-[27]
+[22]
 
-[28
+[23]
+
+[24
 
 ]
-Chapter 3.
 File: images/fig-derivative-1.png Graphic file (type bmp)
 <images/fig-derivative-1.png>
 File: images/fig-derivative-2.png Graphic file (type bmp)
 <images/fig-derivative-2.png>
 
 
-[29]
+[25]
 
-[30]
+[26]
+Underfull \vbox (badness 3657) has occurred while \output is active []
 
-[31]
 
-[32]
-Overfull \hbox (25.34334pt too wide) detected at line 1425
+
+[27]
+
+[28]
+Overfull \hbox (25.34334pt too wide) detected at line 1392
 [][][][][]
  []
 
 
 
-[33]
-Overfull \hbox (22.00453pt too wide) detected at line 1440
+[29]
+Overfull \hbox (22.00453pt too wide) detected at line 1405
 [][][][][] [] [][][] [] [][] [] [][] [] [][][][][][][] [] [][][] [] [][][] [] [][][] [] [][][] [] [][] [] [][] [] [][][][][][][] [] [][][] [] [][][] [] [][][][]
  []
 
 
-Overfull \hbox (15.70384pt too wide) in paragraph at lines 1453--1458
+Overfull \hbox (15.70384pt too wide) in paragraph at lines 1419--1424
 []\TU/THSarabunNew(1)/m/n/10 ถ้า ให้ $[] [] [][][][]$ เรา สามารถ ใช้ สัญลักษณ์ $[][][] [][][] [][][] [][][] [] [] [][]$ หรือ $[][] [][] [][] [][] [] [] []$
  []
 
 
 
-[34]
+[30]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/b/n' will be
-(Font)              scaled to size 15.21167pt on input line 1478.
+(Font)              scaled to size 15.21167pt on input line 1444.
 
-LaTeX Warning: Hyper reference `fig-mountain' on page 35 undefined on input line 1508.
+LaTeX Warning: Hyper reference `fig-mountain' on page 31 undefined on input line 1470.
 
 
 
-[35]
+[31]
 File: images/fig-derivative-3.png Graphic file (type bmp)
 <images/fig-derivative-3.png>
 
 
-[36]
+[32]
 
-[37]
-Overfull \hbox (24.6513pt too wide) in paragraph at lines 1632--1634
+[33]
+Overfull \hbox (24.6513pt too wide) in paragraph at lines 1593--1595
 []$[]$ \TU/THSarabunNew(1)/m/n/10 เมื่อ $[] [] [] []$ 
  []
 
-LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/it' will be
-(Font)              scaled to size 8.87347pt on input line 1662.
-LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/it' will be
-(Font)              scaled to size 6.3382pt on input line 1662.
 
+Underfull \vbox (badness 1845) has occurred while \output is active []
+
+
+
+[34]
+
+[35]
+
+[36]
+
+[37]
 
 [38]
 
@@ -1580,6 +1569,9 @@ LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/it' will be
 [42]
 
 [43]
+File: images/fig-derivative-4.png Graphic file (type bmp)
+<images/fig-derivative-4.png>
+
 
 [44]
 
@@ -1588,61 +1580,52 @@ LaTeX Font Info:    Font shape `TU/THSarabunNew(0)/m/it' will be
 [46]
 
 [47]
-File: images/fig-derivative-4.png Graphic file (type bmp)
-<images/fig-derivative-4.png>
-
 
 [48]
 
+LaTeX Warning: Hyper reference `fig-fly' on page 49 undefined on input line 2247.
+
+
+
 [49]
+File: images/fig-derivative-5.png Graphic file (type bmp)
+<images/fig-derivative-5.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2266--2268
+
+ []
+
+
+Underfull \vbox (badness 2197) has occurred while \output is active []
+
+
 
 [50]
+Underfull \vbox (badness 1043) has occurred while \output is active []
+
+
 
 [51]
 
 [52]
 
 [53]
-
-LaTeX Warning: Hyper reference `fig-fly' on page 54 undefined on input line 2312.
-
-File: images/fig-derivative-5.png Graphic file (type bmp)
-<images/fig-derivative-5.png>
-
-Underfull \hbox (badness 7888) in paragraph at lines 2327--2327
-[]\TU/THSarabunNew(0)/b/n/14.4 อนุพันธ์ ของ ฟังก์ชัน ตรีโกณมิติ และ อิน เวอร์ ส ของ ฟังก์ชัน
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2331--2333
+Underfull \hbox (badness 10000) in paragraph at lines 2418--2419
 
  []
 
 
 
 [54]
+Underfull \vbox (badness 6825) has occurred while \output is active []
+
+
 
 [55]
 
 [56]
 
 [57]
-Underfull \hbox (badness 10000) in paragraph at lines 2504--2505
-
- []
-
-
-
-[58]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[59]
-
-[60]
-
-[61]
 File: SCMA104bookdownproj_files/figure-latex/graph-logistic equation-1.pdf Graphic file (type pdf)
 <use SCMA104bookdownproj_files/figure-latex/graph-logistic equation-1.pdf>
 
@@ -1650,126 +1633,210 @@ Underfull \vbox (badness 2635) has occurred while \output is active []
 
 
 
-[62]
+[58]
 
-[63]
+[59]
 
-[64]
-Chapter 4.
-
-Underfull \hbox (badness 1242) in paragraph at lines 2738--2742
+[60]
+Underfull \hbox (badness 1242) in paragraph at lines 2639--2643
 []\TU/THSarabunNew(1)/m/n/10 หลัก การ หา อนุพันธ์ สามารถ นำ ไป ประยุกต์ ใช้ได้ ใน หลาก หลาย สาขา วิชาชีพ ไม่ ว่า จะ เป็น ธุรกิจ
  []
 
 
 
-[65
+[61
 
 ]
 
+[62]
+
+[63]
+
+[64]
+
+[65]
+
 [66]
+File: images/graph1.png Graphic file (type bmp)
+<images/graph1.png>
+
 
 [67]
+File: images/graph2.png Graphic file (type bmp)
+<images/graph2.png>
+
 
 [68]
+File: images/graph3.png Graphic file (type bmp)
+<images/graph3.png>
+
 
 [69]
 
 [70]
+File: images/graph4.png Graphic file (type bmp)
+<images/graph4.png>
+File: images/graph5.png Graphic file (type bmp)
+<images/graph5.png>
+
 
 [71]
 
-LaTeX Warning: Hyper reference `Fig:graph1' on page 72 undefined on input line 3088.
-
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
-
-LaTeX Warning: Hyper reference `Fig:graph2' on page 72 undefined on input line 3126.
-
-
-
 [72]
-
-LaTeX Warning: Hyper reference `Fig:graph3' on page 73 undefined on input line 3166.
-
+File: images/graph6.png Graphic file (type bmp)
+<images/graph6.png>
 
 
 [73]
-
-LaTeX Warning: Hyper reference `Fig:graph4' on page 74 undefined on input line 3203.
-
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2006) in font TH Sarabun New/OT:script=thai;language=dflt;mapping=tex-text;!
-
-LaTeX Warning: Hyper reference `Fig:graph5' on page 74 undefined on input line 3211.
-
+File: images/graph7.png Graphic file (type bmp)
+<images/graph7.png>
 
 
 [74]
 
 [75]
-
-LaTeX Warning: Hyper reference `Fig:graph6' on page 76 undefined on input line 3321.
-
+File: images/graph8.png Graphic file (type bmp)
+<images/graph8.png>
 
 
 [76]
-
-LaTeX Warning: Hyper reference `fig-monod' on page 77 undefined on input line 3387.
-
-
-
-[77]
-
-[78]
-
-LaTeX Warning: Hyper reference `fig-nitrogen' on page 79 undefined on input line 3451.
-
 Missing character: There is no ฒ ("E12) in font lmmi10!
 
 
+[77]
+File: images/graph9.png Graphic file (type bmp)
+<images/graph9.png>
+File: images/graph10.png Graphic file (type bmp)
+<images/graph10.png>
+
+
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 3468--3469
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3473--3483
+
+ []
+
+
+
 [79]
-
-LaTeX Warning: Hyper reference `fig-artery' on page 80 undefined on input line 3537.
-
-
-LaTeX Warning: Hyper reference `fig-box-area' on page 80 undefined on input line 3544.
-
+LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
+(Font)              scaled to size 15.21167pt on input line 3531.
+LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
+(Font)              scaled to size 10.14111pt on input line 3531.
+LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
+(Font)              scaled to size 7.60583pt on input line 3531.
 
 
 [80]
-Underfull \hbox (badness 10000) in paragraph at lines 3573--3574
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3578--3588
-
- []
-
-
 
 [81]
-LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 15.21167pt on input line 3640.
-LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 10.14111pt on input line 3640.
-LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 7.60583pt on input line 3640.
-
 
 [82]
 
-[83]
-No file SCMA104bookdownproj.bbl.
+[83
+
+]
+
+[84]
+Underfull \hbox (badness 10000) in paragraph at lines 3802--3805
+
+ []
+
+File: images/fig-area-1.png Graphic file (type bmp)
+<images/fig-area-1.png>
 
 
-[84] (./SCMA104bookdownproj.aux)
+[85]
+File: images/fig-area-2.png Graphic file (type bmp)
+<images/fig-area-2.png>
+
+
+[86]
+File: images/fig-area-3.png Graphic file (type bmp)
+<images/fig-area-3.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[87]
+
+[88]
+
+[89]
+
+[90]
+
+[91]
+
+[92
+
+]
+
+[93]
+
+[94]
+
+[95]
+
+[96]
+
+[97]
+
+[98]
+
+[99]
+
+[100]
+
+[101]
+
+[102]
+Overfull \hbox (24.6513pt too wide) in paragraph at lines 4555--4557
+[]$[]$ \TU/THSarabunNew(1)/m/n/10 เมื่อ $[] [] [] []$ 
+ []
+
+
+
+[103
+
+]
+
+[104]
+
+[105]
+Overfull \hbox (20.92055pt too wide) detected at line 4741
+[][][][][][] [] [] [] [] [] [] [] [][]
+ []
+
+
+
+[106]
+
+[107]
+Overfull \hbox (4.46082pt too wide) detected at line 4908
+[][] [] [] [] [] [] [] []
+ []
+
+
+
+[108]
+
+[109]
+
+[110]
+
+[111]
+
+[112]
+
+[113]
+
+[114] (./SCMA104bookdownproj.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
@@ -1779,12 +1846,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 31793 strings out of 476234
- 647092 string characters out of 5786213
- 1169328 words of memory out of 5000000
- 53828 multiletter control sequences out of 15000+600000
- 564656 words of font info for 106 fonts, out of 8000000 for 9000
+ 31556 strings out of 476234
+ 646933 string characters out of 5786213
+ 1163813 words of memory out of 5000000
+ 53590 multiletter control sequences out of 15000+600000
+ 564624 words of font info for 102 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,18n,126p,1016b,583s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,18n,126p,1016b,540s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on SCMA104bookdownproj.pdf (84 pages).
+Output written on SCMA104bookdownproj.pdf (118 pages).

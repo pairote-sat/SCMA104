@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.15)  25 SEP 2024 08:25
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.15)  28 SEP 2024 23:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1018,14 +1018,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \c@exercise=\count346
 \c@hypothesis=\count347
 
-(./SCMA104bookdownproSlidesj.aux
-
-LaTeX Warning: Label `uxe41uxe1auxe1auxe1duxe01uxe2buxe14' multiply defined.
-
-
-LaTeX Warning: Label `uxe41uxe1auxe1auxe1duxe01uxe2buxe14-1' multiply defined.
-
-)
+(./SCMA104bookdownproSlidesj.aux)
 \openout1 = `SCMA104bookdownproSlidesj.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
@@ -2066,248 +2059,233 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ] [171] [172
 
 ]
+File: images/graph1.png Graphic file (type bmp)
+<images/graph1.png>
 
-LaTeX Warning: Hyper reference `Fig:graph1' on page 173 undefined on input line
- 3052.
+[173] [174]
+File: images/graph2.png Graphic file (type bmp)
+<images/graph2.png>
+ [175
 
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2005) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-[173]
-
-LaTeX Warning: Hyper reference `Fig:graph2' on page 174 undefined on input line
- 3089.
-
-
-Underfull \vbox (badness 2435) has occurred while \output is active []
-
- [174
+] [176] [177
 
 ]
-[175] [176
+File: images/graph3.png Graphic file (type bmp)
+<images/graph3.png>
+ [178] [179] [180
 
 ]
+File: images/graph4.png Graphic file (type bmp)
+<images/graph4.png>
+ [181] [182]
+File: images/graph5.png Graphic file (type bmp)
+<images/graph5.png>
+ [183
 
-LaTeX Warning: Hyper reference `Fig:graph3' on page 177 undefined on input line
- 3129.
+] [184]
+[185]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[177] [178
+ [186]
+File: images/graph6.png Graphic file (type bmp)
+<images/graph6.png>
 
-]
-
-LaTeX Warning: Hyper reference `Fig:graph4' on page 179 undefined on input line
- 3166.
-
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2006) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-[179]
-
-LaTeX Warning: Hyper reference `Fig:graph5' on page 180 undefined on input line
- 3173.
-
-[180
-
-] [181] [182]
-
-LaTeX Warning: Hyper reference `Fig:graph6' on page 183 undefined on input line
- 3283.
-
-[183] [184] [185] [186
+[187] [188] [189] [190
 
 ]
+File: images/graph7.png Graphic file (type bmp)
+<images/graph7.png>
+ [191
 
-LaTeX Warning: Hyper reference `fig-monod' on page 187 undefined on input line 
-3349.
+] [192] [193
 
-[187
-
-] [188
-
-] [189] [190
+] [194] [195
 
 ]
-
-LaTeX Warning: Hyper reference `fig-nitrogen' on page 191 undefined on input li
-ne 3413.
-
-[191]
+File: images/graph8.png Graphic file (type bmp)
+<images/graph8.png>
+ [196] [197]
 Missing character: There is no ฒ ("E12) in font lmmi12!
-[192
+[198
 
-] [193] [194
+] [199] [200
 
-] [195]
+] [201]
 
-LaTeX Warning: Hyper reference `fig-artery' on page 196 undefined on input line
- 3499.
-
-
-LaTeX Warning: Hyper reference `fig-box-area' on page 196 undefined on input li
-ne 3506.
+LaTeX Warning: Hyper reference `fig-artery' on page 202 undefined on input line
+ 3554.
 
 
-Underfull \vbox (badness 3919) has occurred while \output is active []
+LaTeX Warning: Hyper reference `fig-box-area' on page 202 undefined on input li
+ne 3561.
 
- [196]
-Underfull \hbox (badness 10000) in paragraph at lines 3537--3538
+File: images/graph9.png Graphic file (type bmp)
+<images/graph9.png>
+File: images/graph10.png Graphic file (type bmp)
+<images/graph10.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [202]
+Underfull \hbox (badness 10000) in paragraph at lines 3606--3607
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 3542--3552
+[203] [204]
+Underfull \hbox (badness 10000) in paragraph at lines 3611--3621
 
  []
 
-[197] [198] [199
+[205] [206
 
 ]
 LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 30.42325pt on input line 3605.
+(Font)              scaled to size 30.42325pt on input line 3674.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 21.29617pt on input line 3605.
+(Font)              scaled to size 21.29617pt on input line 3674.
 LaTeX Font Info:    Font shape `TU/THSarabunNew(1)/m/n' will be
-(Font)              scaled to size 15.21162pt on input line 3605.
- [200
+(Font)              scaled to size 15.21162pt on input line 3674.
+ [207
 
-] [201
+] [208
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [202
+ [209
 
 ]
-[203] [204
+[210] [211
 
-] [205
+] [212
 
-] [206
+] [213
+
+] [214
 
 ]
 Chapter 5.
 
 Underfull \vbox (badness 8019) has occurred while \output is active []
 
- [207
+ [215]
+[216] [217
 
-]
-[208] [209
+] [218
 
-] [210
-
-] [211]
-Underfull \vbox (badness 2318) has occurred while \output is active []
-
- [212]
-[213]
-Underfull \hbox (badness 10000) in paragraph at lines 3876--3879
+] [219] [220]
+Underfull \hbox (badness 10000) in paragraph at lines 3955--3958
 
  []
 
+File: images/fig-area-1.png Graphic file (type bmp)
+<images/fig-area-1.png>
+[221] [222]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \vbox (badness 3088) has occurred while \output is active []
+ [223]
+File: images/fig-area-2.png Graphic file (type bmp)
+<images/fig-area-2.png>
 
- [214]
-[215]
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2006) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-Missing character: There is no   (U+2004) in font TH Sarabun New/OT:script=thai
-;language=dflt;mapping=tex-text;!
-[216
 
-] [217] [218] [219
+LaTeX Warning: Float too large for page by 38.00443pt on input line 3984.
 
-] [220
+[224] [225]
+File: images/fig-area-3.png Graphic file (type bmp)
+<images/fig-area-3.png>
+ [226
 
-] [221
+] [227]
+Underfull \vbox (badness 1565) has occurred while \output is active []
 
-] [222] [223] [224] [225
+ [228]
+[229] [230
 
-] [226
+] [231
 
-] [227
+] [232
 
-]
-[228
+] [233] [234] [235] [236
+
+] [237
+
+] [238
+
+] [239
+
+] [240
 
 ]
 Chapter 6.
 
 Underfull \vbox (badness 1297) has occurred while \output is active []
 
- [229
-
-]
-[230]
-Underfull \hbox (badness 1681) in paragraph at lines 4168--4171
+ [241]
+[242]
+Underfull \hbox (badness 1681) in paragraph at lines 4257--4260
 []\TU/THSarabunNew(1)/m/n/20 สรุป แล้ว เมื่อ เรา ทำการ เปลี่ยน ตัวแปร $[] [] []
 [][][]$ เรา จะ ได้ ว่า $[][] [] [][][][][][][]$ ดัง นั้น
  []
 
-[231] [232
-
-] [233
-
-] [234
-
-] [235] [236
-
-] [237] [238
-
-] [239
-
-] [240] [241
-
-] [242
-
-]
-[243
-
-] [244
+[243] [244
 
 ] [245
 
-] [246] [247] [248] [249
+] [246
 
-] [250
+] [247] [248
+
+] [249] [250
 
 ] [251
 
 ] [252] [253
 
-] [254]
-[255] [256
+] [254
 
-] [257] [258] [259
+]
+[255
 
-] [260
+] [256
 
-] [261]
+] [257
+
+] [258]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [259]
+[260] [261
+
+] [262
+
+] [263
+
+] [264] [265
+
+] [266] [267
+
+] [268] [269
+
+] [270
+
+] [271]
+[272]
+Chapter 7.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [273
+
+]
+[274] [275] [276] [277] [278]
+Overfull \hbox (26.03992pt too wide) detected at line 4922
+[][][][][][] [] [] [] [] [] [] [] [][]
+ []
+
+[279] [280] [281] [282] [283] [284] [285] [286] [287] [288] [289] [290]
+[291] [292] [293] [294] [295] [296] [297] [298]
 No file SCMA104bookdownproSlidesj.bbl.
-[262] (./SCMA104bookdownproSlidesj.aux)
+[299] (./SCMA104bookdownproSlidesj.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -2316,17 +2294,14 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 30154 strings out of 474773
- 602404 string characters out of 5757724
- 1941839 words of memory out of 5000000
- 51776 multiletter control sequences out of 15000+600000
+ 30407 strings out of 474773
+ 608249 string characters out of 5757724
+ 1945839 words of memory out of 5000000
+ 52016 multiletter control sequences out of 15000+600000
  567565 words of font info for 128 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,18n,124p,1022b,579s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,18n,124p,1022b,566s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on SCMA104bookdownproSlidesj.pdf (268 pages).
+Output written on SCMA104bookdownproSlidesj.pdf (305 pages).

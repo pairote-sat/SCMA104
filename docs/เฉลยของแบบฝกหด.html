@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>บทที่ 7 เฉลยของแบบฝึกหัด | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</title>
+  <meta name="description" content="บทที่ 7 เฉลยของแบบฝึกหัด | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="บทที่ 7 เฉลยของแบบฝึกหัด | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="บทที่ 7 เฉลยของแบบฝึกหัด | SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science" />
+  
+  
+  
+
+<meta name="author" content="Pairote Satiracoo" />
+
+
+<meta name="date" content="2024-10-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="เทคนคของการหาปรพนธ-techniques-of-integration.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SCMA104</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> หลักการและความสำคัญของแคลคูลัสและระบบสมการเชิงอนุพันธ์สามัญ</a></li>
+<li class="chapter" data-level="2" data-path="ลมต-limits.html"><a href="ลมต-limits.html"><i class="fa fa-check"></i><b>2</b> ลิมิต (Limits)</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ลมต-limits.html"><a href="ลมต-limits.html#ความตอเนอง-continuity"><i class="fa fa-check"></i><b>2.1</b> ความต่อเนื่อง (Continuity)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html"><i class="fa fa-check"></i><b>3</b> อนุพันธ์ (Derivatives)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธ-derivatives-1"><i class="fa fa-check"></i><b>3.1</b> อนุพันธ์ (Derivatives)</a></li>
+<li class="chapter" data-level="3.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#การคำนวณหาอนพนธ"><i class="fa fa-check"></i><b>3.2</b> การคำนวณหาอนุพันธ์</a></li>
+<li class="chapter" data-level="3.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#สตรสำหรบหาอนพนธ"><i class="fa fa-check"></i><b>3.3</b> สูตรสำหรับหาอนุพันธ์</a></li>
+<li class="chapter" data-level="3.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธอนดบสง-high-order-derivatives"><i class="fa fa-check"></i><b>3.4</b> อนุพันธ์อันดับสูง (High Order Derivatives)</a></li>
+<li class="chapter" data-level="3.5" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#การตความอนพนธ-interpretation-of-derivatives"><i class="fa fa-check"></i><b>3.5</b> การตีความอนุพันธ์ (Interpretation of Derivatives)</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงความชน-derivatives-as-slopes"><i class="fa fa-check"></i><b>3.5.1</b> อนุพันธ์ในเชิงความชัน (Derivatives as Slopes)</a></li>
+<li class="chapter" data-level="3.5.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงอตราเรว-derivatives-as-speeds"><i class="fa fa-check"></i><b>3.5.2</b> อนุพันธ์ในเชิงอัตราเร็ว (Derivatives as Speeds)</a></li>
+<li class="chapter" data-level="3.5.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธในเชงอตราการเปลยนแปลง-derivatives-as-rates-of-change"><i class="fa fa-check"></i><b>3.5.3</b> อนุพันธ์ในเชิงอัตราการเปลี่ยนแปลง (Derivatives as Rates of Change)</a></li>
+<li class="chapter" data-level="3.5.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-exercises"><i class="fa fa-check"></i><b>3.5.4</b> แบบฝึกหัด (Exercises)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#กฎลกโซ-the-chain-rule"><i class="fa fa-check"></i><b>3.6</b> กฎลูกโซ่ (The Chain Rule)</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด"><i class="fa fa-check"></i><b>3.6.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนอนเวอรส-derivatives-of-inverse-functions"><i class="fa fa-check"></i><b>3.7</b> อนุพันธ์ของฟังก์ชันอินเวอร์ส (Derivatives of Inverse Functions)</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-1"><i class="fa fa-check"></i><b>3.7.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#differentials-implicit-differentiation-and-related-rates"><i class="fa fa-check"></i><b>3.8</b> Differentials, Implicit Differentiation and Related Rates</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#differentials"><i class="fa fa-check"></i><b>3.8.1</b> Differentials</a></li>
+<li class="chapter" data-level="3.8.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#implicit-differentiation"><i class="fa fa-check"></i><b>3.8.2</b> Implicit Differentiation</a></li>
+<li class="chapter" data-level="3.8.3" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#related-rates"><i class="fa fa-check"></i><b>3.8.3</b> Related Rates</a></li>
+<li class="chapter" data-level="3.8.4" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#แบบฝกหด-2"><i class="fa fa-check"></i><b>3.8.4</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนตรโกณมตและอนเวอรสของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9</b> อนุพันธ์ของฟังก์ชันตรีโกณมิติและอินเวอร์สของฟังก์ชันตรีโกณมิติ</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9.1</b> อนุพันธ์ของฟังก์ชันตรีโกณมิติ</a></li>
+<li class="chapter" data-level="3.9.2" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนอนเวอรสของฟงกชนตรโกณมต"><i class="fa fa-check"></i><b>3.9.2</b> อนุพันธ์ของฟังก์ชันอินเวอร์สของฟังก์ชันตรีโกณมิติ</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="อนพนธ-derivatives.html"><a href="อนพนธ-derivatives.html#อนพนธของฟงกชนเอกซโพเนนเชยลและฟงกชนลอการทม"><i class="fa fa-check"></i><b>3.10</b> อนุพันธ์ของฟังก์ชันเอกซ์โพเนนเชียลและฟังก์ชันลอการิทึม</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html"><i class="fa fa-check"></i><b>4</b> การประยุกต์ของอนุพันธ์ (Applications of Differentiation)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#applications-of-derivatives-related-to-students-discipline"><i class="fa fa-check"></i><b>4.1</b> Applications of derivatives related to students discipline</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-3"><i class="fa fa-check"></i><b>4.1.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#sec-sketch"><i class="fa fa-check"></i><b>4.2</b> Sketching the graph of a function from the derivative</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-4"><i class="fa fa-check"></i><b>4.2.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การประยกตของ-monotonicity-และ-concavity"><i class="fa fa-check"></i><b>4.3</b> การประยุกต์ของ Monotonicity และ Concavity</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-5"><i class="fa fa-check"></i><b>4.3.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาคาเหมาะทสด-optimization"><i class="fa fa-check"></i><b>4.4</b> การหาค่าเหมาะที่สุด (Optimization)</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#แบบฝกหด-6"><i class="fa fa-check"></i><b>4.4.1</b> แบบฝึกหัด</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#รปแบบไมกำหนด-indeterminate-form-และกฎของโลปตาล-lhopital-rule"><i class="fa fa-check"></i><b>4.5</b> รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L’Hopital Rule)</a>
+<ul>
+<li><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty" id="toc-การหาลมตทอยในรปแบบไมกำหนด-0cdot-infty-หรอ-infty--infty"><span class="toc-section-number">4.5.1</span> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0\cdot \infty\)</span> หรือ <span class="math inline">\(\infty
+-\infty\)</span></a></li>
+<li class="chapter" data-level="4.5.2" data-path="การประยกตของอนพนธ-applications-of-differentiation.html"><a href="การประยกตของอนพนธ-applications-of-differentiation.html#การหาลมตทอยในรปแบบไมกำหนด-00-1infty-infty0"><i class="fa fa-check"></i><b>4.5.2</b> การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด <span class="math inline">\(0^{0}, 1^{\infty}, \infty^0\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html"><i class="fa fa-check"></i><b>5</b> การหาปริพันธ์ (Integrations)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#ปฏยานพนธ-antiderivatives"><i class="fa fa-check"></i><b>5.1</b> ปฏิยานุพันธ์ (Antiderivatives)</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#prob-anti"><i class="fa fa-check"></i><b>5.1.1</b> แบบฝึกหัด (Antiderivatives)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#ปรพนธจำกดเขต-the-definite-integral"><i class="fa fa-check"></i><b>5.2</b> ปริพันธ์จำกัดเขต (The Definite Integral)</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#integration-คออะไร"><i class="fa fa-check"></i><b>5.2.1</b> Integration คืออะไร</a></li>
+<li class="chapter" data-level="5.2.2" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#การประมาณคาพนทและปรพนธจำกดเขต"><i class="fa fa-check"></i><b>5.2.2</b> การประมาณค่าพื้นที่และปริพันธ์จำกัดเขต</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#ทฤษฎพนฐานของแคลคลส-the-fundamental-theorem-of-calculus"><i class="fa fa-check"></i><b>5.3</b> ทฤษฎีพื้นฐานของแคลคูลัส (The fundamental Theorem of Calculus)</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="การหาปรพนธ-integrations.html"><a href="การหาปรพนธ-integrations.html#สตรพนฐานของการอนทเกรท-basic-integration-rules"><i class="fa fa-check"></i><b>5.3.1</b> สูตรพื้นฐานของการอินทิเกรท (Basic Integration Rules)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html"><i class="fa fa-check"></i><b>6</b> เทคนิคของการหาปริพันธ์ (Techniques of Integration)</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยการเปลยนตวแปร-integration-by-substitution"><i class="fa fa-check"></i><b>6.1</b> การหาปริพันธ์โดยการเปลี่ยนตัวแปร (Integration by Substitution)</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#แบบฝกหด-integrals"><i class="fa fa-check"></i><b>6.1.1</b> แบบฝึกหัด (Integrals)</a></li>
+<li class="chapter" data-level="6.1.2" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยการแทนดวยฟงกชนตรโกณมต-trigonometric-substitutions"><i class="fa fa-check"></i><b>6.1.2</b> การหาปริพันธ์โดยการแทนด้วยฟังก์ชันตรีโกณมิติ (Trigonometric Substitutions)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยแยกสวน-integration-by-parts"><i class="fa fa-check"></i><b>6.2</b> การหาปริพันธ์โดยแยกส่วน (Integration by Parts)</a></li>
+<li class="chapter" data-level="6.3" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#การหาปรพนธโดยเศษสวนยอย-integration-by-partial-fractions"><i class="fa fa-check"></i><b>6.3</b> การหาปริพันธ์โดยเศษส่วนย่อย (Integration by Partial Fractions)</a></li>
+<li class="chapter" data-level="6.4" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#ปรพนธไมตรงแบบ-improper-integrals"><i class="fa fa-check"></i><b>6.4</b> ปริพันธ์ไม่ตรงแบบ (Improper Integrals)</a></li>
+<li class="chapter" data-level="6.5" data-path="เทคนคของการหาปรพนธ-techniques-of-integration.html"><a href="เทคนคของการหาปรพนธ-techniques-of-integration.html#แบบฝกหด-improper-integrals"><i class="fa fa-check"></i><b>6.5</b> แบบฝึกหัด (Improper Integrals)</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="เฉลยของแบบฝกหด.html"><a href="เฉลยของแบบฝกหด.html"><i class="fa fa-check"></i><b>7</b> เฉลยของแบบฝึกหัด</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="เฉลยของแบบฝกหด.html"><a href="เฉลยของแบบฝกหด.html#solution"><i class="fa fa-check"></i><b>7.0.1</b> Solution:</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SCMA104 Systems of Ordinary Differential Equations and Applications in Medical Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="เฉลยของแบบฝกหด" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">บทที่ 7</span> เฉลยของแบบฝึกหัด<a href="เฉลยของแบบฝกหด.html#เฉลยของแบบฝกหด" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<ol style="list-style-type: decimal">
+<li><p>จงหาอนุพันธ์ต่อไปนี้ ถ้าอนุพันธ์ดังกล่าวหาค่าได้ ในกรณีที่หาค่าไม่ได้ ให้ระบุว่าหาค่าไม่ได้</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\displaystyle f&#39;(x)\)</span> เมื่อ <span class="math inline">\(f(x)=g(x)h(x)k(x)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle f^{(n)}(0)\)</span> เมื่อ <span class="math inline">\(\displaystyle f(x)=\sum_{i=1}^k x^i\)</span> โดยที่ <span class="math inline">\(k\)</span> และ <span class="math inline">\(n\)</span> เป็นจำนวนนับ</p></li>
+<li><p><span class="math inline">\(\displaystyle\frac{d}{dt}\frac1{1-t}\)</span> และ <span class="math inline">\(\displaystyle\frac{d^2}{dt^2}\frac1{1-t}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\frac{d}{dt}\frac{f(t)}t\)</span> เมื่อ <span class="math inline">\(f\)</span> เป็นฟังก์ชันซึ่ง <span class="math inline">\(\displaystyle\frac{d}{dt}f(t)=\frac{f(t)}t\)</span> สำหรับทุกๆ <span class="math inline">\(t\neq0\)</span></p></li>
+<li><p><span class="math inline">\(f&#39;(-1)\)</span>, <span class="math inline">\(f&#39;(-\frac23)\)</span>, <span class="math inline">\(f&#39;(0)\)</span>, <span class="math inline">\(f&#39;(1)\)</span> เมื่อ <span class="math inline">\(f(x)=x\sqrt{1+x}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\left.\frac d{dx}\,\frac x{\sqrt{1+x}-\sqrt{1-x}}\right|_{x=0}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\frac {dy}{dx}\;\)</span>, <span class="math inline">\(\displaystyle\left.\frac {dy}{dx}\,\right|_{x=0}\)</span>, <span class="math inline">\(\displaystyle\left.\frac {dy}{dx}\,\right|_{x=0.25}\)</span>, <span class="math inline">\(\displaystyle\left.\frac {dy}{dx}\,\right|_{x=1}\)</span> เมื่อ <span class="math inline">\(\displaystyle y=\frac{1-\sqrt x}{\sqrt{1-x}}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\frac d{dx}\,\left(x^2\sqrt{1+x}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\frac {d^2y}{dx^2}\)</span> เมื่อ <span class="math inline">\(y=(1+x^2)\sqrt{1-2x}\)</span> ( หาอนุพันธ์ของ <span class="math inline">\(\sqrt{1-2x}\)</span> และ <span class="math inline">\(1/\sqrt{1-2x}\)</span> ก่อน)</p></li>
+<li><p><span class="math inline">\(\displaystyle\frac {d^{10}y}{dx^{10}}\)</span> เมื่อ <span class="math inline">\(y=\left(x^5-x^4-x^3-x^2-x-1\right)\left(x^5+2x^4+2x^3+2x^2+2x+2\right)\)</span></p></li>
+</ol></li>
+</ol>
+<div id="solution" class="section level3 hasAnchor" number="7.0.1">
+<h3><span class="header-section-number">7.0.1</span> Solution:<a href="เฉลยของแบบฝกหด.html#solution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Given the function <span class="math inline">\(f(x) = g(x)h(x)k(x)\)</span>, we apply the product rule for differentiation.</li>
+</ol>
+<p>The product rule for three functions <span class="math inline">\(g(x), h(x), k(x)\)</span> is:</p>
+<p><span class="math display">\[
+f&#39;(x) = g&#39;(x)h(x)k(x) + g(x)h&#39;(x)k(x) + g(x)h(x)k&#39;(x)
+\]</span></p>
+<p>Therefore, the derivative of <span class="math inline">\(f(x) = g(x)h(x)k(x)\)</span> is:</p>
+<p><span class="math display">\[
+f&#39;(x) = g&#39;(x)h(x)k(x) + g(x)h&#39;(x)k(x) + g(x)h(x)k&#39;(x)
+\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Given <span class="math inline">\(f(x) = \sum_{i=1}^k x^i = x + x^2 + x^3 + \dots + x^k\)</span>, we aim to find <span class="math inline">\(f^{(n)}(0)\)</span>.</li>
+</ol>
+<p>The general form of the function is a sum of powers of <span class="math inline">\(x\)</span>. The derivative of each term <span class="math inline">\(x^i\)</span> is:</p>
+<p><span class="math display">\[
+\frac{d}{dx}x^i = ix^{i-1}
+\]</span></p>
+<p>Now, for the <span class="math inline">\(n\)</span>-th derivative <span class="math inline">\(f^{(n)}(x)\)</span>:</p>
+<ul>
+<li>If <span class="math inline">\(n \leq k\)</span>, <span class="math inline">\(f^{(n)}(x)\)</span> will be non-zero.</li>
+<li>If <span class="math inline">\(n &gt; k\)</span>, all terms become zero because derivatives of powers of <span class="math inline">\(x\)</span> vanish after the <span class="math inline">\(k\)</span>-th derivative.</li>
+</ul>
+<p>Evaluating at <span class="math inline">\(x = 0\)</span>:</p>
+<ul>
+<li>If <span class="math inline">\(n &gt; 1\)</span>, <span class="math inline">\(f^{(n)}(0) = 0\)</span> for all terms except the <span class="math inline">\(n\)</span>-th power, where <span class="math inline">\(i = n\)</span>, leading to:</li>
+</ul>
+<p><span class="math display">\[
+f^{(n)}(0) = n! \text{ (if } n \leq k \text{)}
+\]</span></p>
+<p><span class="math display">\[
+f^{(n)}(0) = 0 \text{ (if } n &gt; k \text{)}
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>The solution is given as follows:</li>
+</ol>
+<ul>
+<li>First derivative <span class="math inline">\(\frac{d}{dt} \frac{1}{1-t}\)</span></li>
+</ul>
+<p>Let <span class="math inline">\(f(t) = \frac{1}{1-t}\)</span>.</p>
+<p>We use the chain rule for differentiation:</p>
+<p><span class="math display">\[
+\frac{d}{dt} \frac{1}{1-t} = \frac{d}{dt} (1-t)^{-1}
+\]</span></p>
+<p>Using the power rule:</p>
+<p><span class="math display">\[
+= -1(1-t)^{-2} \cdot (-1) = \frac{1}{(1-t)^2}
+\]</span></p>
+<ul>
+<li>Second derivative <span class="math inline">\(\frac{d^2}{dt^2} \frac{1}{1-t}\)</span></li>
+</ul>
+<p>To find the second derivative, differentiate <span class="math inline">\(\frac{1}{(1-t)^2}\)</span> again:</p>
+<p><span class="math display">\[
+\frac{d^2}{dt^2} \frac{1}{1-t} = \frac{d}{dt} \frac{1}{(1-t)^2}
+\]</span></p>
+<p>Using the chain rule:</p>
+<p><span class="math display">\[
+= 2(1-t)^{-3} \cdot (-1) = \frac{2}{(1-t)^3}
+\]</span></p>
+<ol start="4" style="list-style-type: decimal">
+<li>We are asked to find <span class="math inline">\(\frac{d}{dt} \left( \frac{f(t)}{t} \right)\)</span>, where it is given that <span class="math inline">\(\frac{d}{dt} f(t) = \frac{f(t)}{t}\)</span> for all <span class="math inline">\(t \neq 0\)</span>.</li>
+</ol>
+<p>We use the quotient rule for differentiation:</p>
+<p><span class="math display">\[
+\frac{d}{dt} \left( \frac{f(t)}{t} \right) = \frac{t \cdot \frac{d}{dt} f(t) - f(t) \cdot \frac{d}{dt} t}{t^2}
+\]</span></p>
+<p>Now, substitute <span class="math inline">\(\frac{d}{dt} f(t) = \frac{f(t)}{t}\)</span>:</p>
+<p><span class="math display">\[
+= \frac{t \cdot \frac{f(t)}{t} - f(t) \cdot 1}{t^2}
+\]</span></p>
+<p>Simplify the expression:</p>
+<p><span class="math display">\[
+= \frac{f(t) - f(t)}{t^2} = 0
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\frac{d}{dt} \left( \frac{f(t)}{t} \right) = 0 \quad \text{for all } t \neq 0
+\]</span></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Given <span class="math inline">\(f(x) = x\sqrt{1+x}\)</span>, we want to find the derivatives at specific points <span class="math inline">\(f&#39;(-1)\)</span>, <span class="math inline">\(f&#39;(-\frac{2}{3})\)</span>, <span class="math inline">\(f&#39;(0)\)</span>, and <span class="math inline">\(f&#39;(1)\)</span>.</li>
+</ol>
+<p><strong>Step 1:</strong> <strong>Find the derivative of</strong> <span class="math inline">\(f(x)\)</span></p>
+<p>We use the product rule for <span class="math inline">\(f(x) = x \cdot \sqrt{1+x}\)</span>:</p>
+<p><span class="math display">\[
+f&#39;(x) = \frac{d}{dx} \left( x \right) \cdot \sqrt{1+x} + x \cdot \frac{d}{dx} \left( \sqrt{1+x} \right)
+\]</span></p>
+<p>The derivative of <span class="math inline">\(\sqrt{1+x}\)</span> is <span class="math inline">\(\frac{1}{2\sqrt{1+x}}\)</span>, so:</p>
+<p><span class="math display">\[
+f&#39;(x) = 1 \cdot \sqrt{1+x} + x \cdot \frac{1}{2\sqrt{1+x}} = \sqrt{1+x} + \frac{x}{2\sqrt{1+x}}
+\]</span></p>
+<p><strong>Step 2:</strong> <strong>Evaluate at specific points</strong></p>
+<ul>
+<li><strong>At</strong> <span class="math inline">\(x = -1\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+f&#39;(-1) = \sqrt{1+(-1)} + \frac{-1}{2\sqrt{1+(-1)}} = \sqrt{0} + \frac{-1}{2\sqrt{0}} \text{( undefined term due to division by 0)}
+\]</span></p>
+<ul>
+<li><strong>At</strong> <span class="math inline">\(x = -\frac{2}{3}\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+f&#39;\left( -\frac{2}{3} \right) = \sqrt{1 - \frac{2}{3}} + \frac{-\frac{2}{3}}{2\sqrt{1-\frac{2}{3}}} = \sqrt{\frac{1}{3}} + \frac{-\frac{2}{3}}{2\sqrt{\frac{1}{3}}}
+\]</span></p>
+<p><span class="math display">\[
+= \frac{1}{\sqrt{3}} + \frac{-\frac{2}{3}}{2 \cdot \frac{1}{\sqrt{3}}} = \frac{1}{\sqrt{3}} - \frac{2}{2\sqrt{3}} = 0
+\]</span></p>
+<ul>
+<li><strong>At</strong> <span class="math inline">\(x = 0\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+f&#39;(0) = \sqrt{1+0} + \frac{0}{2\sqrt{1+0}} = \sqrt{1} + 0 = 1
+\]</span></p>
+<ul>
+<li><strong>At</strong> <span class="math inline">\(x = 1\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+f&#39;(1) = \sqrt{1+1} + \frac{1}{2\sqrt{1+1}} = \sqrt{2} + \frac{1}{2\sqrt{2}} = \sqrt{2} + \frac{1}{2\sqrt{2}} = \frac{2\sqrt{2}}{2} = \frac{3\sqrt{2}}{2}
+\]</span></p>
+<p><strong>Step 3:</strong> <strong>Final Results</strong>:</p>
+<p><span class="math display">\[
+f&#39;(-1) = \text{undefined}, \quad f&#39;\left( -\frac{2}{3} \right) = 0, \quad f&#39;(0) = 1, \quad f&#39;(1) = \frac{3\sqrt{2}}{2}
+\]</span></p>
+<ol start="6" style="list-style-type: decimal">
+<li>We are asked to find the derivative of <span class="math inline">\(\frac{x}{\sqrt{1+x} - \sqrt{1-x}}\)</span> at <span class="math inline">\(x = 0\)</span>.</li>
+</ol>
+<p><strong>Step 1:</strong> <strong>Differentiate</strong> <span class="math inline">\(f(x)\)</span>:</p>
+<p>Let <span class="math inline">\(f(x) = \frac{x}{\sqrt{1+x} - \sqrt{1-x}}\)</span>. To differentiate, we use the quotient rule:</p>
+<p><span class="math display">\[
+f&#39;(x) = \frac{(\sqrt{1+x} - \sqrt{1-x}) \cdot 1 - x \cdot \left( \frac{1}{2\sqrt{1+x}} + \frac{1}{2\sqrt{1-x}} \right)}{(\sqrt{1+x} - \sqrt{1-x})^2}
+\]</span></p>
+<p>This can be simplified to:</p>
+<p><span class="math display">\[
+f&#39;(x) = \frac{x \sqrt{1 - x} + x \sqrt{x + 1} + 2 \sqrt{1 - x} - 2 \sqrt{x + 1}}{4 \left( x^2 + \sqrt{1 - x} \sqrt{x + 1} - 1 \right)}
+\]</span></p>
+<p>We want to find <span class="math inline">\(f&#39;(0)\)</span> using the expression:</p>
+<p><span class="math display">\[
+f&#39;(x) = \frac{x \sqrt{1 - x} + x \sqrt{x + 1} + 2 \sqrt{1 - x} - 2 \sqrt{x + 1}}{4 \left( x^2 + \sqrt{1 - x} \sqrt{x + 1} - 1 \right)}
+\]</span></p>
+<p><strong>Step 2: Evaluate the Limit at</strong> <span class="math inline">\(x = 0\)</span></p>
+<ul>
+<li><p><strong>Evaluate the numerator</strong>:</p>
+<ul>
+<li>At <span class="math inline">\(x = 0\)</span>: <span class="math display">\[
+0 \cdot \sqrt{1 - 0} + 0 \cdot \sqrt{0 + 1} + 2 \sqrt{1 - 0} - 2 \sqrt{0 + 1} = 0 + 0 + 2 - 2 = 0
+\]</span></li>
+<li>The numerator equals <span class="math inline">\(0\)</span>.</li>
+</ul></li>
+<li><p><strong>Evaluate the denominator</strong>:</p>
+<ul>
+<li>At <span class="math inline">\(x = 0\)</span>: <span class="math display">\[
+4 \left( 0^2 + \sqrt{1 - 0} \sqrt{0 + 1} - 1 \right) = 4(0 + 1 - 1) = 0
+\]</span></li>
+<li>The denominator also equals <span class="math inline">\(0\)</span>.</li>
+</ul>
+<p>Since the limit is of the indeterminate form <span class="math inline">\(\frac{0}{0}\)</span>, we apply <strong>L’Hospital’s Rule</strong>.</p></li>
+</ul>
+<p><strong>Step 3: Differentiate the Numerator and Denominator</strong></p>
+<ul>
+<li><p><strong>Differentiate the numerator</strong>: The derivative of the numerator, using the product and chain rules: <span class="math display">\[
+  \text{Numerator}&#39; = \left( x \sqrt{1 - x} \right)&#39; + \left( x \sqrt{x + 1} \right)&#39; + \left( 2 \sqrt{1 - x} \right)&#39; - \left( 2 \sqrt{x + 1} \right)&#39;
+  \]</span></p>
+<p>Simplifying:</p></li>
+</ul>
+<p><span class="math display">\[
+    \text{Numerator}&#39; = \sqrt{1 - x} - \frac{x}{2\sqrt{1 - x}} + \sqrt{x + 1} + \frac{x}{2\sqrt{x + 1}} - \frac{1}{\sqrt{1 - x}} - \frac{1}{\sqrt{x + 1}}
+\]</span></p>
+<p>The simplified form of the derivative is:</p>
+<p><span class="math display">\[
+\text{Numerator}&#39; = \frac{3x}{2} \left( \frac{1}{\sqrt{x + 1}} - \frac{1}{\sqrt{1 - x}} \right).
+\]</span></p>
+<ul>
+<li><strong>Differentiate the denominator</strong>: The derivative of the denominator is: <span class="math display">\[
+  \text{Denominator}&#39; = 4 \left( 2x + \frac{1}{2\sqrt{1 - x}} \cdot \frac{1}{2\sqrt{x + 1}} - \frac{1}{2\sqrt{x + 1}} \cdot \frac{1}{2\sqrt{1 - x}} \right)
+  \]</span> Simplifying: <span class="math display">\[
+  \text{Denominator}&#39; = 8x
+  \]</span></li>
+</ul>
+<p>We substitute <span class="math inline">\(x = 0\)</span> into the simplified expressions:</p>
+<ul>
+<li><p><strong>Numerator at</strong> <span class="math inline">\(x = 0\)</span>:</p>
+<p><span class="math display">\[
+  \text{Numerator}&#39;(0) = \frac{3 \cdot 0}{2} \left( \frac{1}{\sqrt{0 + 1}} - \frac{1}{\sqrt{1 - 0}} \right) = 0.
+\]</span></p></li>
+<li><p><strong>Denominator at</strong> <span class="math inline">\(x = 0\)</span>:</p>
+<p><span class="math display">\[
+  \text{Denominator}&#39;(0) = 8 \cdot 0 = 0.
+\]</span></p></li>
+</ul>
+<p>Since we again encounter the indeterminate form <span class="math inline">\(\frac{0}{0}\)</span>, we need to apply <strong>L’Hospital’s Rule</strong> a second time.</p>
+<p><strong>Step 4: Differentiate Again</strong></p>
+<ul>
+<li><p><strong>Second Derivative of the Numerator</strong>:</p>
+<p>We differentiate the numerator:</p>
+<p><span class="math display">\[
+  \text{Numerator}&#39;&#39; = \frac{3}{2} \left( \frac{1}{\sqrt{x + 1}} - \frac{1}{\sqrt{1 - x}} \right) + \frac{3x}{2} \left( -\frac{1}{2(1 + x)^{3/2}} - \frac{1}{2(1 - x)^{3/2}} \right).
+  \]</span></p></li>
+<li><p><strong>Second Derivative of the Denominator</strong>:</p>
+<p>The second derivative of the denominator is:</p>
+<p><span class="math display">\[
+  \text{Denominator}&#39;&#39; = 8.
+  \]</span></p></li>
+</ul>
+<p><strong>Step 5: Evaluate the Limit Again</strong></p>
+<p>Now, the limit becomes:</p>
+<p><span class="math display">\[
+f&#39;(0) = \lim_{x \to 0} \frac{\text{Numerator}&#39;&#39;(x)}{\text{Denominator}&#39;&#39;(x)}.
+\]</span></p>
+<p>Evaluating the second derivative of the numerator at <span class="math inline">\(x = 0\)</span>:</p>
+<ul>
+<li><strong>Numerator at</strong> <span class="math inline">\(x = 0\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+      \text{Numerator}&#39;&#39;(0) = \frac{3}{2} \left( 1 - 1 \right) + \frac{3 \cdot 0}{2} \left( -\frac{1}{2(1)^{3/2}} - \frac{1}{2(1)^{3/2}} \right) = 0.
+  \]</span></p>
+<ul>
+<li><p><strong>Denominator at</strong> <span class="math inline">\(x = 0\)</span>:</p>
+<p><span class="math display">\[
+\text{Denominator}&#39;&#39;(0) = 8.
+\]</span></p></li>
+</ul>
+<p>Since this results in a <span class="math inline">\(\frac{0}{8}\)</span> form, we can directly conclude:</p>
+<p><span class="math display">\[
+f&#39;(0) = \frac{0}{8} = 0.
+\]</span></p>
+<p>Thus, the value of <span class="math inline">\(f&#39;(0)\)</span> is:</p>
+<p><span class="math display">\[
+f&#39;(0) = 0.
+\]</span></p>
+<p><strong>Step 6: Final Evaluation</strong></p>
+<p>With the second derivative of the numerator evaluated to zero, we can conclude:</p>
+<p><span class="math display">\[
+f&#39;(0) = \frac{0}{8} = 0.
+\]</span></p>
+<p>Thus, the value of <span class="math inline">\(f&#39;(0)\)</span> is:</p>
+<p><span class="math display">\[
+f&#39;(0) = 0.
+\]</span></p>
+<p><strong>Step 7:</strong> <strong>Conclusion</strong></p>
+<p>By applying L’Hospital’s Rule twice and differentiating the numerator and denominator, we confirm that <span class="math inline">\(f&#39;(0) = 0\)</span>.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>We need to compute the derivative <span class="math inline">\(\frac{dy}{dx}\)</span> for the function</li>
+</ol>
+<p><span class="math display">\[
+y = \frac{1 - \sqrt{x}}{\sqrt{1 - x}}
+\]</span></p>
+<p>and evaluate it at the points <span class="math inline">\(x = 0\)</span>, <span class="math inline">\(x = 0.25\)</span>, and <span class="math inline">\(x = 1\)</span>.</p>
+<p><strong>Step 1:</strong> <strong>Differentiate</strong> <span class="math inline">\(y\)</span>:</p>
+<p>We will use the quotient rule for differentiation, which states:</p>
+<p><span class="math display">\[
+\frac{d}{dx}\left(\frac{u}{v}\right) = \frac{u&#39;v - uv&#39;}{v^2}
+\]</span></p>
+<p>where <span class="math inline">\(u = 1 - \sqrt{x}\)</span> and <span class="math inline">\(v = \sqrt{1 - x}\)</span>.</p>
+<ul>
+<li><p>Find <span class="math inline">\(u&#39;\)</span>: <span class="math display">\[
+u&#39; = \frac{d}{dx}(1 - \sqrt{x}) = -\frac{1}{2\sqrt{x}}
+\]</span></p></li>
+<li><p>Find <span class="math inline">\(v&#39;\)</span>: <span class="math display">\[
+v&#39; = \frac{d}{dx}(\sqrt{1 - x}) = -\frac{1}{2\sqrt{1 - x}}
+\]</span></p></li>
+</ul>
+<p>Using the quotient rule: <span class="math display">\[
+\frac{dy}{dx} = \frac{\left(-\frac{1}{2\sqrt{x}}\right) \sqrt{1 - x} - (1 - \sqrt{x}) \left(-\frac{1}{2\sqrt{1 - x}}\right)}{1 - x}
+\]</span></p>
+<p>This simplifies to:</p>
+<p><span class="math display">\[
+\frac{dy}{dx} = \frac{-\frac{\sqrt{1 - x}}{2\sqrt{x}} + \frac{(1 - \sqrt{x})}{2\sqrt{1 - x}}}{1 - x}
+\]</span></p>
+<p><strong>Step 2:</strong> <strong>Evaluate</strong> <span class="math inline">\(\frac{dy}{dx}\)</span> at specified points:</p>
+<ul>
+<li><strong>At</strong> <span class="math inline">\(x = 0\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+    \frac{dy}{dx}\bigg|_{x=0} = \text{undefined} \quad (\text{since } \sqrt{0} \text{ in denominator})
+\]</span></p>
+<ul>
+<li><strong>At</strong> <span class="math inline">\(x = 0.25\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+    \frac{dy}{dx}\bigg|_{x=0.25} = \text{Calculate using the derived expression.}
+\]</span></p>
+<p>Plugging <span class="math inline">\(x = 0.25\)</span> into the expression:</p>
+<p><span class="math display">\[
+    = \frac{-\frac{\sqrt{1 - 0.25}}{2\sqrt{0.25}} + \frac{(1 - \sqrt{0.25})}{2\sqrt{1 - 0.25}}}{1 - 0.25}
+\]</span></p>
+<p><span class="math display">\[
+    = \frac{-\frac{\sqrt{0.75}}{2 \cdot 0.5} + \frac{(1 - 0.5)}{2\sqrt{0.75}}}{0.75}
+\]</span></p>
+<p><span class="math display">\[
+    = \frac{-\frac{\sqrt{0.75}}{1} + \frac{0.5}{2\sqrt{0.75}}}{0.75}
+\]</span></p>
+<p><span class="math display">\[
+    = \frac{-\sqrt{0.75} + \frac{0.25}{\sqrt{0.75}}}{0.75}
+\]</span></p>
+<ul>
+<li><strong>At</strong> <span class="math inline">\(x = 1\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+    \frac{dy}{dx}\bigg|_{x=1} = \text{undefined} \quad (\text{since } \sqrt{1 - 1} \text{ in denominator})
+\]</span></p>
+<p><strong>Step 3:</strong> <strong>Conclusion</strong></p>
+<p>The derivatives evaluated at the points are: - <span class="math inline">\(\frac{dy}{dx}\bigg|_{x=0}\)</span>: undefined - <span class="math inline">\(\frac{dy}{dx}\bigg|_{x=0.25}\)</span>: evaluate using the derived expression - <span class="math inline">\(\frac{dy}{dx}\bigg|_{x=1}\)</span>: undefined</p>
+<ol start="8" style="list-style-type: decimal">
+<li>Differentiate the function</li>
+</ol>
+<p><span class="math display">\[
+y = x^2\sqrt{1 + x}
+\]</span></p>
+<p>Using the product rule:</p>
+<ul>
+<li><p>Let <span class="math inline">\(u = x^2\)</span> and <span class="math inline">\(v = \sqrt{1 + x}\)</span>.</p>
+<ul>
+<li><span class="math inline">\(u&#39; = 2x\)</span></li>
+<li><span class="math inline">\(v&#39; = \frac{1}{2\sqrt{1 + x}}\)</span></li>
+</ul></li>
+<li><p>Apply the product rule:</p></li>
+</ul>
+<p><span class="math display">\[
+\frac{dy}{dx} = u&#39;v + uv&#39; = (2x)\sqrt{1 + x} + x^2\left(\frac{1}{2\sqrt{1 + x}}\right)
+\]</span></p>
+<ul>
+<li>Combine over a common denominator:</li>
+</ul>
+<p><span class="math display">\[
+= \frac{2x(1 + x) + \frac{x^2}{2}}{\sqrt{1 + x}} = \frac{2x + \frac{5x^2}{2}}{\sqrt{1 + x}}
+\]</span></p>
+<p><strong>Conclusion</strong></p>
+<p>The derivative is</p>
+<p><span class="math display">\[
+\frac{dy}{dx} = \frac{2x + \frac{5x^2}{2}}{\sqrt{1 + x}}
+\]</span></p>
+<ol start="9" style="list-style-type: decimal">
+<li>We need to find the second derivative</li>
+</ol>
+<p><span class="math display">\[
+\frac{d^2y}{dx^2}
+\]</span></p>
+<p>for the function</p>
+<p><span class="math display">\[
+y = (1 + x^2)\sqrt{1 - 2x}
+\]</span></p>
+<p><strong>Solution</strong></p>
+<ul>
+<li><p><strong>Differentiate</strong> <span class="math inline">\(\sqrt{1 - 2x}\)</span>:</p>
+<p>Using the chain rule: <span class="math display">\[
+v = \sqrt{1 - 2x} \implies v&#39; = \frac{1}{2\sqrt{1 - 2x}} \cdot (-2) = -\frac{1}{\sqrt{1 - 2x}}
+\]</span></p></li>
+<li><p><strong>Differentiate</strong> <span class="math inline">\(\frac{1}{\sqrt{1 - 2x}}\)</span>:</p>
+<p>Using the quotient rule: <span class="math display">\[
+w = (1 - 2x)^{-1/2} \implies w&#39; = -\frac{1}{2}(1 - 2x)^{-3/2} \cdot (-2) = \frac{1}{(1 - 2x)^{3/2}}
+\]</span></p></li>
+<li><p><strong>Differentiate</strong> <span class="math inline">\(y\)</span> using the product rule:</p>
+<p>Let <span class="math inline">\(u = 1 + x^2\)</span> and <span class="math inline">\(v = \sqrt{1 - 2x}\)</span>.</p>
+<ul>
+<li><span class="math inline">\(u&#39; = 2x\)</span></li>
+<li><span class="math inline">\(v&#39; = -\frac{1}{\sqrt{1 - 2x}}\)</span></li>
+</ul>
+<p>Applying the product rule: <span class="math display">\[
+\frac{dy}{dx} = u&#39;v + uv&#39; = (2x)\sqrt{1 - 2x} + (1 + x^2)\left(-\frac{1}{\sqrt{1 - 2x}}\right)
+\]</span></p>
+<p>Simplifying: <span class="math display">\[
+= 2x\sqrt{1 - 2x} - \frac{1 + x^2}{\sqrt{1 - 2x}} = \frac{2x(1 - 2x) - (1 + x^2)}{\sqrt{1 - 2x}}
+\]</span></p>
+<p>Further simplifying: <span class="math display">\[
+= \frac{2x - 4x^2 - 1 - x^2}{\sqrt{1 - 2x}} = \frac{-5x^2 + 2x - 1}{\sqrt{1 - 2x}}
+\]</span></p></li>
+<li><p><strong>Differentiate</strong> <span class="math inline">\(\frac{dy}{dx}\)</span> to find <span class="math inline">\(\frac{d^2y}{dx^2}\)</span>:</p>
+<p>Let <span class="math inline">\(p = -5x^2 + 2x - 1\)</span> and <span class="math inline">\(q = \sqrt{1 - 2x}\)</span>.</p>
+<p>Using the quotient rule: <span class="math display">\[
+\frac{d^2y}{dx^2} = \frac{p&#39;q - pq&#39;}{q^2}
+\]</span></p>
+<ul>
+<li><p>Find <span class="math inline">\(p&#39;\)</span>: <span class="math display">\[
+p&#39; = -10x + 2
+\]</span></p></li>
+<li><p>Find <span class="math inline">\(q&#39;\)</span> (already computed): <span class="math display">\[
+q&#39; = -\frac{1}{\sqrt{1 - 2x}}
+\]</span></p></li>
+</ul>
+<p>Now substituting: <span class="math display">\[
+\frac{d^2y}{dx^2} = \frac{(-10x + 2)\sqrt{1 - 2x} - (-5x^2 + 2x - 1)\left(-\frac{1}{\sqrt{1 - 2x}}\right)}{1 - 2x}
+\]</span></p>
+<p>Simplifying: <span class="math display">\[
+= \frac{(-10x + 2)(1 - 2x) + (5x^2 - 2x + 1)}{(1 - 2x)^{3/2}}
+\]</span></p></li>
+<li><p><strong>Conclusion</strong></p></li>
+</ul>
+<p>Thus, the second derivative is</p>
+<p><span class="math display">\[
+\frac{d^2y}{dx^2} = \frac{(-10x + 2)(1 - 2x) + (5x^2 - 2x + 1)}{(1 - 2x)^{3/2}}
+\]</span></p>
+<ol start="10" style="list-style-type: decimal">
+<li>We need to find the tenth derivative</li>
+</ol>
+<p><span class="math display">\[
+\frac{d^{10}y}{dx^{10}}
+\]</span></p>
+<p>for the function</p>
+<p><span class="math display">\[
+y = (x^5 - x^4 - x^3 - x^2 - x - 1)(x^5 + 2x^4 + 2x^3 + 2x^2 + 2x + 2).
+\]</span></p>
+<p><strong>Solution</strong></p>
+<ul>
+<li><p><strong>Identify the degree of</strong> <span class="math inline">\(y\)</span>:</p>
+<p>Each polynomial is of degree 5. The product of two degree 5 polynomials results in a polynomial of degree</p>
+<p><span class="math display">\[
+5 + 5 = 10.
+\]</span></p></li>
+<li><p><strong>Differentiate</strong> <span class="math inline">\(y\)</span>:</p>
+<p>Since <span class="math inline">\(y\)</span> is a polynomial of degree 10, the tenth derivative will be a constant if the leading term is not zero. The leading term of <span class="math inline">\(y\)</span> is obtained by multiplying the leading terms of the two polynomials:</p>
+<p><span class="math display">\[
+(x^5)(x^5) = x^{10}.
+\]</span></p></li>
+<li><p><strong>Compute the tenth derivative</strong>:</p>
+<p>The <span class="math inline">\(n\)</span>-th derivative of <span class="math inline">\(x^n\)</span> is given by:</p>
+<p><span class="math display">\[
+\frac{d^n}{dx^n}(x^n) = n!.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\frac{d^{10}}{dx^{10}}(x^{10}) = 10!.
+\]</span></p></li>
+<li><p><strong>Conclusion</strong></p></li>
+</ul>
+<p>The tenth derivative is</p>
+<p><span class="math display">\[
+\frac{d^{10}y}{dx^{10}} = 10!.
+\]</span></p>
+<p>Thus,</p>
+<p><span class="math display">\[
+\frac{d^{10}y}{dx^{10}} = 3628800.
+\]</span></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="เทคนคของการหาปรพนธ-techniques-of-integration.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/pairote-sat/SCMA104/edit/main/05-solutions.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/pairote-sat/SCMA104/blob/main/05-solutions.Rmd",
+"text": null
+},
+"download": ["SCMA104bookdownproj.pdf", "SCMA104bookdownproj.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

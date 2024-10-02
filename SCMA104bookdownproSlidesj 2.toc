@@ -1,0 +1,56 @@
+\contentsline {chapter}{\numberline {1}หลักการและความสำคัญของแคลคูลัสและระบบสมการเชิงอนุพันธ์สามัญ}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}ลิมิต (Limits)}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}ความต่อเนื่อง (Continuity)}{42}{section.2.1}%
+\contentsline {chapter}{\numberline {3}อนุพันธ์ (Derivatives)}{55}{chapter.3}%
+\contentsline {section}{\numberline {3.1}อนุพันธ์ (Derivatives)}{55}{section.3.1}%
+\contentsline {section}{\numberline {3.2}การคำนวณหาอนุพันธ์}{59}{section.3.2}%
+\contentsline {section}{\numberline {3.3}สูตรสำหรับหาอนุพันธ์}{64}{section.3.3}%
+\contentsline {section}{\numberline {3.4}อนุพันธ์อันดับสูง (High Order Derivatives)}{69}{section.3.4}%
+\contentsline {section}{\numberline {3.5}การตีความอนุพันธ์ (Interpretation of Derivatives)}{71}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}อนุพันธ์ในเชิงความชัน (Derivatives as Slopes)}{71}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}อนุพันธ์ในเชิงอัตราเร็ว (Derivatives as Speeds)}{76}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}อนุพันธ์ในเชิงอัตราการเปลี่ยนแปลง (Derivatives as Rates of Change)}{78}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}แบบฝึกหัด (Exercises)}{79}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}กฎลูกโซ่ (The Chain Rule)}{81}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}แบบฝึกหัด}{90}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.7}อนุพันธ์ของฟังก์ชันอินเวอร์ส (Derivatives of Inverse Functions)}{91}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}แบบฝึกหัด}{96}{subsection.3.7.1}%
+\contentsline {section}{\numberline {3.8}Differentials, Implicit Differentiation and Related Rates}{97}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Differentials}{97}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Implicit Differentiation}{103}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}Related Rates}{109}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.4}แบบฝึกหัด}{123}{subsection.3.8.4}%
+\contentsline {section}{\numberline {3.9}อนุพันธ์ของฟังก์ชันตรีโกณมิติและอินเวอร์สของฟังก์ชันตรีโกณมิติ}{126}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}อนุพันธ์ของฟังก์ชันตรีโกณมิติ}{126}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}อนุพันธ์ของฟังก์ชันอินเวอร์สของฟังก์ชันตรีโกณมิติ}{135}{subsection.3.9.2}%
+\contentsline {section}{\numberline {3.10}อนุพันธ์ของฟังก์ชันเอกซ์โพเนนเชียลและฟังก์ชันลอการิทึม}{142}{section.3.10}%
+\contentsline {chapter}{\numberline {4}การประยุกต์ของอนุพันธ์ (Applications of Differentiation)}{153}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Applications of derivatives related to students discipline}{154}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}แบบฝึกหัด}{160}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Sketching the graph of a function from the derivative}{161}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}แบบฝึกหัด}{183}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}การประยุกต์ของ Monotonicity และ Concavity}{189}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}แบบฝึกหัด}{194}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}การหาค่าเหมาะที่สุด (Optimization)}{194}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}แบบฝึกหัด}{201}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}รูปแบบไม่กำหนด (Indeterminate form) และกฎของโลปิตาล (L'Hopital Rule)}{203}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด \(0\cdot \infty \) หรือ \(\infty -\infty \)}{207}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}การหาลิมิตที่อยู่ในรูปแบบไม่กำหนด \(0^{0}, 1^{\infty }, \infty ^0\)}{210}{subsection.4.5.2}%
+\contentsline {chapter}{\numberline {5}การหาปริพันธ์ (Integrations)}{215}{chapter.5}%
+\contentsline {section}{\numberline {5.1}ปฏิยานุพันธ์ (Antiderivatives)}{215}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}แบบฝึกหัด (Antiderivatives)}{219}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}ปริพันธ์จำกัดเขต (The Definite Integral)}{221}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Integration คืออะไร}{221}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}การประมาณค่าพื้นที่และปริพันธ์จำกัดเขต}{221}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}ทฤษฎีพื้นฐานของแคลคูลัส (The fundamental Theorem of Calculus)}{228}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}สูตรพื้นฐานของการอินทิเกรท (Basic Integration Rules)}{232}{subsection.5.3.1}%
+\contentsline {chapter}{\numberline {6}เทคนิคของการหาปริพันธ์ (Techniques of Integration)}{241}{chapter.6}%
+\contentsline {section}{\numberline {6.1}การหาปริพันธ์โดยการเปลี่ยนตัวแปร (Integration by Substitution)}{242}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}แบบฝึกหัด (Integrals)}{246}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}การหาปริพันธ์โดยการแทนด้วยฟังก์ชันตรีโกณมิติ (Trigonometric Substitutions)}{247}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}การหาปริพันธ์โดยแยกส่วน (Integration by Parts)}{251}{section.6.2}%
+\contentsline {section}{\numberline {6.3}การหาปริพันธ์โดยเศษส่วนย่อย (Integration by Partial Fractions)}{257}{section.6.3}%
+\contentsline {section}{\numberline {6.4}ปริพันธ์ไม่ตรงแบบ (Improper Integrals)}{264}{section.6.4}%
+\contentsline {section}{\numberline {6.5}แบบฝึกหัด (Improper Integrals)}{271}{section.6.5}%
+\contentsline {chapter}{\numberline {7}เฉลยของแบบฝึกหัด}{273}{chapter.7}%
+\contentsline {subsection}{\numberline {7.0.1}Solution:}{275}{subsection.7.0.1}%
